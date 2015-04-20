@@ -7,6 +7,7 @@
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
 * Updated enchantments.
+* Allow commands in kits and use `{player}` to replace with player's name.
 * `/showkit <kitname>` to show the kit's contents.
 
 ![showkit](https://i.imgur.com/d4Ff8vN.png)
