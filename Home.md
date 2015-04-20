@@ -9,6 +9,7 @@
 * Updated enchantments.
 * Allow commands in kits and use `{player}` to replace with player's name.
 * `/showkit <kitname>` to show the kit's contents.
+* BannerMeta support.
 
 ### Showkit
 Command: `/showkit <kitname>`
