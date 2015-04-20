@@ -13,4 +13,5 @@ Patterns will be listed after the base color and will include the type with the 
 
 ### Example Syntax
 An example banner:
+
 `- BANNER 1 basecolor:364 STRIPE_LEFT,365 SQUARE_TOP_RIGHT,385`
