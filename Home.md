@@ -6,3 +6,7 @@
 * Configuration option to not send `no new mail` notification on join.
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
+* Updated enchantments.
+* `/showkit <kitname>` to show the kit's contents.
+
+![showkit](https://i.imgur.com/d4Ff8vN.png)
