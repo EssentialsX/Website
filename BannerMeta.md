@@ -1,5 +1,6 @@
 # BannerMeta
-BannerMeta is for banners. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later. Syntax for banner meta:
+BannerMeta is for banner flags. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later. 
+![banner pic](http://media-minecraftforum.cursecdn.com/attachments/14/153/635418493636559467.png)
 
 
 ## Base Color
@@ -14,4 +15,4 @@ Patterns will be listed after the base color and will include the type with the 
 ### Example Syntax
 An example banner:
 
-`- BANNER 1 basecolor:364 STRIPE_LEFT,365 SQUARE_TOP_RIGHT,385`
+`- BANNER 1 basecolor:256,256,256 STRIPE_LEFT,365 SQUARE_TOP_RIGHT,255,255,255`
