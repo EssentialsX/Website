@@ -10,6 +10,8 @@
 * Allow commands in kits and use `{player}` to replace with player's name.
 * `/showkit <kitname>` to show the kit's contents.
 * BannerMeta support.
+* Fixed mob spawners for 1.8.3+, this means you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners won't be pigs when placed
+* Uses UUID-backed Vault for permissions group and prefix/suffix lookups. This results in better performance due to not needing a name-to-UUID conversion. Spigot-Essentials implements UUID lookups for zPermissions, but not other permissions plugins. Because EssentialsX prioritizes Vault, all queries using the Vault handler should be much faster.
 
 ### Showkit
 Command: `/showkit <kitname>`
