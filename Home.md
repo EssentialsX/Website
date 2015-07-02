@@ -2,7 +2,7 @@
 
 ## Differences between Essentials/Spigot-Essentials and EssentialsX
 * `/createkit <kitname> <delay>` - creates a kit out of your inventory.
-* Per gamemode permissions. Allowing players to `/gma` and `/gms` but not `/gmc` or `/gmsp` if desired.
+* Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired.
   * `essentials.gamemode.creative`
   * `essentials.gamemode.survival`
   * `essentials.gamemode.adventure`
