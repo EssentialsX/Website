@@ -2,11 +2,12 @@
 
 ## Differences between Essentials/Spigot-Essentials and EssentialsX
 * `/createkit <kitname> <delay>` - creates a kit out of your inventory.
-* Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired.
+* Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired. You need to give the player essentials.gamemode to use the /gm command + whichever gamemodes you want them to be able to change to.
   * `essentials.gamemode.creative`
   * `essentials.gamemode.survival`
   * `essentials.gamemode.adventure`
   * `essentials.gamemode.spectator`
+  * `essentials.gamemode.all`
 * Configuration option to not send `no new mail` notification on join.
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
