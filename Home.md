@@ -21,6 +21,9 @@
 * `/tppos` has an additional world name argument.
 * `/msgtoggle` command allows people to ignore all private messages.
 * Fixes for sending and receiving money for EssentialsEco.
+* Separate permissions for bulk sell and hand sell
+  * `essentials.sell.hand`
+  * `essentials.sell.bulk`
 
 ### Showkit
 Command: `/showkit <kitname>`
