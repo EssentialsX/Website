@@ -25,6 +25,7 @@
 * Separate permissions for bulk sell and hand sell
   * `essentials.sell.hand`
   * `essentials.sell.bulk`
+* SocialSpy exempt with `essentials.chat.spy.exempt`
 
 ### Showkit
 Command: `/showkit <kitname>`
