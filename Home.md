@@ -38,3 +38,6 @@ Command: `/createkit <kitname> <delay>`
 Permission: `essentials.createkit`
 Creates a kit from your inventory and puts it in the config file. *This will remove comments from your config file* :disappointed: 
 ![createkit](https://i.imgur.com/nXMlNGP.png)
+
+### If placed spawners are still pigs
+* Assign `essentials.spawnerconvert.*` to your default group
