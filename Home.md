@@ -26,6 +26,7 @@
   * `essentials.sell.hand`
   * `essentials.sell.bulk`
 * SocialSpy exempt with `essentials.chat.spy.exempt`
+* Improved translations for German and French
 
 ### Showkit
 Command: `/showkit <kitname>`
