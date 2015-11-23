@@ -49,10 +49,17 @@ There is a configurable feature you may set called `last-message-reply-recipient
 Here's a formatted scenario of the new last-message-reply-recipient feature:
 
 > **SupaHam: /msg Kakifrucht Hi**
+
 > _SupaHam -> Kakifrucht: Hi_
+
 > **Kakifrucht: /r Hi**
+
 > _Kakifrucht -> SupaHam: Hi_
+
 > **EvilOlaf: /msg Kakifrucht Hi**
+
 > _EvilOlaf -> Kakifrucht: Hi_
+
 > **Kakifrucht: /r Hi back to you!**
+
 > _Kakifrucht -> SupaHam: Hi back to you!_
