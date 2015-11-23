@@ -62,4 +62,4 @@ Here's a formatted scenario of the new last-message-reply-recipient feature:
 
 > **Kakifrucht: /r Hi back to you!**
 
-> _Kakifrucht -> SupaHam: Hi back to you!_
+> _Kakifrucht -> SupaHam: Hi back to you, SupaHam!_
