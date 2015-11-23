@@ -45,7 +45,7 @@ Creates a kit from your inventory and puts it in the config file. *This will rem
 
 ### Controlled Private Messaging
 
-_This feature was added in build 210._
+**This feature was added in build 210.**
 
 There is a configurable feature you may set called `last-message-reply-recipient` that if set to `true` makes your reply-recipient whoever you messaged last and not whoever messaged you last, with the exception that if you do not have a reply-recipient then whoever messaged you last will be your reply-recipient.
 
