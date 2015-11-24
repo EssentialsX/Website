@@ -66,3 +66,5 @@ Here's a formatted scenario of the new last-message-reply-recipient feature:
 > **Kakifrucht: /r Hi back to you, SupaHam!**
 
 > _Kakifrucht -> SupaHam: Hi back to you, SupaHam!_
+
+If this feature is enabled, EssentialsX will take into account the `last-message-reply-recipient-timeout` setting. This setting allows you to configure the duration, in seconds, that the reply-recipient will not change, when receiving replies. If after this duration the recipient receives a message, the recipient's replies will start going to the latest message sender.
