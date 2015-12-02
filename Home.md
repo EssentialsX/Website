@@ -27,6 +27,7 @@
   * `essentials.sell.bulk`
 * SocialSpy exempt with `essentials.chat.spy.exempt`
 * Improved translations for German and French
+* Adds configuration option for the milk bucket "easter egg", which (really shouldn't, but does) allow players to mess with other people's horses: `milk-bucket-easter-egg`
 
 ### Showkit
 Command: `/showkit <kitname>`
