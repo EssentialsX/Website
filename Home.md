@@ -20,7 +20,7 @@
 * Adds an option to forcefully disable safe teleportation (very useful for Factions/raiding servers). Mainline Essentials only has two values for the `teleport-safety` option: to convert locations to safe teleports (results in plenty of exploits) or to deny the teleport entirely. EssentialsX adds a `force-disable-teleport-safety` option (default false) that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location.
 * Supports more tree types compared to Essentials and Spigot-Essentials (Mega Redwood, Tall redwood, Tall Birch, etc...)
 * `/tppos` has an additional world name argument.
-* `/msgtoggle` command allows people to ignore all private messages.
+* `/msgtoggle` command allows people to ignore all private messages with permission: `essentials.msgtoggle`
 * Fixes for sending and receiving money for EssentialsEco.
 * Separate permissions for bulk sell and hand sell
   * `essentials.sell.hand`
