@@ -72,6 +72,19 @@ If this feature is enabled, EssentialsX will take into account the `last-message
 
 ### /seen UUID
 
-**This feature was added in build 241 (2e903ac).**
+**This feature was added in [build 241](https://ci.drtshock.net/job/EssentialsX/241) (2e903ac).**
 
 Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
+
+### Per world /time setting permission
+
+**This feature was added in [build 250](https://ci.drtshock.net/job/EssentialsX/250) (eb924b9..d570570).**
+
+Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
+
+##### Permissions are as follow:
+
+permission | description
+---|---
+| essentials.time.world.\<world\> | Permits the user to set the time in <world>. <world> is the world name with spaces replaced with _. e.g. My World becomes, my_world. |
+| essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.\<world\>`. |
