@@ -8,6 +8,7 @@
   * `essentials.gamemode.adventure`
   * `essentials.gamemode.spectator`
   * `essentials.gamemode.all`
+  *Note*: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
 * Configuration option to not send `no new mail` notification on join.
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
