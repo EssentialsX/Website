@@ -93,3 +93,17 @@ permission | description
 ---|---
 | essentials.time.world.\<world\> | Permits the user to set the time in <world>. <world> is the world name with spaces replaced with _. e.g. My World becomes, my_world. |
 | essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
+
+### AFK Player List name
+**This feature was added in [build 263](https://ci.drtshock.net/job/EssentialsX/263) (bbf657e).**
+
+This build introduces the `afk-list-name` config property which is used to specify a player-list name format for players that are AFK.
+
+The property has two placeholders:
+- `{USERNAME}`: The player's name
+- `{PLAYER}`: The player's display name.
+
+Here's an example of "[AFK] _SupaHam_":
+```yaml
+afk-list-name: '&7[AFK] &o{USERNAME}'
+```
