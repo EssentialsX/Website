@@ -83,7 +83,7 @@ Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now 
 
 **This feature was added in [build 250](https://ci.drtshock.net/job/EssentialsX/250) (eb924b9..d570570).**
 
-*Note*: in [build 262](https://ci.drtshock.net/job/EssentialsX/262) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
+**Note**: in [build 262](https://ci.drtshock.net/job/EssentialsX/262) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
 
 Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
 
