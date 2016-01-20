@@ -97,7 +97,7 @@ permission | description
 ### AFK Player List name
 **This feature was added in [build 263](https://ci.drtshock.net/job/EssentialsX/263) (bbf657e).**
 
-This build introduces the `afk-list-name` config property which is used to specify a player-list name format for players that are AFK.
+This build introduces the `afk-list-name` config property which is used to specify the player-list name format for players that are AFK.
 
 The property has two placeholders:
 - `{USERNAME}`: The player's name
