@@ -14,7 +14,7 @@
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
 * Updated enchantments.
-* Has buy sign support for Minecraft 1.9.
+* Has buy/trade sign support for Minecraft 1.9.
 * Allow commands in kits and use `{player}` to replace with player's name.
 * `/showkit <kitname>` to show the kit's contents.
 * BannerMeta support.
