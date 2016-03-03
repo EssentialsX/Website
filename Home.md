@@ -14,12 +14,13 @@
 * Updated to latest Spigot / Minecraft version at all times.
 * Actively maintained.
 * Updated enchantments.
+* Has buy sign support for Minecraft 1.9.
 * Allow commands in kits and use `{player}` to replace with player's name.
 * `/showkit <kitname>` to show the kit's contents.
 * BannerMeta support.
 * Fixed mob spawner support. This means you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners won't be pigs when placed.
 * Uses UUID-backed Vault for permissions group and prefix/suffix lookups. This results in better performance due to not needing a name-to-UUID conversion. Spigot-Essentials implements UUID lookups for zPermissions, but not other permissions plugins. Because EssentialsX prioritizes Vault, all queries using the Vault handler should be much faster.
-* Adds an option to forcefully disable safe teleportation (very useful for Factions/raiding servers). Mainline Essentials only has two values for the `teleport-safety` option: to convert locations to safe teleports (results in plenty of exploits) or to deny the teleport entirely. EssentialsX adds a `force-disable-teleport-safety` option (default false) that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location. *Note: To disable cross-world teleportation safety, switch to PaperSpigot and set `disable-teleportation-suffocation-check` to true.* 
+* Adds an option to forcefully disable safe teleportation (very useful for Factions/raiding servers). Mainline Essentials only has two values for the `teleport-safety` option: to convert locations to safe teleports (results in plenty of exploits) or to deny the teleport entirely. EssentialsX adds a `force-disable-teleport-safety` option (default false) that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location. **Note: To disable cross-world teleportation safety, switch to PaperSpigot and set `disable-teleportation-suffocation-check` to true.** 
 * Supports more tree types compared to Essentials and Spigot-Essentials (Mega Redwood, Tall redwood, Tall Birch, etc...)
 * `/tppos` has an additional world name argument.
 * `/msgtoggle` command allows people to ignore all private messages with permission: `essentials.msgtoggle`
