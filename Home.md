@@ -117,3 +117,13 @@ afk-list-name: '&7[AFK] &o{USERNAME}'
 PR #198 introduced the ability to limit /nick to only allow color changes, ensuring players could still be identified by their original Minecraft name. The feature introduced a new permission node called `essentials.nick.changecolors`. When a player has the preceeding permission, they are only allowed to add colours to their names. Where if the player was called SupaHam, he could only be able to use `/nick &5SupaHam` but not `/nick &5TheSupaHam`, where the latter is prefixing the name with 'The'.
 
 However, this feature also introduced the `essentials.nick.changecolors.bypass` permission node. Where if a player has the preceeding permission they are allowed to bypass the check and thus be able to change the characters of their name. This was originally created to ensure convenience for Server Operators without breaking functionality when they updated EssentialsX.
+
+### Teleport to spawn when joining
+
+**This feature was added in [build 361](https://ci.drtshock.net/job/EssentialsX/361) (b673630).**
+
+Requested in #345. Administrators can now specify whether all joining players are to be teleported to spawn using the `spawn-on-join` option found in the `config.yml` file.
+
+When `spawn-on-join` is `true` all players are teleport to their group spawn point. If no group spawn point has been set, the default spawn point, set with `/setspawn`, will be used instead.
+
+If Admins wish to exempt certain players from this feature when `spawn-on-join` is `true`, they can give them the `essentials.spawn-on-join.exempt` permission and they will log in where they left off, assuming no other plugin is interfering.
