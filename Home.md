@@ -1,6 +1,6 @@
 # EssentialsX wiki!
 
-Pages:
+## Pages
 * [BannerMeta](https://github.com/drtshock/Essentials/wiki/BannerMeta)
 * [Command Cooldowns](https://github.com/drtshock/Essentials/wiki/Command-Cooldowns)
 
