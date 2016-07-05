@@ -1,5 +1,9 @@
 # EssentialsX wiki!
 
+Pages:
+* [BannerMeta](https://github.com/drtshock/Essentials/wiki/BannerMeta)
+* [Command Cooldowns](https://github.com/drtshock/Essentials/wiki/Command-Cooldowns)
+
 ## Differences between Essentials/Spigot-Essentials and EssentialsX
 * `/createkit <kitname> <delay>` - creates a kit out of your inventory.
 * Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired. You need to give the player essentials.gamemode to use the /gm command + whichever gamemodes you want them to be able to change to.
