@@ -51,7 +51,7 @@ Creates a kit from your inventory and puts it in the config file. *This will rem
 
 ### Controlled Private Messaging
 
-**This feature was added in build 210.**
+**This feature was added in [build 210](https://ci.drtshock.net/job/EssentialsX).**
 
 There is a configurable feature you may set called `last-message-reply-recipient` that if set to `true` makes your reply-recipient whoever you messaged last and not whoever messaged you last, with the exception that if you do not have a reply-recipient then whoever messaged you last will be your reply-recipient.
 
@@ -77,15 +77,15 @@ If this feature is enabled, EssentialsX will take into account the `last-message
 
 ### /seen UUID
 
-**This feature was added in [build 241](https://ci.drtshock.net/job/EssentialsX) (2e903ac).**
+**This feature was added in [build 241](https://ci.drtshock.net/job/EssentialsX) ([2e903ac](https://github.com/drtshock/Essentials/commit/2e903ac)).**
 
 Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
 
 ### Per world /time setting permission
 
-**This feature was added in [build 250](https://ci.drtshock.net/job/EssentialsX) (eb924b9..d570570).**
+**This feature was added in [build 250](https://ci.drtshock.net/job/EssentialsX) ([eb924b9](https://github.com/drtshock/Essentials/commit/eb924b9)).**
 
-**Note**: In [build 262](https://ci.drtshock.net/job/EssentialsX/262) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
+**Note**: In [build 262](https://ci.drtshock.net/job/EssentialsX) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
 
 Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
 
@@ -97,7 +97,7 @@ permission | description
 | essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
 
 ### AFK Player List name
-**This feature was added in [build 263](https://ci.drtshock.net/job/EssentialsX) (bbf657e).**
+**This feature was added in [build 263](https://ci.drtshock.net/job/EssentialsX) ([bbf657e](https://github.com/drtshock/Essentials/commit/bbf657e)).**
 
 This build introduces the `afk-list-name` config property which is used to specify the player-list name format for players that are AFK.
 
@@ -112,7 +112,7 @@ afk-list-name: '&7[AFK] &o{USERNAME}'
 
 ### Nickname color permissions
 
-**This feature was added in [build 246](https://ci.drtshock.net/job/EssentialsX) (9f75f1a).**
+**This feature was added in [build 246](https://ci.drtshock.net/job/EssentialsX) ([9f75f1a](https://github.com/drtshock/Essentials/commit/9f75f1a)).**
 
 PR #198 introduced the ability to limit /nick to only allow color changes, ensuring players could still be identified by their original Minecraft name. The feature introduced a new permission node called `essentials.nick.changecolors`. When a player has the preceding permission, they are only allowed to add colours to their names. Where if the player was called SupaHam, he could only be able to use `/nick &5SupaHam` but not `/nick &5TheSupaHam`, where the latter is prefixing the name with 'The'.
 
@@ -122,10 +122,13 @@ However, this feature also introduced the `essentials.nick.changecolors.bypass` 
 
 ### Teleport to spawn when joining
 
-**This feature was added in [build 361](https://ci.drtshock.net/job/EssentialsX) (b673630).**
+**This feature was added in [build 361](https://ci.drtshock.net/job/EssentialsX) ([b673630](https://github.com/drtshock/Essentials/commit/b673630)).**
 
 Requested in #345. Administrators can now specify whether all joining players are to be teleported to spawn using the `spawn-on-join` option found in the `config.yml` file.
 
 When `spawn-on-join` is `true` all players are teleport to their group spawn point. If no group spawn point has been set, the default spawn point, set with `/setspawn`, will be used instead.
 
 If Admins wish to exempt certain players from this feature when `spawn-on-join` is `true`, they can give them the `essentials.spawn-on-join.exempt` permission and they will log in where they left off, assuming no other plugin is interfering.
+
+### Command Cooldowns
+** This feature was added in [build 369](https://ci.drtshock.net/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).**
