@@ -131,4 +131,4 @@ When `spawn-on-join` is `true` all players are teleport to their group spawn poi
 If Admins wish to exempt certain players from this feature when `spawn-on-join` is `true`, they can give them the `essentials.spawn-on-join.exempt` permission and they will log in where they left off, assuming no other plugin is interfering.
 
 ### Command Cooldowns
-** This feature was added in [build 369](https://ci.drtshock.net/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).**
+**This feature was added in [build 369](https://ci.drtshock.net/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).**
