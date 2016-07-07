@@ -40,3 +40,6 @@ command-cooldown-persistence: false
 ```
 
 **NOTE:** If the `command-cooldown-persistence` is not present in the config then it can be added anywhere in the config, as long as it is not indented.
+
+# Bypass
+Users can be set to bypass all command cooldowns by giving them the `essentials.commandcooldowns.bypass` permission.
