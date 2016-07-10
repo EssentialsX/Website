@@ -133,3 +133,17 @@ Requested in #345. Administrators can now specify whether all joining players ar
 When `spawn-on-join` is `true` all players are teleport to their group spawn point. If no group spawn point has been set, the default spawn point, set with `/setspawn`, will be used instead.
 
 If Admins wish to exempt certain players from this feature when `spawn-on-join` is `true`, they can give them the `essentials.spawn-on-join.exempt` permission and they will log in where they left off, assuming no other plugin is interfering.
+
+### AFK message
+
+**This feature was added in [build 380](https://ci.drtshock.net/job/EssentialsX) ([9dfa650d](https://github.com/drtshock/Essentials/commit/9dfa650d)).** _Requested in [#590](/drtshock/Essentials/issues/590). PR in [#664](/drtshock/Essentials/pull/664)._
+
+Players can now set their AFK message when using the `/afk` command to notify others of their situation. This helps give insight on how long the player will be back so that other inquiring players can be informed and act appropriately.
+
+Players are informed with the AFK message by default when they `/msg` a player who is AFK. However, when a player goes AFK with a message, by default the message will not be broadcast. However, this can be changed in the locale file by modifying `userIsAwayWithMessage` and using the `{1}` argument, the message.
+
+To set the AFK message simply type `/afk <message...>` e.g. `/afk I'm walking my dog`.
+
+In order to use this feature a player must have the `essentials.afk.message` permission.
+
+If a player is muted, they are not able to supply a message as it can be used to exploit their punishment.
