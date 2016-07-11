@@ -1,4 +1,3 @@
-# Command Cooldowns
 **This feature was added in [build 369](https://ci.drtshock.net/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).** 
 _Requested in [#110](/drtshock/Essentials/issues/110). PR in [#692](/drtshock/Essentials/pull/692)._
 
