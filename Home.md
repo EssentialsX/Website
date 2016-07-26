@@ -147,3 +147,12 @@ To set the AFK message simply type `/afk <message...>` e.g. `/afk I'm walking my
 In order to use this feature a player must have the `essentials.afk.message` permission.
 
 If a player is muted, they are not able to supply a message as it can be used to exploit their punishment.
+
+### Pay toggle
+**This feature was added in [build 416](https://ci.drtshock.net/job/EssentialsX) ([2493c65](https://github.com/drtshock/Essentials/commit/2493c65)).** _Requested in [#413](/drtshock/Essentials/issues/413)._
+
+Players have the ability to disable any and all payment via the `/paytoggle` command. This can be used to combat players using `/pay` as a means of spam towards other players, like celebrities on your server.
+
+`paytoggle` also has the following aliases: `epaytoggle`, `payoff`, `epayoff`, `payon`, `epayon`
+
+`payoff` will always disable payments to prevent errors. On the contrary, `payon` will always enable payments.
