@@ -128,7 +128,15 @@ However, this feature also introduced the `essentials.nick.changecolors.bypass` 
 
 **This feature was added in [build 361](https://ci.drtshock.net/job/EssentialsX) ([b673630](https://github.com/drtshock/Essentials/commit/b673630)).**
 
-Requested in #345. Administrators can now specify whether all joining players are to be teleported to spawn using the `spawn-on-join` option found in the `config.yml` file.
+Requested in #345. Administrators can now specify whether joining players are to be teleported to spawn using the `spawn-on-join` option found in the `config.yml` file.
+
+`spawn-on-join` accepts three different data types:
+
+1. Boolean - if the value is `true`, all players will be teleported to spawn when joining. If false, this feature is simply disabled.
+2. String - The value is interpreted as a group name and the user is checked for presence in said group when joining. If they belong to the group, then they will be teleported to spawn when joining.
+3. List of Strings - The value is interpreted as a list of groups that are treated as stated above in String.
+
+Note: a group name of "*" is interpreted as a wildcard and catches all players, causing them to teleport to spawn on join.
 
 When `spawn-on-join` is `true` all players are teleport to their group spawn point. If no group spawn point has been set, the default spawn point, set with `/setspawn`, will be used instead.
 
