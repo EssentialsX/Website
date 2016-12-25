@@ -148,7 +148,7 @@ If Admins wish to exempt certain players from this feature when `spawn-on-join` 
 
 Players can now set their AFK message when using the `/afk` command to notify others of their situation. This helps give insight on how long the player will be back so that other inquiring players can be informed and act appropriately.
 
-Players are informed with the AFK message by default when they `/msg` a player who is AFK. However, when a player goes AFK with a message, by default the message will not be broadcast. However, this can be changed in the locale file by modifying `userIsAwayWithMessage` and using the `{1}` argument, the message.
+Players are informed with the AFK message by default when they `/msg` a player who is AFK. However, when a player goes AFK with a message, by default the message will not be broadcast. However, this can be changed in the locale file (messages_en.proeprties, or whichever locale file you are using) by modifying `userIsAwayWithMessage` and using the `{1}` argument, the message. This can be found in the jar file.
 
 To set the AFK message simply type `/afk <message...>` e.g. `/afk I'm walking my dog`.
 
