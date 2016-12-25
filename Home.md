@@ -164,3 +164,12 @@ Players have the ability to disable any and all payment via the `/paytoggle` com
 `paytoggle` also has the following aliases: `epaytoggle`, `payoff`, `epayoff`, `payon`, `epayon`
 
 `payoff` will always disable payments to prevent errors. On the contrary, `payon` will always enable payments.
+
+### Pay confirmation toggle
+**This feature was added in [build 461](https://ci.drtshock.net/job/EssentialsX) ([5f83766](https://github.com/drtshock/Essentials/commit/5f83766)).** _Requested in [#1032](/drtshock/Essentials/issues/1032)._
+
+In build `#458`, confirmation prompting for `/pay` was introduced, but rapidly became repetitive for some players. This feature aims to combat it by allowing individual players to toggle the confirm prompt at their own risk.
+
+This feature introduces the command `/payconfirmtoggle` which modifies `confirm-pay` in the user's data file. `confirm-pay` determines whether a player should be prompted to confirm a payment (regardless of amount) or not. By default, `confirm-pay` is `true`, meaning enabled. Players would need to use the `/payconfirmtoggle` command to change this property, and thus the behaviour of the `/pay` command for themselves.
+
+`payconfirmtoggle` also has the following aliases: `epayconfirmtoggle`, `payconfirmoff`, `epayconfirmoff`, `payconfirmon`, `epayconfirmon`, `payconfirm`, `epayconfirm`
