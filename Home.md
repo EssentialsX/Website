@@ -173,3 +173,9 @@ In build `#458`, confirmation prompting for `/pay` was introduced, but rapidly b
 This feature introduces the command `/payconfirmtoggle` which modifies `confirm-pay` in the user's data file. `confirm-pay` determines whether a player should be prompted to confirm a payment (regardless of amount) or not. By default, `confirm-pay` is `true`, meaning enabled. Players would need to use the `/payconfirmtoggle` command to change this property, and thus the behaviour of the `/pay` command for themselves.
 
 `payconfirmtoggle` also has the following aliases: `epayconfirmtoggle`, `payconfirmoff`, `epayconfirmoff`, `payconfirmon`, `epayconfirmon`, `payconfirm`, `epayconfirm`
+
+### Teleport to exact coordinates
+
+This feature was implemented in ([0a563b9](https://github.com/drtshock/Essentials/commit/0a563b9).
+
+This feature introduces the `teleport-to-center` configuration feature. When set to `true` - the default - all teleportations are centered to the block; technically, setting the x and z coordinate decimals to .5 and .5. When `teleport-to-center` is set to `false`, all teleports are performed to the exact location as given.
