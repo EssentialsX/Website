@@ -1,5 +1,10 @@
 # EssentialsX wiki!
 
+EssentialsX is a fork of [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and are optimized further than the original.
+
+For original permissions: http://wiki.mc-ess.net/wiki/Command_Reference/Perm
+For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
+
 ## Pages
 * [BannerMeta](https://github.com/drtshock/Essentials/wiki/BannerMeta)
 * [Command Cooldowns](https://github.com/drtshock/Essentials/wiki/Command-Cooldowns)
