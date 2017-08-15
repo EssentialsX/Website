@@ -182,6 +182,6 @@ This feature introduces the command `/payconfirmtoggle` which modifies `confirm-
 
 ### Teleport to exact coordinates
 
-This feature was implemented in ([0a563b9](https://github.com/drtshock/Essentials/commit/0a563b9).
+This feature was implemented in ([0a563b9](https://github.com/drtshock/Essentials/commit/0a563b9)).
 
 This feature introduces the `teleport-to-center` configuration feature. When set to `true` - the default - all teleportations are centered to the block; technically, setting the x and z coordinate decimals to .5 and .5. When `teleport-to-center` is set to `false`, all teleports are performed to the exact location as given.
