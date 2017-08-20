@@ -29,5 +29,5 @@ See the [Bukkit wiki page](https://bukkit.gamepedia.com/Commands.yml#aliases) fo
 **Related issues: [#1384](/drtshock/Essentials/issue/1384)**  
 You can alias the command to the version from the other plugin, which should fix tab complete behaviour - see above.
 
-## I need help with GroupManager! / Where's the updated GroupManager?
+## I need help with GroupManager! <br /> Where's the updated GroupManager?
 EssentialsX does not support GroupManager as it is an outdated and broken plugin. We recommend you switch to [LuckPerms](https://github.com/lucko/LuckPerms) as it is still an actively maintained and regularly updated plugin.
