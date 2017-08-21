@@ -21,7 +21,7 @@ For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
   
   **Note**: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
 * Configuration option to not send `no new mail` notification on join.
-* Updated to latest Spigot / Minecraft version at all times.
+* Updated to latest Spigot / Minecraft version at all times, retaining support for versions going back to 1.8.
 * Actively maintained.
 * Updated enchantments.
 * Has buy/trade sign support for Minecraft 1.9.
