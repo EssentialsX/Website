@@ -191,7 +191,10 @@ This feature introduces the `teleport-to-center` configuration feature. When set
 
 This feature introduces the ability to format messages using the traditional ampersand (`&`) syntax.
 
+The following table defines the permissions introduced in this feature.
+
 | Permission | Description |
+|------------|-------------|
 | essentials.mail.url | Allow use of URLs |
 | essentials.mail.color | Allow use of colors |
 | essentials.mail.magic | Allow use of obfuscated/magic text styling |
