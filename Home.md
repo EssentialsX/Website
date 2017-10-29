@@ -61,7 +61,7 @@ Creates a kit from your inventory and puts it in the config file. *This will rem
 
 ### Controlled Private Messaging
 
-**This feature was added in [build 210](https://ci.drtshock.net/job/EssentialsX).**
+**This feature was added in [build 210](https://ci.ender.zone/job/EssentialsX).**
 
 There is a configurable feature you may set called `last-message-reply-recipient` that if set to `true` makes your reply-recipient whoever you messaged last and not whoever messaged you last, with the exception that if you do not have a reply-recipient then whoever messaged you last will be your reply-recipient.
 
@@ -87,15 +87,15 @@ If this feature is enabled, EssentialsX will take into account the `last-message
 
 ### /seen UUID
 
-**This feature was added in [build 241](https://ci.drtshock.net/job/EssentialsX) ([2e903ac](https://github.com/drtshock/Essentials/commit/2e903ac)).**
+**This feature was added in [build 241](https://ci.ender.zone/job/EssentialsX) ([2e903ac](https://github.com/drtshock/Essentials/commit/2e903ac)).**
 
 Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
 
 ### Per world /time setting permission
 
-**This feature was added in [build 250](https://ci.drtshock.net/job/EssentialsX) ([eb924b9](https://github.com/drtshock/Essentials/commit/eb924b9)).**
+**This feature was added in [build 250](https://ci.ender.zone/job/EssentialsX) ([eb924b9](https://github.com/drtshock/Essentials/commit/eb924b9)).**
 
-**Note**: In [build 262](https://ci.drtshock.net/job/EssentialsX) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
+**Note**: In [build 262](https://ci.ender.zone/job/EssentialsX) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
 
 Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
 
@@ -107,7 +107,7 @@ permission | description
 | essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
 
 ### AFK Player List name
-**This feature was added in [build 263](https://ci.drtshock.net/job/EssentialsX) ([bbf657e](https://github.com/drtshock/Essentials/commit/bbf657e)).**
+**This feature was added in [build 263](https://ci.ender.zone/job/EssentialsX) ([bbf657e](https://github.com/drtshock/Essentials/commit/bbf657e)).**
 
 This build introduces the `afk-list-name` config property which is used to specify the player-list name format for players that are AFK.
 
@@ -122,7 +122,7 @@ afk-list-name: '&7[AFK] &o{USERNAME}'
 
 ### Nickname color permissions
 
-**This feature was added in [build 246](https://ci.drtshock.net/job/EssentialsX) ([9f75f1a](https://github.com/drtshock/Essentials/commit/9f75f1a)).**
+**This feature was added in [build 246](https://ci.ender.zone/job/EssentialsX) ([9f75f1a](https://github.com/drtshock/Essentials/commit/9f75f1a)).**
 
 PR #198 introduced the ability to limit /nick to only allow color changes, ensuring players could still be identified by their original Minecraft name. The feature introduced a new permission node called `essentials.nick.changecolors`. When a player has the preceding permission, they are only allowed to add colours to their names. Where if the player was called SupaHam, he could only be able to use `/nick &5SupaHam` but not `/nick &5TheSupaHam`, where the latter is prefixing the name with 'The'.
 
@@ -132,7 +132,7 @@ However, this feature also introduced the `essentials.nick.changecolors.bypass` 
 
 ### Teleport to spawn when joining
 
-**This feature was added in [build 361](https://ci.drtshock.net/job/EssentialsX) ([b673630](https://github.com/drtshock/Essentials/commit/b673630)).**
+**This feature was added in [build 361](https://ci.ender.zone/job/EssentialsX) ([b673630](https://github.com/drtshock/Essentials/commit/b673630)).**
 
 Requested in #345. Administrators can now specify whether joining players are to be teleported to spawn using the `spawn-on-join` option found in the `config.yml` file.
 
@@ -150,7 +150,7 @@ If Admins wish to exempt certain players from this feature when `spawn-on-join` 
 
 ### AFK message
 
-**This feature was added in [build 380](https://ci.drtshock.net/job/EssentialsX) ([9dfa650d](https://github.com/drtshock/Essentials/commit/9dfa650d)).** _Requested in [#590](/drtshock/Essentials/issues/590). PR in [#664](/drtshock/Essentials/pull/664)._
+**This feature was added in [build 380](https://ci.ender.zone/job/EssentialsX) ([9dfa650d](https://github.com/drtshock/Essentials/commit/9dfa650d)).** _Requested in [#590](/drtshock/Essentials/issues/590). PR in [#664](/drtshock/Essentials/pull/664)._
 
 Players can now set their AFK message when using the `/afk` command to notify others of their situation. This helps give insight on how long the player will be back so that other inquiring players can be informed and act appropriately.
 
@@ -163,7 +163,7 @@ In order to use this feature a player must have the `essentials.afk.message` per
 If a player is muted, they are not able to supply a message as it can be used to exploit their punishment.
 
 ### Pay toggle
-**This feature was added in [build 416](https://ci.drtshock.net/job/EssentialsX) ([2493c65](https://github.com/drtshock/Essentials/commit/2493c65)).** _Requested in [#413](/drtshock/Essentials/issues/413)._
+**This feature was added in [build 416](https://ci.ender.zone/job/EssentialsX) ([2493c65](https://github.com/drtshock/Essentials/commit/2493c65)).** _Requested in [#413](/drtshock/Essentials/issues/413)._
 
 Players have the ability to disable any and all payment via the `/paytoggle` command. This can be used to combat players using `/pay` as a means of spam towards other players, like celebrities on your server.
 
@@ -172,7 +172,7 @@ Players have the ability to disable any and all payment via the `/paytoggle` com
 `payoff` will always disable payments to prevent errors. On the contrary, `payon` will always enable payments.
 
 ### Pay confirmation toggle
-**This feature was added in [build 461](https://ci.drtshock.net/job/EssentialsX) ([5f83766](https://github.com/drtshock/Essentials/commit/5f83766)).** _Requested in [#1032](/drtshock/Essentials/issues/1032)._
+**This feature was added in [build 461](https://ci.ender.zone/job/EssentialsX) ([5f83766](https://github.com/drtshock/Essentials/commit/5f83766)).** _Requested in [#1032](/drtshock/Essentials/issues/1032)._
 
 In build `#458`, confirmation prompting for `/pay` was introduced, but rapidly became repetitive for some players. This feature aims to combat it by allowing individual players to toggle the confirm prompt at their own risk.
 
