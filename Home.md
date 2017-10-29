@@ -185,3 +185,14 @@ This feature introduces the command `/payconfirmtoggle` which modifies `confirm-
 This feature was implemented in ([0a563b9](https://github.com/drtshock/Essentials/commit/0a563b9)).
 
 This feature introduces the `teleport-to-center` configuration feature. When set to `true` - the default - all teleportations are centered to the block; technically, setting the x and z coordinate decimals to .5 and .5. When `teleport-to-center` is set to `false`, all teleports are performed to the exact location as given.
+
+### Mail chat formatting
+**This feature was added in [build 540](https://ci.ender.zone/job/EssentialsX) ([665229b](https://github.com/drtshock/Essentials/commit/665229b)).** _Requested in [#1560](/drtshock/Essentials/issues/1560)._
+
+This feature introduces the ability to format messages using the traditional ampersand (`&`) syntax.
+
+| Permission | Description |
+| essentials.mail.url | Allow use of URLs |
+| essentials.mail.color | Allow use of colors |
+| essentials.mail.magic | Allow use of obfuscated/magic text styling |
+| essentials.mail.format | Allow use of chat styles |
