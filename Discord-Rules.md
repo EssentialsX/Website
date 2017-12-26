@@ -1,10 +1,10 @@
-### Rules
+## Rules
 1. Don't be a dick
 2. Don't spam
 3. Don't advertise your discord or Minecraft server
 4. Use plugin channels for support
 
-### Projects
+## Projects
 | Project        | Discord Channel | Github           | Releases |
 | ------------- | --- | -------------| -----|
 | EssentialsX | #essentialsx | [Github](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
@@ -23,7 +23,7 @@ If it meets the following criteria, send Trent#4071 a message.
 * Other OSS developers close by that you can harass to help with your project <3
 
 
-### Roles
+## Roles
 | Role        | Criteria  |
 | ------------- | ------------- |
 | Developer | Dev on 1 of 3 projects |
