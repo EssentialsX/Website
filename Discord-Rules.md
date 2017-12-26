@@ -13,9 +13,9 @@
 
 #### Get Your Project Added
 If it meets the following criteria, send Trent#4071 a message.
-* Open Source (means an open source license and an open repository). Can be behind a paywall like FactionsUUID.
-* Non trivial project
-* 1k+ downloads if FOSS, 200+ purchases if behind paywall.
+- [x] Open Source (means an open source license and an open repository). Can be behind a paywall like FactionsUUID.
+- [x] Non trivial project
+- [x] 1k+ downloads if FOSS, 200+ purchases if behind paywall.
 
 #### Benefits of having your project here:
 * Part of an active community of OSS developers and users! We grew to 100 users in less than a week.
