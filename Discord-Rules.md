@@ -1,15 +1,15 @@
 ## Rules
 1. Don't be a dick
 2. Don't spam
-3. Don't advertise your discord or Minecraft server
+3. Don't advertise your Discord or Minecraft server
 4. Use plugin channels for support
 
 ## Projects
 | Project        | Discord Channel | Github           | Releases |
 | ------------- | --- | -------------| -----|
-| EssentialsX | #essentialsx | [Github](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
-| PlayerVaultsX    | #playervaultsx | [Github](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
-| FactionsUUID | #factionsuuid | [Github](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)    |
+| EssentialsX | #essentialsx | [GitHub](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
+| PlayerVaultsX    | #playervaultsx | [GitHub](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
+| FactionsUUID | #factionsuuid | [GitHub](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)    |
 
 #### Get Your Project Added
 If it meets the following criteria, send Trent#4071 a message.
