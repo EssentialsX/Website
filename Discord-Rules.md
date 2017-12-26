@@ -5,11 +5,13 @@
 4. Use plugin channels for support
 
 ### Projects
-| Project        | Github           | Releases |
-| ------------- |-------------| -----|
-| EssentialsX | [Github](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
-| PlayerVaultsX    | [Github](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
-| FactionsUUID | [Github](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)    |
+| Project        | Discord Channel | Github           | Releases |
+| ------------- | --- | -------------| -----|
+| EssentialsX | #essentialsx | [Github](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
+| PlayerVaultsX    | #playervaultsx | [Github](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
+| FactionsUUID | #factionsuuid | [Github](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)    |
+
+Want to add your project?
 
 
 ### Roles
