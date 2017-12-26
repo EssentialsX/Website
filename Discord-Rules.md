@@ -5,7 +5,7 @@
 4. Use plugin channels for support
 
 ## Projects
-| Project        | Discord Channel | GitHub           | Releases |
+| Project        | Discord Channel | Code Repo           | Releases |
 | ------------- | --- | -------------| -----|
 | EssentialsX | #essentialsx | [GitHub](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)|
 | PlayerVaultsX    | #playervaultsx | [GitHub](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
