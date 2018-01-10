@@ -12,7 +12,7 @@ In this example, the `[balance]` sign is enabled but the `[buy]` sign is not.
 Note that enabling `color` means that players will be allowed to use color codes in the sign text, but still requires that another sign type is enabled.
 
 ## EssentialsX overrides a command from Spigot or another plugin
-**Related issues: [#1458](/drtshock/Essentials/issue/1458)**  
+**Related issues: [#1458](/EssentialsX/Essentials/issue/1458)**  
 You can create an alias for commands using Bukkit's `commands.yml` file, which should be in your server root.
 
 The following example overrides `/ban` with Hammer's `/ban` command, forces `/tell` to run the vanilla `/tell` command, and forces EssentialsX to handle the `msg` command.
@@ -38,7 +38,7 @@ overridden-commands:
 This may not work consistently, however, so you may also need to alias the command to the `essentials:`-prefixed version of the same command. [See above](https://github.com/EssentialsX/Essentials/wiki/Common-Issues#essentialsx-overrides-a-command-from-spigot-or-another-plugin) for details.
 
 ## Tab completion doesn't work for commands that override an EssentialsX command
-**Related issues: [#1384](/drtshock/Essentials/issue/1384)**  
+**Related issues: [#1384](/EssentialsX/Essentials/issue/1384)**  
 You can alias the command to the version from the other plugin, which should fix tab complete behaviour - see above.
 
 ## I need help with GroupManager! <br /> Where's the updated GroupManager?
