@@ -11,8 +11,7 @@
 | PlayerVaultsX    | #playervaultsx | [GitHub](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/) |
 | FactionsUUID | #factionsuuid | [GitHub](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)    |
 | SafeTrade | #safetrade | [GitHub](https://github.com/BtoBastian/SafeTrade) | [Spigot](https://www.spigotmc.org/resources/safetrade.13885/) |
-| ObsidianDestroyer | #obsidiandestroyer | [GitHub](https://github.com/drtshock/ObsidianDestroyer) | [Spigot]
-(https://www.spigotmc.org/resources/obsidiandestroyer.1625/)
+| ObsidianDestroyer | #obsidiandestroyer | [GitHub](https://github.com/drtshock/ObsidianDestroyer) | [Spigot](https://www.spigotmc.org/resources/obsidiandestroyer.1625/)
 
 #### Get Your Project Added
 If it meets the following criteria, send Trent#4071 a message.
