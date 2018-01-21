@@ -11,7 +11,6 @@ For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
 * [Command Cooldowns](https://github.com/drtshock/Essentials/wiki/Command-Cooldowns)
 
 ## Differences between Essentials/Spigot-Essentials and EssentialsX
-* `/createkit <kitname> <delay>` - creates a kit out of your inventory.
 * Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired. You need to give the player essentials.gamemode to use the /gm command + whichever gamemodes you want them to be able to change to.
   * `essentials.gamemode.creative`
   * `essentials.gamemode.survival`
@@ -44,26 +43,29 @@ For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
 * Adds configuration option for the "Set fly mode enabled..." message on join: `send-fly-enable-on-join`
 * Fixes giving spawner eggs with entity ID values and potions with damage values in 1.9
 
-### Showkit
-Command: `/showkit <kitname>`
-Permission: `essentials.showkit`
-Shows a list of kit contents straight from config file.
+### Kits
+Kits have been moved from the main config to `kits.yml`. This means that kits can be created from in-game and automatically added to your server without needing to manually edit the config, while also retaining all the comments in `config.yml`.
+
+#### `/showkit`
+Command: `/showkit <kitname>`  
+Permission: `essentials.showkit`  
+Shows a list of kit contents straight from config file.  
 ![showkit](https://i.imgur.com/d4Ff8vN.png)
 
-### Createkit
-Command: `/createkit <kitname> <delay>`
-Permission: `essentials.createkit`
-Creates a kit from your inventory and puts it in the config file. *This will remove comments from your config file* :disappointed: 
+#### `/createkit`
+Command: `/createkit <kitname> <delay>`  
+Permission: `essentials.createkit`  
+If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.  
+If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.  
 ![createkit](https://i.imgur.com/nXMlNGP.png)
 
-### If placed spawners are still pigs
-* Assign `essentials.spawnerconvert.*` to your default group
+### Spawner Placement Fix
+If your placed spawners are still pig spawners, assign `essentials.spawnerconvert.*` to your default group.
 
 ### Controlled Private Messaging
-
 **This feature was added in [build 210](https://ci.ender.zone/job/EssentialsX).**
 
-There is a configurable feature you may set called `last-message-reply-recipient` that if set to `true` makes your reply-recipient whoever you messaged last and not whoever messaged you last, with the exception that if you do not have a reply-recipient then whoever messaged you last will be your reply-recipient.
+There is a configurable feature you may set called `last-message-reply-recipient`. If set to `true`, your reply recipient will be **whoever you messaged** last and *not* **whoever messaged you** last, unless you don't have a reply recipient, in which case whoever messaged you last will be your reply recipient.
 
 Here's a formatted scenario of the new last-message-reply-recipient feature:
 
@@ -85,23 +87,22 @@ Here's a formatted scenario of the new last-message-reply-recipient feature:
 
 If this feature is enabled, EssentialsX will take into account the `last-message-reply-recipient-timeout` setting. This setting allows you to configure the duration, in seconds, that the reply-recipient will not change, when receiving replies. If after this duration the recipient receives a message, the recipient's replies will start going to the latest message sender.
 
-### /seen UUID
+### `/seen` by UUID
 
 **This feature was added in [build 241](https://ci.ender.zone/job/EssentialsX) ([2e903ac](https://github.com/drtshock/Essentials/commit/2e903ac)).**
 
 Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
 
-### Per world /time setting permission
+### Per-world `/time` setting permission
 
 **This feature was added in [build 250](https://ci.ender.zone/job/EssentialsX) ([eb924b9](https://github.com/drtshock/Essentials/commit/eb924b9)).**
 
-**Note**: In [build 262](https://ci.ender.zone/job/EssentialsX) (c6d2746) this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
+**Note**: As of [build 262](https://ci.ender.zone/job/EssentialsX) (c6d2746), this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
 
 Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
 
-##### Permissions are as follow:
-
-permission | description
+#### Permissions
+Permission | Description
 ---|---
 | essentials.time.world.\<world\> | Permits the user to set the time in <world>. <world> is the world name with spaces replaced with _. e.g. My World becomes, my_world. |
 | essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
