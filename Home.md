@@ -6,45 +6,56 @@ For original permissions: http://wiki.mc-ess.net/wiki/Command_Reference/Perm
 
 For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
 
-## Pages
-* [BannerMeta](https://github.com/drtshock/Essentials/wiki/BannerMeta)
-* [Command Cooldowns](https://github.com/drtshock/Essentials/wiki/Command-Cooldowns)
+**Note:** You need to update *all* Essentials modules to the same version of EssentialsX to prevent version mismatch errors. You can find the latest version at the [build server](https://ci.ender.zone/job/EssentialsX/lastSuccessfulBuild). In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
 
-## Differences between Essentials/Spigot-Essentials and EssentialsX
-* Per gamemode permissions, which lets players run `/gma` and `/gms`, but not `/gmc` or `/gmsp` if desired. You need to give the player essentials.gamemode to use the /gm command + whichever gamemodes you want them to be able to change to.
-  * `essentials.gamemode.creative`
-  * `essentials.gamemode.survival`
-  * `essentials.gamemode.adventure`
-  * `essentials.gamemode.spectator`
-  * `essentials.gamemode.all`
-  
-  **Note**: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
-* Configuration option to not send `no new mail` notification on join.
-* Updated to latest Spigot / Minecraft version at all times, retaining support for versions going back to 1.8.
-* Actively maintained.
-* Updated enchantments.
+## Pages
+* [[Banner Metadata|BannerMeta]]
+* [[Command Cooldowns]]
+
+## Improvements over Essentials and Spigot Essentials
+* Actively maintained and updated for the latest Spigot and Minecraft versions at all times, retaining support going back to 1.8.
+* Support for updated enchantments, mobs, items and tree types.
 * Has buy/trade sign support for Minecraft 1.9.
+* Support for [[Banner Metadata|BannerMeta]] and [[Command Cooldowns]].
+* Configuration option to not send `no new mail` notification on join.
 * Allow commands in kits and use `{player}` to replace with player's name.
-* `/showkit <kitname>` to show the kit's contents.
-* BannerMeta support.
 * Fixed mob spawner support. This means you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners won't be pigs when placed.
+* Fixes giving spawner eggs with entity ID values and potions with damage values in 1.9.
+* Fixes sending and receiving money with EssentialsEco.
 * Uses UUID-backed Vault for permissions group and prefix/suffix lookups. This results in better performance due to not needing a name-to-UUID conversion. Spigot-Essentials implements UUID lookups for zPermissions, but not other permissions plugins. Because EssentialsX prioritizes Vault, all queries using the Vault handler should be much faster.
-* Adds an option to forcefully disable safe teleportation (very useful for Factions/raiding servers). Mainline Essentials only has two values for the `teleport-safety` option: to convert locations to safe teleports (results in plenty of exploits) or to deny the teleport entirely. EssentialsX adds a `force-disable-teleport-safety` option (default false) that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location. **Note: To disable cross-world teleportation safety, switch to PaperSpigot and set `disable-teleportation-suffocation-check` to true in paper.yml.** 
-* Supports more tree types compared to Essentials and Spigot-Essentials (Mega Redwood, Tall redwood, Tall Birch, etc...)
-* `/tppos` has an additional world name argument.
-* `/msgtoggle` command allows people to ignore all private messages with permission: `essentials.msgtoggle`
-* Fixes for sending and receiving money for EssentialsEco.
+* `/tppos` can now optionally accept a world name.
+* The `/msgtoggle` command allows people to ignore all private messages with permission: `essentials.msgtoggle`
 * Separate permissions for bulk sell and hand sell
   * `essentials.sell.hand`
   * `essentials.sell.bulk`
-* SocialSpy exempt with `essentials.chat.spy.exempt`
-* Improved translations for German and French
+* Adds a permission for exemption from SocialSpy: `essentials.chat.spy.exempt`
 * Adds configuration option for the milk bucket "easter egg", which (really shouldn't, but does) allow players to mess with other people's horses: `milk-bucket-easter-egg`
 * Adds configuration option for the "Set fly mode enabled..." message on join: `send-fly-enable-on-join`
-* Fixes giving spawner eggs with entity ID values and potions with damage values in 1.9
 
-### Kits
+### Per-gamemode permissions
+Permissions have been added for each gamemode with the EssentialsX `/gamemode` command, meaning that if desired, players may run `/gma` and `/gms`, but not `/gmc` or `/gmsp`. You need to give the player `essentials.gamemode` to use the /gm command, then whichever gamemodes you want them to be able to change to:
+* `essentials.gamemode.creative`
+* `essentials.gamemode.survival`
+* `essentials.gamemode.adventure`
+* `essentials.gamemode.spectator`
+* `essentials.gamemode.all`
+  
+**Note**: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
+
+### Kits changes
 Kits have been moved from the main config to `kits.yml`. This means that kits can be created from in-game and automatically added to your server without needing to manually edit the config, while also retaining all the comments in `config.yml`.
+
+In addition, commands are now supported in kits - simply add a line to your kit as follows:
+```yaml
+kits:
+  mykit:
+    delay: 1000
+    items:
+      - 272 1
+      - /your command here
+```
+
+You can also include `{player}`, which will be substituted for the player's name.
 
 #### `/showkit`
 Command: `/showkit <kitname>`  
@@ -59,7 +70,18 @@ If `pastebin-createkit` is set to false, creates a kit from your inventory and p
 If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.  
 ![createkit](https://i.imgur.com/nXMlNGP.png)
 
-### Spawner Placement Fix
+### Forcefully disable teleportation safety
+
+Upstream Essentials only has two values for the `teleport-safety` option:
+* Convert locations to safe teleports (results in plenty of exploits); or
+* Deny the teleport entirely.
+
+EssentialsX adds a `force-disable-teleport-safety` option (defaulting to false), that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location.
+
+**Note:** To disable cross-world teleportation safety, switch to PaperSpigot and set `disable-teleportation-suffocation-check` to true in paper.yml.
+
+
+### Spawner placement fix
 If your placed spawners are still pig spawners, assign `essentials.spawnerconvert.*` to your default group.
 
 ### Controlled Private Messaging
@@ -102,10 +124,10 @@ Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now 
 Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
 
 #### Permissions
-| Permission | Description |
-|------------|-------------|
+| Permission                      | Description |
+|---------------------------------|-------------|
 | essentials.time.world.`<world>` | Permits the user to set the time in `<world>`. `<world>` is the world name with spaces replaced with _. e.g. My World becomes, my_world. |
-| essentials.time.world.all | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
+| essentials.time.world.all       | Permits the user to set time of all worlds. This will override `essentials.time.world.<world>`. |
 
 ### AFK Player List name
 **This feature was added in [build 263](https://ci.ender.zone/job/EssentialsX) ([bbf657e](https://github.com/drtshock/Essentials/commit/bbf657e)).**
