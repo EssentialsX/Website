@@ -43,3 +43,71 @@ You can alias the command to the version from the other plugin, which should fix
 
 ## I need help with GroupManager! <br /> Where's the updated GroupManager?
 EssentialsX does not support GroupManager as it is an outdated and broken plugin. We recommend you switch to [LuckPerms](https://github.com/lucko/LuckPerms) as it is still an actively maintained and regularly updated plugin.
+
+## How do I build EssentialsX?
+Once you've ensured you have an up-to-date JDK and Maven installed, you need to build a few different Spigot versions using [Spigot BuildTools](https://www.spigotmc.org/wiki/buildtools/):
+```bash
+java -jar BuildTools.jar --rev 1.8
+java -jar BuildTools.jar --rev 1.8.3
+java -jar BuildTools.jar --rev 1.9
+java -jar BuildTools.jar --rev 1.9.4
+```
+
+This is required to allow EssentialsX's compatibility providers can build against older versions of the Spigot server, and only needs to be done once.
+
+Next, [download or clone EssentialsX](https://github.com/EssentialsX/Essentials), open a terminal in the root of the EssentialsX source and run:
+```bash
+mvn clean install
+```
+
+If this completes with no errors, you will be able to find each plugin jar in the `target` subdirectory of the respective plugin's directory - `Essentials/target/` will contain the EssentialsX jar, `EssentialsSpawn/target/` will contain the EssentialsXSpawn jar and so on.
+
+## How do I add EssentialsX as a dependency?
+### Maven
+Under `repositories` in your `pom.xml`, you need to add a new `repository` for the EssentialsX CI server:
+```xml
+<repositories>
+    ...
+    <repository>
+        <id>ess-repo</id>
+        <url>https://ci.ender.zone/plugin/repository/everything/</url>
+    </repository>
+</repositories>
+```
+
+Next, add EssentialsX as a `dependency` under `dependencies`:
+```xml
+<dependencies>
+    ...
+    <dependency>
+        <groupId>net.ess3</groupId>
+        <artifactId>EssentialsX</artifactId>
+        <version>2.0.1</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+Make sure the dependency is `provided` - you don't want to include the entire EssentialsX plugin within your plugin.
+
+You should now be able to build against EssentialsX's API in your IDE - you may need to reimport your project for this to work.
+
+### Gradle (untested)
+First, add the repository to your `build.gradle`:
+```groovy
+repositories {
+    maven {
+        url "https://ci.ender.zone/plugin/repository/everything/"
+    }
+}
+```
+
+Next, add the dependency as a `compileOnly` dependency:
+```groovy
+dependencies {
+    ...
+    compileOnly 'net.ess3:EssentialsX:2.0.1'
+}
+```
+
+You should now be able to build against EssentialsX's API in your IDE.
