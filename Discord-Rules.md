@@ -1,7 +1,7 @@
 ## Rules
 1. Don't be a dick
 2. Don't spam
-3. Don't advertise your Discord or Minecraft server
+3. Don't advertise (Discord, Minecraft server, premium plugins, etc.)
 4. Use plugin channels for support
 
 ## Projects
