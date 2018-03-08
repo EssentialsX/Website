@@ -52,7 +52,7 @@ kits:
     delay: 1000
     items:
       - 272 1
-      - /your command here
+      - /give {player} apple 1
 ```
 
 You can also include `{player}`, which will be substituted for the player's name.
