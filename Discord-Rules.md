@@ -9,6 +9,7 @@
 | ------------- | ------------- | ----- |
 | EssentialsX | [GitHub](https://github.com/EssentialsX/Essentials) | [Spigot](https://www.spigotmc.org/resources/essentialsx.9089/)
 | FactionsUUID | [GitHub](https://github.com/drtshock/Factions) | [Spigot](https://www.spigotmc.org/resources/factionsuuid.1035/)
+| SkinsRestorer | [GitHub](https://github.com/Th3Tr0LLeR/SkinsRestorer---Maro) / [Dev GitHub](https://github.com/DoNotSpamPls/SkinsRestorerX/) | [Spigot](https://www.spigotmc.org/resources/skinsrestorer.2124/)
 | PlayerVaultsX | [GitHub](https://github.com/drtshock/PlayerVaults) |[Spigot](https://www.spigotmc.org/resources/playervaultsx.51204/)
 | Forums.gg | N/A | [Website](https://forums.gg)
 | ObsidianDestroyer | [GitHub](https://github.com/drtshock/ObsidianDestroyer) | [Spigot](https://www.spigotmc.org/resources/obsidiandestroyer.1625/)
@@ -19,12 +20,12 @@
 #### Get Your Project Added
 If your project meets the following criteria, send Trent#4071 a message.
 - [x] Preferrably open source (although we can make exceptions). Can be behind a paywall like FactionsUUID.
-- [x] Non trivial project
+- [x] Non-trivial project
 - [x] Has a fair amount of active users/plugin downloads/repository forks/etc.
 
 #### Benefits of having your project here:
-* Part of an active community of OSS developers and users! We grew to 100 users in less than a week.
-* Project lead will be given `Developer` role and can give contributor to others.
+* Part of an active community of OSS developers and users! We grew to 100 users in less than a week and already have almost 700 users.
+* A `Project Lead` role that makes you stand out and can give contributor to others!
 * Other OSS developers close by that you can harass to help with your project <3
 
 ## Roles
