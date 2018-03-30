@@ -224,6 +224,6 @@ The following table defines the permissions introduced in this feature.
 | essentials.mail.format | Allow use of chat styles |
 
 ### Helmet slot hat
-**This was introduced in 7958cd0b880205edaeaf34420bafde8d5cc1f7ed - the first release to include this feature was 2.15.0.**
+**This was introduced in [7958cd0](https://github.com/EssentialsX/Essentials/commit/7958cd0b880205edaeaf34420bafde8d5cc1f7ed) - the first release to include this feature was 2.15.0.**
 
 If `allow-direct-hat` is enabled in the `config.yml`, then players with the permission `essentials.hat` can click on their helmet slot to place any block on their head, not just helmets.
