@@ -2,6 +2,8 @@
 
 EssentialsX is a fork of [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and are optimized further than the original.
 
+Updated permission list: https://essinfo.xeya.me/permissions.php
+
 For original permissions: http://wiki.mc-ess.net/wiki/Command_Reference/Perm
 
 For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
