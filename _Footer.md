@@ -1,0 +1,3 @@
+[![Release 2.15.0](https://img.shields.io/badge/release-2.15.0-E93B38.svg?style=flat-square)](https://github.com/EssentialsX/Essentials/releases/latest)
+[![Latest Build](https://img.shields.io/badge/dynamic/json.svg?url=https://ci.akpmakes.tech/job/EssentialsX/lastSuccessfulBuild/api/json&label=build&query=$.id&colorB=green&prefix=b&style=flat-square)](https://essentialsx.github.io/)
+[![Discord](https://img.shields.io/discord/390942438061113344.svg?style=flat-square)](https://discord.gg/h8CnPSw)
