@@ -1,4 +1,3 @@
-# Locale
 The Essentials project has made a effort to move all internal messages to a single location.  Throughout the code, everything from syntax errors to teleport requests, have been stripped out and replaced with a locale happy message template.
 Any code that is not currently in development should have its messages displaced to a single translation file.  Essentials ships with several copies of this file, with one file per locale, but you can replace, extend or add locale files by placing them in the Essentials plugin folder.
 
@@ -14,14 +13,20 @@ You can tell Essentials which locale you want it to use by setting the 'locale' 
 * Danish: 'da'
 * German: 'de'
 * Spanish: 'es'
+* Estonian 'et'
 * Finnish: 'fi'
 * French: 'fr'
+* Hungarian 'hu'
 * Italian: 'it'
+* Korean 'ko'
+* Lithuanian 'lt'
 * Dutch: 'nl'
 * Polish: 'pl'
-* Portugese: 'pt'
+* Portugese: 'pt', 'pt_BR' for Brazil
 * Romanian: 'ro'
+* Russian 'ru'
 * Swedish; 'sv'
+* Turkish 'tr'
 * Chinese: 'zh' for modern Chinese, 'zh_HK' for Hong Kong, and 'zh_TW' for traditional Chinese
 
 ## Defining Locale
