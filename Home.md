@@ -14,8 +14,8 @@ For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
 **Note:** You need to update *all* Essentials modules to the same version of EssentialsX to prevent version mismatch errors. You can find the latest version at the [build server](https://ci.ender.zone/job/EssentialsX/lastSuccessfulBuild). In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
 
 ## Pages
-* [[Banner Metadata|BannerMeta]]
-* [[Command Cooldowns]]
+* [Banner Metadata](BannerMeta)
+* [Command Cooldowns](Command-Cooldowns)
 
 ## Improvements over Essentials and Spigot Essentials
 * Actively maintained and updated for the latest Spigot and Minecraft versions at all times, retaining support going back to 1.8.
