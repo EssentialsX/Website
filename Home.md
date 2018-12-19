@@ -1,6 +1,6 @@
 # EssentialsX wiki!
 
-EssentialsX is a fork of [Esentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and are optimized further than the original.
+EssentialsX is a fork of [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and are optimized further than the original.
 
 Updated permission list: https://essinfo.xeya.me/permissions.php
 
