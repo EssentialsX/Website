@@ -71,6 +71,9 @@ Let's say you simply want to change the way currency is output so that the curre
 Most user messages can be disabled or hidden simply by setting the message string to blank, for example:
   noNewMail=
 
+## Contributing
+If you wish to contribute translations, you can do so using [crowdin](https://crowdin.com/project/essentialsx-official) or by editing one of the files and submitting a pull request.
+
 ## Other files
 ### plugin.yml
 On top of the locale file there are a few other locations or settings you might want to look into.  The essentials help system automatically parses each plugin's plugin.yml including it's own.  It is from these files that the syntax and command descriptions are from.  To have a complete in-game translation you may want to update these files to your native language.
