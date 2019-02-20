@@ -82,7 +82,7 @@ Next, add EssentialsX as a `dependency` under `dependencies`:
     <dependency>
         <groupId>net.ess3</groupId>
         <artifactId>EssentialsX</artifactId>
-        <version>2.15.0</version>
+        <version>2.16.0</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -106,7 +106,7 @@ Next, add the dependency as a `compileOnly` dependency:
 ```groovy
 dependencies {
     ...
-    compileOnly 'net.ess3:EssentialsX:2.15.0'
+    compileOnly 'net.ess3:EssentialsX:2.16.0'
 }
 ```
 
