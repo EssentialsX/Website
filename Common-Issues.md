@@ -15,11 +15,14 @@ Note that enabling `color` means that players will be allowed to use color codes
 **Related issues: [#1458](/EssentialsX/Essentials/issues/1458)**  
 You can create an alias for commands using Bukkit's `commands.yml` file, which should be in your server root.
 
-The following example overrides `/ban` with Hammer's `/ban` command, forces `/tell` to run the vanilla `/tell` command, and forces EssentialsX to handle the `msg` command.
+The example below does the following:
+* Overrides `/gc` with [spark](https://github.com/lucko/spark)'s `/profiler` command
+* Overrides `/tell` with the [vanilla `/tell`](https://minecraft.gamepedia.com/Commands/tell) command
+* Forces `/msg` to run EssentialsX's `/msg` command
 ```yaml
 aliases:
-    ban:
-    - "hammer:ban $1-"
+    gc:
+    - "spark:profiler $1-"
     tell:
     - "minecraft:tell $1-"
     msg:
@@ -29,13 +32,15 @@ aliases:
 See the [Bukkit wiki page](https://bukkit.gamepedia.com/Commands.yml#aliases) for more information.
 
 ## Another plugin is overriding an EssentialsX command
-You can force EssentialsX to handle commands that are also provided by another plugin using the [`overridden-commands` section](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml#L138) of your `config.yml`. This will tell EssentialsX not to "give up" the command to the other plugin. For example, to force EssentialsX to try and handle the `/msg` command, your section should look like this:
+Typically, if EssentialsX finds another plugin providing a command with the same name as one of EssentialsX's own commands, it will try and hand over that command to the other plugin. However, you can force EssentialsX to handle commands that are also provided by another plugin using the [`overridden-commands` section](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml#L138) of your `config.yml`. This will tell EssentialsX not to "give up" the command to the other plugin.
+
+For example, to force EssentialsX to handle the `/msg` command instead of passing it over to another plugin, your section should look like this:
 ```yaml
 overridden-commands:
   - msg
 ```
 
-This may not work consistently, however, so you may also need to alias the command to the `essentials:`-prefixed version of the same command. [See above](https://github.com/EssentialsX/Essentials/wiki/Common-Issues#essentialsx-overrides-a-command-from-spigot-or-another-plugin) for details.
+Note that in some cases, you may also need to alias the command to the `essentials:` version of the command. [See above](https://github.com/EssentialsX/Essentials/wiki/Common-Issues#essentialsx-overrides-a-command-from-spigot-or-another-plugin) for details. In addition, if you have a plugin running on your proxy ([BungeeCord](https://www.spigotmc.org/wiki/bungeecord/)/[Waterfall](https://github.com/PaperMC/Waterfall) or [Velocity](https://velocitypowered.com)), the command may not even reach the server. EssentialsX can't do anything about this - you need to fix this on the proxy.
 
 ## Tab completion doesn't work for commands that override an EssentialsX command
 **Related issues: [#1384](/EssentialsX/Essentials/issues/1384)**  
@@ -82,17 +87,17 @@ Next, add EssentialsX as a `dependency` under `dependencies`:
     <dependency>
         <groupId>net.ess3</groupId>
         <artifactId>EssentialsX</artifactId>
-        <version>2.16.0</version>
+        <version>2.16.1</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
 ```
 
-Make sure the dependency is `provided` - you don't want to include the entire EssentialsX plugin within your plugin.
+Make sure the dependency is `provided` - you don't want to include the whole of EssentialsX inside your plugin.
 
 You should now be able to build against EssentialsX's API in your IDE - you may need to reimport your project for this to work.
 
-### Gradle (untested)
+### Gradle
 First, add the repository to your `build.gradle`:
 ```groovy
 repositories {
@@ -106,7 +111,7 @@ Next, add the dependency as a `compileOnly` dependency:
 ```groovy
 dependencies {
     ...
-    compileOnly 'net.ess3:EssentialsX:2.16.0'
+    compileOnly 'net.ess3:EssentialsX:2.16.1'
 }
 ```
 
