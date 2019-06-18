@@ -1,17 +1,11 @@
 # EssentialsX wiki!
 
-EssentialsX is a fork of [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and are optimized further than the original.
+EssentialsX is a fork of the original [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and will be updated when you first run EssentialsX
 
-Updated permission list: https://essinfo.xeya.me/permissions.php
+**Commands list:** https://essinfo.xeya.me/commands.php  
+**Permissions list:** https://essinfo.xeya.me/permissions.php
 
-Updated command list: https://essinfo.xeya.me/commands.php
-
-
-For original permissions: http://wiki.mc-ess.net/wiki/Command_Reference/Perm
-
-For original commands: http://wiki.mc-ess.net/wiki/Command_Reference
-
-**Note:** You need to update *all* Essentials modules to the same version of EssentialsX to prevent version mismatch errors. You can find the latest version at the [build server](https://ci.ender.zone/job/EssentialsX/lastSuccessfulBuild). In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
+**Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
 
 ## Pages
 * [Banner Metadata](BannerMeta)
