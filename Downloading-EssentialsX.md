@@ -1,8 +1,8 @@
 ## Downloading EssentialsX
 
-You can download EssentialsX from the [website](https://essentialsx.github.io/#/) or from [the build server](https://ci.ender.zone/job/EssentialsX/). You will also need to install [Vault](https://www.spigotmc.org/resources/vault.34315/) and a permissions plugin like [LuckPerms]() to be able to control ranks, permissions, prefixes and suffixes for your players.
+You can download EssentialsX from the [website](https://essentialsx.github.io/#/) or from [the build server](https://ci.ender.zone/job/EssentialsX/). You will also need to install [Vault](https://www.spigotmc.org/resources/vault.34315/) and a permissions plugin like [LuckPerms](https://luckperms.github.io) to be able to control ranks, permissions, prefixes and suffixes for your players.
 
-EssentialsX is split up into several separate plugins. The only jar that is necessary for EssentialsX to work is the main `EssentialsX` jar, which contains most of the core features most servers will need. The other modules are optional and can be either installed alongside EssentialsX or [replaced with more in-depth plugins](#Alternatives).
+EssentialsX is split up into several separate plugins. The only jar that is necessary for EssentialsX to work is the main `EssentialsX` jar, which contains most of the core features most servers will need. The other modules are optional and can be either installed alongside EssentialsX or [replaced with more in-depth plugins](#alternatives).
 
 ### Core
 The core EssentialsX jar contains many of the core features for most servers. This includes most commands as well as signs, kits and the economy. **You need this jar for all the other modules to work.**
@@ -20,7 +20,7 @@ The core EssentialsX jar contains many of the core features for most servers. Th
 
 **EssentialsX XMPP** acts as a bridge between the XMPP chat network and your server. This allows players to chat across XMPP networks and your server, and can also report server errors to admins. *If you don't know what XMPP is, you don't need this!*
 
-#### Alternatives
+### Alternatives
 There are many alternative plugins that provide some of EssentialsX's features. If you use a dedicated chat plugin, you won't need to install EssentialsX Chat as it won't do anything useful. In addition, if you use [WorldGuard](http://worldguard.enginehub.org/), you may not need EssentialsX AntiBuild or Protect as WorldGuard includes many of the same features and more.
 
 <!--
