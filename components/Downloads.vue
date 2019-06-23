@@ -1,6 +1,6 @@
 <template>
-    <section class="content">
-        <h2>Download EssentialsX</h2>
+    <section class="section">
+        <h1 class="title">Download EssentialsX</h1>
         <div class="box">
             <p class="tip">
                 Not sure what the different jars do? See the <SaberLink to="/wiki/Downloading-EssentialsX.html">downloads guide</SaberLink>.
@@ -17,14 +17,23 @@
                 Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
             </p>
         </b-notification>
-        <table v-if="buildNo">
+        <table v-if="buildNo" class="table">
             <tr>
                 <th>Plugin</th>
                 <th>Download</th>
             </tr>
             <tr v-for="plugin in plugins" :key="plugin.name">
                 <td>{{ plugin.name }}</td>
-                <td><a :href="plugin.main">Download</a> <a v-if="plugin.mirror" :href="plugin.mirror">(mirror)</a></td>
+                <td>
+                    <a :href="plugin.main" class="button is-primary">
+                        <b-icon icon="download" size="is-small"></b-icon>
+                        <span>Official</span>
+                    </a>
+                    <a v-if="plugin.mirror" :href="plugin.mirror" class="button">
+                        <b-icon icon="download" size="is-small"></b-icon>
+                        <span>Mirror</span>
+                    </a>
+                </td>
             </tr>
         </table>
         <button v-if="!loading" @click="updateInfo" class="button">
