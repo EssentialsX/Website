@@ -9,7 +9,7 @@
             "Getting Started": [
                 { "label": "Downloading EssentialsX", "link": "/wiki/Downloading-EssentialsX.html" },
                 { "label": "Improvements over Essentials", "link": "/wiki/Home.html" },
-                { "label": "FAQs", "link": "/wiki/Common-Issues.html" }
+                { "label": "Frequently Asked Questions", "link": "/wiki/Common-Issues.html" }
             ],
             "Features": [
                 { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands", "children": [
