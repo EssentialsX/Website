@@ -1,15 +1,22 @@
 <template>
     <section class="content">
         <h2>Download EssentialsX</h2>
-        <p class="tip">
-            Not sure what the different jars do? See the <SaberLink to="/wiki/Downloading-EssentialsX.html">downloads guide</SaberLink>.
-        </p>
-        <p v-if="failed" class="warning">
-            Could not retrieve information about the latest version.
-            Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
-        </p>
-        <p v-if="loading"><i>Currently loading downloads, please wait...</i></p>
-        <p v-if="buildNo">The latest version of EssentialsX is <b>{{build}}</b>.</p>
+        <div class="box">
+            <p class="tip">
+                Not sure what the different jars do? See the <SaberLink to="/wiki/Downloading-EssentialsX.html">downloads guide</SaberLink>.
+            </p>
+            <p v-if="loading">
+                <b-icon icon="sync" custom-class="fa-spin" size="is-small"></b-icon>
+                <i>Currently loading downloads, please wait...</i>
+            </p>
+            <p v-if="buildNo">The latest version of EssentialsX is <b>{{build}}</b>.</p>
+        </div>
+        <b-notification type="is-danger" v-if="failed">
+            <p>
+                Could not retrieve information about the latest version.
+                Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
+            </p>
+        </b-notification>
         <table v-if="buildNo">
             <tr>
                 <th>Plugin</th>
@@ -20,7 +27,9 @@
                 <td><a :href="plugin.main">Download</a> <a v-if="plugin.mirror" :href="plugin.mirror">(mirror)</a></td>
             </tr>
         </table>
-        <button v-if="!loading" @click="updateInfo">Refresh</button>
+        <button v-if="!loading" @click="updateInfo" class="button">
+            <span>Refresh</span>
+        </button>
     </section>
 </template>
 

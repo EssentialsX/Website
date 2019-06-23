@@ -11,6 +11,12 @@
     "saber": "^0.6.8"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-regular-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@types/": "fortawesome/vue-fontawesome",
     "@types/axios": "^0.14.0",
     "@types/sass": "^1.16.0",
     "sass": "^1.21.0",
