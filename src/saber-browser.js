@@ -17,13 +17,15 @@ Vue.use(Buefy, {
     defaultIconPack: "fas"
 });
 
-Vue.use(KonamiCode, {
-    callback: function() {
-        if (!document) return;
-        if (document.body.classList.contains("konami")) {
-            document.body.classList.remove("konami");
-        } else {
-            document.body.classList.add("konami");
+// build process workaround
+if (typeof document !== "undefined") {
+    Vue.use(KonamiCode, {
+        callback: function () {
+            if (document.body.classList.contains("konami")) {
+                document.body.classList.remove("konami");
+            } else {
+                document.body.classList.add("konami");
+            }
         }
-    }
-})
+    });
+}
