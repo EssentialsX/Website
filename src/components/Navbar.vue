@@ -18,7 +18,18 @@
             </div>
 
             <div class="navbar-end">
-                <a href="https://github.com/EssentialsX/Essentials" class="navbar-item">GitHub</a>
+                <div class="navbar-item">
+                    <a href="https://github.com/EssentialsX/Essentials" class="button is-discord">
+                        <b-icon pack="fab" icon="discord"></b-icon>
+                        <span>Discord</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="https://github.com/EssentialsX/Essentials" class="button is-dark">
+                        <b-icon pack="fab" icon="github"></b-icon>
+                        <span>GitHub</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>

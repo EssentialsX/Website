@@ -5,6 +5,9 @@
 $primary: rgb(233, 59, 56);
 $primary-invert: findColorInvert($primary);
 
+$discord: #7289DA;
+$discord-invert: findColorInvert($discord);
+
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: ("white": ($white, $black),
     "black": ($black, $white),
@@ -14,7 +17,8 @@ $colors: ("white": ($white, $black),
     "info": ($info, $info-invert),
     "success": ($success, $success-invert),
     "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert));
+    "danger": ($danger, $danger-invert),
+    "discord": ($discord, $discord-invert));
 
 // Links
 $link: $primary;
@@ -24,6 +28,9 @@ $link-focus-border: $primary;
 // Menu component
 $menu-list-link-padding: 0.35em 0.75em;
 $menu-nested-list-margin: 0.25em;
+
+// Footer
+$footer-background-color: darken($white, 4%);
 
 // Import Bulma and Buefy styles
 @import "~bulma";
