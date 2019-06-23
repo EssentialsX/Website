@@ -1,0 +1,24 @@
+{
+    "siteConfig": {
+        "title": "EssentialsX",
+        "description": "The essential plugin for Spigot servers",
+        "lang": "en"
+    },
+    "themeConfig": {
+        "wikiSidebar": {
+            "Getting Started": [
+                { "label": "Downloading EssentialsX", "link": "/wiki/Downloading-EssentialsX.html" },
+                { "label": "Improvements over Essentials", "link": "/wiki/Home.html" },
+                { "label": "FAQs", "link": "/wiki/Common-Issues.html" }
+            ],
+            "Features": [
+                { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands", "children": [
+                    { "label": "Cooldowns", "link": "/wiki/Command-Cooldowns.html" }
+                ] },
+                { "label": "Permissions", "href": "https://essinfo.xeya.me/index.php?page=permissions" },
+                { "label": "Banner Meta", "link": "/wiki/BannerMeta.html" }
+            ]
+        }
+    },
+    "theme": "./src"
+}
