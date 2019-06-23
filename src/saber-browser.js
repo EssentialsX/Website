@@ -19,6 +19,7 @@ Vue.use(Buefy, {
 
 Vue.use(KonamiCode, {
     callback: function() {
+        if (!document) return;
         if (document.body.classList.contains("konami")) {
             document.body.classList.remove("konami");
         } else {
