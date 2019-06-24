@@ -9,6 +9,7 @@
             "Getting Started": [
                 { "label": "Downloading EssentialsX", "link": "/wiki/Downloading-EssentialsX.html" },
                 { "label": "Improvements over Essentials", "link": "/wiki/Home.html" },
+                { "label": "Changelogs", "link": "/wiki/Changelogs.html" },
                 { "label": "Frequently Asked Questions", "link": "/wiki/Common-Issues.html" }
             ],
             "Features": [
@@ -20,5 +21,16 @@
             ]
         }
     },
-    "theme": "./src"
+    "theme": "./src",
+    "markdown": {
+        "plugins": [
+            {
+                "resolve": "markdown-it-wikilinks",
+                "options": {
+                    "baseURL": "/wiki/",
+                    "makeAllLinksAbsolute": true
+                }
+            }
+        ]
+    }
 }

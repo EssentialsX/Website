@@ -20,6 +20,7 @@
     "@types/": "fortawesome/vue-fontawesome",
     "@types/axios": "^0.14.0",
     "@types/sass": "^1.16.0",
+    "markdown-it-wikilinks": "^1.0.1",
     "sass": "^1.21.0",
     "sass-loader": "^7.1.0"
   }
