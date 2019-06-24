@@ -14,7 +14,7 @@
 
         <div id="navbar-main" :class="mainClass">
             <div class="navbar-start">
-                <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
+                <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item">Wiki</SaberLink>
             </div>
 
             <div class="navbar-end">
