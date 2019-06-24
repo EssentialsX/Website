@@ -3,7 +3,7 @@
 `EssentialsX 2.15.0` was released on March 28th, 2018.
 
 Previous release: `EssentialsX 2.0.1-b488` on June 20th, 2017.
-Next release: [[`EssentialsX 2.16.0`|Changelog 2.16.0]] on January 3rd, 2019.
+Next release: [[`EssentialsX 2.16.0`|Changelog-2.16.0]] on January 3rd, 2019.
 
 ## Changes
 
