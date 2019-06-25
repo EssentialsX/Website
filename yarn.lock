@@ -4378,6 +4378,13 @@ saber-markdown@^0.0.8:
   resolved "https://registry.yarnpkg.com/saber-markdown/-/saber-markdown-0.0.8.tgz#b7d69b0e2572caff1fe3a1d5b8adcbc209d9c669"
   integrity sha512-GLwZf3QkNOX4EdfXcjEmyT+fpf7qvtwyvU9r+5HsaD5gNHRfKnjgzoaQuSZU+RLVkvKYzeGCFI72xq+d65tDdA==
 
+saber-plugin-netlify-redirect@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/saber-plugin-netlify-redirect/-/saber-plugin-netlify-redirect-0.0.6.tgz#3d6e8079f11176666562c9c6c9f748e6c50c3ffe"
+  integrity sha512-OH2GYsXd6+ggDP5Rv4YidZR/oSa11wLeTCEvRaOjUGxrOi+RR7KaOPsye8g36prt2UBhF9ek4I01J5DpBa7x3w==
+  dependencies:
+    url-join "^4.0.0"
+
 saber-utils@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/saber-utils/-/saber-utils-0.1.4.tgz#207539fc8dc4b8a19ff3930181752d760941e506"
@@ -5121,6 +5128,11 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+
+url-join@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.0.tgz#4d3340e807d3773bda9991f8305acdcc2a665d2a"
+  integrity sha1-TTNA6AfTdzvamZH4MFrNzCpmXSo=
 
 url-loader@^1.1.2:
   version "1.1.2"

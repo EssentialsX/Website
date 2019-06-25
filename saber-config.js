@@ -1,4 +1,4 @@
-{
+module.exports = {
     "siteConfig": {
         "title": "EssentialsX",
         "description": "The essential plugin for Spigot servers",
@@ -33,5 +33,8 @@
                 }
             }
         ]
-    }
+    },
+    "plugins": [
+        { "resolve": "saber-plugin-netlify-redirect" }
+    ]
 }
