@@ -13,11 +13,12 @@
                 { "label": "Frequently Asked Questions", "link": "/wiki/Common-Issues.html" }
             ],
             "Features": [
-                { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands", "children": [
-                    { "label": "Cooldowns", "link": "/wiki/Command-Cooldowns.html" }
-                ] },
-                { "label": "Permissions", "href": "https://essinfo.xeya.me/index.php?page=permissions" },
-                { "label": "Banner Meta", "link": "/wiki/BannerMeta.html" }
+                { "label": "Banner Meta", "link": "/wiki/BannerMeta.html" },
+                { "label": "Command Cooldowns", "link": "/wiki/Command-Cooldowns.html" }
+            ],
+            "Reference": [
+                { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands" },
+                { "label": "Permissions", "href": "https://essinfo.xeya.me/index.php?page=permissions" }
             ]
         }
     },
