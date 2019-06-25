@@ -9,7 +9,6 @@ module.exports = {
             "Getting Started": [
                 { "label": "Downloading EssentialsX", "link": "/wiki/Downloading-EssentialsX.html" },
                 { "label": "Improvements over Essentials", "link": "/wiki/Home.html" },
-                { "label": "Changelogs", "link": "/wiki/Changelogs.html" },
                 { "label": "Frequently Asked Questions", "link": "/wiki/Common-Issues.html" }
             ],
             "Features": [
@@ -18,7 +17,8 @@ module.exports = {
             ],
             "Reference": [
                 { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands" },
-                { "label": "Permissions", "href": "https://essinfo.xeya.me/index.php?page=permissions" }
+                { "label": "Permissions", "href": "https://essinfo.xeya.me/index.php?page=permissions" },
+                { "label": "Changelogs", "link": "/wiki/Changelogs.html" }
             ]
         }
     },
