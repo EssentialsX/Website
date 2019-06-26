@@ -2,8 +2,8 @@
 
 ## Getting started
 * [Download EssentialsX](https://github.com/EssentialsX/Essentials/wiki/Downloading-EssentialsX)
-* [Commands](https://essinfo.xeya.me/commands.php)
-* [Permissions](https://essinfo.xeya.me/commands.php)
+* [Commands](https://essinfo.xeya.me/index.php?page=commands)
+* [Permissions](https://essinfo.xeya.me/index.php?page=permissions)
 
 ## Features
 * [Improvements over Essentials](https://github.com/EssentialsX/Essentials/wiki#differences-between-essentialsspigot-essentials-and-essentialsx)
