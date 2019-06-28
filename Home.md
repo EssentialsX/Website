@@ -2,7 +2,7 @@
 
 EssentialsX is a fork of the original [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and will be updated when you first run EssentialsX
 
-**Commands list:** https://essinfo.xeya.me/commands.php
+**Commands list:** https://essinfo.xeya.me/commands.php  
 **Permissions list:** https://essinfo.xeya.me/permissions.php
 
 **Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
@@ -58,16 +58,16 @@ kits:
 You can also include `{player}`, which will be substituted for the player's name.
 
 #### `/showkit`
-Command: `/showkit <kitname>`
-Permission: `essentials.showkit`
-Shows a list of kit contents straight from config file.
+Command: `/showkit <kitname>`  
+Permission: `essentials.showkit`  
+Shows a list of kit contents straight from config file.  
 ![showkit](https://i.imgur.com/d4Ff8vN.png)
 
 #### `/createkit`
-Command: `/createkit <kitname> <delay>`
-Permission: `essentials.createkit`
-If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.
-If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.
+Command: `/createkit <kitname> <delay>`  
+Permission: `essentials.createkit`  
+If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.  
+If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.  
 ![createkit](https://i.imgur.com/nXMlNGP.png)
 
 ### Forcefully disable teleportation safety
@@ -78,8 +78,7 @@ Upstream Essentials only has two values for the `teleport-safety` option:
 
 EssentialsX adds a `force-disable-teleport-safety` option (defaulting to false), that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location.
 
-**Note:** To disable cross-world teleportation safety, switch to PaperSpigot and set `disable-teleportation-suffocation-check` to true in paper.yml.
-
+**Note:** To disable cross-world teleportation safety, switch to Paper and set `disable-teleportation-suffocation-check` to true in paper.yml.
 
 ### Spawner placement fix
 If your placed spawners are still pig spawners, assign `essentials.spawnerconvert.*` to your default group.
