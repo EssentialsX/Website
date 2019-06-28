@@ -2,7 +2,7 @@
 
 EssentialsX is a fork of the original [Essentials](https://github.com/essentials/Essentials). Most commands and permissions work the same way. Old Essentials files are compatible with EssentialsX and will be updated when you first run EssentialsX
 
-**Commands list:** https://essinfo.xeya.me/commands.php  
+**Commands list:** https://essinfo.xeya.me/commands.php
 **Permissions list:** https://essinfo.xeya.me/permissions.php
 
 **Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
@@ -10,6 +10,7 @@ EssentialsX is a fork of the original [Essentials](https://github.com/essentials
 ## Pages
 * [Banner Metadata](BannerMeta)
 * [Command Cooldowns](Command-Cooldowns)
+* [Color Permissions](Color-Permissions)
 
 ## Improvements over Essentials and Spigot Essentials
 * Actively maintained and updated for the latest Spigot and Minecraft versions at all times, retaining support going back to 1.8.
@@ -38,7 +39,7 @@ Permissions have been added for each gamemode with the EssentialsX `/gamemode` c
 * `essentials.gamemode.adventure`
 * `essentials.gamemode.spectator`
 * `essentials.gamemode.all`
-  
+
 **Note**: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
 
 ### Kits changes
@@ -57,16 +58,16 @@ kits:
 You can also include `{player}`, which will be substituted for the player's name.
 
 #### `/showkit`
-Command: `/showkit <kitname>`  
-Permission: `essentials.showkit`  
-Shows a list of kit contents straight from config file.  
+Command: `/showkit <kitname>`
+Permission: `essentials.showkit`
+Shows a list of kit contents straight from config file.
 ![showkit](https://i.imgur.com/d4Ff8vN.png)
 
 #### `/createkit`
-Command: `/createkit <kitname> <delay>`  
-Permission: `essentials.createkit`  
-If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.  
-If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.  
+Command: `/createkit <kitname> <delay>`
+Permission: `essentials.createkit`
+If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.
+If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.
 ![createkit](https://i.imgur.com/nXMlNGP.png)
 
 ### Forcefully disable teleportation safety
@@ -120,7 +121,7 @@ Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now 
 
 **Note**: As of [build 262](https://ci.ender.zone/job/EssentialsX) (c6d2746), this feature can now be enabled by setting the `world-time-permissions` config property to `true`. `world-time-permissions` is set to false by default.
 
-Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world. 
+Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, despite world-permissions provided via permission plugins. This build provides the feature of per world permissions for setting the time of a world.
 
 #### Permissions
 | Permission                      | Description |
@@ -150,7 +151,7 @@ PR #198 introduced the ability to limit /nick to only allow color changes, ensur
 
 However, this feature also introduced the `essentials.nick.changecolors.bypass` permission node. Where if a player has the preceeding permission they are allowed to bypass the check and thus be able to change the characters of their name. This was originally created to ensure convenience for Server Operators without breaking functionality when they updated EssentialsX.
 
-**Note**: This permission requires the `essentials.nick.color` permission in order to use colors in the nickname to begin with. 
+**Note**: This permission requires the `essentials.nick.color` permission in order to use colors in the nickname to begin with.
 
 ### Teleport to spawn when joining
 
