@@ -1,13 +1,13 @@
 <template>
     <section class="section">
         <h1 class="title">Download EssentialsX</h1>
-        <div class="box">
+        <div class="box content">
             <p class="tip">
                 Not sure what the different jars do? See the <SaberLink to="/wiki/Downloading-EssentialsX.html">downloads guide</SaberLink>.
             </p>
             <p v-if="loading">
-                <b-icon icon="sync" custom-class="fa-spin" size="is-small"></b-icon>
                 <i>Currently loading downloads, please wait...</i>
+                <progress class="progress is-primary" max="100">60%</progress>
             </p>
             <p v-if="buildNo">The latest version of EssentialsX is <b>{{build}}</b>.</p>
         </div>
@@ -17,25 +17,53 @@
                 Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
             </p>
         </b-notification>
-        <table v-if="buildNo" class="table">
-            <tr>
-                <th>Plugin</th>
-                <th>Download</th>
-            </tr>
-            <tr v-for="plugin in plugins" :key="plugin.name">
-                <td>{{ plugin.name }}</td>
-                <td>
-                    <a :href="plugin.main" class="button is-primary">
-                        <b-icon icon="download" size="is-small"></b-icon>
-                        <span>Official</span>
-                    </a>
-                    <a v-if="plugin.mirror" :href="plugin.mirror" class="button">
-                        <b-icon icon="download" size="is-small"></b-icon>
-                        <span>Mirror</span>
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <div v-if="buildNo" class="tile is-ancestor">
+            <div class="tile is-parent is-vertical is-3">
+                <downloads-tile
+                    bold="true"
+                    text="EssentialsX"
+                    description="The main EssentialsX plugin"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX '].main"
+                />
+            </div>
+            <div class="tile is-parent is-vertical is-3">
+                <downloads-tile
+                    text="AntiBuild"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX AntiBuild'].main"
+                />
+                <downloads-tile
+                    text="Protect"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX Protect'].main"
+                />
+            </div>
+            <div class="tile is-parent is-vertical is-3">
+                <downloads-tile
+                    text="Chat"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX Chat'].main"
+                />
+                <downloads-tile
+                    text="Spawn"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX Spawn'].main"
+                />
+            </div>
+            <div class="tile is-parent is-vertical is-3">
+                <downloads-tile
+                    text="GeoIP"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX GeoIP'].main"
+                />
+                <downloads-tile
+                    text="XMPP"
+                    :version="buildNo"
+                    :url="plugins['EssentialsX XMPP'].main"
+                />
+            </div>
+        </div>
         <button v-if="!loading" @click="updateInfo" class="button">
             <span>Refresh</span>
         </button>
@@ -43,6 +71,8 @@
 </template>
 
 <script>
+import DownloadsTile from "./DownloadsTile.vue";
+
 import axios from "axios";
 
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
@@ -67,7 +97,7 @@ export default {
             buildNo: null,
             failed: null,
             loading: null,
-            plugins: [],
+            plugins: {},
         };
     },
     computed: {
@@ -81,13 +111,14 @@ export default {
             axios.get("lastSuccessfulBuild/api/json")
                 .then(response => {
                     this.buildNo = getVersionFromArtifact(response.data.artifacts[0].displayPath);;
-                    this.plugins = response.data.artifacts.map(artifact => {
-                        return {
-                            name: `EssentialsX ${artifact.displayPath.match(/EssentialsX([A-Za-z]*)/)[1]}`,
+                    response.data.artifacts.forEach(artifact => {
+                        const name = `EssentialsX ${artifact.displayPath.match(/EssentialsX([A-Za-z]*)/)[1]}`;
+                        this.plugins[name] = {
                             main: `${mainCI}lastSuccessfulBuild/artifact/${artifact.relativePath}`,
                             mirror: mirrorCI ? `${mirrorCI}lastSuccessfulBuild/artifact/${artifact.relativePath}` : null,
                         };
                     });
+
                     this.failed = null;
                     this.loading = false;
                 }, error => {
@@ -103,6 +134,9 @@ export default {
     },
     mounted: function () {
         this.updateInfo();
+    },
+    components: {
+        DownloadsTile
     }
 }
 </script>
