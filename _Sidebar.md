@@ -9,6 +9,7 @@
 * [Improvements over Essentials](Improvements)
 * [Banner Metadata](BannerMeta)
 * [Command Cooldowns](Command-Cooldowns)
+* [Color Permissions](Color-Permissions)
 
 ## Support
 * [Common Issues](Common-Issues)
