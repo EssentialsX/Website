@@ -1,17 +1,17 @@
 [![**EssentialsX Wiki**](https://camo.githubusercontent.com/9ad178e5cf76a372d6aaee8bbdf13485fbc1d51b/68747470733a2f2f692e696d6775722e636f6d2f435034535a70422e706e67)](https://github.com/EssentialsX/Essentials/wiki)
 
 ## Getting started
-* [Download EssentialsX](https://github.com/EssentialsX/Essentials/wiki/Downloading-EssentialsX)
+* [Download EssentialsX](Downloading-EssentialsX)
 * [Commands](https://essinfo.xeya.me/index.php?page=commands)
 * [Permissions](https://essinfo.xeya.me/index.php?page=permissions)
 
 ## Features
-* [Improvements over Essentials](https://github.com/EssentialsX/Essentials/wiki#differences-between-essentialsspigot-essentials-and-essentialsx)
-* [Banner Metadata](https://github.com/EssentialsX/Essentials/wiki/BannerMeta)
-* [Command Cooldowns](https://github.com/EssentialsX/Essentials/wiki/Command-Cooldowns)
+* [Improvements over Essentials](Improvements)
+* [Banner Metadata](BannerMeta)
+* [Command Cooldowns](Command-Cooldowns)
 
 ## Support
-* [Common Issues](https://github.com/EssentialsX/Essentials/wiki/Common-Issues)
+* [Common Issues](Common-Issues)
 * [Issue Tracker](https://github.com/EssentialsX/Essentials/issues)
 
 ---
