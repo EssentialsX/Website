@@ -1,10 +1,10 @@
 # EssentialsX wiki!
 
 EssentialsX is the essential plugin for Spigot servers, providing the core features and functionality for Minecraft servers of any size and scale. These features include:
-* Homes and Warps - `/home`, `/warp`
-* Teleports and teleport requests - `/tp`, `/tppos`, `/tpa`
 * Private messaging - `/msg`, `/r`, `/mail`
 * Moderation commands - `/kick`, `/ban`, `/mute`, `/jail`
+* Teleports and teleport requests - `/tp`, `/tppos`, `/tpa`
+* Homes and warps - `/home`, `/warp`
 * Vault Economy
 
 EssentialsX also has a handful of additional useful features:
