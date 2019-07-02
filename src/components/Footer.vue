@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">
+    <footer class="footer has-background-black-ter has-text-white">
         <div class="section content">
             <p>
                 <b>EssentialsX</b> by <a href="https://github.com/EssentialsX"><b>EssentialsX team</b></a>,
@@ -8,37 +8,39 @@
             <p>
                 Website by <a href="https://github.com/md678685"><b>md678685</b></a>, with the help of wiki contributors.
             </p>
-            <div class="field is-grouped is-grouped-multi has-text-weight-semibold">
-                <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
-                    <div class="tags has-addons">
-                        <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-dark">Downloads</a>
-                        <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-spigot">{{ downloads }} downloads</a>
-                    </div>
-                </b-tooltip>
-                <b-tooltip class="control" multilined label="Visit us on GitHub">
-                    <div class="tags has-addons">
-                        <a href="https://github.com/EssentialsX/Essentials/" class="tag is-dark">GitHub</a>
-                        <a href="https://github.com/EssentialsX/Essentials/" class="tag is-black">{{ stars }} stars</a>
-                    </div>
-                </b-tooltip>
-                <b-tooltip class="control" multilined label="View all changelogs">
-                    <div class="tags has-addons">
-                        <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Release</a>
-                        <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.17.0</a>
-                    </div>
-                </b-tooltip>
-                <b-tooltip class="control" multilined label="Visit the build server">
-                    <div class="tags has-addons">
-                        <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-dark">Jenkins</a>
-                        <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-success">b{{ buildNo }}</a>
-                    </div>
-                </b-tooltip>
-                <b-tooltip class="control" multilined :label="membersHover + ' people chatting on Discord'">
-                    <div class="tags has-addons">
-                        <a href="https://discord.gg/h8CnPSw" class="tag is-dark">Discord</a>
-                        <a href="https://discord.gg/h8CnPSw" class="tag is-discord">{{ members }} online</a>
-                    </div>
-                </b-tooltip>
+            <div class="box has-background-black-bis">
+                <div class="field is-grouped is-grouped-multi has-text-weight-semibold">
+                    <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
+                        <div class="tags has-addons">
+                            <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-dark">Downloads</a>
+                            <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-spigot">{{ downloads }} downloads</a>
+                        </div>
+                    </b-tooltip>
+                    <b-tooltip class="control" multilined label="Visit us on GitHub">
+                        <div class="tags has-addons">
+                            <a href="https://github.com/EssentialsX/Essentials/" class="tag is-dark">GitHub</a>
+                            <a href="https://github.com/EssentialsX/Essentials/" class="tag is-black">{{ stars }} stars</a>
+                        </div>
+                    </b-tooltip>
+                    <b-tooltip class="control" multilined label="View all changelogs">
+                        <div class="tags has-addons">
+                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Release</a>
+                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.17.0</a>
+                        </div>
+                    </b-tooltip>
+                    <b-tooltip class="control" multilined label="Visit the build server">
+                        <div class="tags has-addons">
+                            <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-dark">Jenkins</a>
+                            <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-success">b{{ buildNo }}</a>
+                        </div>
+                    </b-tooltip>
+                    <b-tooltip class="control" multilined :label="membersHover + ' people chatting on Discord'">
+                        <div class="tags has-addons">
+                            <a href="https://discord.gg/h8CnPSw" class="tag is-dark">Discord</a>
+                            <a href="https://discord.gg/h8CnPSw" class="tag is-discord">{{ members }} online</a>
+                        </div>
+                    </b-tooltip>
+                </div>
             </div>
         </div>
         <div class="section hide-until-code">
