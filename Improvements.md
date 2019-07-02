@@ -51,16 +51,16 @@ kits:
 You can also include `{player}`, which will be substituted for the player's name.
 
 #### `/showkit`
-Command: `/showkit <kitname>`  
-Permission: `essentials.showkit`  
-Shows a list of kit contents straight from config file.  
+Command: `/showkit <kitname>`
+Permission: `essentials.showkit`
+Shows a list of kit contents straight from config file.
 ![showkit](https://i.imgur.com/d4Ff8vN.png)
 
 #### `/createkit`
-Command: `/createkit <kitname> <delay>`  
-Permission: `essentials.createkit`  
-If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.  
-If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.  
+Command: `/createkit <kitname> <delay>`
+Permission: `essentials.createkit`
+If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.
+If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.
 ![createkit](https://i.imgur.com/nXMlNGP.png)
 
 ### Forcefully disable teleportation safety
@@ -189,7 +189,7 @@ This feature introduces the `teleport-to-center` configuration feature. When set
 ### Mail chat formatting
 _Requested in [#1560](/drtshock/Essentials/issues/1560); added in [665229b](https://github.com/drtshock/Essentials/commit/665229b)._
 
-This feature introduces the ability to format `/mail` messages using [`&` formatting codes](Color-Permissions) - see the link for more detail.
+This feature introduces the ability to format `/mail` messages using `&` formatting codes - [click here](Color-Permissions) for more information.
 
 ### Helmet slot hat
 _Added in [7958cd0](https://github.com/EssentialsX/Essentials/commit/7958cd0b880205edaeaf34420bafde8d5cc1f7ed)._
