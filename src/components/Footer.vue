@@ -9,7 +9,7 @@
                 Website by <a href="https://github.com/md678685"><b>md678685</b></a>, with the help of wiki contributors.
             </p>
             <div class="box has-background-black-bis">
-                <div class="field is-grouped is-grouped-multi has-text-weight-semibold">
+                <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
                     <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
                         <div class="tags has-addons">
                             <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-dark">Downloads</a>
