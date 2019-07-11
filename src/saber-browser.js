@@ -29,3 +29,14 @@ if (typeof document !== "undefined") {
         }
     });
 }
+
+export default ({ setHead }) => {
+  setHead({
+    meta: [
+        {
+            name: "description",
+            content: "The essential plugin for Spigot servers."
+        }
+    ]
+  });
+}

@@ -26,10 +26,16 @@ import Footer from "../components/Footer.vue";
 import WikiMenu from "../components/WikiMenu.vue";
 
 export default {
+    props: ['page'],
     components: {
         Navbar,
         Footer,
         WikiMenu
+    },
+    head() {
+        return {
+            title: `${this.page.attributes.title} - ${this.$siteConfig.title} Wiki`
+        }
     }
 }
 </script>

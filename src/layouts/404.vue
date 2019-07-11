@@ -22,6 +22,11 @@ export default {
     components: {
         Navbar,
         Footer
+    },
+    head() {
+        return {
+            title: `404 Not Found - ${this.$siteConfig.title}`
+        }
     }
 }
 </script>

@@ -19,9 +19,13 @@
 <script>
 import Downloads from "../components/Downloads.vue";
 
+export const attributes = {
+    title: "Downloads"
+};
+
 export default {
     components: {
         Downloads
     }
-}
+};
 </script>
