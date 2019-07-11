@@ -7,13 +7,15 @@ module.exports = {
     "themeConfig": {
         "wikiSidebar": {
             "Getting Started": [
+                { "label": "Introduction", "link": "/wiki/Home.html" },
                 { "label": "Downloading EssentialsX", "link": "/wiki/Downloading-EssentialsX.html" },
-                { "label": "Improvements over Essentials", "link": "/wiki/Home.html" },
+                { "label": "Improvements over Essentials", "link": "/wiki/Improvements.html" },
                 { "label": "Frequently Asked Questions", "link": "/wiki/Common-Issues.html" }
             ],
             "Features": [
                 { "label": "Banner Meta", "link": "/wiki/BannerMeta.html" },
-                { "label": "Command Cooldowns", "link": "/wiki/Command-Cooldowns.html" }
+                { "label": "Command Cooldowns", "link": "/wiki/Command-Cooldowns.html" },
+                { "label": "Color Permissions", "link": "/wiki/Color-Permissions.html" }
             ],
             "Reference": [
                 { "label": "Commands", "href": "https://essinfo.xeya.me/index.php?page=commands" },
