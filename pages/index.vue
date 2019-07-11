@@ -11,23 +11,14 @@
                 <Navbar :hero="true" />
             </div>
         </div>
-        <div class="section">
-            <div class="container">
-                <ClientOnly>
-                    <Downloads></Downloads>
-                </ClientOnly>
-            </div>
-        </div>
     </div>
 </template>
 
 <script>
-import Downloads from "../components/Downloads.vue";
 import Navbar from "../src/components/Navbar.vue";
 
 export default {
     components: {
-        Downloads,
         Navbar
     }
 };

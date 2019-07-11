@@ -18,7 +18,9 @@
             </div>
 
             <div class="navbar-end">
+                <SaberLink to="/downloads.html" class="navbar-item">Downloads</SaberLink>
                 <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item">Wiki</SaberLink>
+
                 <div class="navbar-item">
                     <a href="https://github.com/EssentialsX/Essentials" :class="buttonClass('is-discord')">
                         <b-icon pack="fab" icon="discord"></b-icon>

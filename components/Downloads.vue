@@ -1,6 +1,5 @@
 <template>
     <section class="section">
-        <h1 class="title">Download EssentialsX</h1>
         <div class="box content">
             <p class="tip">
                 Not sure what the different jars do? See the <SaberLink to="/wiki/Downloading-EssentialsX.html">downloads guide</SaberLink>.
@@ -22,7 +21,7 @@
                 <downloads-tile
                     bold="true"
                     text="EssentialsX"
-                    description="The main EssentialsX plugin"
+                    description="Core features"
                     :version="buildNo"
                     :url="plugins['EssentialsX '].main"
                 />
@@ -30,11 +29,13 @@
             <div class="tile is-parent is-vertical is-3">
                 <downloads-tile
                     text="AntiBuild"
+                    description="Build permissions"
                     :version="buildNo"
                     :url="plugins['EssentialsX AntiBuild'].main"
                 />
                 <downloads-tile
                     text="Protect"
+                    description="World and gameplay rules"
                     :version="buildNo"
                     :url="plugins['EssentialsX Protect'].main"
                 />
@@ -42,11 +43,13 @@
             <div class="tile is-parent is-vertical is-3">
                 <downloads-tile
                     text="Chat"
+                    description="Chat formatting, local chat"
                     :version="buildNo"
                     :url="plugins['EssentialsX Chat'].main"
                 />
                 <downloads-tile
                     text="Spawn"
+                    description="Spawn point management"
                     :version="buildNo"
                     :url="plugins['EssentialsX Spawn'].main"
                 />
@@ -54,11 +57,13 @@
             <div class="tile is-parent is-vertical is-3">
                 <downloads-tile
                     text="GeoIP"
+                    description="Geolocation add-ons"
                     :version="buildNo"
                     :url="plugins['EssentialsX GeoIP'].main"
                 />
                 <downloads-tile
                     text="XMPP"
+                    description="Jabber chat integration"
                     :version="buildNo"
                     :url="plugins['EssentialsX XMPP'].main"
                 />
