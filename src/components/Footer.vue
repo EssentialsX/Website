@@ -40,6 +40,12 @@
                             <a href="https://discord.gg/h8CnPSw" class="tag is-discord">{{ members }} online</a>
                         </div>
                     </b-tooltip>
+                    <b-tooltip v-if="commitHash" class="control" multilined label="View the website source code">
+                        <div class="tags has-addons">
+                            <a :href="commitLink" class="tag is-dark">Website</a>
+                            <a :href="commitLink" class="tag is-white-bis">{{ commitHash }}</a>
+                        </div>
+                    </b-tooltip>
                 </div>
             </div>
         </div>
@@ -53,6 +59,7 @@
 import axios from "axios";
 
 export default {
+    props: ["page"],
     data() {
         return {
             downloads: "744k",
@@ -79,6 +86,14 @@ export default {
 
             getBuildNo().then(buildNo => this.buildNo = buildNo);
         }
+    },
+    computed: {
+        commitHash() {
+            return this.$siteConfig.commitHash;
+        },
+        commitLink() {
+            return "https://github.com/md678685/EssentialsX-Website/commit/" + this.commitHash;
+        },
     },
     mounted() {
         this.update();
