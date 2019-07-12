@@ -22,6 +22,12 @@
                 <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item">Wiki</SaberLink>
 
                 <div class="navbar-item">
+                    <a href="https://www.patreon.com/essentialsx" :class="buttonClass('is-patreon')">
+                        <b-icon pack="fab" icon="patreon" size="is-small"></b-icon>
+                        <span>Patreon</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
                     <a href="https://github.com/EssentialsX/Essentials" :class="buttonClass('is-discord')">
                         <b-icon pack="fab" icon="discord"></b-icon>
                         <span>Discord</span>
@@ -72,7 +78,7 @@ export default {
                 button: true,
                 [colour]: !this.hero,
                 "is-white": this.hero,
-                "is-outlined": this.hero
+                "is-outlined": this.hero,
             }
         }
     }

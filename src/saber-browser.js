@@ -4,12 +4,12 @@ import "./style/main.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faSync, faExternalLinkSquareAlt, faDownload } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faDiscord, faPatreon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import KonamiCode from "vue-konami-code";
 
-library.add(faSync, faExternalLinkSquareAlt, faGithub, faDiscord, faDownload);
+library.add(faSync, faExternalLinkSquareAlt, faGithub, faDiscord, faDownload, faPatreon);
 Vue.component('vue-fontawesome', FontAwesomeIcon);
 
 Vue.use(Buefy, {

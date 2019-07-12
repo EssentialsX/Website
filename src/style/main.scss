@@ -11,6 +11,9 @@ $discord-invert: findColorInvert($discord);
 $spigot: #ee8a18;
 $spigot-invert: findColorInvert($spigot);
 
+$patreon: #f86754;
+$patreon-invert: findColorInvert($patreon);
+
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: ("white": ($white, $black),
     "black": ($black, $white),
@@ -22,7 +25,8 @@ $colors: ("white": ($white, $black),
     "warning": ($warning, $warning-invert),
     "danger": ($danger, $danger-invert),
     "discord": ($discord, $discord-invert),
-    "spigot": ($spigot, $spigot-invert));
+    "spigot": ($spigot, $spigot-invert),
+    "patreon": ($patreon, $patreon-invert));
 
 // Links
 $link: $primary;
