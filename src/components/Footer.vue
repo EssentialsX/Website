@@ -6,7 +6,8 @@
                 based on the original plugin by <a href="https://github.com/Essentials">the Essentials team</a>.
             </p>
             <p>
-                Website by <a href="https://github.com/md678685"><b>md678685</b></a>, with the help of wiki contributors.
+                Website by <a href="https://github.com/md678685"><b>md678685</b></a>, with the help of <a href="https://github.com/EssentialsX/wiki/graphs/contributors">wiki contributors</a>.
+                Built with <a href="https://saber.land">Saber</a>, <a href="https://bulma.io">Bulma</a>, <a href="https://vuejs.org">Vue</a> and <a href="https://buefy.org/">Buefy</a>.
             </p>
             <div class="box has-background-black-bis">
                 <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
