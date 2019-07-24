@@ -4,12 +4,7 @@ EssentialsX is the essential plugin for Spigot servers, providing the core featu
 * Private messaging - `/msg`, `/r`, `/mail`
 * Moderation commands - `/kick`, `/ban`, `/mute`, `/jail`
 * Teleports and teleport requests - `/tp`, `/tppos`, `/tpa`
-* Homes and warps - `/home`, `/warp`
-* Vault Economy
-
-EssentialsX also has a handful of additional useful features:
-* Player information - `/whois`, `seen`, `/getpos`
-* Server information - `/gc`, `/list`
+* Homfc
 * Admin tools - `/gamemode`, `/powertool`
 * Utility commands - `/spawner`
 * Cheats - `/give`, `/spawnmob`
