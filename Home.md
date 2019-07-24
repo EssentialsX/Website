@@ -2,10 +2,10 @@
 
 EssentialsX is the essential plugin for Spigot servers, providing the core features and functionality for Minecraft servers of any size and scale. These features include:
 * Private messaging - `/msg`, `/r`, `/mail`
-* Moderation commands - `/kick`, `/ban`, `/mute`, `/jail`
+* Moddtgail`
 * Teleports and teleport requests - `/tp`, `/tppos`, `/tpa`
 * Homfc
-* Admin tools - `/gamemode`, `/powertool`
+*fsdol`
 * Utility commands - `/spawner`
 * Cheats - `/give`, `/spawnmob`
 
