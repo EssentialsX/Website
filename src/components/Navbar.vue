@@ -19,7 +19,7 @@
 
             <div class="navbar-end">
                 <SaberLink to="/downloads.html" class="navbar-item">Downloads</SaberLink>
-                <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item">Wiki</SaberLink>
+                <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
 
                 <div class="navbar-item">
                     <a href="https://www.patreon.com/essentialsx" :class="buttonClass('is-patreon')">
@@ -28,7 +28,7 @@
                     </a>
                 </div>
                 <div class="navbar-item">
-                    <a href="https://github.com/EssentialsX/Essentials" :class="buttonClass('is-discord')">
+                    <a href="https://discord.gg/WPaDhms" :class="buttonClass('is-discord')">
                         <b-icon pack="fab" icon="discord"></b-icon>
                         <span>Discord</span>
                     </a>
