@@ -3,7 +3,7 @@
         <div class="hero is-primary">
             <div class="hero-body">
                 <h1 class="title">Download EssentialsX</h1>
-                <h2 class="subtitle">Get the latest builds of all the EssentialsX plugins</h2>
+                <h2 class="subtitle">Get bleeding edge builds of EssentialsX and add-ons.</h2>
             </div>
         </div>
         <div class="section">

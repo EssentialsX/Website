@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" :class="{ 'is-primary': !hero, 'is-dark': hero }" role="navigation" aria-label="main navigation">
+    <nav class=" is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <SaberLink class="navbar-item" to="/" v-if="!hero">
                 <b>{{ $siteConfig.title }}</b>
@@ -18,6 +18,7 @@
             </div>
 
             <div class="navbar-end">
+                <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
                 <SaberLink to="/downloads.html" class="navbar-item">Downloads</SaberLink>
                 <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
 
@@ -25,18 +26,6 @@
                     <a href="https://www.patreon.com/essentialsx" :class="buttonClass('is-patreon')">
                         <b-icon pack="fab" icon="patreon" size="is-small"></b-icon>
                         <span>Patreon</span>
-                    </a>
-                </div>
-                <div class="navbar-item">
-                    <a href="https://discord.gg/WPaDhms" :class="buttonClass('is-discord')">
-                        <b-icon pack="fab" icon="discord"></b-icon>
-                        <span>Discord</span>
-                    </a>
-                </div>
-                <div class="navbar-item">
-                    <a href="https://github.com/EssentialsX/Essentials" :class="buttonClass('is-dark')">
-                        <b-icon pack="fab" icon="github"></b-icon>
-                        <span>GitHub</span>
                     </a>
                 </div>
             </div>

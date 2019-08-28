@@ -1,6 +1,9 @@
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 
+// Container layout
+$gap: 48px;
+
 // Set your colors
 $primary: rgb(233, 59, 56);
 $primary-invert: findColorInvert($primary);
