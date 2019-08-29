@@ -1,6 +1,7 @@
 # BannerMeta
-BannerMeta is for banner flags. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later. 
-![banner pic](http://media-minecraftforum.cursecdn.com/attachments/14/153/635418493636559467.png)
+BannerMeta is for banner flags. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later.
+
+![banner pic](./images/bannermeta.png)
 
 
 ## Base Color
