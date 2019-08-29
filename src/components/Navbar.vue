@@ -1,5 +1,5 @@
 <template>
-    <nav class=" is-primary" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <SaberLink class="navbar-item" to="/" v-if="!hero">
                 <b>{{ $siteConfig.title }}</b>
