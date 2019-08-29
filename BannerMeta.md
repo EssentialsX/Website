@@ -1,11 +1,10 @@
 # BannerMeta
-BannerMeta is for banner flags. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later.
+BannerMeta lets you create custom flag designs for banners and shields. Each banner can have unlimited patterns and patterns listed first will go below patterns listed later.
 
-![banner pic](./images/bannermeta.png)
-
+![BannerMeta example](https://user-images.githubusercontent.com/1917406/63939958-5f891000-ca60-11e9-8025-32808f018757.png)
 
 ## Base Color
-Base color will be the first thing listed for a banner. It will be displayed as RGB. Base color will show under all patterns.
+Base color should be the first thing listed for a banner. It will be displayed as RGB. Base color will show under all patterns.
 
 
 ## Patterns
