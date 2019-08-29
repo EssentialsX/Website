@@ -9,7 +9,7 @@
         <div class="section">
             <div class="container">
                 <ClientOnly>
-                    <Downloads></Downloads>
+                    <Downloads class="squish"></Downloads>
                 </ClientOnly>
             </div>
         </div>
@@ -29,3 +29,20 @@ export default {
     }
 };
 </script>
+
+<style>
+@keyframes squishA {
+    from { transform: scaleX(1) rotate(-2deg) }
+    to   { transform: scaleX(0.4) rotate(2deg) }
+}
+
+@keyframes squishB {
+    from { margin-left: -20%; margin-right: 20%; }
+    to   { margin-left: 20%; margin-right: -20%; }
+}
+
+.konami .squish {
+    animation: squishA 2.7s ease-in alternate-reverse infinite,
+               squishB 2.2s ease alternate-reverse infinite;
+}
+</style>
