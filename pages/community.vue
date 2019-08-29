@@ -36,8 +36,9 @@
                         </div>
                     </div>
                     <div class="column">
+                        <Discord />
                         <Patreon />
-                        <iframe style="height: 500px; margin-right: -1px" src="https://discordapp.com/widget?id=390942438061113344&theme=dark" width="768" height="600"></iframe>
+                        <Github />
                     </div>
                 </div>
 
@@ -47,7 +48,9 @@
 </template>
 
 <script>
-import Patreon from "../components/Patreon";
+import Discord from "../components/SocialDiscord";
+import Patreon from "../components/SocialPatreon";
+import Github from "../components/SocialGithub";
 
 export const attributes = {
     title: "Community"
@@ -55,7 +58,9 @@ export const attributes = {
 
 export default {
     components: {
-        Patreon
+        Discord,
+        Github,
+        Patreon,
     }
 };
 </script>

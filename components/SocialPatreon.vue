@@ -3,7 +3,7 @@
         <div class="media-content">
             <div class="content has-text-centered">
                 <p>
-                    <strong class="has-text-white">EssentialsX Team</strong> is creating EssentialsX
+                    Support EssentialsX on <strong class="has-text-white">Patreon</strong>
                 </p>
             </div>
             <nav class="level is-mobile">
@@ -30,22 +30,13 @@
 </template>
 
 <script>
-// https://api.patreon.com/campaigns/1395802
-import axios from "axios";
-
 export default {
-    data() {
-        return {
-            patronCount: -1,
-            pledgeSum: -1
-        }
-    },
     computed: {
         patrons() {
-            return this.patronCount < 0 ? "??" : this.patronCount;
+            return this.external.patreon.patrons || "??";
         },
         sum() {
-            return this.pledgeSum < 0 ? "??" : this.pledgeSum;
+            return this.external.patreon.sum ? Math.round(this.external.patreon.sum / 100) : "??";
         }
     }
 }
