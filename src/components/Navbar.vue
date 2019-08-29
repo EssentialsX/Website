@@ -17,7 +17,7 @@
                 <!-- <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item" v-if="!hero">Wiki</SaberLink> -->
             </div>
 
-            <div class="navbar-end">
+            <div class="navbar-end has-text-centered-touch">
                 <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
                 <SaberLink to="/downloads.html" class="navbar-item">Downloads</SaberLink>
                 <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
