@@ -66,7 +66,7 @@ export default {
             return this.$siteConfig.commitHash;
         },
         commitLink() {
-            return "https://github.com/md678685/EssentialsX-Website/commit/" + this.commitHash;
+            return "https://github.com/EssentialsX/Website/commit/" + this.commitHash;
         },
         downloads() {
             return this.external.downloads ? (this.external.downloads / 1000000).toFixed(2) + "m" : "1.5m";
