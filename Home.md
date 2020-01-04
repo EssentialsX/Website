@@ -8,15 +8,10 @@ EssentialsX is the essential plugin for Spigot servers, providing core features 
 * Various moderation tools including **kicks, temporary bans, mutes and jails**
 * Built-in economy features including **sign shops, command costs and full Vault support**
 
-In addition, EssentialsX's add-on plugins provide further integrated features:
-* **AntiBuild**: Enforce permissions checks for building/interacting/crafting and alert staff when players use certain items. [More details on the Essentials wiki.](http://wiki.ess3.net/wiki/AntiBuild)
-* **Chat**: Customise chat formats for the whole server as well as specific groups.
-* **GeoIP**: Display geographical lookup data for players when they log in and in `/whois`.
-* **Protect**: Set rules to protect your world, like disabling explosions and fire spread.
-* **Spawn**: Set up spawnpoints for different groups, and show welcome messages and set different spawn locations for new players.
-* **XMPP**: Monitor your server and receive private messages via a XMPP-compatible chat service. ~~We have no idea how it works either.~~
+In addition, EssentialsX's optional modules provide further integrated features like chat formatting, world protection, GeoIP lookup and more - see the [Module Breakdown](Module-Breakdown) for more information.
 
 ## Pages
+
 * [Banner Metadata](BannerMeta)
 * [Command Cooldowns](Command-Cooldowns)
 * [Color Permissions](Color-Permissions)
@@ -25,9 +20,8 @@ In addition, EssentialsX's add-on plugins provide further integrated features:
 
 **Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
 
-## The original Essentials plugin
+## Updating from Essentials 2
 
-EssentialsX is a fork of the original [Essentials](https://github.com/essentials/Essentials), which was discontinued in 2014. EssentialsX adds several new features over the original Essentials plugin and the SpigotMC Essentials fork. See [Improvements](Improvements) and [Changelogs](Changelogs) for more information.
+EssentialsX is a fork of the original [Essentials project](https://github.com/essentials/Essentials), which was discontinued in 2014. EssentialsX adds several new features over the original Essentials - [the Improvements page](Improvements) and [EssentialsX changelogs](https://github.com/EssentialsX/Essentials/releases) for more information.
 
-To upgrade from Essentials 2.14.x or earlier, stop your server, replace your Essentials jars with the equivalent EssentialsX jars and restart your server. EssentialsX will load and convert your old Essentials files when you first run it.
-
+To upgrade from Essentials 2.14.x or earlier, stop your server, delete the old Essentials jars and replace them with the equivalent EssentialsX jars. We recommend renaming your `config.yml` file to take advantage of new settings added by EssentialsX, and taking a full backup of your `plugins/Essentials/` folder. Once you restart your server, EssentialsX will create a new `config.yml` and update old user data to the new format.
