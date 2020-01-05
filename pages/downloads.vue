@@ -2,8 +2,10 @@
     <div>
         <div class="hero is-primary">
             <div class="hero-body">
-                <h1 class="title">Download EssentialsX</h1>
-                <h2 class="subtitle">Get bleeding edge builds of EssentialsX and add-ons.</h2>
+                <div class="container">
+                    <h1 class="title">Download EssentialsX</h1>
+                    <h2 class="subtitle">Get bleeding edge builds of EssentialsX and add-ons, including the latest features and bug fixes.</h2>
+                </div>
             </div>
         </div>
         <div class="section">

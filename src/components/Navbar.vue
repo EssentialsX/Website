@@ -1,32 +1,30 @@
 <template>
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <SaberLink class="navbar-item" to="/" v-if="!hero">
-                <b>{{ $siteConfig.title }}</b>
-            </SaberLink>
+    <nav class="navbar is-dark is-spaced" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <SaberLink class="navbar-item is-marginless has-text-large" to="/">
+                    <!-- <b>{{ $siteConfig.title }}</b> -->
+                    <img src="@/images/logo-navbar.png">
+                </SaberLink>
 
-            <a role="button" :class="burgerClass" @click="expanded = !expanded" aria-label="menu" aria-expanded="false" data-target="navbar-main">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbar-main" :class="mainClass">
-            <div class="navbar-start">
-                <!-- <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item" v-if="!hero">Wiki</SaberLink> -->
+                <a role="button" :class="burgerClass" @click="expanded = !expanded" aria-label="menu" aria-expanded="false" data-target="navbar-main">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
 
-            <div class="navbar-end has-text-centered-touch">
-                <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
-                <SaberLink to="/downloads.html" class="navbar-item">Downloads</SaberLink>
-                <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
+            <div id="navbar-main" :class="mainClass">
+                <div class="navbar-start">
+                    <!-- <SaberLink to="/wiki/Downloading-EssentialsX.html" class="navbar-item" v-if="!hero">Wiki</SaberLink> -->
+                </div>
 
-                <div class="navbar-item">
-                    <a href="https://www.patreon.com/essentialsx" :class="buttonClass('is-patreon')">
-                        <b-icon pack="fab" icon="patreon" size="is-small"></b-icon>
-                        <span>Patreon</span>
-                    </a>
+                <div class="navbar-end has-text-centered-touch">
+                    <SaberLink to="/community.html" class="navbar-item">Community</SaberLink>
+                    <SaberLink to="/wiki/Home.html" class="navbar-item">Wiki</SaberLink>
+                    <SaberLink to="/downloads.html" class="navbar-item">
+                        <button :class="buttonClass('is-white')">Downloads</button>
+                    </SaberLink>
                 </div>
             </div>
         </div>
@@ -65,9 +63,8 @@ export default {
         buttonClass(colour) {
             return {
                 button: true,
-                [colour]: !this.hero,
-                "is-white": this.hero,
-                "is-outlined": this.hero,
+                "is-rounded": true,
+                [colour]: true,
             }
         }
     }

@@ -1,6 +1,8 @@
 import Vue from "vue";
 import axios from "axios";
 
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
 const corsAnywhere = "https://cors-anywhere.herokuapp.com/";
 
 const state = Vue.observable({

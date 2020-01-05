@@ -1,15 +1,7 @@
 <template>
-    <footer class="footer has-background-black-ter has-text-white">
-        <div class="section content">
-            <p>
-                <b>EssentialsX</b> by <a href="https://github.com/EssentialsX"><b>EssentialsX team</b></a>,
-                based on the original plugin by <a href="https://github.com/Essentials">the Essentials team</a>.
-            </p>
-            <p>
-                Website by <a href="https://github.com/md678685"><b>md678685</b></a>, with the help of <a href="https://github.com/EssentialsX/wiki/graphs/contributors">wiki contributors</a>.
-                Built with <a href="https://saber.land">Saber</a>, <a href="https://bulma.io">Bulma</a>, <a href="https://vuejs.org">Vue</a> and <a href="https://buefy.org/">Buefy</a>.
-            </p>
-            <div class="box has-background-black-bis">
+    <div>
+        <footer class="footer has-background-black-ter has-text-white">
+            <div class="container">
                 <div class="field is-grouped is-grouped-multiline has-text-weight-semibold">
                     <b-tooltip class="control" multilined :label="downloadsHover + ' downloads across BukkitDev and SpigotMC'">
                         <div class="tags has-addons">
@@ -20,7 +12,7 @@
                     <b-tooltip class="control" multilined label="View all changelogs">
                         <div class="tags has-addons">
                             <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Latest release</a>
-                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.17.0</a>
+                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.17.2</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined label="Visit the build server">
@@ -49,11 +41,14 @@
                     </b-tooltip>
                 </div>
             </div>
-        </div>
-        <div class="section hide-until-code">
-            <a class="button is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a>
-        </div>
-    </footer>
+            <br />
+            <div class="container content">
+                <p>Website copyright &copy; 2019-2020 EssentialsX Team, 2015-2020 EssentialsX wiki contributors except where otherwise noted.</p>
+                <span class="hide-until-code"><a class="button is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a></span>
+            </div>
+        </footer>
+    </div>
+
 </template>
 
 <script>

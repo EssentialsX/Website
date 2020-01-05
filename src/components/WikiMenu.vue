@@ -9,10 +9,9 @@
                 Pages
             </p>
             <a class="card-header-icon">
-                <b-icon
-                    size="is-small"
+                <fa-icon
                     :icon="props.open ? 'chevron-up' : 'chevron-down'">
-                </b-icon>
+                </fa-icon>
             </a>
         </div>
         <div class="card-content">

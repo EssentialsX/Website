@@ -20,19 +20,34 @@ module.exports = {
         wikiSidebar: {
             "Getting Started": [
                 { label: "Introduction", link: "/wiki/Home.html" },
-                { label: "Downloading EssentialsX", link: "/wiki/Downloading-EssentialsX.html" },
+                { label: "Installing EssentialsX", link: "/wiki/Installing-EssentialsX.html" },
+                { label: "Module Breakdown", link: "/wiki/Module-Breakdown.html" },
                 { label: "Improvements over Essentials", link: "/wiki/Improvements.html" },
+                { label: "Translations and Custom Messages", link: "/wiki/Locale.html" },
                 { label: "Frequently Asked Questions", link: "/wiki/Common-Issues.html" }
             ],
-            Features: [
-                { label: "Banner Meta", link: "/wiki/BannerMeta.html" },
+            "Configuring EssentialsX": [
                 { label: "Command Cooldowns", link: "/wiki/Command-Cooldowns.html" },
-                { label: "Color Permissions", link: "/wiki/Color-Permissions.html" }
+                { label: "Color Permissions", link: "/wiki/Color-Permissions.html" },
+                { label: "Customising /list", href: "https://wiki.mc-ess.net/wiki/List" },
+            ],
+            "Using EssentialsX": [
+                { label: "Signs", href: "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
+                { label: "Banner Meta", link: "/wiki/BannerMeta.html" },
+            ],
+            Modules: [
+                { label: "AntiBuild", href: "https://wiki.mc-ess.net/wiki/AntiBuild" },
+                { label: "Chat", link: "/wiki/BannerMeta.html" },
+                { label: "GeoIP", link: "/wiki/BannerMeta.html" },
+                { label: "Protect", href: "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
+                { label: "Spawn", link: "/wiki/BannerMeta.html" },
+                { label: "XMPP", href: "https://wiki.mc-ess.net/wiki/XMPP" }
+
             ],
             Reference: [
                 { label: "Commands", href: "https://essinfo.xeya.me/index.php?page=commands" },
                 { label: "Permissions", href: "https://essinfo.xeya.me/index.php?page=permissions" },
-                { label: "Changelogs", link: "/wiki/Changelogs.html" }
+                { label: "Changelogs", link: "https://github.com/EssentialsX/Essentials/releases" }
             ]
         }
     },

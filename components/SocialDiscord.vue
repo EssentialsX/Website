@@ -10,6 +10,12 @@
                 <div class="level-item has-text-centered">
                     <div>
                         <p class="title has-text-white">{{ members }}</p>
+                        <p class="heading">Online</p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="title has-text-white">4000+</p>
                         <p class="heading">Members</p>
                     </div>
                 </div>

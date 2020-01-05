@@ -1,7 +1,7 @@
 <template>
     <a :class="tileClass" :href="url">
         <p :class="titleClass">
-            <b-icon icon="download"></b-icon>
+            <fa-icon icon="download"></fa-icon>
             {{ text }}
         </p>
         <p class="subtitle">{{ version }}</p>

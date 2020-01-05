@@ -2,8 +2,10 @@
     <div>
         <div class="hero is-primary">
             <div class="hero-body">
-                <h1 class="title">Join the EssentialsX community</h1>
-                <h2 class="subtitle">Need support with EssentialsX, or just want to chat about servers and plugins? We've got you covered.</h2>
+                <div class="container">
+                    <h1 class="title">Join the EssentialsX community</h1>
+                    <h2 class="subtitle">Need support with EssentialsX, or just want to chat about servers and plugins? We've got you covered.</h2>
+                </div>
             </div>
         </div>
         <div class="section">
@@ -13,10 +15,10 @@
                         <div class="content">
                             <h2>Join the MOSS community on Discord</h2>
                             <p>
-                                MOSS is one of the leading Discord communities for open source Minecraft projects and welcomes new members.
+                                MOSS is one of the leading Discord communities for open source Minecraft projects.
                             </p>
                             <p>
-                                You can get support for several plugins including EssentialsX, plus chat to fellow server owners and plugin developers from across the globe!
+                                You can get support for several plugins including EssentialsX, plus chat to fellow server owners and plugin developers from across the globe! We're always happy to welcome new members.
                             </p>
                             <h2>Discuss EssentialsX on GitHub</h2>
                             <p>
