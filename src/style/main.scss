@@ -51,3 +51,6 @@ $footer-padding: 2rem 1.5rem 1rem;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+// Import dark theme
+@import "~bulma-prefers-dark/bulma-prefers-dark.sass";

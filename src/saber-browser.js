@@ -3,7 +3,7 @@ import Buefy from "buefy";
 import "./style/main.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faCheckCircle, faTools } from "@fortawesome/free-solid-svg-icons";
+import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faCheckCircle, faTools, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faDiscord, faPatreon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -11,7 +11,7 @@ import KonamiCode from "vue-konami-code";
 
 import ExternalData from "./mixins/external-data";
 
-library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faDiscord, faDownload, faPatreon, faCheckCircle, faTools);
+library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faDiscord, faDownload, faPatreon, faCheckCircle, faTools, faSun, faMoon);
 Vue.component('fa-icon', FontAwesomeIcon);
 
 Vue.use(Buefy, {
