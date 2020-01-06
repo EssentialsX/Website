@@ -37,10 +37,10 @@ module.exports = {
             ],
             Modules: [
                 { label: "AntiBuild", href: "https://wiki.mc-ess.net/wiki/AntiBuild" },
-                { label: "Chat", link: "/wiki/BannerMeta.html" },
-                { label: "GeoIP", link: "/wiki/BannerMeta.html" },
+                { label: "Chat", link: "/wiki/Module-Breakdown.html#essentialsx-chat" },
+                { label: "GeoIP", link: "/wiki/Module-Breakdown.html#essentialsx-geoip" },
                 { label: "Protect", href: "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
-                { label: "Spawn", link: "/wiki/BannerMeta.html" },
+                { label: "Spawn", link: "/wiki/Module-Breakdown.html#essentialsx-spawn" },
                 { label: "XMPP", href: "https://wiki.mc-ess.net/wiki/XMPP" }
 
             ],

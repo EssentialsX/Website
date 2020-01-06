@@ -27,7 +27,6 @@ export default {
     },
     watch: {
         dark(to) {
-            console.log(schemePref);
             schemePref.scheme = to ? "dark" : "light";
         }
     }

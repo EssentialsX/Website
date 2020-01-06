@@ -55,7 +55,7 @@ async function getDownloads() {
         response = await axios.get("https://api.spiget.org/v2/resources/9089");
         count += response.data.downloads;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
         count += Math.round(state.downloads / 2);
     }
 
@@ -63,7 +63,7 @@ async function getDownloads() {
         response = await axios.get("https://api.cfwidget.com/minecraft/bukkit-plugins/essentialsx/");
         count += response.data.downloads.total;
     } catch (e) {
-        console.error(e)
+        // console.error(e)
         count += Math.round(state.downloads / 2)
     }
 
@@ -76,7 +76,7 @@ async function getMembers() {
         let response = await axios.get("https://canary.discordapp.com/api/guilds/390942438061113344/widget.json");
         members = response.data.presence_count;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
     }
 
     state.discord.members = members;
@@ -90,7 +90,7 @@ async function getStars() {
         stars = response.data.stargazers_count;
         forks = response.data.forks_count;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
     }
 
     state.github.stars = stars;
@@ -106,7 +106,7 @@ async function getPatrons() {
         patrons = response.data.data.attributes.patron_count;
         sum = response.data.data.attributes.pledge_sum;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
     }
 
     state.patreon.patrons = patrons;
@@ -141,7 +141,7 @@ async function getJenkins() {
 
         state.jenkins.error = null;
     } catch (e) {
-        console.error(e);
+        // console.error(e);
         state.jenkins.error = e.response ? e.response.data : e.message;
     }
     state.jenkins.loading = false;
