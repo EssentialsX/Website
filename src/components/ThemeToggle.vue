@@ -8,7 +8,11 @@
 
 <script>
 import initPreference from "css-prefers-color-scheme";
-const schemePref = (!!window) ? initPreference() : { scheme: "light" };
+let schemePref = { scheme: "light" };
+
+if (typeof document !== "undefined") {
+    schemePref = initPreference();
+}
 
 export default {
     data() {
