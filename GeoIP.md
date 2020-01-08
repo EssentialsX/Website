@@ -23,7 +23,7 @@ First, you'll need to register for access to the GeoLite2 database, which Essent
 
 Go to the [MaxMind website](https://www.maxmind.com/en/geolite2/signup) and fill in your details to sign up for access to the GeoLite2 database:
 
-![An example of a filled-in signup form. Note that providing your phone number is optional.](images/geoip-step1.png)
+![An example of a filled-in signup form. Note that providing your phone number is optional.](./images/geoip-step1.png)
 
 You'll need to agree to the [GeoLite2 EULA](#legal-notices) in order to use the database.
 
@@ -31,19 +31,19 @@ Click **Continue**, then once you've received your email from MaxMind, set up a 
 
 Once you're logged in, scroll down and click **My License Key** on the left-hand side:
 
-!["My License Key" is under Security on the left-hand sidebar.](images/geoip-step2.png)
+!["My License Key" is under Security on the left-hand sidebar.](./images/geoip-step2.png)
 
 Next, click **Generate new license key**:
 
-![The "Generate new license key" button is below the empty table.](images/geoip-step3.png)
+![The "Generate new license key" button is below the empty table.](./images/geoip-step3.png)
 
 Type in a name like `EssentialsX key` as the description and click **No** in the box below, then click **Confirm**:
 
-![The description should be filled in with something to identify the key, and you should check "No" next to the GeoIP Update text.](images/geoip-step3.png)
+![The description should be filled in with something to identify the key, and you should check "No" next to the GeoIP Update text.](./images/geoip-step3.png)
 
 You should now receive a **license key**. Copy this down somewhere safe, as you won't be able to see the original key again later on.
 
-![Copy down the license key and keep it somewhere safe.](images/geoip-step5.png)
+![Copy down the license key and keep it somewhere safe.](./images/geoip-step5.png)
 
 Next, you'll need to download and install the EssentialsXGeoIP jar - you can see how to do this [here](Installing-EssentialsX).
 Start and stop your server, then open `plugins/EssentialsGeoIP/config.yml` in a text editor.
