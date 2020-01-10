@@ -1,7 +1,7 @@
 <template>
     <div class="tags" @click="dark = !dark">
         <div class="tag is-light">
-            <fa-icon :icon="currentIcon"></fa-icon>
+            <fa-icon :icon="currentIcon" size="sm"></fa-icon>
         </div>
     </div>
 </template>
