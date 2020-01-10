@@ -64,6 +64,7 @@ module.exports = {
         ]
     },
     plugins: [
-        { resolve: "saber-plugin-netlify-redirect" }
+        { resolve: "saber-plugin-netlify-redirect" },
+        { resolve: "./plugins/wiki-redirects" },
     ]
 }
