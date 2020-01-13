@@ -15,8 +15,8 @@ In addition, EssentialsX's optional modules provide further integrated features 
 * [Banner Metadata](BannerMeta)
 * [Command Cooldowns](Command-Cooldowns)
 * [Color Permissions](Color-Permissions)
-* [Commands list](https://essinfo.xeya.me/commands.php) (community-maintained)
-* [Permissions list](https://essinfo.xeya.me/permissions.php) (community-maintained)
+* [Commands list](https://essinfo.xeya.me/commands.html) (community-maintained)
+* [Permissions list](https://essinfo.xeya.me/permissions.html) (community-maintained)
 
 **Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
 
