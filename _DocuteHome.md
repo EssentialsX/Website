@@ -10,9 +10,10 @@
 * [[Improvements over Essentials|Improvements]]
 * [[Banner Metadata|BannerMeta]]
 * [[Command Cooldowns]]
+* [[Support|Help]]
 
 ## Support
 
-* [[Common Issues]]
+* [[Frequently Asked Questions]]
 * [Issue Tracker](https://github.com/EssentialsX/Essentials/issues)
 * [Discord](https://discord.gg/F7gexAQ) - [[Rules|Discord-Rules]]

@@ -12,8 +12,8 @@
 * [Color Permissions](Color-Permissions)
 
 ## Support
-* [Common Issues](Common-Issues)
-* [Issue Tracker](https://github.com/EssentialsX/Essentials/issues)
+* [Frequently Asked Questions](Common-Issues)
+* [Getting Support](Help)
 
 ---
 [![**Downloads**](https://camo.githubusercontent.com/9aff2864d80daf2dac77bdbf5d1ea985381e180e/68747470733a2f2f692e696d6775722e636f6d2f4d4d6330504a592e706e67)](https://ci.ender.zone/job/EssentialsX)
