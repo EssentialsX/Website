@@ -1,7 +1,7 @@
 import Vue from "vue";
 import axios from "axios";
 
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+// axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 const corsAnywhere = "https://cors-anywhere.herokuapp.com/";
 
@@ -114,7 +114,7 @@ async function getPatrons() {
 }
 
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
-const mirrorCI = null; // "https://ci.akpmakes.tech/job/EssentialsX/";
+const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
 const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.pre-]+?)\.jar/;
 
 function getVersionFromArtifact(name) {
@@ -128,7 +128,18 @@ function getVersionFromArtifact(name) {
 async function getJenkins() {
     try {
         state.jenkins.loading = true;
-        let response = await axios.get(`${corsAnywhere}${mainCI}lastSuccessfulBuild/api/json`)
+        let response;
+
+        try {
+            response = await axios.get(`${corsAnywhere}${mainCI}lastSuccessfulBuild/api/json`, {
+                headers: {
+                    "X-Requested-With": "XMLHTTPRequest"
+                }
+            });
+        } catch (e) {
+            response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`)
+        }
+
         state.jenkins.build = response.data.id;
         state.jenkins.version = getVersionFromArtifact(response.data.artifacts[0].displayPath);;
         response.data.artifacts.forEach(artifact => {
