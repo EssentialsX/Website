@@ -77,6 +77,10 @@ Under `repositories` in your `pom.xml`, you need to add a new `repository` for t
         <id>ess-repo</id>
         <url>https://ci.ender.zone/plugin/repository/everything/</url>
     </repository>
+    <repository>
+        <id>paper-repo</id>
+        <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
 </repositories>
 ```
 
@@ -87,7 +91,7 @@ Next, add EssentialsX as a `dependency` under `dependencies`:
     <dependency>
         <groupId>net.ess3</groupId>
         <artifactId>EssentialsX</artifactId>
-        <version>2.16.1</version>
+        <version>2.17.2</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -102,7 +106,12 @@ First, add the repository to your `build.gradle`:
 ```groovy
 repositories {
     maven {
+        name "essentialsx"
         url "https://ci.ender.zone/plugin/repository/everything/"
+    }
+    maven {
+        name "papermc"
+        url "https://papermc.io/repo/repository/maven-public/"
     }
 }
 ```
@@ -111,7 +120,7 @@ Next, add the dependency as a `compileOnly` dependency:
 ```groovy
 dependencies {
     ...
-    compileOnly 'net.ess3:EssentialsX:2.16.1'
+    compileOnly 'net.ess3:EssentialsX:2.17.2'
 }
 ```
 
