@@ -1,4 +1,4 @@
 [![Spigot Downloads](https://img.shields.io/badge/dynamic/json.svg?url=https://api.spiget.org/v2/resources/9089&label=downloads&query=$.downloads&colorB=ee8a18&style=flat-square&maxAge=3600)](https://www.spigotmc.org/resources/essentialsx.9089/)
 [![Release 2.17.2](https://img.shields.io/badge/release-2.17.2-E93B38.svg?style=flat-square&maxAge=3600)](https://github.com/EssentialsX/Essentials/releases/latest)
-[![Latest Build](https://img.shields.io/badge/dynamic/json.svg?url=https://ci.ender.zone/job/EssentialsX/lastSuccessfulBuild/api/json&label=build&query=$.id&colorB=green&prefix=b&style=flat-square&maxAge=3600)](https://essentialsx.github.io/)
+[![Latest Build](https://img.shields.io/badge/dynamic/json.svg?url=https://ci.ender.zone/job/EssentialsX/lastSuccessfulBuild/api/json&label=build&query=$.id&colorB=green&prefix=b&style=flat-square&maxAge=3600)](https://essentialsx.cf/downloads.html)
 [![Discord](https://img.shields.io/discord/390942438061113344.svg?style=flat-square&maxAge=3600&colorB=7289DA)](https://discord.gg/h8CnPSw)
