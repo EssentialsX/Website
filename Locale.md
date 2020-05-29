@@ -34,15 +34,15 @@ Below is a list of languages that EssentialsX supports:
 - **Dutch**: `nl`
 - **Polish**: `pl`
 - **Portuguese**: `pt`
-  - Brazil: `pt_BR`
+  - **Brazil**: `pt_BR`
 - **Romanian**: `ro`
 - **Russian**: `ru`
 - **Swedish**: `sv`
 - **Turkish** `tr`
 - Chinese:
-  - `zh` for **modern Chinese**,
-  - `zh_HK` for **Hong Kong**, and
-  - `zh_TW` for **traditional Chinese**
+  - **Modern**: `zh`
+  - **Hong Kong**: `zh_HK`
+  - **Traditional Chinese**: `zh_TW`
 
 ## Changing locale
 
@@ -58,7 +58,7 @@ Simply place your edited locale file (with appropriate locale suffix) in the `pl
 
 If you are having trouble, [try this tutorial video](https://www.youtube.com/watch?v=9Uan2oJ9zK8). Note that this video is for the original Essentials plugin, not EssentialsX.
 
-You may need to update the file on occasion to deal with changes in EssentialsX such as parameter changes or changes to the actual syntax of the messages. This can be done with a diff tool like [diffuse](http://diffuse.sourceforge.net/screenshots.html), which highlights changes between two text files.
+You may need to update the file on occasion to deal with changes in EssentialsX such as parameter changes or changes to the actual syntax of the messages. This can be done with a diff tool like [Diffchecker](https://www.diffchecker.com/), which highlights changes between two text files.
 
 ## Minor Changes
 
@@ -69,7 +69,7 @@ When editing only a few keys, the process should look something like [this (clic
 
 ## Colours
 
-If you decide to edit the locale files with a standard text editor, you may notice lots of text like '\u00a7'. These are Unicode character escapes, which allow you to represent symbols and letters which do not exist in ASCII within an ASCII file. The most common of these you will see is '\u00a7' which represents the **section symbol** (&sect;), used in Minecraft to make colour codes. Other languages such as those that use their own alphabets or use non-standard characters will also need to use these codes. Many Java IDEs will do the conversion to and from Unicode automatically, or you can use a tool to manually convert them.
+If you decide to edit the locale files with a standard text editor, you may notice lots of text like '\u00a7'. These are Unicode character escapes, which allow you to represent symbols and letters which do not exist in ASCII within an ASCII file. The most common of these you will see is '\u00a7' which represents the **section symbol** (&sect;), used in Minecraft to make colour codes. Other languages such as those that use their own alphabets or use non-standard characters will also need to use these codes. Many Java IDEs will do the conversion to and from Unicode automatically, or you can use a tool like [this](https://native2ascii.net/) to manually convert them.
 
 ## Example
 
