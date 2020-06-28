@@ -1,5 +1,5 @@
 <template>
-    <div class="tags" @click="dark = !dark">
+    <div v-if="!isDarkReader" class="tags" @click="dark = !dark">
         <div class="tag is-light">
             <fa-icon :icon="currentIcon" size="sm"></fa-icon>
         </div>
@@ -10,7 +10,16 @@
 import initPreference from "css-prefers-color-scheme";
 let schemePref = { scheme: "light" };
 
-if (typeof document !== "undefined") {
+function isDarkReader() {
+    if (!process.browser) {
+        return null;
+    }
+    return document.head.getElementsByClassName("darkreader").length > 0;
+}
+
+console.log(process.browser, isDarkReader())
+
+if (process.browser && !isDarkReader()) {
     schemePref = initPreference();
 }
 
@@ -23,6 +32,9 @@ export default {
     computed: {
         currentIcon() {
             return this.dark ? "moon" : "sun";
+        },
+        isDarkReader() {
+            return isDarkReader();
         }
     },
     watch: {
