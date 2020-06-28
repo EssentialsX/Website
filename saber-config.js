@@ -55,16 +55,16 @@ module.exports = {
     markdown: {
         plugins: [
             {
-                resolve: "markdown-it-wikilinks",
+                resolve: "markdown-it-anchor",
                 options: {
-                    baseURL: "/wiki/",
-                    makeAllLinksAbsolute: true
+                    permalink: true,
+                    permalinkSymbol: "🔗"
                 }
             }
         ]
     },
     plugins: [
-        { resolve: "saber-plugin-netlify-redirect" },
         { resolve: "./plugins/wiki-redirects" },
+        { resolve: "saber-plugin-netlify-redirect" },
     ]
 }

@@ -6,14 +6,17 @@
   "author": "md678685",
   "license": "MIT",
   "dependencies": {
+    "@tomleesm/markdown-it-wikilinks": "^1.1.1",
     "autoprefixer": "^9.7.3",
     "axios": "^0.19.0",
-    "buefy": "^0.7.7",
+    "buefy": "^0.8.20",
     "bulma-prefers-dark": "^0.1.0-beta.0",
     "css-prefers-color-scheme": "^4.0.0",
     "git-state": "^4.1.0",
-    "saber": "^0.6.8",
-    "saber-plugin-netlify-redirect": "^0.0.6",
+    "markdown-it-anchor": "^5.3.0",
+    "markdown-it-wikilinks": "^1.0.1",
+    "saber": "^0.11.7",
+    "saber-plugin-netlify-redirect": "^0.1.2",
     "vue-konami-code": "^1.0.0"
   },
   "devDependencies": {
@@ -26,9 +29,8 @@
     "@types/autoprefixer": "^9.6.1",
     "@types/axios": "^0.14.0",
     "@types/sass": "^1.16.0",
-    "markdown-it-wikilinks": "^1.0.1",
     "sass": "^1.21.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^8.0.2"
   },
   "browserslist": [
     "ie > 8",

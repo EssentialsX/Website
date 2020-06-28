@@ -54,8 +54,9 @@ import Discord from "../components/SocialDiscord";
 import Patreon from "../components/SocialPatreon";
 import Github from "../components/SocialGithub";
 
-export const attributes = {
-    title: "Community"
+export const data = {
+    title: "Community",
+    layout: "default"
 };
 
 export default {

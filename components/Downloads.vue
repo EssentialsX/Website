@@ -19,7 +19,7 @@
         <div v-if="version" class="tile is-ancestor">
             <div class="tile is-parent is-vertical is-3">
                 <downloads-tile
-                    bold=true
+                    bold
                     text="EssentialsX"
                     description="Core features: messages, teleports, homes, warps and more"
                     :version="version"

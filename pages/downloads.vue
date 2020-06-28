@@ -21,8 +21,9 @@
 <script>
 import Downloads from "../components/Downloads.vue";
 
-export const attributes = {
-    title: "Downloads"
+export const data = {
+    title: "Downloads",
+    layout: "default"
 };
 
 export default {

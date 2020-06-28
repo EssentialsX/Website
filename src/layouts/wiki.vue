@@ -35,7 +35,7 @@ export default {
     },
     head() {
         return {
-            title: `${this.page.attributes.title} - ${this.$siteConfig.title} Wiki`
+            title: `${this.page.title} - ${this.$siteConfig.title} Wiki`
         }
     }
 }

@@ -61,7 +61,7 @@ export default {
     }
 };
 
-export const attributes = {
+export const data = {
     layout: "homepage"
 };
 </script>

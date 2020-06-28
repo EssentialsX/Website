@@ -19,8 +19,7 @@ Vue.use(Buefy, {
     defaultIconPack: "fas"
 });
 
-// build process workaround
-if (typeof document !== "undefined") {
+if (process.browser) {
     Vue.use(KonamiCode, {
         callback: function () {
             if (document.body.classList.contains("konami")) {
