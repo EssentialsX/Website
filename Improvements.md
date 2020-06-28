@@ -4,7 +4,7 @@ EssentialsX is a continuation of the origin Essentials plugin. Essentials was di
 * Actively maintained and updated for 1.8.8 all the way up to the latest Spigot and Minecraft versions.
 * Supports new Minecraft content including new items, enchantments, mobs and trees.
 * Supports [Essentials signs](https://wiki.mc-ess.net/wiki/Sign_Tutorial) on all Minecraft versions.
-* Supports [Banner Metadata](BannerMeta) and [Command Cooldowns](Command-Cooldowns).
+* Supports [[Banner Metadata|BannerMeta]] and [[Command Cooldowns|Command-Cooldowns]].
 * Configuration option to hide the `no new mail` message on join.
 * Allows commands in kits with a `{player}` placeholder for the player's name.
 * Supports mob spawners on recent versions.
@@ -158,7 +158,7 @@ _Requested in [#590](/drtshock/Essentials/issues/590); PR in [#664](/drtshock/Es
 
 Players can set their AFK message when using the `/afk` command to notify others of their situation. When a player sends a message with `/msg` to an AFK player, they will see the AFK player's message.
 
-By default, when a player sets their AFK status, the message will not be broadcast to the whole server. However, this can be changed in the [locale file](Locale) by adding `{1}` to the `userIsAwayWithMessage` message, where `{1}` will be replaced by the player's AFK message.
+By default, when a player sets their AFK status, the message will not be broadcast to the whole server. However, this can be changed in the [[locale file|Locale]] by adding `{1}` to the `userIsAwayWithMessage` message, where `{1}` will be replaced by the player's AFK message.
 
 To set your AFK message, simply type `/afk <message...>`. For example: `/afk I'm walking my dog`.
 
@@ -189,7 +189,7 @@ This feature introduces the `teleport-to-center` configuration feature. When set
 ### Mail chat formatting
 _Requested in [#1560](/drtshock/Essentials/issues/1560); added in [665229b](https://github.com/drtshock/Essentials/commit/665229b)._
 
-This feature introduces the ability to format `/mail` messages using `&` formatting codes - [click here](Color-Permissions) for more information.
+This feature introduces the ability to format `/mail` messages using `&` formatting codes - [[click here|Color-Permissions]] for more information.
 
 ### Helmet slot hat
 _Added in [7958cd0](https://github.com/EssentialsX/Essentials/commit/7958cd0b880205edaeaf34420bafde8d5cc1f7ed)._
