@@ -4,7 +4,7 @@ First of all, make sure you're running a supported Minecraft server platform. We
 
 You can download EssentialsX either from [SpigotMC](https://www.spigotmc.org/resources/essentialsx.9089/) for stable releases, or from the [downloads page](https://essentialsx.cf/downloads.html) for development builds with the latest features and bug fixes.
 
-EssentialsX is split up into several separate plugins. The only jar that is necessary for EssentialsX to work is the main `EssentialsX` jar, which contains most of the core features most servers will need. The other modules are optional - see the [[Module Breakdown|Module-Breakdown]] page for more information on what each module does.
+EssentialsX is split up into several separate plugins. The only jar that is necessary for EssentialsX to work is the main `EssentialsX` jar, which contains most of the core features most servers will need. The other modules are optional - see the [[Module-Breakdown|Module Breakdown]] page for more information on what each module does.
 
 Once you've decided which EssentialsX modules you need, copy the required `.jar` files into the `plugins/` directory (if you downloaded from SpigotMC, you'll need to unzip the downloaded file first).
 
