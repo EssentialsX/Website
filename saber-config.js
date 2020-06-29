@@ -23,13 +23,14 @@ module.exports = {
                 { label: "Installing EssentialsX", link: "/wiki/Installing-EssentialsX.html" },
                 { label: "Module Breakdown", link: "/wiki/Module-Breakdown.html" },
                 { label: "Improvements over Essentials", link: "/wiki/Improvements.html" },
-                { label: "Translations and Custom Messages", link: "/wiki/Locale.html" },
                 { label: "Frequently Asked Questions", link: "/wiki/Common-Issues.html" }
             ],
             "Configuring EssentialsX": [
                 { label: "Command Cooldowns", link: "/wiki/Command-Cooldowns.html" },
                 { label: "Color Permissions", link: "/wiki/Color-Permissions.html" },
                 { label: "Customising /list", href: "https://wiki.mc-ess.net/wiki/List" },
+                { label: "Signs", href: "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
+                { label: "Translations and Custom Messages", link: "/wiki/Locale.html" },
             ],
             "Using EssentialsX": [
                 { label: "Signs", href: "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
