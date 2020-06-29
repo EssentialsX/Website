@@ -56,7 +56,6 @@
 
 <script>
 import axios from "axios";
-import ThemeToggle from "./ThemeToggle";
 
 export default {
     props: ["page"],
