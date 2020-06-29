@@ -7,10 +7,6 @@ const redirects = [
         fromPath: "/help",
         toPath: "/wiki/Help.html"
     },
-    {
-        fromPath: "/discord",
-        toPath: "https://discord.gg/casfFyh"
-    },
 ]
 
 module.exports = {
