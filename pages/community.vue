@@ -30,11 +30,6 @@
                                 Feeling generous or just want to say hi? You can see news updates, chat to other patrons and leave comments for us over on our
                                 <a href="https://patreon.com/EssentialsX">Patreon page.</a> You can also pledge to EssentialsX to help support the project.
                             </p>
-                            <h2>EssentialsX on IRC</h2>
-                            <p>
-                                For all the old-fashioned folk out there, you can join <strong>#essentialsx</strong> over on <strong>irc.esper.net</strong>.
-                                Note that the IRC channel is less active, so if you're looking for quick support, we strongly recommend joining MOSS on Discord instead.
-                            </p>
                         </div>
                     </div>
                     <div class="column">
