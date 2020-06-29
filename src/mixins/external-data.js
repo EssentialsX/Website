@@ -113,6 +113,7 @@ async function getPatrons() {
     state.patreon.sum = sum;
 }
 
+const api = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
 const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.pre-]+?)\.jar/;
@@ -131,13 +132,17 @@ async function getJenkins() {
         let response;
 
         try {
-            response = await axios.get(`${corsAnywhere}${mainCI}lastSuccessfulBuild/api/json`, {
+            response = await axios.get(`${api}lastSuccessfulBuild/api/json`, {
                 headers: {
                     "X-Requested-With": "XMLHTTPRequest"
                 }
             });
         } catch (e) {
-            response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`)
+            response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`, {
+                headers: {
+                    "X-Requested-With": "XMLHTTPRequest"
+                }
+            })
         }
 
         state.jenkins.build = response.data.id;
