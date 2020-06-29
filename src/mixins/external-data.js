@@ -132,17 +132,9 @@ async function getJenkins() {
         let response;
 
         try {
-            response = await axios.get(`${api}lastSuccessfulBuild/api/json`, {
-                headers: {
-                    "X-Requested-With": "XMLHTTPRequest"
-                }
-            });
+            response = await axios.get(`${api}lastSuccessfulBuild/api/json`);
         } catch (e) {
-            response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`, {
-                headers: {
-                    "X-Requested-With": "XMLHTTPRequest"
-                }
-            })
+            response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`);
         }
 
         state.jenkins.build = response.data.id;
