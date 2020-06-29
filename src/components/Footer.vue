@@ -39,9 +39,6 @@
                             <a :href="commitLink" class="tag is-white-bis">{{ commitHash }}</a>
                         </div>
                     </b-tooltip>
-                    <b-tooltip class="control" multilined label="Change the website theme">
-                        <theme-toggle></theme-toggle>
-                    </b-tooltip>
                 </div>
             </div>
             <br />
@@ -84,14 +81,8 @@ export default {
         membersHover() {
             return this.external.discord.members || "Over 1000";
         }
-    },
-    components: {
-        ThemeToggle
     }
 }
-
-
-
 </script>
 
 
