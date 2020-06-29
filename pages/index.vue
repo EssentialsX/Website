@@ -18,7 +18,7 @@
                             <h2>All you can eat, and then some.</h2>
                             <p>With over <a href="https://essinfo.xeya.me/commands.php">130 commands</a>, EssentialsX provides one of the most comprehensive feature sets out there, providing teleportation, moderation tools, gameplay enhancements and more.</p>
                             <p>Just want the homes and warps? Great. Need a sign shop? Done. Want complex and rich kits with enchantments, custom books and lore? Sorted.</p>
-                            <p>Whether you're a small group of friends or a huge server with hundreds of players, we're got the basics covered.</p>
+                            <p>Whether you're a small group of friends or a huge server with hundreds of players, we've got the basics covered.</p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Home.html">Visit the wiki</saber-link>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="tile is-child">
                             <h2>Compatible with just about <i>everything</i>.</h2>
                             <p>Built for the Bukkit platform with compatibility in mind, EssentialsX works seamlessly alongside thousands of other plugins. Plus, many plugins hook into EssentialsX's various features like economy, ignores, mutes and vanish through our API.</p>
-                            <p>Not only does EssentialsX work well other plugins, but it also runs on 8 different versions of Minecraft. That's right, <i>eight</i>. No more worrying about being forced to upgrade to the latest Minecraft version*, you can keep using the latest features and fixes all the way back to 1.8.8.</p>
+                            <p>Not only does EssentialsX work well with other plugins, but it also runs on 9 different versions of Minecraft. That's right, <i>nine</i>. No more worrying about being forced to upgrade to the latest Minecraft version*, you can keep using the latest features and fixes all the way back to 1.8.8.</p>
                             <p class="has-text-grey-light"><small>*You should probably update from Minecraft 1.8.8 anyway though - it's nearly 5 years old and lacks any support from Mojang.</small></p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Installing-EssentialsX.html">Get started with EssentialsX</saber-link>
                         </div>
