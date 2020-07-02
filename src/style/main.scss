@@ -1,40 +1,25 @@
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all";
-
 // Container layout
 $gap: 48px;
 
 // Set your colors
+
 $primary: rgb(233, 59, 56);
-$primary-invert: findColorInvert($primary);
-
 $discord: #7289DA;
-$discord-invert: findColorInvert($discord);
-
 $spigot: #ee8a18;
-$spigot-invert: findColorInvert($spigot);
-
 $patreon: #f86754;
-$patreon-invert: findColorInvert($patreon);
 
-// Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: ("white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-    "info": ($info, $info-invert),
-    "success": ($success, $success-invert),
-    "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert),
-    "discord": ($discord, $discord-invert),
-    "spigot": ($spigot, $spigot-invert),
-    "patreon": ($patreon, $patreon-invert));
+$custom-colors: (
+    "discord": ($discord),
+    "spigot": ($spigot),
+    "patreon": ($patreon)
+);
 
 // Links
 $link: $primary;
-$link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
 
 // Box
 $box-radius: 2px;
