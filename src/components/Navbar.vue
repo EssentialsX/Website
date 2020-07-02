@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar is-dark is-spaced" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <SaberLink class="navbar-item is-marginless has-text-large" to="/">
@@ -63,8 +63,8 @@ export default {
         buttonClass(colour) {
             return {
                 button: true,
-                "is-rounded": true,
                 [colour]: true,
+                "is-rounded": true
             }
         }
     }
