@@ -41,8 +41,7 @@ export default {
                 "box": true,
                 "hero": true,
                 "is-primary": true,
-                "has-text-centered": true,
-                "is-bold": this.bold
+                "has-text-centered": true
             }
         },
         titleClass() {
