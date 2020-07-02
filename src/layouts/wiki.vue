@@ -1,6 +1,14 @@
 <template>
     <div>
         <Navbar />
+        <div class="hero is-primary">
+            <div class="hero-body py-4">
+                <div class="container">
+                    <h1 class="title">Wiki</h1>
+                    <h1 class="subtitle">{{ page.title }}</h1>
+                </div>
+            </div>
+        </div>
         <div class="section">
             <div class="container">
                 <div class="columns">
