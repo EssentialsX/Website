@@ -33,6 +33,15 @@ $menu-nested-list-margin: 0.25em;
 $footer-background-color: darken($white, 4%);
 $footer-padding: 2rem 1.5rem 1rem;
 
+// Revert button sizing to pre-0.8.0
+$control-height: 2.25em;
+$control-padding-vertical: calc(0.375em - #{$control-border-width});
+$control-padding-horizontal: calc(0.625em - #{$control-border-width});
+
+$button-border-width: $control-border-width !default;
+$button-padding-vertical: calc(0.375em - #{$button-border-width});
+$button-padding-horizontal: 0.75em;
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
