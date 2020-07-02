@@ -52,15 +52,15 @@ async function getDownloads() {
     let response;
     let count = 0;
     try {
-        response = await axios.get("https://api.spiget.org/v2/resources/9089");
-        count += response.data.downloads;
+        response = await axios.get("https://api.spigotmc.org/simple/0.1/index.php?action=getResource&id=9089");
+        count += response.data.stats.downloads;
     } catch (e) {
         // console.error(e);
         count += Math.round(state.downloads / 2);
     }
 
     try {
-        response = await axios.get("https://api.cfwidget.com/minecraft/bukkit-plugins/essentialsx/");
+        response = await axios.get(`${corsAnywhere}https://api.cfwidget.com/minecraft/bukkit-plugins/essentialsx/`);
         count += response.data.downloads.total;
     } catch (e) {
         // console.error(e)
@@ -158,8 +158,8 @@ async function getJenkins() {
     state.jenkins.loading = false;
 }
 
-getJenkins()
-    .then(getMembers)
-    .then(getPatrons)
-    .then(getStars)
-    .then(getDownloads);
+getJenkins();
+getMembers();
+getPatrons();
+getStars();
+getDownloads();
