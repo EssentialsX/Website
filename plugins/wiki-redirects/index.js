@@ -14,7 +14,7 @@ const redirects = [
 ]
 
 module.exports = {
-    name: "essentialsx-wiki-redirects",
+    name: "essentialsx:wiki-redirects",
     apply: (api, options) => {
         redirects.forEach(redirect => api.pages.createRedirect(redirect));
     }

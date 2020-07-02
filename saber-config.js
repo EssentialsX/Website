@@ -59,13 +59,15 @@ module.exports = {
                 resolve: "markdown-it-anchor",
                 options: {
                     permalink: true,
-                    permalinkSymbol: "🔗"
+                    permalinkSymbol: "<fa-icon icon=\"link\" size=\"xs\" />"
                 }
             }
         ]
     },
     plugins: [
+        { resolve: "./plugins/transform-markdown" },
         { resolve: "./plugins/wiki-redirects" },
         { resolve: "saber-plugin-netlify-redirect" },
+        { resolve: "saber-plugin-image" },
     ]
 }
