@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-        <div class="hero is-warning is-medium">
+        <div class="hero is-warning is-large is-bold">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">404</h1>
