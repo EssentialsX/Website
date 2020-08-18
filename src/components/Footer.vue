@@ -12,7 +12,7 @@
                     <b-tooltip class="control" multilined label="View all changelogs">
                         <div class="tags has-addons">
                             <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Latest release</a>
-                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.17.2</a>
+                            <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">2.18.0</a>
                         </div>
                     </b-tooltip>
                     <b-tooltip class="control" multilined label="Visit the build server">
