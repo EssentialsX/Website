@@ -8,16 +8,12 @@
 
 <script>
 import initPreference from "css-prefers-color-scheme";
-let schemePref = { scheme: "light" };
-
-if (typeof document !== "undefined") {
-    schemePref = initPreference();
-}
 
 export default {
     data() {
         return {
-            dark: schemePref.scheme === "dark"
+            schemePref: null,
+            dark: false
         }
     },
     computed: {
@@ -25,9 +21,13 @@ export default {
             return this.dark ? "moon" : "sun";
         }
     },
+    mounted() {
+        this.schemePref = initPreference();
+        this.dark = this.schemePref.scheme === "dark";
+    },
     watch: {
         dark(to) {
-            schemePref.scheme = to ? "dark" : "light";
+            this.schemePref.scheme = to ? "dark" : "light";
         }
     }
 }
