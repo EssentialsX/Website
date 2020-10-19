@@ -32,7 +32,8 @@ const state = Vue.observable({
             "EssentialsX XMPP": {},
         }
     },
-    downloads: 1644000
+    downloads: 1644000,
+    latestRelease: '2.18.1'
 });
 
 export default {
@@ -155,8 +156,18 @@ async function getJenkins() {
     state.jenkins.loading = false;
 }
 
+async function getLatestRelease() {
+    try {
+        const { data } = await axios.get('https://api.github.com/repos/EssentialsX/Essentials/releases');
+        state.latestRelease = data[0].tag_name;
+    } catch (e) {
+        // console.error(e);
+    }
+}
+
 getJenkins()
     .then(getMembers)
     .then(getPatrons)
     .then(getStars)
-    .then(getDownloads);
+    .then(getDownloads)
+    .then(getLatestRelease);
