@@ -47,7 +47,7 @@ module.exports = {
             Reference: [
                 { label: "Commands", href: "https://essinfo.xeya.me/commands.html" },
                 { label: "Permissions", href: "https://essinfo.xeya.me/permissions.html" },
-                { label: "Changelogs", link: "https://github.com/EssentialsX/Essentials/releases" }
+                { label: "Changelogs", href: "https://github.com/EssentialsX/Essentials/releases" }
             ]
         }
     },
