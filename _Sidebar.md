@@ -2,8 +2,8 @@
 
 ## Getting started
 * [[Download EssentialsX|Downloading-EssentialsX]]
-* [Commands](https://essinfo.xeya.me/index.php?page=commands)
-* [Permissions](https://essinfo.xeya.me/index.php?page=permissions)
+* [Commands](https://essinfo.xeya.me/commands.html)
+* [Permissions](https://essinfo.xeya.me/permissions.html)
 * [[Locale|Locale]]
 
 ## Features
