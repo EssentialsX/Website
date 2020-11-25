@@ -21,6 +21,7 @@ const state = Vue.observable({
         build: null,
         version: null,
         error: null,
+        commit: null,
         loading: false,
         plugins: {
             "EssentialsX ": {},
@@ -30,7 +31,8 @@ const state = Vue.observable({
             "EssentialsX Protect": {},
             "EssentialsX Spawn": {},
             "EssentialsX XMPP": {},
-        }
+        },
+        changes: []
     },
     downloads: 1644000,
     latestRelease: '2.18.1'
@@ -146,6 +148,15 @@ async function getJenkins() {
                 main: `${mainCI}lastSuccessfulBuild/artifact/${artifact.relativePath}`,
                 mirror: mirrorCI ? `${mirrorCI}lastSuccessfulBuild/artifact/${artifact.relativePath}` : null,
             };
+        });
+
+        response.data.changeSet.items.forEach(({ commitId, comment, timestamp }) => {
+            state.jenkins.commit = commitId;
+            state.jenkins.changes.push({
+                commit: commitId,
+                comment,
+                time: timestamp
+            });
         });
 
         state.jenkins.error = null;
