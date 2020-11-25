@@ -117,7 +117,7 @@ async function getPatrons() {
 const api = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
-const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.pre-]+?)\.jar/;
+const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-dev\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
 
 function getVersionFromArtifact(name) {
     let m;
