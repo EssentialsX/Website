@@ -21,6 +21,7 @@ const state = Vue.observable({
         build: null,
         version: null,
         error: null,
+        commit: null,
         loading: false,
         plugins: {
             "EssentialsX ": {},
@@ -30,9 +31,11 @@ const state = Vue.observable({
             "EssentialsX Protect": {},
             "EssentialsX Spawn": {},
             "EssentialsX XMPP": {},
-        }
+        },
+        changes: []
     },
-    downloads: 1644000
+    downloads: 1644000,
+    latestRelease: '2.18.1'
 });
 
 export default {
@@ -116,7 +119,7 @@ async function getPatrons() {
 const api = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
-const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.pre-]+?)\.jar/;
+const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-dev\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
 
 function getVersionFromArtifact(name) {
     let m;
@@ -147,6 +150,15 @@ async function getJenkins() {
             };
         });
 
+        response.data.changeSet.items.forEach(({ commitId, comment, timestamp }) => {
+            state.jenkins.commit = commitId;
+            state.jenkins.changes.push({
+                commit: commitId,
+                comment,
+                time: timestamp
+            });
+        });
+
         state.jenkins.error = null;
     } catch (e) {
         // console.error(e);
@@ -155,8 +167,18 @@ async function getJenkins() {
     state.jenkins.loading = false;
 }
 
+async function getLatestRelease() {
+    try {
+        const { data } = await axios.get('https://api.github.com/repos/EssentialsX/Essentials/releases');
+        state.latestRelease = data[0].tag_name;
+    } catch (e) {
+        // console.error(e);
+    }
+}
+
 getJenkins()
     .then(getMembers)
     .then(getPatrons)
     .then(getStars)
-    .then(getDownloads);
+    .then(getDownloads)
+    .then(getLatestRelease);
