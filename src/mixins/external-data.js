@@ -27,6 +27,7 @@ const state = Vue.observable({
             "EssentialsX ": {},
             "EssentialsX AntiBuild": {},
             "EssentialsX Chat": {},
+            "EssentialsX Discord": {},
             "EssentialsX GeoIP": {},
             "EssentialsX Protect": {},
             "EssentialsX Spawn": {},
