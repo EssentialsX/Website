@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">Authorize your EssentialsXDiscord Bot</h1>
-          <h2 class="subtitle">Enter your Client ID bellow to add your bot to your Discord server.</h2>
+          <h2 class="subtitle">Enter the client ID from the Discord Developers site into the box below to add your bot to your Discord server.</h2>
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
         <div class="columns">
           <div class="column">
             <div class="content">
-              <h2>Authorize your EssentialsXDiscord Bot with Discord</h2>
+              <h2>Authorize your EssentialsX Discord Bot with Discord</h2>
               <p>
                 Enter your Client ID, which you should have copied from step two of the initial setup instructions,
                 into the box below.

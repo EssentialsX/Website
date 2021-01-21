@@ -67,7 +67,7 @@
                 />
                 <downloads-tile
                     text="Discord"
-                    description="A bloat-free Discord Bridge for the EssentialsX Suite"
+                    description="Bloat-free Discord chat bridge"
                     :version="version"
                     :url="plugins['EssentialsX Discord'].main"
                 />
