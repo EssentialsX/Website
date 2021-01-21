@@ -1,86 +1,76 @@
 <template>
     <div>
-        <div class="box content">
-            <p>
-                EssentialsX is developed by volunteers in our free time.
-                If you'd like to support the development of EssentialsX, please <a href="https://www.patreon.com/essentialsx" target="_blank">consider supporting us on Patreon</a>.
-            </p>
-            <p class="tip">
-                Not sure what to download? See the <SaberLink to="/wiki/Installing-EssentialsX.html">Installing EssentialsX guide</SaberLink> and <SaberLink to="/wiki/Module-Breakdown.html">module breakdown</SaberLink>.
-            </p>
+        <div class="content">
             <p v-if="loading">
                 <i>Currently loading downloads, please wait...</i>
-                <progress class="progress is-primary" max="100">60%</progress>
+                <progress class="progress is-primary" max="100">50%</progress>
             </p>
             <p v-if="version && !loading">The latest version of EssentialsX is <b>{{version}}</b> (build {{build}}, commit <a :href='commitLink'>{{commit}}</a>).</p>
         </div>
-        <b-notification type="is-danger" v-if="error">
+        <b-notification type="is-danger" v-if="error" :closable="false">
             <p>
-                Could not retrieve information about the latest version.
-                Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
+                Could not load the latest dev builds. <a href="#" @click="refreshJenkins">Retry</a>, or
+                click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
             </p>
         </b-notification>
-        <div v-if="version && !loading" class="tile is-ancestor">
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    bold=true
-                    text="EssentialsX"
-                    description="Core features: messages, teleports, homes, warps and more"
-                    :version="version"
-                    :url="plugins['EssentialsX '].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="AntiBuild"
-                    description="Restrict building with permissions"
-                    :version="version"
-                    :url="plugins['EssentialsX AntiBuild'].main"
-                />
-                <downloads-tile
-                    text="Protect"
-                    description="Configurable world protection"
-                    :version="version"
-                    :url="plugins['EssentialsX Protect'].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="Chat"
-                    description="Chat formatting & local chat"
-                    :version="version"
-                    :url="plugins['EssentialsX Chat'].main"
-                />
-                <downloads-tile
-                    text="Spawn"
-                    description="Fine-grained spawnpoint control"
-                    :version="version"
-                    :url="plugins['EssentialsX Spawn'].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="GeoIP"
-                    description="Geographic player lookup"
-                    :version="version"
-                    :url="plugins['EssentialsX GeoIP'].main"
-                />
-                <downloads-tile
-                    text="XMPP"
-                    description="Jabber server integration"
-                    :version="version"
-                    :url="plugins['EssentialsX XMPP'].main"
-                />
-            </div>
+
+        <div v-if="version && !loading">
+            <h1 class="title is-4">Core</h1>
+            
+            <downloads-item
+                name="EssentialsX Core"
+                description="Core functionality: teleports, private messages, homes, warps and more"
+                :version="version"
+                :download="plugins['EssentialsX '].main"
+            />
+
+            <h1 class="title is-4">Recommended add-ons</h1>
+
+            <downloads-item
+                name="EssentialsX Chat"
+                description="Chat formatting, local chat"
+                :version="version"
+                :download="plugins['EssentialsX Protect'].main"
+            />
+            <downloads-item
+                name="EssentialsX Spawn"
+                description="Spawnpoint control, per-player spawns"
+                :version="version"
+                :download="plugins['EssentialsX GeoIP'].main"
+            />
+
+            <h1 class="title is-4">Other add-ons</h1>
+
+            <downloads-item
+                name="EssentialsX AntiBuild"
+                description="Simple permissions-based building control"
+                :version="version"
+                :download="plugins['EssentialsX AntiBuild'].main"
+            />
+            <downloads-item
+                name="EssentialsX Geo"
+                description="Geographical player lookup"
+                :version="version"
+                :download="plugins['EssentialsX Chat'].main"
+            />
+            <downloads-item
+                name="EssentialsX Protect"
+                description="Configurable world protection and control"
+                :version="version"
+                :download="plugins['EssentialsX Spawn'].main"
+            />
+            <downloads-item
+                name="EssentialsX XMPP"
+                description="Lightweight chat, messaging and server log integration with Jabber/XMPP services"
+                :version="version"
+                :download="plugins['EssentialsX XMPP'].main"
+            />
         </div>
-        <button v-if="!loading" @click="refreshJenkins" class="button">
-            <span>Refresh</span>
-        </button>
     </div>
 </template>
 
 <script>
-import DownloadsTile from "./DownloadsTile.vue";
+import DownloadsItem from "./DownloadsItem.vue";
 
 export default {
     computed: {
@@ -107,7 +97,7 @@ export default {
         }
     },
     components: {
-        DownloadsTile
+        DownloadsItem
     }
 }
 </script>

@@ -10,6 +10,12 @@
         </div>
         <div class="section">
             <div class="container">
+                <b-notification type="is-patreon">
+                    <p>
+                        EssentialsX is developed by volunteers in our free time.
+                        If you'd like to support the development of EssentialsX, please <a href="https://www.patreon.com/essentialsx" target="_blank">consider supporting us on Patreon</a>.
+                    </p>
+                </b-notification>
                 <ClientOnly>
                     <Downloads class="squish"></Downloads>
                 </ClientOnly>
