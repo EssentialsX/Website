@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.7.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "buefy": "^0.7.7",
     "bulma-prefers-dark": "^0.1.0-beta.0",
     "css-prefers-color-scheme": "^4.0.0",
