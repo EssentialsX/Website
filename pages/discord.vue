@@ -3,7 +3,7 @@
     <div class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Authorize your EssentialsXDiscord Bot</h1>
+          <h1 class="title">Authorize your EssentialsX Discord Bot</h1>
           <h2 class="subtitle">Enter the client ID from the Discord Developers site into the box below to add your bot to your Discord server.</h2>
         </div>
       </div>
