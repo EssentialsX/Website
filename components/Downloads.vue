@@ -66,12 +66,6 @@
                     :url="plugins['EssentialsX GeoIP'].main"
                 />
                 <downloads-tile
-                    text="Discord"
-                    description="Bloat-free Discord chat bridge"
-                    :version="version"
-                    :url="plugins['EssentialsX Discord'].main"
-                />
-                <downloads-tile
                     text="XMPP"
                     description="Jabber server integration"
                     :version="version"
