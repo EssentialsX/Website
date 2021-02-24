@@ -1,113 +1,137 @@
 <template>
     <div>
-        <div class="box content">
-            <p>
-                EssentialsX is developed by volunteers in our free time.
-                If you'd like to support the development of EssentialsX, please <a href="https://www.patreon.com/essentialsx" target="_blank">consider supporting us on Patreon</a>.
-            </p>
-            <p class="tip">
-                Not sure what to download? See the <SaberLink to="/wiki/Installing-EssentialsX.html">Installing EssentialsX guide</SaberLink> and <SaberLink to="/wiki/Module-Breakdown.html">module breakdown</SaberLink>.
-            </p>
-            <p v-if="loading">
-                <i>Currently loading downloads, please wait...</i>
-                <progress class="progress is-primary" max="100">60%</progress>
-            </p>
-            <p v-if="version && !loading">The latest version of EssentialsX is <b>{{version}}</b> (build {{build}}, commit <a :href='commitLink'>{{commit}}</a>).</p>
+        <div class="columns">
+            <div class="column">
+                <div class="buttons has-addons">
+                    <b-button
+                        label="Stable release"
+                        @click="branch = 'stable'"
+                        :loading="this.external.builds['stable'].loading"
+                        :type="branch == 'stable' ? 'is-primary' : null"
+                    />
+                    <b-button
+                        label="Development build"
+                        @click="branch = 'dev'"
+                        :loading="this.external.builds['dev'].loading"
+                        :type="branch == 'dev' ? 'is-primary' : null"
+                    />
+                </div>
+
+                <div class="content">
+                    <p v-if="version && !loading">
+                        The latest <b>{{ branch }}</b> version of EssentialsX is <b>{{ version }}</b><span v-if="this.build"> (build {{ build }}, commit <a :href='commitLink'>{{ commit }}</a>)</span>.
+                        You can view the changelog <a :href="changelog">here</a>.
+                    </p>
+                </div>
+
+                <b-notification type="is-danger" v-if="error" :closable="false">
+                    <p>
+                        Could not load the latest dev builds. <a href="#" @click="refreshJenkins">Retry</a>, or
+                        click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
+                    </p>
+                </b-notification>
+                
+                <div v-if="version && !loading">
+                    <h1 class="title is-4">Core</h1>
+                    
+                    <downloads-item
+                        v-bind="plugins.core"
+                        :version="version"
+                    />
+
+                    <h1 class="title is-4">Recommended add-ons</h1>
+
+                    <downloads-item
+                        v-bind="plugins.chat"
+                        :version="version"
+                    />
+                    <downloads-item
+                        v-bind="plugins.spawn"
+                        :version="version"
+                    />
+
+                    <h1 class="title is-4">Other add-ons</h1>
+
+                    <downloads-item
+                        v-bind="plugins.antibuild"
+                        :version="version"
+                    />
+                    <downloads-item
+                        v-bind="plugins.discord"
+                        v-if="plugins.discord.downloadUrl"
+                        :version="version"
+                    />
+                    <downloads-item
+                        v-bind="plugins.geo"
+                        :version="version"
+                    />
+                    <downloads-item
+                        v-bind="plugins.protect"
+                        :version="version"
+                    />
+                    <downloads-item
+                        v-bind="plugins.xmpp"
+                        v-if="plugins.xmpp.downloadUrl"
+                        :version="version"
+                    />
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <support-info />
+            </div>
         </div>
-        <b-notification type="is-danger" v-if="error">
-            <p>
-                Could not retrieve information about the latest version.
-                Click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
-            </p>
-        </b-notification>
-        <div v-if="version && !loading" class="tile is-ancestor">
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    bold=true
-                    text="EssentialsX"
-                    description="Core features: messages, teleports, homes, warps and more"
-                    :version="version"
-                    :url="plugins['EssentialsX '].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="AntiBuild"
-                    description="Restrict building with permissions"
-                    :version="version"
-                    :url="plugins['EssentialsX AntiBuild'].main"
-                />
-                <downloads-tile
-                    text="Protect"
-                    description="Configurable world protection"
-                    :version="version"
-                    :url="plugins['EssentialsX Protect'].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="Chat"
-                    description="Chat formatting & local chat"
-                    :version="version"
-                    :url="plugins['EssentialsX Chat'].main"
-                />
-                <downloads-tile
-                    text="Spawn"
-                    description="Fine-grained spawnpoint control"
-                    :version="version"
-                    :url="plugins['EssentialsX Spawn'].main"
-                />
-            </div>
-            <div class="tile is-parent is-vertical is-3">
-                <downloads-tile
-                    text="GeoIP"
-                    description="Geographic player lookup"
-                    :version="version"
-                    :url="plugins['EssentialsX GeoIP'].main"
-                />
-                <downloads-tile
-                    text="XMPP"
-                    description="Jabber server integration"
-                    :version="version"
-                    :url="plugins['EssentialsX XMPP'].main"
-                />
-            </div>
-        </div>
-        <button v-if="!loading" @click="refreshJenkins" class="button">
-            <span>Refresh</span>
-        </button>
     </div>
 </template>
 
 <script>
-import DownloadsTile from "./DownloadsTile.vue";
+import DownloadsItem from "./DownloadsItem.vue";
+import SupportInfo from "./SupportInfo.vue";
 
 export default {
+    data() {
+        return {
+            branch: this.startBranch
+        };
+    },
     computed: {
+        branchInfo() {
+            return this.external.builds[this.branch];
+        },
         version() {
-            return this.external.jenkins.version;
+            return this.branchInfo.version;
         },
         build() {
-            return this.external.jenkins.build;
+            return this.branchInfo.build;
         },
         error() {
-            return this.external.jenkins.error;
+            return this.branchInfo.error;
         },
         loading() {
-            return this.external.jenkins.loading;
+            return this.branchInfo.loading;
         },
         plugins() {
-            return this.external.jenkins.plugins;
+            return this.branchInfo.plugins;
         },
         commit() {
-            return this.external.jenkins.commit ? this.external.jenkins.commit.substring(0, 7) : null;
+            return this.branchInfo.commit ? this.branchInfo.commit.substring(0, 7) : null;
         },
         commitLink() {
-            return this.external.jenkins.commit ? `https://github.com/EssentialsX/Essentials/commit/${this.external.jenkins.commit}` : null;
+            return this.commit ? `https://github.com/EssentialsX/Essentials/commit/${this.commit}` : null;
+        },
+        changelog() {
+            return this.branchInfo.changelogUrl;
         }
     },
     components: {
-        DownloadsTile
+        DownloadsItem,
+        SupportInfo
+    },
+    props: {
+        startBranch: {
+            type: String,
+            required: false,
+            default: "dev"
+        }
     }
 }
 </script>
