@@ -8,7 +8,7 @@ const pluginsDefaults = {
         name: "EssentialsX",
         description: "Core functionality: teleports, private messages, homes, warps and more",
         downloadUrl: null,
-        tags: [{ text: 'REQUIRED', color: 'dark' }]
+        tags: [{ text: 'REQUIRED' }]
     },
     antibuild: {
         name: "EssentialsX AntiBuild",
@@ -26,7 +26,7 @@ const pluginsDefaults = {
         name: "EssentialsX Discord",
         description: "Lightweight chat, messaging and command integration with Discord",
         downloadUrl: null,
-        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW' }]
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW', color: 'success' }]
     },
     geo: {
         name: "EssentialsX Geo",
