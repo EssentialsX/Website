@@ -34,13 +34,13 @@
                 name="EssentialsX Chat"
                 description="Chat formatting, local chat"
                 :version="version"
-                :download="plugins['EssentialsX Protect'].main"
+                :download="plugins['EssentialsX Chat'].main"
             />
             <downloads-item
                 name="EssentialsX Spawn"
                 description="Spawnpoint control, per-player spawns"
                 :version="version"
-                :download="plugins['EssentialsX GeoIP'].main"
+                :download="plugins['EssentialsX Spawn'].main"
             />
 
             <h1 class="title is-4">Other add-ons</h1>
@@ -68,7 +68,7 @@
                 name="EssentialsX Protect"
                 description="Configurable world protection and control"
                 :version="version"
-                :download="plugins['EssentialsX Spawn'].main"
+                :download="plugins['EssentialsX Protect'].main"
             />
             <downloads-item
                 name="EssentialsX XMPP"
