@@ -5,8 +5,12 @@
                 <i>Currently loading downloads, please wait...</i>
                 <progress class="progress is-primary" max="100">50%</progress>
             </p>
-            <p v-if="version && !loading">The latest version of EssentialsX is <b>{{version}}</b> (build {{build}}, commit <a :href='commitLink'>{{commit}}</a>).</p>
+            <p v-if="version && !loading">
+                The latest version of EssentialsX is <b>{{version}}</b> (build {{build}}, commit <a :href='commitLink'>{{commit}}</a>).
+                You can see recent changes <a href="https://github.com/EssentialsX/Essentials/commits/2.x">here</a>.
+            </p>
         </div>
+
         <b-notification type="is-danger" v-if="error" :closable="false">
             <p>
                 Could not load the latest dev builds. <a href="#" @click="refreshJenkins">Retry</a>, or
