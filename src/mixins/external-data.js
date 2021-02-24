@@ -20,7 +20,7 @@ const pluginsDefaults = {
         name: "EssentialsX Chat",
         description: "Chat formatting, local chat",
         downloadUrl: null,
-        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]
+        tags: [{ text: 'RECOMMENDED', color: 'info' }, { text: 'OPTIONAL', color: 'light' }]
     },
     discord: {
         name: "EssentialsX Discord",
@@ -44,7 +44,7 @@ const pluginsDefaults = {
         name: "EssentialsX Spawn",
         description: "Spawnpoint control, per-player spawns",
         downloadUrl: null,
-        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]
+        tags: [{ text: 'RECOMMENDED', color: 'info' }, { text: 'OPTIONAL', color: 'light' }]
     },
     xmpp: {
         name: "EssentialsX XMPP",
