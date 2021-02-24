@@ -1,12 +1,12 @@
 <template>
     <div class="box">
-        <div class="columns is-vcentered">
+        <div class="columns is-vcentereddd">
             <div class="column is-narrow">
-                <p class="title is-4 no-pad-bottom">{{ name }}</p>
+                <p class="title is-4 no-margin-bottom">{{ name }}</p>
                 <p>{{ version }}</p>
             </div>
             <div class="column">
-                <div class="tags">
+                <div class="tags column-margin-top">
                     <span v-for="tag in tags" :key="tag.name" :class="tagClass(tag)">
                         <b>{{ tag.text }}</b>
                     </span>
@@ -18,20 +18,22 @@
                 </p>
             </div>
             <div class="column is-narrow">
-                <b-button
-                    type="is-info"
-                    v-if="info"
-                    tag="a"
-                    :href="info">
-                    More Info
-                </b-button>
-                <b-button
-                    type="is-primary"
-                    v-if="downloadUrl"
-                    tag="a"
-                    :href="downloadUrl">
-                    Download
-                </b-button>
+                <div class="buttons column-margin-top">
+                    <b-button
+                        type="is-info"
+                        v-if="info"
+                        tag="a"
+                        :href="info">
+                        More Info
+                    </b-button>
+                    <b-button
+                        type="is-primary"
+                        v-if="downloadUrl"
+                        tag="a"
+                        :href="downloadUrl">
+                        Download
+                    </b-button>
+                </div>
             </div>
         </div>
         <div class="is-hidden-mobile">
@@ -83,7 +85,11 @@ export default {
 </script>
 
 <style scoped>
-.no-pad-bottom {
+.no-margin-bottom {
     margin-bottom: 0;
+}
+
+.column-margin-top {
+    margin-top: 0.2rem
 }
 </style>
