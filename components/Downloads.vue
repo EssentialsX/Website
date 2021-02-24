@@ -67,14 +67,14 @@
                 description="Chat formatting, local chat"
                 :version="version"
                 :download="plugins['EssentialsX Chat'].main"
-                :tags="[{ text: 'OPTIONAL', color: 'light' }]"
+                :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]"
             />
             <downloads-item
                 name="EssentialsX Spawn"
                 description="Spawnpoint control, per-player spawns"
                 :version="version"
                 :download="plugins['EssentialsX Spawn'].main"
-                :tags="[{ text: 'OPTIONAL', color: 'light' }]"
+                :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]"
             />
 
             <h1 class="title is-4">Other add-ons</h1>
