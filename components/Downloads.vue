@@ -48,6 +48,13 @@
                 :download="plugins['EssentialsX AntiBuild'].main"
             />
             <downloads-item
+                v-if="!!plugins['EssentialsX Discord']"
+                name="EssentialsX Discord"
+                description="Simple bridge between Minecraft and Discord servers"
+                :version="version"
+                :download="plugins['EssentialsX Discord'].main"
+            />
+            <downloads-item
                 name="EssentialsX Geo"
                 description="Geographical player lookup (formerly EssentialsX GeoIP)"
                 :version="version"
