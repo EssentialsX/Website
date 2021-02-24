@@ -90,8 +90,8 @@ import SupportInfo from "./SupportInfo.vue";
 export default {
     data() {
         return {
-            branch: "dev"
-        }
+            branch: this.startBranch
+        };
     },
     computed: {
         branchInfo() {
@@ -125,6 +125,13 @@ export default {
     components: {
         DownloadsItem,
         SupportInfo
+    },
+    props: {
+        startBranch: {
+            type: String,
+            required: false,
+            default: "dev"
+        }
     }
 }
 </script>

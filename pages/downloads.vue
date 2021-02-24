@@ -17,7 +17,10 @@
                     </p>
                 </b-notification>
                 <ClientOnly>
-                    <Downloads class="squish"></Downloads>
+                    <Downloads
+                        :startBranch="startBranch"
+                        class="squish"
+                    />
                 </ClientOnly>
             </div>
         </div>
@@ -32,6 +35,12 @@ export const attributes = {
 };
 
 export default {
+    data() {
+        console.log(this.$route.query)
+        return {
+            startBranch: this.$route.query.branch || "dev"
+        };
+    },
     components: {
         Downloads
     }
