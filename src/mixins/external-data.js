@@ -96,7 +96,7 @@ export default {
     methods: {
         refreshDownloads() {
             getJenkins();
-
+            getLatestRelease();
         }
     }
 }
@@ -155,7 +155,7 @@ async function getPatrons() {
     let sum = 4000;
 
     try {
-        let response = await axios.get(`https://api.patreon.com/campaigns/1395802`);
+        let response = await axios.get(`https://patreon-api.essentialsx.net/`);
         patrons = response.data.data.attributes.patron_count;
         sum = response.data.data.attributes.pledge_sum;
     } catch (e) {

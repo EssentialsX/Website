@@ -19,8 +19,7 @@
 
                 <div class="content">
                     <p v-if="version && !loading">
-                        The latest <b>{{ branch }}</b> version of EssentialsX is <b>{{ version }}</b>
-                        <span v-if="this.build"> (build {{ build }}, commit <a :href='commitLink'>{{ commit }}</a>)</span>.
+                        The latest <b>{{ branch }}</b> version of EssentialsX is <b>{{ version }}</b><span v-if="this.build"> (build {{ build }}, commit <a :href='commitLink'>{{ commit }}</a>)</span>.
                         You can view the changelog <a :href="changelog">here</a>.
                     </p>
                 </div>
