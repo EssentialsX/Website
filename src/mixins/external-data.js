@@ -72,14 +72,32 @@ const state = Vue.observable({
             version: null,
             build: null,
             commit: null,
-            plugins: { ...pluginsDefaults },
+            plugins: { 
+                core: { ...pluginsDefaults.core },
+                antibuild: { ...pluginsDefaults.antibuild },
+                chat: { ...pluginsDefaults.chat },
+                discord: { ...pluginsDefaults.discord },
+                geo: { ...pluginsDefaults.geo },
+                protect: { ...pluginsDefaults.protect },
+                spawn: { ...pluginsDefaults.spawn },
+                xmpp: { ...pluginsDefaults.xmpp }
+            },
             loading: true,
             error: null
         },
         stable: {
             changelogUrl: "https://github.com/EssentialsX/Essentials/releases",
             version: null,
-            plugins: { ...pluginsDefaults },
+            plugins: { 
+                core: { ...pluginsDefaults.core },
+                antibuild: { ...pluginsDefaults.antibuild },
+                chat: { ...pluginsDefaults.chat },
+                discord: { ...pluginsDefaults.discord },
+                geo: { ...pluginsDefaults.geo },
+                protect: { ...pluginsDefaults.protect },
+                spawn: { ...pluginsDefaults.spawn },
+                xmpp: { ...pluginsDefaults.xmpp }
+            },
             loading: true,
             error: null
         }
