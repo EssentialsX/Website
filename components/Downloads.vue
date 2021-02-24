@@ -49,9 +49,9 @@
             />
             <downloads-item
                 name="EssentialsX Geo"
-                description="Geographical player lookup"
+                description="Geographical player lookup (formerly EssentialsX GeoIP)"
                 :version="version"
-                :download="plugins['EssentialsX Chat'].main"
+                :download="plugins['EssentialsX GeoIP'].main"
             />
             <downloads-item
                 name="EssentialsX Protect"
