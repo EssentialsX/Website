@@ -3,10 +3,10 @@
         <div class="content">
             <div class="message is-info">
                 <div class="message-body">
-                    <p style="display: block; text-align: left">
+                    <p>
                         EssentialsX officially supports the <b>CraftBukkit</b>, <b>Spigot</b> and <a href="https://papermc.io/"><b>Paper (recommended)</b></a> server software running the following Minecraft versions:
                     </p>            
-                    <ul style="display: block; text-align: left">
+                    <ul>
                         <li>✅ <b>1.16.5</b> - EssentialsX actively develops against and supports these versions.</li>
                         <li>⚠️ <b>1.8.8</b>, <b>1.9.4</b>, <b>1.10.2</b>, <b>1.11.2</b>, <b>1.12.2</b>, <b>1.13.2</b>, <b>1.14.4</b> and <b>1.15.2</b> - these versions are still supported, but are not a priority for us, and may be dropped in a future release.</li>
                     </ul>
@@ -18,7 +18,7 @@
             
             <div class="message is-danger">
                 <div class="message-body">
-                    <p style="display: block; text-align: left">
+                    <p>
                         EssentialsX <b>does not support</b> the following Minecraft versions and server software:
                     </p>
                     <ul>
@@ -26,7 +26,7 @@
                         <li>🛑 <b>Any Forge/Fabric hybrid server software</b>, including <b>Cauldron</b>, <b>Thermos</b>, <b>CatServer</b>, <b>Mohist</b> and <b>Magma</b> - the Bukkit API does not properly support mods, and using Bukkit plugins on modded Forge/Fabric servers will cause significant problems.<br />For Forge servers, use <b><a href="https://www.spongepowered.org/downloads/spongeforge">SpongeForge</a></b> with <b><a href=https://nucleuspowered.org/>Nucleus</a></b> for plugin support and a complete Essentials replacement, or consider a mod designed for Forge such as <a href="https://www.curseforge.com/minecraft/mc-mods/ftb-essentials"><b>FTB Essentials</b></a>.</li>
                         <li>🛑 <b>1.7.10 or below</b> - you should use the original <a href="https://dev.bukkit.org/projects/essentials">Essentials</a>.</li>
                     </ul>
-                    <p style="display: block; text-align: left">
+                    <p>
                         We will not be able to provide support if you use any of the software or versions listed above.
                     </p>
                 </div>
