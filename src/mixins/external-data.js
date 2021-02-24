@@ -3,8 +3,6 @@ import axios from "axios";
 
 // axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-const corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-
 const pluginsDefaults = {
     core: {
         name: "EssentialsX",
@@ -115,7 +113,7 @@ async function getDownloads() {
     }
 
     try {
-        response = await axios.get("https://api.cfwidget.com/minecraft/bukkit-plugins/essentialsx/");
+        response = await axios.get(`https://cf-api.essentialsx.net/`);
         count += response.data.downloads.total;
     } catch (e) {
         // console.error(e)
@@ -157,7 +155,7 @@ async function getPatrons() {
     let sum = 4000;
 
     try {
-        let response = await axios.get(`${corsAnywhere}https://api.patreon.com/campaigns/1395802`);
+        let response = await axios.get(`https://api.patreon.com/campaigns/1395802`);
         patrons = response.data.data.attributes.patron_count;
         sum = response.data.data.attributes.pledge_sum;
     } catch (e) {
@@ -168,8 +166,8 @@ async function getPatrons() {
     state.patreon.sum = sum;
 }
 
-const api = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
+const mainCIAPI = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
 const moduleRegex = /EssentialsX([A-Za-z]+)/;
 const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-dev\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
@@ -199,7 +197,7 @@ async function getJenkins() {
         let response;
         let currentCI = mainCI;
         try {
-            response = await axios.get(`${api}lastSuccessfulBuild/api/json`);
+            response = await axios.get(`${mainCIAPI}lastSuccessfulBuild/api/json`);
         } catch (e) {
             response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`);
             currentCI = mirrorCI;
