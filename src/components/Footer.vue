@@ -77,7 +77,7 @@ export default {
             return this.external.github.stars || "400+";
         },
         buildNo() {
-            return this.external.jenkins.build || "???";
+            return this.external.builds.dev.build || "???";
         },
         members() {
             return this.external.discord.members ? (this.external.discord.members / 1000).toFixed(1) + "k" : "1k";
@@ -86,7 +86,7 @@ export default {
             return this.external.discord.members || "Over 1000";
         },
         latestRelease() {
-            return this.external.latestRelease;
+            return this.external.builds.stable.version;
         }
     },
     components: {

@@ -2,14 +2,30 @@
     <div>
         <div class="columns">
             <div class="column">
+                <div class="buttons has-addons">
+                    <b-button
+                        label="Stable release"
+                        @click="branch = 'stable'"
+                        :loading="this.external.builds['stable'].loading"
+                        :type="branch == 'stable' ? 'is-primary' : null"
+                    />
+                    <b-button
+                        label="Development build"
+                        @click="branch = 'dev'"
+                        :loading="this.external.builds['dev'].loading"
+                        :type="branch == 'dev' ? 'is-primary' : null"
+                    />
+                </div>
+
                 <div class="content">
                     <p v-if="loading">
                         <i>Currently loading downloads, please wait...</i>
                         <progress class="progress is-primary" max="100">50%</progress>
                     </p>
                     <p v-if="version && !loading">
-                        The latest version of EssentialsX is <b>{{version}}</b> (build {{build}}, commit <a :href='commitLink'>{{commit}}</a>).
-                        You can see recent changes <a href="https://github.com/EssentialsX/Essentials/commits/2.x">here</a>.
+                        The latest <b>{{ branch }}</b> version of EssentialsX is <b>{{ version }}</b>
+                        <span v-if="this.build"> (build {{ build }}, commit <a :href='commitLink'>{{ commit }}</a>)</span>.
+                        You can view the changelog <a :href="changelog">here</a>.
                     </p>
                 </div>
 
@@ -24,67 +40,44 @@
                     <h1 class="title is-4">Core</h1>
                     
                     <downloads-item
-                        name="EssentialsX Core"
-                        description="Core functionality: teleports, private messages, homes, warps and more"
+                        v-bind="plugins.core"
                         :version="version"
-                        :download="plugins['EssentialsX '].main"
-                        :tags="[{ text: 'REQUIRED', color: 'dark' }]"
                     />
 
                     <h1 class="title is-4">Recommended add-ons</h1>
 
                     <downloads-item
-                        name="EssentialsX Chat"
-                        description="Chat formatting, local chat"
+                        v-bind="plugins.chat"
                         :version="version"
-                        :download="plugins['EssentialsX Chat'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]"
                     />
                     <downloads-item
-                        name="EssentialsX Spawn"
-                        description="Spawnpoint control, per-player spawns"
+                        v-bind="plugins.spawn"
                         :version="version"
-                        :download="plugins['EssentialsX Spawn'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]"
                     />
 
                     <h1 class="title is-4">Other add-ons</h1>
 
                     <downloads-item
-                        name="EssentialsX AntiBuild"
-                        description="Simple permissions-based building control"
+                        v-bind="plugins.antibuild"
                         :version="version"
-                        :download="plugins['EssentialsX AntiBuild'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }]"
                     />
                     <downloads-item
-                        v-if="!!plugins['EssentialsX Discord']"
-                        name="EssentialsX Discord"
-                        description="Simple bridge between Minecraft and Discord servers"
+                        v-bind="plugins.discord"
+                        v-if="plugins.discord.downloadUrl"
                         :version="version"
-                        :download="plugins['EssentialsX Discord'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW' }]"
                     />
                     <downloads-item
-                        name="EssentialsX Geo"
-                        description="Geographical player lookup (formerly EssentialsX GeoIP)"
+                        v-bind="plugins.geo"
                         :version="version"
-                        :download="plugins['EssentialsX GeoIP'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }]"
                     />
                     <downloads-item
-                        name="EssentialsX Protect"
-                        description="Configurable world protection and control"
+                        v-bind="plugins.protect"
                         :version="version"
-                        :download="plugins['EssentialsX Protect'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }]"
                     />
                     <downloads-item
-                        name="EssentialsX XMPP"
-                        description="Lightweight chat, messaging and server log integration with Jabber/XMPP services"
+                        v-bind="plugins.xmpp"
+                        v-if="plugins.xmpp.downloadUrl"
                         :version="version"
-                        :download="plugins['EssentialsX XMPP'].main"
-                        :tags="[{ text: 'OPTIONAL', color: 'light' }, { text: 'LEGACY', color: 'warning' }]"
                     />
                 </div>
             </div>
@@ -100,27 +93,38 @@ import DownloadsItem from "./DownloadsItem.vue";
 import SupportInfo from "./SupportInfo.vue";
 
 export default {
+    data() {
+        return {
+            branch: "dev"
+        }
+    },
     computed: {
+        branchInfo() {
+            return this.external.builds[this.branch];
+        },
         version() {
-            return this.external.jenkins.version;
+            return this.branchInfo.version;
         },
         build() {
-            return this.external.jenkins.build;
+            return this.branchInfo.build;
         },
         error() {
-            return this.external.jenkins.error;
+            return this.branchInfo.error;
         },
         loading() {
-            return this.external.jenkins.loading;
+            return this.branchInfo.loading;
         },
         plugins() {
-            return this.external.jenkins.plugins;
+            return this.branchInfo.plugins;
         },
         commit() {
-            return this.external.jenkins.commit ? this.external.jenkins.commit.substring(0, 7) : null;
+            return this.branchInfo.commit ? this.branchInfo.commit.substring(0, 7) : null;
         },
         commitLink() {
-            return this.external.jenkins.commit ? `https://github.com/EssentialsX/Essentials/commit/${this.external.jenkins.commit}` : null;
+            return this.commit ? `https://github.com/EssentialsX/Essentials/commit/${this.commit}` : null;
+        },
+        changelog() {
+            return this.branchInfo.changelogUrl;
         }
     },
     components: {

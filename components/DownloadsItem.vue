@@ -27,9 +27,9 @@
                 </b-button>
                 <b-button
                     type="is-primary"
-                    v-if="download"
+                    v-if="downloadUrl"
                     tag="a"
-                    :href="download">
+                    :href="downloadUrl">
                     Download
                 </b-button>
             </div>
@@ -57,7 +57,7 @@ export default {
             type: String,
             required: true
         },
-        download: {
+        downloadUrl: {
             type: String,
             requried: false
         },

@@ -5,6 +5,57 @@ import axios from "axios";
 
 const corsAnywhere = "https://cors-anywhere.herokuapp.com/";
 
+const pluginsDefaults = {
+    core: {
+        name: "EssentialsX",
+        description: "Core functionality: teleports, private messages, homes, warps and more",
+        downloadUrl: null,
+        tags: [{ text: 'REQUIRED', color: 'dark' }]
+    },
+    antibuild: {
+        name: "EssentialsX AntiBuild",
+        description: "Simple permissions-based building control",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }]
+    },
+    chat: {
+        name: "EssentialsX Chat",
+        description: "Chat formatting, local chat",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]
+    },
+    discord: {
+        name: "EssentialsX Discord",
+        description: "Lightweight chat, messaging and command integration with Discord",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW' }]
+    },
+    geo: {
+        name: "EssentialsX Geo",
+        description: "Geographical player lookup (formerly EssentialsX GeoIP)",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }]
+    },
+    protect: {
+        name: "EssentialsX Protect",
+        description: "Configurable world protection and control",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }]
+    },
+    spawn: {
+        name: "EssentialsX Spawn",
+        description: "Spawnpoint control, per-player spawns",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'RECOMMENDED', color: 'info' }]
+    },
+    xmpp: {
+        name: "EssentialsX XMPP",
+        description: "Lightweight chat, messaging and server log integration with Jabber/XMPP services",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'LEGACY', color: 'warning' }]
+    }
+};
+
 const state = Vue.observable({
     github: {
         stars: null,
@@ -17,25 +68,25 @@ const state = Vue.observable({
     discord: {
         members: null,
     },
-    jenkins: {
-        build: null,
-        version: null,
-        error: null,
-        commit: null,
-        loading: false,
-        plugins: {
-            "EssentialsX ": {},
-            "EssentialsX AntiBuild": {},
-            "EssentialsX Chat": {},
-            "EssentialsX GeoIP": {},
-            "EssentialsX Protect": {},
-            "EssentialsX Spawn": {},
-            "EssentialsX XMPP": {},
+    builds: {
+        dev: {
+            changelogUrl: "https://github.com/EssentialsX/Essentials/commits/2.x",
+            version: null,
+            build: null,
+            commit: null,
+            plugins: { ...pluginsDefaults },
+            loading: true,
+            error: null
         },
-        changes: []
+        stable: {
+            changelogUrl: "https://github.com/EssentialsX/Essentials/releases",
+            version: null,
+            plugins: { ...pluginsDefaults },
+            loading: true,
+            error: null
+        }
     },
-    downloads: 1644000,
-    latestRelease: '2.18.1'
+    downloads: 3000000
 });
 
 export default {
@@ -45,8 +96,9 @@ export default {
         }
     },
     methods: {
-        refreshJenkins() {
+        refreshDownloads() {
             getJenkins();
+
         }
     }
 }
@@ -86,7 +138,7 @@ async function getMembers() {
 }
 
 async function getStars() {
-    let stars = 440;
+    let stars = 800;
     let forks = 400;
     try {
         let response = await axios.get("https://api.github.com/repos/EssentialsX/Essentials");
@@ -119,6 +171,7 @@ async function getPatrons() {
 const api = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mainCI = "https://ci.ender.zone/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
+const moduleRegex = /EssentialsX([A-Za-z]+)/;
 const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-dev\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
 
 function getVersionFromArtifact(name) {
@@ -129,56 +182,65 @@ function getVersionFromArtifact(name) {
     }
 }
 
+function getModuleIdFromArtifact(name) {
+    let m;
+
+    while ((m = moduleRegex.exec(name)) !== null) {
+        return m[1].toLowerCase().replace("geoip", "geo");
+    }
+
+    return "core";
+}
+
 async function getJenkins() {
     try {
-        state.jenkins.loading = true;
-        let response;
+        state.builds.dev.loading = true;
 
+        let response;
+        let currentCI = mainCI;
         try {
             response = await axios.get(`${api}lastSuccessfulBuild/api/json`);
         } catch (e) {
             response = await axios.get(`${mirrorCI}lastSuccessfulBuild/api/json`);
+            currentCI = mirrorCI;
         }
 
-        state.jenkins.build = response.data.id;
-        state.jenkins.version = getVersionFromArtifact(response.data.artifacts[0].displayPath);;
+        state.builds.dev.build = response.data.id;
+        state.builds.dev.version = getVersionFromArtifact(response.data.artifacts[0].displayPath);
+        state.builds.dev.commit = response.data.changeSet.items[0].commitId;
+        state.builds.dev.error = null;
+
         response.data.artifacts.forEach(artifact => {
-            const name = `EssentialsX ${artifact.displayPath.match(/EssentialsX([A-Za-z]*)/)[1]}`;
-            state.jenkins.plugins[name] = {
-                main: `${mainCI}lastSuccessfulBuild/artifact/${artifact.relativePath}`,
-                mirror: mirrorCI ? `${mirrorCI}lastSuccessfulBuild/artifact/${artifact.relativePath}` : null,
-            };
+            let moduleId = getModuleIdFromArtifact(artifact.displayPath);
+            state.builds.dev.plugins[moduleId].downloadUrl = `${currentCI}lastSuccessfulBuild/artifact/${artifact.relativePath}`;
         });
-
-        response.data.changeSet.items.forEach(({ commitId, comment, timestamp }) => {
-            state.jenkins.commit = commitId;
-            state.jenkins.changes.push({
-                commit: commitId,
-                comment,
-                time: timestamp
-            });
-        });
-
-        state.jenkins.error = null;
     } catch (e) {
-        // console.error(e);
-        state.jenkins.error = e.response ? e.response.data : e.message;
+        state.builds.dev.error = e.response ? e.response.data : e.message;
     }
-    state.jenkins.loading = false;
+    state.builds.dev.loading = false;
 }
 
 async function getLatestRelease() {
     try {
+        state.builds.stable.loading = true;
         const { data } = await axios.get('https://api.github.com/repos/EssentialsX/Essentials/releases');
-        state.latestRelease = data[0].tag_name;
+
+        state.builds.stable.version = data[0].tag_name;
+        state.builds.stable.error = null;
+
+        data[0].assets.forEach(asset => {
+            let moduleId = getModuleIdFromArtifact(asset.name);
+            state.builds.stable.plugins[moduleId].downloadUrl = asset.browser_download_url;
+        });
     } catch (e) {
-        // console.error(e);
+        state.builds.stable.error = e.response ? e.response.data : e.message;
     }
+    state.builds.stable.loading = false;
 }
 
-getJenkins()
-    .then(getMembers)
-    .then(getPatrons)
-    .then(getStars)
-    .then(getDownloads)
-    .then(getLatestRelease);
+getJenkins();
+getLatestRelease();
+getMembers();
+getPatrons();
+getStars();
+getDownloads();
