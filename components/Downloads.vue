@@ -18,10 +18,6 @@
                 </div>
 
                 <div class="content">
-                    <p v-if="loading">
-                        <i>Currently loading downloads, please wait...</i>
-                        <progress class="progress is-primary" max="100">50%</progress>
-                    </p>
                     <p v-if="version && !loading">
                         The latest <b>{{ branch }}</b> version of EssentialsX is <b>{{ version }}</b>
                         <span v-if="this.build"> (build {{ build }}, commit <a :href='commitLink'>{{ commit }}</a>)</span>.
