@@ -13,6 +13,11 @@
                         {{ description }}
                     </p>
                 </div>
+                <div class="tags">
+                    <span v-for="tag in tags" :key="tag.name" :class="tagClass(tag)">
+                        <b>{{ tag.text }}</b>
+                    </span>
+                </div>
             </div>
             <div class="level-right">
                 <div class="level-item">
@@ -70,6 +75,19 @@ export default {
             type: String,
             required: false
         },
+        tags: {
+            type: Array,
+            required: false
+        }
+    },
+    methods: {
+        tagClass(tag) {
+            let tagColor = tag.color || "primary";
+            return {
+                tag: true,
+                [`is-${tagColor}`]: true
+            };
+        }
     }
 }
 </script>
