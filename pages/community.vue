@@ -19,6 +19,7 @@
                             </p>
                             <p>
                                 You can get support for several plugins including EssentialsX, plus chat to fellow server owners and plugin developers from across the globe! We're always happy to welcome new members.
+                                <a href="https://discord.gg/h8CnPSw">Click here to join.</a>
                             </p>
                             <h2>Discuss EssentialsX on GitHub</h2>
                             <p>
