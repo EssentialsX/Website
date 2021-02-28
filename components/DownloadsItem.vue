@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <div class="columns is-vcentereddd">
+        <div class="columns">
             <div class="column is-narrow">
                 <p class="title is-4 no-margin-bottom">{{ name }}</p>
                 <p>{{ version }}</p>
