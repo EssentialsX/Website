@@ -28,10 +28,23 @@
                     </b-button>
                     <b-button
                         type="is-primary"
-                        v-if="downloadUrl"
+                        v-if="downloadUrl && !bundleEnabled"
                         tag="a"
                         :href="downloadUrl">
                         Download
+                    </b-button>
+                    <b-button
+                        type="is-primary"
+                        v-if="downloadUrl && bundleEnabled && !bundleRequired"
+                        @click="$emit('toggle-bundle-selection')">
+                        <span v-if="bundleSelected">Remove</span>
+                        <span v-else>Add</span>
+                    </b-button>
+                    <b-button
+                        type="is-primary"
+                        disabled
+                        v-if="downloadUrl && bundleEnabled && bundleRequired">
+                        Required
                     </b-button>
                 </div>
             </div>
@@ -69,6 +82,19 @@ export default {
         },
         tags: {
             type: Array,
+            required: false
+        },
+        bundleRequired: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        bundleSelected: {
+            type: Boolean,
+            required: false
+        },
+        bundleEnabled: {
+            type: Boolean,
             required: false
         }
     },

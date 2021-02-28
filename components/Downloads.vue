@@ -2,20 +2,44 @@
     <div>
         <div class="columns">
             <div class="column">
-                <div class="buttons has-addons">
-                    <b-button
-                        label="Stable release"
-                        @click="branch = 'stable'"
-                        :loading="this.external.builds['stable'].loading"
-                        :type="branch == 'stable' ? 'is-primary' : null"
-                    />
-                    <b-button
-                        label="Development build"
-                        @click="branch = 'dev'"
-                        :loading="this.external.builds['dev'].loading"
-                        :type="branch == 'dev' ? 'is-primary' : null"
-                    />
+                <div class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <div class="buttons has-addons">
+                                <b-button
+                                    label="Stable release"
+                                    @click="branch = 'stable'"
+                                    :loading="this.external.builds['stable'].loading"
+                                    :type="branch == 'stable' ? 'is-primary' : null"
+                                />
+                                <b-button
+                                    label="Development build"
+                                    @click="branch = 'dev'"
+                                    :loading="this.external.builds['dev'].loading"
+                                    :type="branch == 'dev' ? 'is-primary' : null"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <div class="buttons has-addons">
+                                <b-button
+                                    label="Single"
+                                    @click="bundleEnabled = false"
+                                    :type="bundleEnabled ? null : 'is-primary'"
+                                />
+                                <b-button
+                                    label="Bundle"
+                                    @click="bundleEnabled = true"
+                                    :type="bundleEnabled ? 'is-primary' : null"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                
 
                 <div class="content">
                     <p v-if="version && !loading">
@@ -36,6 +60,10 @@
                     
                     <downloads-item
                         v-bind="plugins.core"
+                        bundle-required
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.core"
+                        @toggle-bundle-selection="toggleBundleSelection('core')"
                         :version="version"
                     />
 
@@ -43,10 +71,16 @@
 
                     <downloads-item
                         v-bind="plugins.chat"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.chat"
+                        @toggle-bundle-selection="toggleBundleSelection('chat')"
                         :version="version"
                     />
                     <downloads-item
                         v-bind="plugins.spawn"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.spawn"
+                        @toggle-bundle-selection="toggleBundleSelection('spawn')"
                         :version="version"
                     />
 
@@ -54,24 +88,39 @@
 
                     <downloads-item
                         v-bind="plugins.antibuild"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.antibuild"
+                        @toggle-bundle-selection="toggleBundleSelection('antibuild')"
                         :version="version"
                     />
                     <downloads-item
                         v-bind="plugins.discord"
                         v-if="plugins.discord.downloadUrl"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.discord"
+                        @toggle-bundle-selection="toggleBundleSelection('discord')"
                         :version="version"
                     />
                     <downloads-item
                         v-bind="plugins.geo"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.geo"
+                        @toggle-bundle-selection="toggleBundleSelection('geo')"
                         :version="version"
                     />
                     <downloads-item
                         v-bind="plugins.protect"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.protect"
+                        @toggle-bundle-selection="toggleBundleSelection('protect')"
                         :version="version"
                     />
                     <downloads-item
                         v-bind="plugins.xmpp"
                         v-if="plugins.xmpp.downloadUrl"
+                        :bundle-enabled="bundleEnabled"
+                        :bundle-selected="bundleSelected.xmpp"
+                        @toggle-bundle-selection="toggleBundleSelection('xmpp')"
                         :version="version"
                     />
                 </div>
@@ -90,7 +139,18 @@ import SupportInfo from "./SupportInfo.vue";
 export default {
     data() {
         return {
-            branch: this.startBranch
+            branch: this.startBranch,
+            bundleEnabled: false,
+            bundleSelected: {
+                core: true,
+                antibuild: false,
+                chat: false,
+                discord: false,
+                geo: false,
+                protect: false,
+                spawn: false,
+                xmpp: false
+            }
         };
     },
     computed: {
@@ -120,6 +180,11 @@ export default {
         },
         changelog() {
             return this.branchInfo.changelogUrl;
+        }
+    },
+    methods: {
+        toggleBundleSelection(module) {
+            this.bundleSelected[module] = !this.bundleSelected[module];
         }
     },
     components: {
