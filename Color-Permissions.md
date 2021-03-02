@@ -9,6 +9,7 @@ This works for the following:
 * Sending mails with `/mail`: `essentials.mail.<suffix>`
 * Setting your own nickname with `/nick`: `essentials.nick.<suffix>`
 * Sending chat messages **(requires EssentialsX Chat)**: `essentials.chat.<suffix>`
+* Editing a sign with `/editsign`: `essentials.editsign.<suffix>`
 * Colors on signs **(requires color signs to be enabled)**: `essentials.signs.<suffix>`
 
 Below is a list of valid permissions suffixes. Note that some codes are only available on EssentialsX 2.16.1.169 and
@@ -19,6 +20,7 @@ above:
 | `color` (group)  | `&0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &a &b &c &d &e &f` | All versions        |
 | `format` (group) | `&l &m &n &o &r`                                  | All versions        |
 | `magic` (group)  | `&k`                                              | All versions        |
+| `rgb`            | `&#RRGGBB`                                        | 2.18.0+             |
 | `black`          | `&0`                                              | 2.16.1.169+         |
 | `dark_blue`      | `&1`                                              | 2.16.1.169+         |
 | `dark_green`     | `&2`                                              | 2.16.1.169+         |

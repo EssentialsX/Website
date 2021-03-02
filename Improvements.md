@@ -44,7 +44,7 @@ kits:
   mykit:
     delay: 1000
     items:
-      - 272 1
+      - stone 1
       - /give {player} apple 1
 ```
 

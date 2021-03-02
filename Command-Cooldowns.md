@@ -1,4 +1,4 @@
-**This feature was added in [build 369](https://ci.drtshock.net/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).** 
+**This feature was added in [build 369](https://ci.ender.zone/job/EssentialsX) ([09acbcd](https://github.com/drtshock/Essentials/commit/09acbcdb05f34e0043116f1866904b0ff0f03ddd)).** 
 _Requested in [#110](/drtshock/Essentials/issues/110). PR in [#692](/drtshock/Essentials/pull/692)._
 
 This feature introduces the highly demanded ability to apply cooldowns to commands. If you want to limit how often a player can `/feed` or go `/home`, all you have to do is simply add that command to the config:

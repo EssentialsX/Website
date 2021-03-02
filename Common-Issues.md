@@ -32,7 +32,7 @@ aliases:
 See the [Bukkit wiki page](https://bukkit.gamepedia.com/Commands.yml#aliases) for more information.
 
 ## Another plugin is overriding an EssentialsX command
-Typically, if EssentialsX finds another plugin providing a command with the same name as one of EssentialsX's own commands, it will try and hand over that command to the other plugin. However, you can force EssentialsX to handle commands that are also provided by another plugin using the [`overridden-commands` section](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml#L138) of your `config.yml`. This will tell EssentialsX not to "give up" the command to the other plugin.
+Typically, if EssentialsX finds another plugin providing a command with the same name as one of EssentialsX's own commands, it will try and hand over that command to the other plugin. However, you can force EssentialsX to handle commands that are also provided by another plugin using the [`overridden-commands` section](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/main/resources/config.yml#L162) of your `config.yml`. This will tell EssentialsX not to "give up" the command to the other plugin.
 
 For example, to force EssentialsX to handle the `/msg` command instead of passing it over to another plugin, your section should look like this:
 ```yaml
@@ -62,20 +62,35 @@ This is required to allow EssentialsX's compatibility providers can build agains
 
 Next, [download or clone EssentialsX](https://github.com/EssentialsX/Essentials), open a terminal in the root of the EssentialsX source and run:
 ```bash
-mvn clean install
+./gradlew build
 ```
 
-If this completes with no errors, you will be able to find each plugin jar in the `target` subdirectory of the respective plugin's directory - `Essentials/target/` will contain the EssentialsX jar, `EssentialsSpawn/target/` will contain the EssentialsXSpawn jar and so on.
+If this completes with no errors, you will be able to find each plugin jar in the `jars/` directory or, in `build/libs/` inside each module's directory.
 
 ## How do I add EssentialsX as a dependency?
+### Repositores
+Do you want to integrate with EssentialsX in your plugin? You can use the EssentialsX Maven repo to build against EssentialsX's API.
+
+Releases are hosted on the Maven repo at `https://repo.essentialsx.net/releases/`, while snapshots (including dev builds) are hosted at `https://repo.essentialsx.net/snapshots/`.
+
+To add EssentialsX to your build system, you should use the following artifacts:
+
+| Type            | Group ID        | Artifact ID | Version         |
+| :-------------- | :-------------- | :---------- | :-------------- |
+| Older releases  | net.ess3        | EssentialsX | 2.18.2          |
+| Snapshots       | net.essentialsx | EssentialsX | 2.19.0-SNAPSHOT |
+| Future releases | net.essentialsx | EssentialsX | 2.19.0          |
+
+Note: up until 2.18.2, EssentialsX used the net.ess3 group ID, but starting with 2.19.0 snapshots, the group ID is now net.essentialsx. When updating your plugin, make sure you use the correct group ID.
+
 ### Maven
 Under `repositories` in your `pom.xml`, you need to add a new `repository` for the EssentialsX CI server:
 ```xml
 <repositories>
     ...
     <repository>
-        <id>ess-repo</id>
-        <url>https://ci.ender.zone/plugin/repository/everything/</url>
+        <id>essentials-snapshots</id>
+        <url>https://repo.essentialsx.net/snapshots/</url>
     </repository>
     <repository>
         <id>paper-repo</id>
@@ -89,13 +104,20 @@ Next, add EssentialsX as a `dependency` under `dependencies`:
 <dependencies>
     ...
     <dependency>
-        <groupId>net.ess3</groupId>
+        <groupId>net.essentialsx</groupId>
         <artifactId>EssentialsX</artifactId>
-        <version>2.17.2</version>
+        <version>2.19.0-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
 ```
+
+<!-- Removed the releases repository
+    <repository>
+        <id>essentials-releases</id>
+        <url>https://repo.essentialsx.net/releases/</url>
+    </repository>
+-->
 
 Make sure the dependency is `provided` - you don't want to include the whole of EssentialsX inside your plugin.
 
@@ -106,8 +128,8 @@ First, add the repository to your `build.gradle`:
 ```groovy
 repositories {
     maven {
-        name "essentialsx"
-        url "https://ci.ender.zone/plugin/repository/everything/"
+        name "essentialsx-snapshots"
+        url "https://repo.essentialsx.net/snapshots/"
     }
     maven {
         name "papermc"
@@ -116,11 +138,18 @@ repositories {
 }
 ```
 
+<!-- Removed the releases repository
+    maven {
+        name "essentialsx-releases"
+        url "https://repo.essentialsx.net/releases/"
+    }
+-->
+
 Next, add the dependency as a `compileOnly` dependency:
 ```groovy
 dependencies {
     ...
-    compileOnly 'net.ess3:EssentialsX:2.17.2'
+    compileOnly 'net.essentialsx:EssentialsX:2.19.0-SNAPSHOT'
 }
 ```
 

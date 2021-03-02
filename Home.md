@@ -18,7 +18,7 @@ In addition, EssentialsX's optional modules provide further integrated features 
 * [Commands list](https://essinfo.xeya.me/commands.html) (community-maintained)
 * [Permissions list](https://essinfo.xeya.me/permissions.html) (community-maintained)
 
-**Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/config.yml).
+**Note:** When updating EssentialsX, you need to update *all* the modules to the same version to prevent version mismatch errors. In addition, you may want to update your config file - the latest config file can always be found [here](https://github.com/EssentialsX/Essentials/blob/2.x/Essentials/src/main/resources/config.yml).
 
 ## Updating from Essentials 2
 

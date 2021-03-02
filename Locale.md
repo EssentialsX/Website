@@ -69,7 +69,9 @@ When editing only a few keys, the process should look something like [this (clic
 
 ## Colours
 
-If you decide to edit the locale files with a standard text editor, you may notice lots of text like '\u00a7'. These are Unicode character escapes, which allow you to represent symbols and letters which do not exist in ASCII within an ASCII file. The most common of these you will see is '\u00a7' which represents the **section symbol** (&sect;), used in Minecraft to make colour codes. Other languages such as those that use their own alphabets or use non-standard characters will also need to use these codes. Many Java IDEs will do the conversion to and from Unicode automatically, or you can use a tool like [this](https://native2ascii.net/) to manually convert them.
+If you have an older messages file, you may notice lots of text like `\u00a7`. These are Unicode character escapes, but are no longer needed in modern versions of EssentialsX which support UTF-8 files, and you can convert these to UTF-8 characters `§` using a tool such as [Interactive native2ascii](https://native2ascii.net/).
+
+To use RGB colour codes, you will need to use Spigot's `§x§R§R§G§G§B§B` format, where RRGGBB come from the colour's hexadecimal code. You can also use [legacy colour codes (`§0` to `§f`)](https://minecraft.gamepedia.com/Formatting_codes#Color_codes) and [formatting codes](https://minecraft.gamepedia.com/Formatting_codes#Formatting_codes).
 
 ## Example
 

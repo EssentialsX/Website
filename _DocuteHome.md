@@ -3,7 +3,7 @@
 ## Getting started
 
 * [[Installing EssentialsX]]
-* [Commands](https://essinfo.xeya.me/commands.php) and [Permissions](https://essinfo.xeya.me/permissions.php)
+* [Commands](https://essinfo.xeya.me/commands.html) and [Permissions](https://essinfo.xeya.me/permissions.html)
 
 ## Features
 

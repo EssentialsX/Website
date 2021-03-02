@@ -10,13 +10,13 @@ The core EssentialsX jar contains many of the core features for most servers. Th
 
 Note that AntiBuild doesn't include any kind of region protection; to restrict building in specific regions we recommend installing [WorldGuard](https://dev.bukkit.org/projects/worldguard).
 
-*We recommend you use LuckPerms with AntiBuild to make the most of its features.*
+*We recommend you use [LuckPerms](https://luckperms.net/download) with AntiBuild to make the most of its features.*
 
 ## EssentialsX Chat
 
 **EssentialsX Chat** includes many of EssentialsX's chat features. It allows you to customise chat formatting on your server by adding prefixes, suffixes and colours in chat, as well as setting different formats for different groups.
 
-*You need Vault and LuckPerms to give players prefixes and suffixes and to detect groups.*
+*You need [Vault](https://www.spigotmc.org/resources/34315/) and [LuckPerms](https://luckperms.net/download) to give players prefixes and suffixes and to detect groups.*
 
 ## EssentialsX GeoIP
 
