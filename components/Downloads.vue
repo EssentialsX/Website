@@ -26,7 +26,7 @@
 
                 <b-notification type="is-danger" v-if="error" :closable="false">
                     <p>
-                        Could not load the latest dev builds. <a href="#" @click="refreshJenkins">Retry</a>, or
+                        Could not load the latest dev builds. <a href="#" @click="refreshDownloads">Retry</a>, or
                         click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
                     </p>
                 </b-notification>
