@@ -208,6 +208,14 @@ function getModuleIdFromArtifact(name) {
     return "core";
 }
 
+function getCommitIdFromArtifact(name) {
+    let m;
+
+    while ((m = versionRegex.exec(name)) !== null) {
+        return m[2];
+    }
+}
+
 async function getJenkins() {
     try {
         state.builds.dev.loading = true;
@@ -223,7 +231,14 @@ async function getJenkins() {
 
         state.builds.dev.build = response.data.id;
         state.builds.dev.version = getVersionFromArtifact(response.data.artifacts[0].displayPath);
-        state.builds.dev.commit = response.data.changeSet.items[0].commitId;
+        if (response.data.changeSet.items[0]) {
+            state.builds.dev.commit = response.data.changeSet.items[0].commitId;
+        } else {
+            state.builds.dev.commit = getCommitIdFromArtifact(response.data.artifacts[0].displayPath);
+        }
+        if (!state.builds.dev.commit) {
+            state.builds.dev.commit = null;
+        }
         state.builds.dev.error = null;
 
         response.data.artifacts.forEach(artifact => {
