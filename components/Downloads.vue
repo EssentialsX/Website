@@ -63,6 +63,11 @@
                         :version="version"
                     />
                     <downloads-item
+                        v-bind="plugins.discordlink"
+                        v-if="plugins.discordlink.downloadUrl"
+                        :version="version"
+                    />
+                    <downloads-item
                         v-bind="plugins.geo"
                         :version="version"
                     />

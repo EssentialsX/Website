@@ -28,6 +28,12 @@ const pluginsDefaults = {
         downloadUrl: null,
         tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW', color: 'success' }]
     },
+    discordlink: {
+        name: "EssentialsX Discord: Account Linking",
+        description: "Account sync between Discord and Minecraft",
+        downloadUrl: null,
+        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW', color: 'success' }, { text: 'REQUIRES DISCORD ADDON', color: 'discord' }]
+    },
     geo: {
         name: "EssentialsX Geo",
         description: "Geographical player lookup (formerly EssentialsX GeoIP)",
@@ -77,6 +83,7 @@ const state = Vue.observable({
                 antibuild: { ...pluginsDefaults.antibuild },
                 chat: { ...pluginsDefaults.chat },
                 discord: { ...pluginsDefaults.discord },
+                discordlink: { ...pluginsDefaults.discordlink },
                 geo: { ...pluginsDefaults.geo },
                 protect: { ...pluginsDefaults.protect },
                 spawn: { ...pluginsDefaults.spawn },
@@ -93,6 +100,7 @@ const state = Vue.observable({
                 antibuild: { ...pluginsDefaults.antibuild },
                 chat: { ...pluginsDefaults.chat },
                 discord: { ...pluginsDefaults.discord },
+                discordlink: { ...pluginsDefaults.discordlink },
                 geo: { ...pluginsDefaults.geo },
                 protect: { ...pluginsDefaults.protect },
                 spawn: { ...pluginsDefaults.spawn },
