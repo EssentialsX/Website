@@ -13,7 +13,7 @@
                 <b-notification type="is-danger">
                     <p>
                         <b>PSA: Do not use Mohist. It includes dangerous and potentially malicious behaviour.</b>
-                        <saber-link to="/do-not-use-mohist">Click here for more information.</saber-link>
+                        <saber-link to="/do-not-use-mohist.html">Click here for more information.</saber-link>
                     </p>
                 </b-notification>
                 <b-notification type="is-patreon">
