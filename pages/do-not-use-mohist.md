@@ -62,7 +62,7 @@ a "plugin checker", which scans for plugins that Mohist breaks and shows the fol
 Not only is this message misleading (implying that EssentialsX is at fault when the real issue is on Mohist's end), but
 it tricks users into **deleting the software they downloaded from a trusted source** and **running arbitrary code**
 from an unknown source, *without telling the user what is wrong with the plugin they downloaded, how the "correct
-version" is any beter, or where the "correct" version even originates from*. Many users who see this prompt will not
+version" is any better, or where the "correct" version even originates from*. Many users who see this prompt will not
 understand that Mohist is downloading and running arbitrary modified code instead of the official plugin jars they
 downloaded. Furthermore, this mechanism could very easily be abused to download malware, hidden behind the names of
 other well-known projects and using the excuse of "fixes".
