@@ -13,8 +13,9 @@ It has come to our attention that as of [10th April 2021](https://github.com/Moh
 behaviour shady, but it also poses significant risk to users who don't know what software they're running.
 
 As a result, we strongly recommend that you **do not use or support the Mohist project in any way going forwards.**
-There are countless alternatives that are safer and more functional, and these alternatives are listed at the bottom
-of this page.
+We cannot guarantee the safety or functionality of unofficial builds of EssentialsX, and you should avoid using Mohist
+where possible. There are countless alternatives that are safer and more functional, and these alternatives are listed
+at the bottom of this page.
 
 ### Context
 
