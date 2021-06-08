@@ -196,7 +196,7 @@ const mainCI = "https://ci.ender.zone/job/EssentialsX/";
 const mainCIAPI = "https://ci-api.essentialsx.net/job/EssentialsX/";
 const mirrorCI = "https://ci.lucko.me/job/EssentialsX/";
 const moduleRegex = /EssentialsX([A-Za-z]+)/;
-const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-dev\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
+const versionRegex = /EssentialsX[a-zA-Z]*-([0-9\.]+?(?:-(?:dev|rc|beta|alpha)\+[0-9]+)?(?:-([0-9a-fA-F]+?))?)\.jar/;
 
 function getVersionFromArtifact(name) {
     let m;
