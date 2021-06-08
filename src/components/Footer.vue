@@ -46,7 +46,7 @@
             </div>
             <br />
             <div class="container content">
-                <p>Website copyright &copy; 2019-2020 EssentialsX Team, 2015-2020 EssentialsX wiki contributors except where otherwise noted.</p>
+                <p>Website copyright &copy; 2019-2021 EssentialsX Team, 2015-2021 EssentialsX wiki contributors except where otherwise noted.</p>
                 <span class="hide-until-code"><a class="button is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a></span>
             </div>
         </footer>
