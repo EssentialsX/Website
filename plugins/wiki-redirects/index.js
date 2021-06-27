@@ -115,6 +115,10 @@ const redirects = [
         fromPath: "/Module-Breakdown#essentialsx-xmpp",
         toPath: "/wiki/Module-Breakdown.html#essentialsx-xmpp"
     },
+    {
+        fromPath: "/Module-Breakdown#essentialsx-discord",
+        toPath: "/wiki/Module-Breakdown.html#essentialsx-discord"
+    },
 ]
 
 module.exports = {
