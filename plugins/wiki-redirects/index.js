@@ -38,6 +38,10 @@ const redirects = [
         toPath: "/wiki/BannerMeta.html"
     },
     {
+        fromPath: "/Discord-Tutorial",
+        toPath: "/wiki/Discord-Tutorial.html"
+    },
+    {
         fromPath: "/geoip",
         toPath: "/wiki/GeoIP.html"
     },
@@ -83,6 +87,10 @@ const redirects = [
         toPath: "/wiki/BannerMeta.html"
     },
     {
+        fromPath: "/Discord-Tutorial.html",
+        toPath: "/wiki/Discord-Tutorial.html"
+    },
+    {
         fromPath: "/geoip.html",
         toPath: "/wiki/GeoIP.html"
     },
@@ -114,6 +122,10 @@ const redirects = [
     {
         fromPath: "/Module-Breakdown#essentialsx-xmpp",
         toPath: "/wiki/Module-Breakdown.html#essentialsx-xmpp"
+    },
+    {
+        fromPath: "/Module-Breakdown#essentialsx-discord",
+        toPath: "/wiki/Module-Breakdown.html#essentialsx-discord"
     },
 ]
 
