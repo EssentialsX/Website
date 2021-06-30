@@ -896,8 +896,8 @@
     schema-utils "^1.0.0"
 
 "@essentialsx/markdown-it-wikilinks@https://github.com/EssentialsX/markdown-it-wikilinks":
-  version "1.1.1-12"
-  resolved "https://github.com/EssentialsX/markdown-it-wikilinks#a4d173e341e942a6842bae4df887b51e1b934c06"
+  version "1.1.1-12-essx-1"
+  resolved "https://github.com/EssentialsX/markdown-it-wikilinks#b7dc454dff59425c2548e2263dce9453b30866b1"
   dependencies:
     "@gerhobbelt/markdown-it-regexp" "0.6.0-13"
     sanitize-filename "1.6.3"
