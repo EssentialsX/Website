@@ -38,6 +38,10 @@ const redirects = [
         toPath: "/wiki/BannerMeta.html"
     },
     {
+        fromPath: "/Discord-Tutorial",
+        toPath: "/wiki/Discord-Tutorial.html"
+    },
+    {
         fromPath: "/geoip",
         toPath: "/wiki/GeoIP.html"
     },
@@ -81,6 +85,10 @@ const redirects = [
     {
         fromPath: "/BannerMeta.html",
         toPath: "/wiki/BannerMeta.html"
+    },
+    {
+        fromPath: "/Discord-Tutorial.html",
+        toPath: "/wiki/Discord-Tutorial.html"
     },
     {
         fromPath: "/geoip.html",
