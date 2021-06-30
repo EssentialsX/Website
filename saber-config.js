@@ -52,19 +52,9 @@ module.exports = {
         }
     },
     theme: "./src",
-    markdown: {
-        plugins: [
-            {
-                resolve: "markdown-it-wikilinks",
-                options: {
-                    baseURL: "/wiki/",
-                    makeAllLinksAbsolute: true
-                }
-            }
-        ]
-    },
     plugins: [
         { resolve: "saber-plugin-netlify-redirect" },
         { resolve: "./plugins/wiki-redirects" },
+        { resolve: "./plugins/wikilinks" },
     ]
 }
