@@ -38,10 +38,10 @@ module.exports = {
             Modules: [
                 { label: "AntiBuild", href: "https://wiki.mc-ess.net/wiki/AntiBuild" },
                 { label: "Chat", link: "/wiki/Module-Breakdown.html#essentialsx-chat" },
+                { label: "Discord", link: "/wiki/Module-Breakdown.html#essentialsx-discord" },
                 { label: "GeoIP", link: "/wiki/GeoIP.html" },
                 { label: "Protect", href: "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
                 { label: "Spawn", link: "/wiki/Module-Breakdown.html#essentialsx-spawn" },
-                { label: "Discord", link: "/wiki/Module-Breakdown.html#essentialsx-discord" },
                 { label: "XMPP", href: "https://wiki.mc-ess.net/wiki/XMPP" }
 
             ],
