@@ -32,6 +32,24 @@ Note that Protect doesn't include any kind of region protection; to protect spec
 
 **EssentialsX Spawn** lets you control where players spawn both when they first join the server and when they die. You can use the in-game `/setspawn` command to set a spawn location for everyone on your server as well as for specific groups.
 
+## EssentialsX Discord
+
+**EssentialsX Discord** brings a simple, lightweight, easy-to-use, and bloat-free
+bridge between Discord and Minecraft.
+
+EssentialsX Discord offers *essential* features you'd want from a Discord bridge such as:
+* MC Chat -> Discord Channel
+* Discord Channel -> MC Chat
+* Basic MC -> Discord Event Monitoring (Join/Leave/Death/Mute)
+* MC Console -> Discord Relay
+* Discord Slash Commands
+    * /execute - Execute console commands from Discord
+    * /msg - Message Minecraft players from Discord
+    * /list - List players currently online on Minecraft
+* & more...
+
+For more information on how to set up EssentialsX Discord, check out [[Discord-Tutorial|the tutorial]]!
+
 ## EssentialsX XMPP
 
 **EssentialsX XMPP** acts as a bridge between Jabber/XMPP chat networks and your server. This allows players to chat between XMPP networks and your server, and can also allow server admins to monitor the console and server errors remotely. For more information, see the [Essentials XMPP guide](https://wiki.mc-ess.net/wiki/XMPP).
