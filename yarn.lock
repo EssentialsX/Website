@@ -942,7 +942,7 @@
 
 "@gerhobbelt/markdown-it-regexp@0.6.0-13":
   version "0.6.0-13"
-  resolved "https://registry.npmjs.org/@gerhobbelt/markdown-it-regexp/-/markdown-it-regexp-0.6.0-13.tgz"
+  resolved "https://registry.yarnpkg.com/@gerhobbelt/markdown-it-regexp/-/markdown-it-regexp-0.6.0-13.tgz#efd3afc94e23fa5aa6fa230ae5d279f0026ae123"
   integrity sha512-2PhU+iSjesGRa9czNgZC/Gn6vCpWPh/z3pl73QMMGRJy32SMwQhp4E0x4H7IeazTfWlXDJTFQCJY5st0bYfbbw==
 
 "@intervolga/optimize-cssnano-plugin@^1.0.6":
@@ -4695,7 +4695,7 @@ safer-buffer@^2.1.0:
 
 sanitize-filename@1.6.3:
   version "1.6.3"
-  resolved "https://registry.npmjs.org/sanitize-filename/-/sanitize-filename-1.6.3.tgz"
+  resolved "https://registry.yarnpkg.com/sanitize-filename/-/sanitize-filename-1.6.3.tgz#755ebd752045931977e30b2025d340d7c9090378"
   integrity sha512-y/52Mcy7aw3gRm7IrcGDFx/bCk4AhRh2eI9luHOQM86nZsqwiRkkq2GekHXBBD+SmPidc8i2PqtYZl+pWJ8Oeg==
   dependencies:
     truncate-utf8-bytes "^1.0.0"
@@ -5233,7 +5233,7 @@ trouter@^2.0.1:
 
 truncate-utf8-bytes@^1.0.0:
   version "1.0.2"
-  resolved "https://registry.npmjs.org/truncate-utf8-bytes/-/truncate-utf8-bytes-1.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/truncate-utf8-bytes/-/truncate-utf8-bytes-1.0.2.tgz#405923909592d56f78a5818434b0b78489ca5f2b"
   integrity sha1-QFkjkJWS1W94pYGENLC3hInKXys=
   dependencies:
     utf8-byte-length "^1.0.1"
@@ -5374,7 +5374,7 @@ use@^3.1.0:
 
 utf8-byte-length@^1.0.1:
   version "1.0.4"
-  resolved "https://registry.npmjs.org/utf8-byte-length/-/utf8-byte-length-1.0.4.tgz"
+  resolved "https://registry.yarnpkg.com/utf8-byte-length/-/utf8-byte-length-1.0.4.tgz#f45f150c4c66eee968186505ab93fcbb8ad6bf61"
   integrity sha1-9F8VDExm7uloGGUFq5P8u4rWv2E=
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
