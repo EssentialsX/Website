@@ -30,6 +30,7 @@ module.exports = {
                 { label: "Command Cooldowns", link: "/wiki/Command-Cooldowns.html" },
                 { label: "Color Permissions", link: "/wiki/Color-Permissions.html" },
                 { label: "Customising /list", href: "https://wiki.mc-ess.net/wiki/List" },
+                { label: "EssentialsX Discord Setup Guide", href: "/wiki/Discord-Tutorial.html" },
             ],
             "Using EssentialsX": [
                 { label: "Signs", href: "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
