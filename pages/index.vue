@@ -1,11 +1,22 @@
 <template>
   <div>
-    <div class="hero is-primary is-medium is-bold has-text-centered">
+    <div class="hero is-primary has-text-centered">
       <div class="hero-body">
         <p class="title">It's in the name.</p>
         <p class="subtitle">
-          EssentialsX is the essential plugin suite for Minecraft servers, with over 130 commands for servers of all size and scale.
+          EssentialsX is the essential plugin suite for Minecraft servers, with
+          over 130 commands for servers of all size and scale.
         </p>
+        <br />
+        <b-button
+          tag="nuxt-link"
+          to="/downloads"
+          type="is-white"
+          icon-left="arrow-down"
+          outlined
+        >
+          Download
+        </b-button>
       </div>
     </div>
     <div class="columns is-mobile">
