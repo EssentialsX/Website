@@ -15,9 +15,3 @@
     </template>
   </b-navbar>
 </template>
-
-<style scoped>
-.darkmode--activated #main-navbar {
-  mix-blend-mode: difference;
-}
-</style>

@@ -1,0 +1,13 @@
+@mixin no-invert() {
+  mix-blend-mode: difference;
+}
+
+.darkmode--activated {
+  .navbar {
+    @include no-invert();
+  }
+
+  .hero {
+    @include no-invert();
+  }
+}

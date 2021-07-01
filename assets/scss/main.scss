@@ -102,6 +102,8 @@ $link-focus-border: $primary;
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 
+@import "./dark-overrides";
+
 .darkmode-layer, .darkmode-toggle {
   z-index: 500;
 }
