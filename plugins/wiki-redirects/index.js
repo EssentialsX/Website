@@ -38,6 +38,10 @@ const redirects = [
         toPath: "/wiki/BannerMeta.html"
     },
     {
+        fromPath: "/discord-tutorial",
+        toPath: "/wiki/Discord-Tutorial.html"
+    },
+    {
         fromPath: "/Discord-Tutorial",
         toPath: "/wiki/Discord-Tutorial.html"
     },
