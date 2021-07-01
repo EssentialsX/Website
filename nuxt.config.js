@@ -44,7 +44,7 @@ export default {
     [
       'nuxtjs-darkmode-js-module',
       {
-        mixColor: '#fff', // default: '#fff'
+        time: '0.0s',
       },
     ],
   ],
