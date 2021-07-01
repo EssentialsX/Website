@@ -2,15 +2,36 @@
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #8c67ef;
+$primary: #E93B38;
 $primary-light: findLightColor($primary);
 $primary-dark: findDarkColor($primary);
 $primary-invert: findColorInvert($primary);
-$twitter: #4099FF;
-$twitter-invert: findColorInvert($twitter);
+
+$secondary: #F56C2F;
+$secondary-light: findLightColor($secondary);
+$secondary-dark: findDarkColor($secondary);
+$secondary-invert: findColorInvert($secondary);
+
+$tertiary: #FF308C;
+$tertiary-light: findLightColor($tertiary);
+$tertiary-dark: findDarkColor($tertiary);
+$tertiary-invert: findColorInvert($tertiary);
 
 // Lists and maps
-$custom-colors: null !default;
+$custom-colors: (
+  "secondary": (
+    $secondary,
+    $secondary-invert,
+    $secondary-light,
+    $secondary-dark,
+  ),
+  "tertiary": (
+    $tertiary,
+    $tertiary-invert,
+    $tertiary-light,
+    $tertiary-dark,
+  ),
+) !default;
 $custom-shades: null !default;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
@@ -80,3 +101,7 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
