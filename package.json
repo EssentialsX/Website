@@ -16,10 +16,11 @@
     "@nuxt/typescript-runtime": "^2.0.1",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/pwa": "^3.3.5",
-    "bulma": "^0.9.2",
+    "buefy": "^0.9.8",
+    "bulma": "^0.9.3",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
-    "nuxt-buefy": "^0.4.4",
+    "nuxt-buefy": "^0.4.8",
     "nuxtjs-darkmode-js-module": "^1.0.3"
   },
   "devDependencies": {
