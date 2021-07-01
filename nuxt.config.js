@@ -60,7 +60,9 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    remarkPlugins: ['remark-wiki-link'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
