@@ -98,12 +98,17 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+$navbar-padding-vertical: 0.3rem;
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 
 @import "./dark-overrides";
 
+/*
+// Force dark mode to apply above all elements
 .darkmode-layer, .darkmode-toggle {
-  z-index: 500;
+ z-index: 500;
 }
+*/

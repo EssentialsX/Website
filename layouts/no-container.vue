@@ -3,9 +3,7 @@
     <Navbar />
 
     <section class="main-content">
-      <div class="container">
-        <nuxt />
-      </div>
+      <nuxt />
     </section>
   </div>
 </template>

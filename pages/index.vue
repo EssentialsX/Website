@@ -1,5 +1,13 @@
 <template>
-  <section class="section">
+  <div>
+    <div class="hero is-primary is-medium is-bold has-text-centered">
+      <div class="hero-body">
+        <p class="title">It's in the name.</p>
+        <p class="subtitle">
+          EssentialsX is the essential plugin suite for Minecraft servers, with over 130 commands for servers of all size and scale.
+        </p>
+      </div>
+    </div>
     <div class="columns is-mobile">
       <card title="Free" icon="github">
         Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
@@ -18,17 +26,12 @@
         No other internal dependency
       </card>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
-  name: 'HomePage',
-
-  components: {
-    Card,
-  },
+  name: 'Home',
+  layout: 'no-container',
 }
 </script>
