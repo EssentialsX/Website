@@ -1,5 +1,5 @@
 <template>
-  <b-navbar id="main-navbar" type="is-dark" spaced>
+  <b-navbar id="main-navbar" type="is-dark" spaced wrapper-class="container">
     <template #brand>
       <b-navbar-item tag="nuxt-link" :to="{ path: '/' }">
         <img src="@/assets/images/logo-navbar.png" />
