@@ -5,5 +5,7 @@
     <section class="main-content">
       <nuxt />
     </section>
+
+    <Footer />
   </div>
 </template>
