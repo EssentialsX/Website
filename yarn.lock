@@ -6295,19 +6295,7 @@ mdast-util-to-hast@^10.0.0, mdast-util-to-hast@^10.1.1:
     unist-util-position "^3.0.0"
     unist-util-visit "^2.0.0"
 
-mdast-util-to-markdown@^0.5.1:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-markdown/-/mdast-util-to-markdown-0.5.4.tgz#be680ed0c0e11a07d07c7adff9551eec09c1b0f9"
-  integrity sha512-0jQTkbWYx0HdEA/h++7faebJWr5JyBoBeiRf0u3F4F3QtnyyGaWIsOwo749kRb1ttKrLLr+wRtOkfou9yB0p6A==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    longest-streak "^2.0.0"
-    mdast-util-to-string "^2.0.0"
-    parse-entities "^2.0.0"
-    repeat-string "^1.0.0"
-    zwitch "^1.0.0"
-
-mdast-util-to-markdown@^0.6.0, mdast-util-to-markdown@^0.6.1, mdast-util-to-markdown@~0.6.0:
+mdast-util-to-markdown@^0.6.0, mdast-util-to-markdown@^0.6.1, mdast-util-to-markdown@^0.6.5, mdast-util-to-markdown@~0.6.0:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/mdast-util-to-markdown/-/mdast-util-to-markdown-0.6.5.tgz#b33f67ca820d69e6cc527a93d4039249b504bebe"
   integrity sha512-XeV9sDE7ZlOQvs45C9UKMtfTcctcaj/pGwH8YLbMHoMOXNNCn2LsqVQOqrF1+/NU8lKDAqozme9SCXWyo9oAcQ==
@@ -6329,13 +6317,13 @@ mdast-util-to-string@^2.0.0:
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz#b8cfe6a713e1091cb5b728fc48885a4767f8b97b"
   integrity sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==
 
-mdast-util-wiki-link@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-wiki-link/-/mdast-util-wiki-link-0.0.1.tgz#1f70e494d8af5fd527210f300683016be8307fd5"
-  integrity sha512-mQGhpvS1kICzDvC4me3vV4L/0msyGTvoHWIjqI0wUR1ToQ+CMy1o+tDVsS1G6QrXMMHOY0I8S9k6qwRfjxS6cA==
+mdast-util-wiki-link@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/mdast-util-wiki-link/-/mdast-util-wiki-link-0.0.2.tgz#f9cb957febafa3ddc4cf1567ec159400217e1690"
+  integrity sha512-lSsR10/dPuYIxzjGZIGA4oYzsnEnqcsD6DTXL0pqdbBzNB9teKVZB2aIzZcUsdg31v/NoHOstkVwzbN6VrQLtw==
   dependencies:
     "@babel/runtime" "^7.12.1"
-    mdast-util-to-markdown "^0.5.1"
+    mdast-util-to-markdown "^0.6.5"
 
 mdn-data@2.0.14:
   version "2.0.14"
@@ -6475,7 +6463,7 @@ micromark-extension-gfm@^0.3.0:
     micromark-extension-gfm-tagfilter "~0.3.0"
     micromark-extension-gfm-task-list-item "~0.3.0"
 
-micromark-extension-wiki-link@0.0.4:
+micromark-extension-wiki-link@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/micromark-extension-wiki-link/-/micromark-extension-wiki-link-0.0.4.tgz#f4750a0f24051bf0521bbafaf64f291f9266d2a4"
   integrity sha512-dJc8AfnoU8BHkN+7fWZvIS20SMsMS1ZlxQUn6We67MqeKbOiEDZV5eEvCpwqGBijbJbxX3Kxz879L4K9HIiOvw==
@@ -8643,12 +8631,12 @@ remark-stringify@^9.0.0:
     mdast-util-to-markdown "^0.6.0"
 
 "remark-wiki-link@https://github.com/mdcfe/remark-wiki-link#fix/default-module":
-  version "1.0.2"
-  resolved "https://github.com/mdcfe/remark-wiki-link#e57fc2ce09b2a865ea307db88c61e6b90a4b9d0d"
+  version "1.0.3"
+  resolved "https://github.com/mdcfe/remark-wiki-link#1e59ccd2da5fa13ac1fd9bafcf22326155374c4e"
   dependencies:
     "@babel/runtime" "^7.4.4"
-    mdast-util-wiki-link "0.0.1"
-    micromark-extension-wiki-link "0.0.4"
+    mdast-util-wiki-link "^0.0.2"
+    micromark-extension-wiki-link "^0.0.4"
 
 remark@^13.0.0:
   version "13.0.0"
