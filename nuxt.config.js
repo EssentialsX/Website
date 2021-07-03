@@ -4,11 +4,16 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'website',
+    title: 'EssentialsX',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'EssentialsX: the essential plugin suite for Minecraft servers.',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -61,7 +66,54 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    remarkPlugins: ['remark-wiki-link'],
+    markdown: {
+      remarkPlugins: [
+        [
+          'remark-autolink-headings',
+          {
+            behavior: 'append',
+            content: {
+              type: 'element',
+              tagName: 'span',
+              properties: { className: ['icon', 'is-small', 'pl-5'] },
+              children: [
+                {
+                  type: 'element',
+                  tagName: 'i',
+                  properties: {
+                    className: ['mdi', 'mdi-link', 'mdi-rotate-135'],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+        [
+          'remark-wiki-link',
+          {
+            pageResolver: (name) => {
+              return [
+                name.replace(/ /g, '-'),
+                name.replace(/ /g, '-').toLowerCase(),
+              ]
+            },
+            hrefTemplate: (permalink) => {
+              const anchorText = /#.+/
+              if (permalink.search(anchorText) === -1) {
+                return `/docs/2.x/${permalink}`
+              } else {
+                const fixedAnchor = permalink.match(anchorText)[0].toLowerCase()
+                return `/docs/2.x/${permalink.replace(
+                  anchorText,
+                  ''
+                )}${fixedAnchor.replace(/%20/g, '-').toLowerCase()}`
+              }
+            },
+            aliasDivider: '|',
+          },
+        ],
+      ],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

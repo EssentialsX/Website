@@ -23,7 +23,8 @@
     "nuxt": "^2.14.12",
     "nuxt-buefy": "^0.4.8",
     "nuxtjs-darkmode-js-module": "^1.0.3",
-    "remark-wiki-link": "^1.0.2"
+    "p-debounce": "^4.0.0",
+    "remark-wiki-link": "https://github.com/mdcfe/remark-wiki-link#fix/default-module"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",

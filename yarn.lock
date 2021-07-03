@@ -7077,6 +7077,11 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
+p-debounce@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/p-debounce/-/p-debounce-4.0.0.tgz#348e3f44489baa9435cc7d807f17b3bb2fb16b24"
+  integrity sha512-4Ispi9I9qYGO4lueiLDhe4q4iK5ERK8reLsuzH6BPaXn53EGaua8H66PXIFGrW897hwjXp+pVLrm/DLxN0RF0A==
+
 p-defer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
@@ -8642,10 +8647,9 @@ remark-stringify@^9.0.0:
   dependencies:
     mdast-util-to-markdown "^0.6.0"
 
-remark-wiki-link@^1.0.2:
+"remark-wiki-link@https://github.com/mdcfe/remark-wiki-link#fix/default-module":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/remark-wiki-link/-/remark-wiki-link-1.0.2.tgz#a02dc2bf7f94827a45440a659b08cbb15f4239de"
-  integrity sha512-lPCfPUXO9GrpZxJ6Y0y4DoMcqLyYm9Y5Mv4pUyZqVGJkiYxHJOWUNkNHhdF8GgWg6ILOcvemExUOUhQQpZ5Q0Q==
+  resolved "https://github.com/mdcfe/remark-wiki-link#e57fc2ce09b2a865ea307db88c61e6b90a4b9d0d"
   dependencies:
     "@babel/runtime" "^7.4.4"
     mdast-util-wiki-link "0.0.1"
