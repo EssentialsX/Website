@@ -3,7 +3,7 @@
     <section class="hero is-primary is-small">
       <div class="hero-body">
         <div class="container">
-          <p class="title">Get help with EssentialsX</p>
+          <p class="title">{{ page.title }}</p>
         </div>
       </div>
     </section>
@@ -19,8 +19,8 @@
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'no-container',
-  async asyncData({ $content }) {
-    const page = await $content('get-help').fetch()
+  async asyncData({ $content, params }) {
+    const page = await $content(`misc/${params.page}`).fetch()
     return {
       page,
     }

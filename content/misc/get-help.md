@@ -6,7 +6,7 @@ Need help with EssentialsX? There are several ways you can get help with setting
 
 ## Search the wiki
 
-EssentialsX has a [wiki](/docs/2.x), which documents many features of the plugin. If you're not sure how to use the plugin, you can search the wiki to see if it answers your question.
+EssentialsX has a [wiki](/docs/2.x/Home), which documents many features of the plugin. If you're not sure how to use the plugin, you can search the wiki to see if it answers your question.
 
 ## Join MOSS on Discord
 

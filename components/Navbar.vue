@@ -7,11 +7,11 @@
     </template>
     <template #end>
       <b-navbar-item tag="nuxt-link" to="/downloads">Download</b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/docs/2.x">
+      <b-navbar-item tag="nuxt-link" to="/docs/2.x/Home">
         Documentation
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/get-help">Get help</b-navbar-item>
-      <b-navbar-item tag="nuxt-link" to="/support-us">Support us</b-navbar-item>
+      <b-navbar-item tag="nuxt-link" to="/misc/get-help">Get help</b-navbar-item>
+      <b-navbar-item tag="nuxt-link" to="/misc/support-us">Support us</b-navbar-item>
     </template>
   </b-navbar>
 </template>
