@@ -42,7 +42,7 @@ export default Vue.extend({
       this.$data.results = await this.$content(this.$props.searchRoot)
         .only(['title', 'slug', 'excerpt'])
         .sortBy('title', 'asc')
-        .limit(5)
+        .limit(10)
         .search(query)
         .fetch()
     },
