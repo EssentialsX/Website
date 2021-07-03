@@ -2,11 +2,13 @@
 title: Support the EssentialsX project
 ---
 
+Want to support the EssentialsX project? There are several ways you can help us out:
+
 # Support EssentialsX on Patreon
 
 EssentialsX is developed for free in our spare time. If you'd like what you see, you can support us for as little as $1 per month on [Patreon](https://www.patreon.com/essentialsx) or [GitHub Sponsors](https://github.com/sponsors/EssentialsX/)!
 
-If you'd prefer, you can also make a one-off contribution to EssentialsX on [Ko-fi](https://ko-fi.com/essentialsx). Any support would be greatly appreciated, and would allow us to continue working on and supporting EssentialsX for free.
+If you'd prefer, you can also make a one-off contribution to EssentialsX on [Ko-fi](https://ko-fi.com/essentialsx). Any support would be greatly appreciated (especially if your server is profitable!) and would allow us to continue working on and supporting EssentialsX for free.
 
 # Contribute on GitHub
 
