@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="column">
-          <nav id="main-page-content" class="breadcrumb is-medium">
+          <nav class="breadcrumb is-medium">
             <ul>
               <li><nuxt-link to="/docs">Docs</nuxt-link></li>
               <li><nuxt-link to="/docs/2.x/Home">2.x</nuxt-link></li>
