@@ -8678,9 +8678,10 @@ remark-stringify@^9.0.0:
   dependencies:
     mdast-util-to-markdown "^0.6.0"
 
-"remark-wiki-link@https://github.com/mdcfe/remark-wiki-link#fix/default-module":
-  version "1.0.3"
-  resolved "https://github.com/mdcfe/remark-wiki-link#1e59ccd2da5fa13ac1fd9bafcf22326155374c4e"
+remark-wiki-link@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/remark-wiki-link/-/remark-wiki-link-1.0.4.tgz#f3ac7688ce822e494bb3732a5957082293a59a42"
+  integrity sha512-kLgRlXn5cBMa3Fa+OgcI6L4yyYdI74TdIiynBtOvrZN9q7o4mDCYrfAAt7VgLvQyuLBrPARPM1g67ZuAWA1yFg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     mdast-util-wiki-link "^0.0.2"
