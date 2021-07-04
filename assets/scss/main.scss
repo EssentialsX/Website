@@ -1,114 +1,19 @@
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all";
-
-// Set your colors
-$primary: #E93B38;
-$primary-light: findLightColor($primary);
-$primary-dark: findDarkColor($primary);
-$primary-invert: findColorInvert($primary);
-
-$secondary: #F56C2F;
-$secondary-light: findLightColor($secondary);
-$secondary-dark: findDarkColor($secondary);
-$secondary-invert: findColorInvert($secondary);
-
-$tertiary: #FF308C;
-$tertiary-light: findLightColor($tertiary);
-$tertiary-dark: findDarkColor($tertiary);
-$tertiary-invert: findColorInvert($tertiary);
-
-// Lists and maps
-$custom-colors: (
-  "secondary": (
-    $secondary,
-    $secondary-invert,
-    $secondary-light,
-    $secondary-dark,
-  ),
-  "tertiary": (
-    $tertiary,
-    $tertiary-invert,
-    $tertiary-light,
-    $tertiary-dark,
-  ),
-) !default;
-$custom-shades: null !default;
-
-// Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: mergeColorMaps(
-    (
-        "white": (
-            $white,
-            $black,
-        ),
-        "black": (
-            $black,
-            $white,
-        ),
-        "light": (
-            $light,
-            $light-invert,
-        ),
-        "dark": (
-            $dark,
-            $dark-invert,
-        ),
-        "primary": (
-            $primary,
-            $primary-invert,
-            $primary-light,
-            $primary-dark,
-        ),
-        "link": (
-            $link,
-            $link-invert,
-            $link-light,
-            $link-dark,
-        ),
-        "info": (
-            $info,
-            $info-invert,
-            $info-light,
-            $info-dark,
-        ),
-        "success": (
-            $success,
-            $success-invert,
-            $success-light,
-            $success-dark,
-        ),
-        "warning": (
-            $warning,
-            $warning-invert,
-            $warning-light,
-            $warning-dark,
-        ),
-        "danger": (
-            $danger,
-            $danger-invert,
-            $danger-light,
-            $danger-dark,
-        ),
-    ),
-    $custom-colors
-);
+@import './generated-fallback.css'; // import fallbacks first, so they are overridden
+@import './generated-bulma-vars.sass';
 
 // Links
 $link: $primary;
-$link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+// Code
+$code: $primary;
+
+// Fix conflicts between Prism.js and Bulma
+// https://github.com/jgthms/bulma/issues/1708#issuecomment-834447892
+.token.number, .token.tag { all: inherit; }
+
+// Navbar
 $navbar-padding-vertical: 0.3rem;
 
-// Import Bulma and Buefy styles
-@import "~bulma";
+@import '../../node_modules/bulma-css-vars/bulma-cv-lib';
 @import "~buefy/src/scss/buefy";
-
-@import "./dark-overrides";
-
-/*
-// Force dark mode to apply above all elements
-.darkmode-layer, .darkmode-toggle {
- z-index: 500;
-}
-*/

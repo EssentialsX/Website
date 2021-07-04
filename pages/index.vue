@@ -11,9 +11,10 @@
         <b-button
           tag="nuxt-link"
           to="/downloads"
-          type="is-white"
+          type="is-primary"
           icon-left="arrow-down"
           outlined
+          inverted
         >
           Download
         </b-button>

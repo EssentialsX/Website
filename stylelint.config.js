@@ -10,4 +10,5 @@ module.exports = {
     'function-name-case': null,
     'scss/at-import-no-partial-leading-underscore': null,
   },
+  ignoreFiles: ['assets/scss/generated-*'],
 }

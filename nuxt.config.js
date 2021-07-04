@@ -22,7 +22,7 @@ export default {
   css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/darkmode/index.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -45,13 +45,6 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    // https://github.com/sandoche/nuxtjs-darkmode-js-module
-    [
-      'nuxtjs-darkmode-js-module',
-      {
-        time: '0.0s',
-      },
-    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -113,6 +106,9 @@ export default {
           },
         ],
       ],
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
     },
   },
 
