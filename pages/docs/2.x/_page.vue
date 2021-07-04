@@ -37,17 +37,22 @@
 </template>
 
 <script lang="ts">
+import { IContentDocument } from '@nuxt/content/types/content'
 import Vue from 'vue'
+
+type SidebarDocument = IContentDocument & { sidebar: any }
 
 export default Vue.extend({
   layout: 'docs-v2',
   async asyncData({ $content, params }) {
     const page = await $content(`docs/2.x/${params.page}`).fetch()
-    const sidebarMenu = (await $content('sidebars/2.x-docs').fetch()).sidebar
+    const sidebarDoc: SidebarDocument = (await $content(
+      'sidebars/2.x-docs'
+    ).fetch()) as SidebarDocument
 
     return {
       page,
-      sidebarMenu,
+      sidebarMenu: sidebarDoc.sidebar,
       menuExpanded: false,
     }
   },
