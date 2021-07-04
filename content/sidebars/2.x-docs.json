@@ -20,7 +20,9 @@
     "Modules": [
       { "label": "AntiBuild", "href": "https://wiki.mc-ess.net/wiki/AntiBuild" },
       { "label": "Chat", "link": "/docs/2.x/Module-Breakdown#essentialsx-chat" },
-      { "label": "Discord", "link": "/docs/2.x/Module-Breakdown#essentialsx-discord" },
+      { "label": "Discord", "link": "/docs/2.x/Discord-Tutorial", "children": [
+        { "label": "Authorize your bot", "link": "/misc/discord-auth" }
+      ] },
       { "label": "GeoIP", "link": "/docs/2.x/GeoIP" },
       { "label": "Protect", "href": "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
       { "label": "Spawn", "link": "/docs/2.x/Module-Breakdown#essentialsx-spawn" },
