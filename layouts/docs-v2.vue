@@ -2,7 +2,7 @@
   <div>
     <Navbar />
 
-    <div class="hero is-secondary is-small">
+    <div class="hero is-primary is-small">
       <div class="hero-body">
         <div class="container">
           <div class="level">
