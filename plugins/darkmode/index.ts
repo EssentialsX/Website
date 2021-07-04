@@ -1,8 +1,10 @@
+import { Plugin } from '@nuxt/types'
 import { ColorUpdater, hsl } from 'bulma-css-vars'
+import { ColorCallSet, Hsl } from 'bulma-css-vars/dist/types'
 import { bulmaCssVariablesDefs } from './bulma-colors'
 
 const themeKey = 'preferred-theme'
-const modes = {
+const modes: { [index: string]: { [index: string]: string | Hsl } } = {
   light: {
     primary: '#E93B38',
     secondary: '#F56C2F',
@@ -45,12 +47,40 @@ const modes = {
   },
 }
 
-const updater = new ColorUpdater(bulmaCssVariablesDefs)
+const updater = new ColorUpdater(
+  (bulmaCssVariablesDefs as unknown) as ColorCallSet
+)
 
-export default (_context, inject) => {
+declare module 'vue/types/vue' {
+  // this.$theme inside Vue components
+  interface Vue {
+    $theme(theme?: string): string
+  }
+}
+
+declare module '@nuxt/types' {
+  // nuxtContext.app.$theme inside asyncData, fetch, plugins, middleware, nuxtServerInit
+  interface NuxtAppOptions {
+    $theme(theme?: string): string
+  }
+  // nuxtContext.$theme
+  interface Context {
+    $theme(theme?: string): string
+  }
+}
+
+declare module 'vuex/types/index' {
+  // this.$theme inside Vuex stores
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+  interface Store<S> {
+    $theme(theme?: string): string
+  }
+}
+
+const themePlugin: Plugin = (_context, inject) => {
   let currentTheme = 'light'
 
-  function setTheme(theme, manual) {
+  function setTheme(theme: string, manual: boolean) {
     if (!modes[theme]) {
       // eslint-disable-next-line no-console
       console.error(`Invalid theme specified: ${theme}`)
@@ -60,7 +90,7 @@ export default (_context, inject) => {
     for (const color in modes[theme]) {
       if (Object.hasOwnProperty.call(modes[theme], color)) {
         const value = modes[theme][color]
-        updater.updateVarsInDocument(color, value)
+        updater.updateVarsInDocument(color, value as string)
       }
     }
 
@@ -80,7 +110,7 @@ export default (_context, inject) => {
     }
   }
 
-  inject('theme', (theme) => {
+  inject('theme', (theme: string) => {
     if (theme) {
       setTheme(theme, true)
     }
@@ -90,3 +120,5 @@ export default (_context, inject) => {
 
   setInitialTheme()
 }
+
+export default themePlugin
