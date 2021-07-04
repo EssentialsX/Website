@@ -2,11 +2,23 @@
   <div class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-one-fifth">
-          <DocsSidebar :sidebar-menu="sidebarMenu" />
+        <div class="column is-narrow">
+          <div class="block is-hidden-tablet">
+            <b-button
+              :icon-left="menuExpanded ? 'chevron-up' : 'chevron-down'"
+              type="is-primary"
+              expanded
+              @click="menuExpanded = !menuExpanded"
+            >
+              {{ menuExpanded ? 'Hide' : 'Show' }} menu
+            </b-button>
+          </div>
+          <div :class="menuClass">
+            <DocsSidebar :sidebar-menu="sidebarMenu" />
+          </div>
         </div>
         <div class="column">
-          <nav class="breadcrumb is-medium">
+          <nav id="main-page-content" class="breadcrumb is-medium">
             <ul>
               <li><nuxt-link to="/docs">Docs</nuxt-link></li>
               <li><nuxt-link to="/docs/2.x/Home">2.x</nuxt-link></li>
@@ -36,10 +48,17 @@ export default Vue.extend({
     return {
       page,
       sidebarMenu,
+      menuExpanded: false,
     }
   },
   computed: {
-    title(): string {
+    menuClass() {
+      return {
+        'is-hidden-mobile': !this.$data.menuExpanded,
+        block: true,
+      }
+    },
+    title(): String {
       return this.$data.page.title || this.$data.page.slug || 'hello'
     },
   },
