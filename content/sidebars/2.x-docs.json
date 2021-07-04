@@ -1,0 +1,36 @@
+{
+  "sidebar": {
+    "Getting Started": [
+    { "label": "Introduction", "link": "/docs/2.x/Home" },
+    { "label": "Installing EssentialsX", "link": "/docs/2.x/Installing-EssentialsX" },
+    { "label": "Module Breakdown", "link": "/docs/2.x/Module-Breakdown" },
+    { "label": "Improvements over Essentials", "link": "/docs/2.x/Improvements" },
+    { "label": "Translations and Custom Messages", "link": "/docs/2.x/Locale" },
+    { "label": "Frequently Asked Questions", "link": "/docs/2.x/Common-Issues" }
+    ],
+    "Configuring EssentialsX": [
+      { "label": "Command Cooldowns", "link": "/docs/2.x/Command-Cooldowns" },
+      { "label": "Color Permissions", "link": "/docs/2.x/Color-Permissions" },
+      { "label": "Customising /list", "href": "https://wiki.mc-ess.net/wiki/List" }
+    ],
+    "Using EssentialsX": [
+      { "label": "Signs", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
+      { "label": "Banner Meta", "link": "/docs/2.x/BannerMeta" }
+    ],
+    "Modules": [
+      { "label": "AntiBuild", "href": "https://wiki.mc-ess.net/wiki/AntiBuild" },
+      { "label": "Chat", "link": "/docs/2.x/Module-Breakdown#essentialsx-chat" },
+      { "label": "Discord", "link": "/docs/2.x/Module-Breakdown#essentialsx-discord" },
+      { "label": "GeoIP", "link": "/docs/2.x/GeoIP" },
+      { "label": "Protect", "href": "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
+      { "label": "Spawn", "link": "/docs/2.x/Module-Breakdown#essentialsx-spawn" },
+      { "label": "XMPP", "href": "https://wiki.mc-ess.net/wiki/XMPP" }
+
+    ],
+    "Reference": [
+      { "label": "Commands", "href": "https://essinfo.xeya.me/commands.html" },
+      { "label": "Permissions", "href": "https://essinfo.xeya.me/permissions.html" },
+      { "label": "Changelogs", "href": "https://github.com/EssentialsX/Essentials/releases" }
+    ]
+  }
+}

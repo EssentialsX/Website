@@ -23,7 +23,9 @@
     "nuxt": "^2.14.12",
     "nuxt-buefy": "^0.4.8",
     "nuxtjs-darkmode-js-module": "^1.0.3",
-    "remark-wiki-link": "https://github.com/mdcfe/remark-wiki-link#fix/default-module"
+    "remark-wiki-link": "https://github.com/mdcfe/remark-wiki-link#fix/default-module",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",

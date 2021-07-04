@@ -2,8 +2,8 @@
   <div class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-2">
-          <p>nav menu placeholder</p>
+        <div class="column is-one-fifth">
+          <DocsSidebar :sidebar-menu="sidebarMenu" />
         </div>
         <div class="column">
           <nav class="breadcrumb is-medium">
@@ -31,9 +31,11 @@ export default Vue.extend({
   layout: 'docs-v2',
   async asyncData({ $content, params }) {
     const page = await $content(`docs/2.x/${params.page}`).fetch()
+    const sidebarMenu = (await $content('sidebars/2.x-docs').fetch()).sidebar
 
     return {
       page,
+      sidebarMenu,
     }
   },
   computed: {
