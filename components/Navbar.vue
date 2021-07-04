@@ -29,8 +29,11 @@ export default Vue.extend({
   },
   computed: {
     themeIcon() {
-      return this.$data.theme === 'light' ? 'weather-night' : 'weather-sunny'
+      return this.$data.theme === 'light' ? 'weather-sunny' : 'weather-night'
     },
+  },
+  mounted() {
+    this.$data.theme = this.$theme()
   },
   methods: {
     toggleTheme() {

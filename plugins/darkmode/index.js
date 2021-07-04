@@ -1,6 +1,7 @@
 import { ColorUpdater, hsl } from 'bulma-css-vars'
 import { bulmaCssVariablesDefs } from './bulma-colors'
 
+const themeKey = 'preferred-theme'
 const modes = {
   light: {
     primary: '#E93B38',
@@ -47,7 +48,9 @@ const modes = {
 const updater = new ColorUpdater(bulmaCssVariablesDefs)
 
 export default (_context, inject) => {
-  inject('theme', (theme) => {
+  let currentTheme = 'light'
+
+  function setTheme(theme, manual) {
     if (!modes[theme]) {
       // eslint-disable-next-line no-console
       console.error(`Invalid theme specified: ${theme}`)
@@ -56,9 +59,34 @@ export default (_context, inject) => {
 
     for (const color in modes[theme]) {
       if (Object.hasOwnProperty.call(modes[theme], color)) {
-        const value = modes[theme][color];
+        const value = modes[theme][color]
         updater.updateVarsInDocument(color, value)
       }
     }
+
+    if (manual) {
+      localStorage.setItem(themeKey, theme)
+    }
+
+    currentTheme = theme
+  }
+
+  function setInitialTheme() {
+    const preferred = localStorage.getItem(themeKey)
+    if (preferred) {
+      setTheme(preferred, false)
+    } else if (window.matchMedia('(prefers-color-scheme: dark)')) {
+      setTheme('dark', false)
+    }
+  }
+
+  inject('theme', (theme) => {
+    if (theme) {
+      setTheme(theme, true)
+    }
+
+    return currentTheme
   })
+
+  setInitialTheme()
 }
