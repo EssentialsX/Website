@@ -14,7 +14,8 @@
     "git-state": "^4.1.0",
     "saber": "^0.6.8",
     "saber-plugin-netlify-redirect": "^0.0.6",
-    "vue-konami-code": "^1.0.0"
+    "vue-konami-code": "^1.0.0",
+    "vue3-highlightjs": "^1.0.5"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
