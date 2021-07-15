@@ -138,7 +138,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Essentials Addons</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
@@ -151,7 +151,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Plugins</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
@@ -164,7 +164,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Config</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
@@ -179,7 +179,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Kits</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
@@ -194,7 +194,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Discord Config</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
@@ -209,7 +209,7 @@
                   class="card-header"
                   role="button">
                 <p class="card-header-title has-text-white">Log</p>
-                <a class="card-header-icon"> {{ props.open ? "⬆️" : "⬇️" }}
+                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
                 </a>
               </div>
             </template>
