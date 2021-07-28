@@ -38,7 +38,7 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
 > `New Application` -> Give Application a Name -> `Create`
 
 2. Once you create the application, you'll be directed to its overview. From this screen, you'll
-   need to copy your "Client ID"/"Application ID" and save it for a later step. To copy your 
+   need to copy your "Client ID"/"Application ID" and save it for a later step. To copy your
    Client ID, click the upper-left most blue "Copy" button. Make sure to save it for a later step.
 > ![Copy Client ID](./images/discord/copy-client-id.gif)
 > `Copy` -> Paste into Notepad for later step
@@ -66,9 +66,8 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
    and paste your Client ID you copied from step 2 into the text box on that page. Once you do that, click
    the "Authorize" button next to the text box. This will redirect you to Discord's authorization website
    to chose which server to add the bot to.
-   Note for advanced users: **Please use the `essentialsx.net` website above even if you think you already know how
-   to invite bots.** Bots for EssentialsX Discord require more than just the `bot` scope to work, so please just use
-   the link above even if you think you know what you're doing.
+   Note for advanced users: **Please use the `essentialsx.net` link above even if you already know how
+   to invite bots.** EssentialsX Discord requires more than just the `bot` scope to work.
 > ![OAuth Link Gen](./images/discord/auth.gif)
 > Paste Client ID -> `Authorize`
 
@@ -130,13 +129,13 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
 
 ## Console Relay
 The console relay is pretty self-explanatory: it relays everything on your console into a Discord channel of
-your choosing. The console relay is ridiculously easy to setup and if your server is already running, you don't
+your choosing. The console relay is ridiculously easy to set up and if your server is already running, you don't
 need to reload it!
 
 0. This assumes you've already done the initial setup.
 
 1. Go to the Discord server that your bot is in and find the channel you wish to use for console output.
-   Right click on the channel and click "Copy ID". Save this ID for the next step.
+   Right-click on the channel and click "Copy ID". Save this ID for the next step.
 > ![Copy ID](./images/discord/copy-cons-id.gif)
 > Find console channel -> Right Click -> `Copy ID`
 
@@ -150,9 +149,9 @@ need to reload it!
    settings. Otherwise, if you'd like to see what other options you can use to customize console output, stick around.
 
 4. The first thing you can customize is the format of the message sent to Discord. By default, the timestamp,
-   level (info/warn/error/etc), and message are shown for each console message. Let's say you wanted to make the
+   level (info/warn/error/etc.), and message are shown for each console message. Let's say you wanted to make the
    timestamp and level bold: since this message would be using Discord's markdown, we can just add \*\* to both sides of
-   level and timestamp. Then once you've done that, just do `/ess reload` and you should see your changes on Discord.
+   level and timestamp. Then, once you've done that, just do `/ess reload` and you should see your changes on Discord.
 > ![Bold Format](./images/discord/bold-format.gif)
 
 5. Next, you can also configure the name you wish the to show above console messages. By default, it's "EssX Console
@@ -180,15 +179,15 @@ and `staff`. If you only completed the initial setup, the `staff` channel defini
 most situations however, as the message system will always fallback to the `primary` channel if a channel ID is
 invalid.
 
-Now on the to the types of messages you can receive themselves (which is where you're going to use these channel
-definitions). In the `message-types` section of the config, you can see a list of message types (join/leave/chat/etc)
+Now on to the types of messages you can receive themselves (which is where you're going to use these channel
+definitions). In the `message-types` section of the config, you can see a list of message types (join/leave/chat/etc.)
 on the left (as the key), and on the right there is a channel definition.
 
 For the sake of example lets say we want to send all chat messages to their own channel. We can do this by creating
 a new channel definition and setting the `chat` message type to said channel definition. Below are step-by-step
 instructions for said example, you can follow along to get the gist of how to apply this to other use cases
 
-1. Find the channel on Discord you want to only send chat messages to, and then right click the channel and click
+1. Find the channel on Discord you want to only send chat messages to, and then right-click the channel and click
    "Copy ID".
 > ![Copy ID](./images/discord/chat-copy-id.gif)
 
@@ -258,7 +257,7 @@ them.
 EssentialsX Discord has a few other permissions that may be important to know about:
 
 * `essentials.discord.markdown` - Allows players to bypass the Markdown filter, so that they can
-  bold/underline/italic/etc their Minecraft chat messages for Discord.
+  bold/underline/italic/etc. their Minecraft chat messages for Discord.
 * `essentials.discord.ping` - Allows players to bypass the ping filter, so that they can ping @everyone/@here
   from Minecraft chat.
 
@@ -282,7 +281,7 @@ built-in message types can be found at [`MessageType.DefaultTypes`](https://gith
 
 Here is an example of what sending a message to the built-in chat channel would look like:
 ```java
-// The built in channel you want to send your message to, in this case the chat channel.
+// The built-in channel you want to send your message to, in this case the chat channel.
 final MessageType channel = MessageType.DefaultTypes.CHAT;
 // Set to true if your message should be allowed to ping @everyone, @here, or roles.
 // If you are sending user-generated content, you probably should keep this as false.
@@ -310,13 +309,13 @@ public class CustomTypeExample {
     private final MessageType type;
     
     public CustomTypeExample(final Plugin plugin) {
-      // Gets the the EssentialsX Discord API service so we can register our type and
+      // Gets the EssentialsX Discord API service, so we can register our type and
       // send a message with it later.
       api = Bukkit.getServicesManager().load(DiscordService.class);
       
       // Create a new message type for the user to define in our config.
       // Unless you're putting a discord channel id as the type key, it's probably 
-      // a good idea to store this object so you don't create it every time.
+      // a good idea to store this object, so you don't create it every time.
       type = new MessageType("my-awesome-channel");
       
       // Registers the type we just created with EssentialsX Discord.
@@ -427,14 +426,14 @@ public class BalanceSlashCommand extends InteractionCommand {
     
     @Override
     public boolean isEphemeral() {
-        // Whether or not the command and response should be hidden to other users on discord.
+        // Whether the command and response should be hidden to other users on discord.
         // Return true here in order to hide command/responses from other discord users.
         return false;
     }
     
     @Override
     public boolean isDisabled() {
-        // Whether or not the command should be prevented from being registered/executed.
+        // Whether the command should be prevented from being registered/executed.
         // Return true here in order to mark the command as disabled.
         return false;
     }
@@ -452,11 +451,11 @@ import net.essentialsx.api.v2.services.discord.DiscordService;
 ...
 
 public class MyEconomyPlugin {
-    @Override
-    public void onEnable() {
-      final DiscordService api = Bukkit.getServicesManager().load(DiscordService.class);
-      api.getInteractionController().registerCommand(new BalanceSlashCommand());
-    }
+  @Override
+  public void onEnable() {
+    final DiscordService api = Bukkit.getServicesManager().load(DiscordService.class);
+    api.getInteractionController().registerCommand(new BalanceSlashCommand());
+  }
 }
 ```
 
