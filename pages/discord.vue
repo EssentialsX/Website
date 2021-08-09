@@ -61,7 +61,7 @@ export default {
   methods: {
     redirect() {
       if (/^\d{18}$/.test(this.$refs.clientid.newValue)) {
-        window.location.href = "https://discord.com/api/oauth2/authorize?client_id=" + this.$refs.clientid.newValue +"&permissions=536889360&scope=bot%20applications.commands";
+        window.location.href = "https://discord.com/api/oauth2/authorize?client_id=" + this.$refs.clientid.newValue +"&permissions=1006652432&scope=bot%20applications.commands";
       }
     }
   }
