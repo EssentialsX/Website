@@ -1,28 +1,23 @@
 <template>
   <div>
-    <b-notification type="is-danger" v-show="invalid" :closable="false">
-      <p>
-        Invalid Dump Key!
-      </p>
+    <b-notification type="is-danger" v-if="invalid" :closable="false">
+      <p>Invalid dump key!</p>
     </b-notification>
-    <b-notification type="is-danger" v-show="error" :closable="false">
-      <p>
-        Error while loading dump: {{ error }}
-      </p>
+
+    <b-notification type="is-danger" v-if="error" :closable="false">
+      <p>Error while loading dump: {{ error }}</p>
     </b-notification>
-    <b-notification type="is-warning" v-show="!loaded && !error && !invalid" :closable="false">
-      <p>
-        Loading Dump...
-      </p>
-    </b-notification>
-    <div v-show="loaded">
+
+    <b-skeleton height="100px" count=5 :active="isLoading" />
+
+    <div v-if="loaded">
       <div class="columns">
         <div class="column">
           <article class="media box has-background-primary has-text-white">
             <div class="media-content">
               <div class="content has-text-left">
                 <p>
-                  <strong class="has-text-white">Essentials Version Information</strong>
+                  <strong class="has-text-white">EssentialsX version information</strong>
                 </p>
               </div>
 
@@ -143,7 +138,9 @@
               </div>
             </template>
 
-            <div class="card-content" id="addons" />
+            <div class="card-content">
+              <DumpPlugins :entries="addons" />
+            </div>
           </b-collapse>
           <b-collapse class="card has-background-dark" :open="false">
             <template #trigger="props">
@@ -156,7 +153,9 @@
               </div>
             </template>
 
-            <div class="card-content" id="plugins" />
+            <div class="card-content">
+              <DumpPlugins :entries="plugins" />
+            </div>
           </b-collapse>
           <b-collapse class="card has-background-dark" :open="false" v-if="config">
             <template #trigger="props">
@@ -170,7 +169,7 @@
             </template>
 
             <div class="card-content">
-              <pre v-highlightjs><code class="yaml">{{ config }}</code></pre>
+              <highlightjs class="p-0" language="yaml" :code="config" />
             </div>
           </b-collapse>
           <b-collapse class="card has-background-dark" :open="false" v-if="kits">
@@ -185,7 +184,7 @@
             </template>
 
             <div class="card-content">
-              <pre v-highlightjs><code class="yaml">{{ kits }}</code></pre>
+              <highlightjs class="p-0" language="yaml" :code="kits" />
             </div>
           </b-collapse>
           <b-collapse class="card has-background-dark" :open="false" v-if="discord">
@@ -200,7 +199,7 @@
             </template>
 
             <div class="card-content">
-              <pre v-highlightjs><code class="yaml">{{ discord }}</code></pre>
+              <highlightjs class="p-0" language="yaml" :code="discord" />
             </div>
           </b-collapse>
           <b-collapse class="card has-background-dark" :open="false" v-if="log">
@@ -215,7 +214,7 @@
             </template>
 
             <div class="card-content">
-              <pre v-highlightjs><code>{{ log }}</code></pre>
+              <highlightjs class="p-0" language="none" :code="log" />
             </div>
           </b-collapse>
         </div>
@@ -224,17 +223,12 @@
   </div>
 </template>
 <script>
-import DumpPlugin from "./DumpPlugin";
-import Vue from "vue";
-import VueHighlightJS from 'vue3-highlightjs'
-import 'highlight.js/styles/stackoverflow-dark.css'
+import DumpPlugins from "./DumpPlugins";
 import axios from "axios";
-
-Vue.use(VueHighlightJS)
 
 export default {
   components: {
-    DumpPlugin
+    DumpPlugins
   },
   mounted() {
     this.loadData()
@@ -264,7 +258,10 @@ export default {
       config: null,
       discord: null,
       kits: null,
-      log: null
+      log: null,
+
+      addons: [],
+      plugins: [],
     }
   },
   methods: {
@@ -303,13 +300,8 @@ export default {
             this.envUptime = dump.environment.uptime
             this.envMemory = dump.environment["allocated-memory"]
 
-            dump["ess-data"].addons.forEach(addon => {
-              createPlugin("addons", addon.name, addon.main, addon.version, addon.enabled, addon.official, addon.unsupported)
-            })
-
-            dump.plugins.forEach(addon => {
-              createPlugin("plugins", addon.name, addon.main, addon.version, addon.enabled, addon.official, addon.unsupported)
-            })
+            this.addons = dump["ess-data"].addons
+            this.plugins = dump.plugins
           }
         })
         this.loaded = true
@@ -318,26 +310,12 @@ export default {
         this.error = e.response ? e.response.data : e.message
       }
     }
-  }
-}
-
-function createPlugin(target, name, main, version, enabled, official, unsupported) {
-  const div = document.createElement('div')
-  div.id = 'plugin'
-  document.getElementById(target).appendChild(div)
-
-  const ComponentCtor = Vue.extend(DumpPlugin)
-  const instance = new ComponentCtor({
-    propsData: {
-      name: name,
-      main: main,
-      version: version,
-      enabled: enabled,
-      official: official,
-      unsupported: unsupported
+  },
+  computed: {
+    isLoading() {
+      return !this.loaded && !this.error && !this.invalid;
     }
-  })
-  instance.$mount('#plugin')
+  }
 }
 </script>
 

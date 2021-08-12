@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Buefy from "buefy";
+
 import "./style/main.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -8,6 +9,13 @@ import { faGithub, faDiscord, faPatreon } from "@fortawesome/free-brands-svg-ico
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import KonamiCode from "vue-konami-code";
+
+import hljs from 'highlight.js/lib/core';
+import yaml from 'highlight.js/lib/languages/yaml';
+import hljsVuePlugin from "@highlightjs/vue-plugin";
+import 'highlight.js/styles/stackoverflow-dark.css'
+
+hljs.registerLanguage('yaml', yaml);
 
 import ExternalData from "./mixins/external-data";
 
@@ -18,6 +26,8 @@ Vue.use(Buefy, {
     defaultIconComponent: 'vue-fontawesome',
     defaultIconPack: "fas"
 });
+
+Vue.use(hljsVuePlugin);
 
 // build process workaround
 if (typeof document !== "undefined") {
