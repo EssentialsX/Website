@@ -13,7 +13,9 @@
     "bulma-prefers-dark": "^0.1.0-beta.0",
     "css-prefers-color-scheme": "^4.0.0",
     "git-state": "^4.1.0",
-    "saber": "^0.6.8",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "saber": "^0.6.10",
     "saber-plugin-netlify-redirect": "^0.0.6",
     "vue-konami-code": "^1.0.0"
   },
@@ -34,5 +36,8 @@
   "browserslist": [
     "ie > 8",
     "last 2 versions"
-  ]
+  ],
+  "scripts": {
+    "postinstall": "patch-package"
+  }
 }
