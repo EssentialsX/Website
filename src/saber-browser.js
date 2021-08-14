@@ -4,7 +4,7 @@ import Buefy from "buefy";
 import "./style/main.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faSync, faExternalLinkSquareAlt, faDownload, faChevronDown, faChevronUp, faUsers, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faDiscord, faPatreon } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -19,7 +19,7 @@ hljs.registerLanguage('yaml', yaml);
 
 import ExternalData from "./mixins/external-data";
 
-library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faDiscord, faDownload, faPatreon, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight);
+library.add(faSync, faUsers, faExternalLinkSquareAlt, faChevronDown, faChevronUp, faGithub, faDiscord, faDownload, faPatreon, faCheckCircle, faTools, faSun, faMoon, faArrowUp, faArrowDown, faAngleRight, faSearch);
 Vue.component('fa-icon', FontAwesomeIcon);
 
 Vue.use(Buefy, {

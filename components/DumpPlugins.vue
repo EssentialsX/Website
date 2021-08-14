@@ -7,9 +7,18 @@
         field="name"
         label="Name"
         sortable
-        searchable
-        v-slot="props">
-        {{ props.row.name }}
+        searchable>
+        <template #searchable="props">
+          <b-input
+            v-model="props.filters[props.column.field]"
+            placeholder="Filter names..."
+            type="search"
+            icon="search"
+            size="is-small" />
+        </template>
+        <template #default="props">
+          {{ props.row.name }}
+        </template>
       </b-table-column>
       <b-table-column
         field="version"
@@ -66,3 +75,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.b-table .table th .th-wrap .control .icon.is-left {
+  margin-left: 0;
+}
+</style>
