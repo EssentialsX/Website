@@ -8,7 +8,7 @@
       <p>Error while loading dump: {{ error }}</p>
     </b-notification>
 
-    <b-skeleton height="100px" count=5 :active="isLoading" />
+    <b-skeleton height="100px" :count="5" :active="isLoading" />
 
     <div v-if="loaded">
       <div class="columns">
@@ -115,107 +115,58 @@
             </nav>
           </b-message>
 
-          <b-collapse class="card has-background-dark" :open="false">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Essentials Addons</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
+          <collapse-message type="is-dark">
+            <template v-slot:title>
+              EssentialsX addons
             </template>
 
-            <div class="card-content">
-              <DumpPlugins :entries="addons" />
-            </div>
-          </b-collapse>
-          <b-collapse class="card has-background-dark" :open="false">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Plugins</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
+            <DumpPlugins :entries="addons" />
+          </collapse-message>
+
+          <collapse-message type="is-dark">
+            <template v-slot:title>
+              Server plugins
             </template>
 
-            <div class="card-content">
-              <DumpPlugins :entries="plugins" />
-            </div>
-          </b-collapse>
-          <b-collapse class="card has-background-dark" :open="false" v-if="config">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Config</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
+            <DumpPlugins :entries="plugins" />
+          </collapse-message>
+
+          <collapse-message type="is-black" v-if="config">
+            <template v-slot:title>
+              Config
             </template>
 
-            <div class="card-content">
-              <highlightjs class="p-0" language="yaml" :code="config" />
-            </div>
-          </b-collapse>
-          <b-collapse class="card has-background-dark" :open="false" v-if="kits">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Kits</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
+            <highlightjs class="p-0" language="yaml" :code="config" />
+          </collapse-message>
+
+          <collapse-message type="is-black" v-if="kits">
+            <template v-slot:title>
+              Kits
             </template>
 
-            <div class="card-content">
-              <highlightjs class="p-0" language="yaml" :code="kits" />
-            </div>
-          </b-collapse>
-          <b-collapse class="card has-background-dark" :open="false" v-if="discord">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Discord Config</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
+            <highlightjs class="p-0" language="yaml" :code="kits" />
+          </collapse-message>
+
+          <collapse-message type="is-black" v-if="discord">
+            <template v-slot:title>
+              Discord config
             </template>
 
-            <div class="card-content">
-              <highlightjs class="p-0" language="yaml" :code="discord" />
-            </div>
-          </b-collapse>
-          <b-collapse class="card has-background-dark" :open="false" v-if="log">
-            <template #trigger="props">
-              <div
-                  class="card-header"
-                  role="button">
-                <p class="card-header-title has-text-white">Log</p>
-                <a class="card-header-icon"> {{ props.open ? "-" : "+" }}
-                </a>
-              </div>
-            </template>
-
-            <div class="card-content">
-              <highlightjs class="p-0" language="none" :code="log" />
-            </div>
-          </b-collapse>
+            <highlightjs class="p-0" language="yaml" :code="discord" />
+          </collapse-message>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import CollapseMessage from "./CollapseMessage"
 import DumpPlugins from "./DumpPlugins";
 import axios from "axios";
 
 export default {
   components: {
+    CollapseMessage,
     DumpPlugins
   },
   mounted() {
