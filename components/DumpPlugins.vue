@@ -7,11 +7,11 @@
         field="name"
         label="Name"
         sortable
-        searchable>
+        :searchable="searchable">
         <template #searchable="props">
           <b-input
             v-model="props.filters[props.column.field]"
-            placeholder="Filter names..."
+            placeholder="Filter plugins by name"
             type="search"
             icon="search"
             size="is-small" />
@@ -55,9 +55,10 @@
       </b-table-column>
 
       <template #detail="props">
-        <div class="content">
+        <div class="content" style="word-break: break-all">
           <p>
-            <b>Main class:</b> {{ props.row.main }}
+            <b>Main class:</b>
+            <span>{{ props.row.main }}</span>
           </p>
         </div>
       </template>
@@ -71,6 +72,11 @@ export default {
     entries: {
       type: Array,
       required: true,
+    },
+    searchable: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 }

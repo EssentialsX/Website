@@ -8,154 +8,156 @@
       <p>Error while loading dump: {{ error }}</p>
     </b-notification>
 
-    <b-skeleton height="100px" :count="5" :active="isLoading" />
+    <b-skeleton height="120px" :count="5" :active="isLoading" />
 
     <div v-if="loaded">
-      <div class="columns">
-        <div class="column">
-          <b-message
-            title="EssentialsX version"
-            type="is-primary"
-            :closable="false">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Version</p>
-                  <p class="title is-6">{{ essVersion }}</p>
-                </div>
+      <div class="message is-primary">
+        <div class="message-header">
+          <p>EssentialsX version</p>
+        </div>
+        <div class="message-body">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Version</p>
+                <p class="title is-6">{{ essVersion }}</p>
               </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Update Branch</p>
-                  <p class="title is-6">{{ essBranch }}</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Update Branch</p>
+                <p class="title is-6">{{ essBranch }}</p>
               </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Economy Layer</p>
-                  <p class="title is-6">{{ essLayer }}</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Economy Layer</p>
+                <p class="title is-6">{{ essLayer }}</p>
               </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Layer Backend</p>
-                  <p class="title is-6">{{ essBackend }}</p>
-                </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Layer Backend</p>
+                <p class="title is-6">{{ essBackend }}</p>
               </div>
-            </nav>
-          </b-message>
-          
-          <b-message
-            title="Server version"
-            type="is-serverinfo"
-            :closable="false">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Brand</p>
-                  <p class="title is-6">{{ srvBrand }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Server Version</p>
-                  <p class="title is-6">{{ srvVersion }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Bukkit Version</p>
-                  <p class="title is-6">{{ srvBukkitVersion }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Support Status</p>
-                  <p class="title is-6">{{ srvSupport }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Support Status Trigger</p>
-                  <p class="title is-6">{{ srvTrigger }}</p>
-                </div>
-              </div>
-            </nav>
-          </b-message>
-
-          <b-message
-            title="Server environment"
-            type="is-info"
-            :closable="false">
-            <nav class="level">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Java Version</p>
-                  <p class="title is-6">{{ envJava }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">OS Name</p>
-                  <p class="title is-6">{{ envOs }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Uptime</p>
-                  <p class="title is-6">{{ envUptime }}</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Allocated Memory</p>
-                  <p class="title is-6">{{ envMemory }}</p>
-                </div>
-              </div>
-            </nav>
-          </b-message>
-
-          <collapse-message type="is-dark">
-            <template v-slot:title>
-              EssentialsX addons
-            </template>
-
-            <DumpPlugins :entries="addons" />
-          </collapse-message>
-
-          <collapse-message type="is-dark">
-            <template v-slot:title>
-              Server plugins
-            </template>
-
-            <DumpPlugins :entries="plugins" />
-          </collapse-message>
-
-          <collapse-message type="is-black" v-if="config">
-            <template v-slot:title>
-              Config
-            </template>
-
-            <highlightjs class="p-0" language="yaml" :code="config" />
-          </collapse-message>
-
-          <collapse-message type="is-black" v-if="kits">
-            <template v-slot:title>
-              Kits
-            </template>
-
-            <highlightjs class="p-0" language="yaml" :code="kits" />
-          </collapse-message>
-
-          <collapse-message type="is-black" v-if="discord">
-            <template v-slot:title>
-              Discord config
-            </template>
-
-            <highlightjs class="p-0" language="yaml" :code="discord" />
-          </collapse-message>
+            </div>
+          </nav>
         </div>
       </div>
+      
+      <div class="message is-serverinfo">
+        <div class="message-header">
+          <p>Server version</p>
+        </div>
+        <div class="message-body">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Brand</p>
+                <p class="title is-6">{{ srvBrand }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Server Version</p>
+                <p class="title is-6">{{ srvVersion }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Bukkit Version</p>
+                <p class="title is-6">{{ srvBukkitVersion }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Support Status</p>
+                <p class="title is-6">{{ srvSupport }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Support Status Trigger</p>
+                <p class="title is-6">{{ srvTrigger }}</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div class="message is-info">
+        <div class="message-header">
+          <p>Server environment</p>
+        </div>
+        <div class="message-body">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Java Version</p>
+                <p class="title is-6">{{ envJava }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">OS Name</p>
+                <p class="title is-6">{{ envOs }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Uptime</p>
+                <p class="title is-6">{{ envUptime }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Allocated Memory</p>
+                <p class="title is-6">{{ envMemory }}</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <collapse-message type="is-dark">
+        <template v-slot:title>
+          EssentialsX addons
+        </template>
+
+        <DumpPlugins :entries="addons" />
+      </collapse-message>
+
+      <collapse-message type="is-dark">
+        <template v-slot:title>
+          Server plugins
+        </template>
+
+        <DumpPlugins :entries="plugins" searchable />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="config">
+        <template v-slot:title>
+          Config
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="config" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="kits">
+        <template v-slot:title>
+          Kits
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="kits" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="discord">
+        <template v-slot:title>
+          Discord config
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="discord" />
+      </collapse-message>
     </div>
   </div>
 </template>
