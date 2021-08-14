@@ -13,120 +13,108 @@
     <div v-if="loaded">
       <div class="columns">
         <div class="column">
-          <article class="media box has-background-primary has-text-white">
-            <div class="media-content">
-              <div class="content has-text-left">
-                <p>
-                  <strong class="has-text-white">EssentialsX version information</strong>
-                </p>
+          <b-message
+            title="EssentialsX version"
+            type="is-primary"
+            :closable="false">
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Version</p>
+                  <p class="title is-6">{{ essVersion }}</p>
+                </div>
               </div>
-
-              <nav class="level is-mobile">
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Version</p>
-                    <p class="has-text-white">{{ essVersion }}</p>
-                  </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Update Branch</p>
+                  <p class="title is-6">{{ essBranch }}</p>
                 </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Update Branch</p>
-                    <p class="has-text-white">{{ essBranch }}</p>
-                  </div>
-                </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Economy Layer</p>
-                    <p class="has-text-white">{{ essLayer }}</p>
-                  </div>
-                </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Layer Backend</p>
-                    <p class="has-text-white">{{ essBackend }}</p>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </article>
-          <article class="media box has-background-serverinfo has-text-white">
-            <div class="media-content">
-              <div class="content has-text-left">
-                <p>
-                  <strong class="has-text-white">Server Version Information</strong>
-                </p>
               </div>
-
-              <nav class="level is-mobile">
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Brand</p>
-                    <p class="has-text-white">{{ srvBrand }}</p>
-                  </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Economy Layer</p>
+                  <p class="title is-6">{{ essLayer }}</p>
                 </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Server Version</p>
-                    <p class="has-text-white">{{ srvVersion }}</p>
-                  </div>
-                </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Bukkit Version</p>
-                    <p class="has-text-white">{{ srvBukkitVersion }}</p>
-                  </div>
-                </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Support Status</p>
-                    <p class="has-text-white">{{ srvSupport }}</p>
-                  </div>
-                </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Support Status Trigger</p>
-                    <p class="has-text-white">{{ srvTrigger }}</p>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </article>
-          <article class="media box has-background-spigot has-text-white">
-            <div class="media-content">
-              <div class="content has-text-left">
-                <p>
-                  <strong class="has-text-white">Server Environment Information</strong>
-                </p>
               </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Layer Backend</p>
+                  <p class="title is-6">{{ essBackend }}</p>
+                </div>
+              </div>
+            </nav>
+          </b-message>
+          
+          <b-message
+            title="Server version"
+            type="is-serverinfo"
+            :closable="false">
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Brand</p>
+                  <p class="title is-6">{{ srvBrand }}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Server Version</p>
+                  <p class="title is-6">{{ srvVersion }}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Bukkit Version</p>
+                  <p class="title is-6">{{ srvBukkitVersion }}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Support Status</p>
+                  <p class="title is-6">{{ srvSupport }}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Support Status Trigger</p>
+                  <p class="title is-6">{{ srvTrigger }}</p>
+                </div>
+              </div>
+            </nav>
+          </b-message>
 
-              <nav class="level is-mobile">
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Java Version</p>
-                    <p class="has-text-white">{{ envJava }}</p>
-                  </div>
+          <b-message
+            title="Server environment"
+            type="is-info"
+            :closable="false">
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Java Version</p>
+                  <p class="title is-6">{{ envJava }}</p>
                 </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">OS Name</p>
-                    <p class="has-text-white">{{ envOs }}</p>
-                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">OS Name</p>
+                  <p class="title is-6">{{ envOs }}</p>
                 </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Uptime</p>
-                    <p class="has-text-white">{{ envUptime }}</p>
-                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Uptime</p>
+                  <p class="title is-6">{{ envUptime }}</p>
                 </div>
-                <div class="level-item has-text-left">
-                  <div>
-                    <p class="heading has-text-centered">Allocated Memory</p>
-                    <p class="has-text-white">{{ envMemory }}</p>
-                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Allocated Memory</p>
+                  <p class="title is-6">{{ envMemory }}</p>
                 </div>
-              </nav>
-            </div>
-          </article>
+              </div>
+            </nav>
+          </b-message>
+
           <b-collapse class="card has-background-dark" :open="false">
             <template #trigger="props">
               <div
