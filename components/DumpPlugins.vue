@@ -57,6 +57,14 @@
       <template #detail="props">
         <div class="content" style="word-break: break-all">
           <p>
+            <b>Description:</b>
+            <span>{{ props.row.description }}</span>
+          </p>
+          <p>
+            <b>Authors:</b>
+            <span>{{ props.row.authors.join(", ") }}</span>
+          </p>
+          <p>
             <b>Main class:</b>
             <span>{{ props.row.main }}</span>
           </p>
