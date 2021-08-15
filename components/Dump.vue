@@ -132,7 +132,7 @@
 
       <collapse-message type="is-dark">
         <template v-slot:title>
-          Server plugins
+          Server plugins ({{ plugins.length }})
         </template>
 
         <DumpPlugins :entries="plugins" searchable />
