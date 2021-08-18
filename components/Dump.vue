@@ -22,7 +22,7 @@
           <summary>
             Error: <b>{{ friendlyError }}</b>
           </summary>
-          <highlightjs language="yaml" :code="JSON.stringify(error)" />
+          <highlightjs language="yaml" :code="JSON.stringify(error, null, 4)" />
         </details>
         <p v-else>
           Error: <b>{{ error }}</b>
@@ -308,6 +308,8 @@ export default {
       if (this.error.error) {
         switch (this.error.error) {
           case "not_found":
+            return "Invalid paste ID";
+          case "missing_paste":
             return "Paste not found";
         }
       }
