@@ -1,0 +1,46 @@
+diff --git a/node_modules/@highlightjs/vue-plugin/package.json b/node_modules/@highlightjs/vue-plugin/package.json
+index 6cd2b2e..bcf859c 100644
+--- a/node_modules/@highlightjs/vue-plugin/package.json
++++ b/node_modules/@highlightjs/vue-plugin/package.json
+@@ -8,7 +8,7 @@
+     "test": "echo \"Error: no test specified\" && exit 1",
+     "publish": "npm publish --access public"
+   },
+-  "type": "module",
++  "type": "commonjs",
+   "author": "Josh Goebel <hello@joshgoebel.com>",
+   "license": "BSD-3-Clause",
+   "devDependencies": {
+diff --git a/node_modules/@highlightjs/vue-plugin/src/vue.js b/node_modules/@highlightjs/vue-plugin/src/vue.js
+index d04629f..4f8821a 100644
+--- a/node_modules/@highlightjs/vue-plugin/src/vue.js
++++ b/node_modules/@highlightjs/vue-plugin/src/vue.js
+@@ -1,5 +1,4 @@
+-import { escapeHTML } from "./lib/utils.js";
+-import hljs from "highlight.js/lib/core.js";
++const hljs = require("highlight.js/lib/core.js");
+ 
+ function hasValueOrEmptyAttribute(value) {
+   return Boolean(value || value === "");
+@@ -57,10 +56,19 @@ const Component = {
+   // template: `<pre><code :class="className" v-html="highlighted"></code></pre>`
+ };
+ 
+-export default {
++function escapeHTML(value) {
++  return value
++      .replace(/&/g, '&amp;')
++      .replace(/</g, '&lt;')
++      .replace(/>/g, '&gt;')
++      .replace(/"/g, '&quot;')
++      .replace(/'/g, '&#x27;');
++}
++
++module.exports = {
+   install(Vue) {
+     Vue.component('highlightjs', Component);
+   },
+   component: Component
+-};
++}
+ 

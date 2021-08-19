@@ -1,0 +1,18 @@
+@media (color-index: 48) {
+  .b-table .table tr.detail {
+    background-color: rgb(27, 27, 27);
+    box-shadow: rgb(0, 0, 0) 0px 1px 3px inset;
+  }
+
+  .b-table .table-wrapper.has-mobile-cards tr:not([class*="is-"]) {
+    background-color: rgb(27, 27, 27);
+  }
+
+  .b-table .table-wrapper.has-mobile-cards tr:not([class*="is-"]):hover {
+    background-color: rgb(41, 41, 41);
+  }
+
+  .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td {
+    border-bottom: 1px solid rgb(41, 41, 41)
+  }
+}
