@@ -4,6 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <p class="title">{{ page.title }}</p>
+          <p v-if="page.description" class="subtitle">{{ page.description }}</p>
         </div>
       </div>
     </section>
