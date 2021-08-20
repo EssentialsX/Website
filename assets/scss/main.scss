@@ -1,12 +1,23 @@
 @import './generated-fallback.css'; // import fallbacks first, so they are overridden
 @import './generated-bulma-vars.sass';
 
-// Links
-$link: $primary;
-$link-focus-border: $primary;
+$custom-colors: (
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+);
 
-// Code
-$code: $primary;
+// Primary colour highlights for text - don't change with theme
+$primary-text: #E93B38;
+
+$link: $primary-text;
+$link-focus-border: $primary-text;
+
+$code: $primary-text;
+
+// Bulma colour overrides - TODO bulma-css-vars
+$yellow: hsl(44, 100%, 67%);
+$green: hsl(123, 58%, 65%);
+$cyan: hsl(207, 85%, 52%);
 
 // Fix conflicts between Prism.js and Bulma
 // https://github.com/jgthms/bulma/issues/1708#issuecomment-834447892
@@ -16,4 +27,4 @@ $code: $primary;
 $navbar-padding-vertical: 0.3rem;
 
 @import '../../node_modules/bulma-css-vars/bulma-cv-lib';
-@import "~buefy/src/scss/buefy";
+@import "../../node_modules/buefy/src/scss/buefy";

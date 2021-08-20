@@ -5,20 +5,23 @@ const appColors = {
   secondary: '#F56C2F',
   tertiary: '#FF308C',
 
-  black: hsl(0, 0, 4),
-  'black-bis': hsl(0, 0, 7),
-  'black-ter': hsl(0, 0, 14),
+  'scheme-main': hsl(0, 0, 100),
+  'scheme-main-bis': hsl(0, 0, 98),
+  'scheme-main-ter': hsl(0, 0, 96),
+  'scheme-main-invert': hsl(0, 0, 4),
+  'scheme-main-invert-bis': hsl(0, 0, 7),
+  'scheme-main-invert-ter': hsl(0, 0, 14),
 
-  'grey-darker': hsl(0, 0, 21),
-  'grey-dark': hsl(0, 0, 29),
-  grey: hsl(0, 0, 48),
-  'grey-light': hsl(0, 0, 71),
-  'grey-lighter': hsl(0, 0, 86),
-  'grey-lightest': hsl(0, 0, 93),
+  background: hsl(0, 0, 96),
+  text: hsl(0, 0, 29),
+  'text-light': hsl(0, 0, 48),
+  'text-strong': hsl(0, 0, 21),
+  'text-invert': '#ffffff',
 
-  'white-ter': hsl(0, 0, 96),
-  'white-bis': hsl(0, 0, 98),
-  white: hsl(0, 0, 100),
+  border: hsl(0, 0, 86),
+  'border-hover': hsl(0, 0, 71),
+  'border-light': hsl(0, 0, 93),
+  'border-light-hover': hsl(0, 0, 71),
 }
 
 module.exports = {
