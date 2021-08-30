@@ -93,6 +93,12 @@
             </div>
             <div class="level-item has-text-centered">
               <div>
+                <p class="heading">Online Mode</p>
+                <p class="title is-6">{{ srvOnlineMode }}</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
                 <p class="heading">Support Status</p>
                 <p class="title is-6">{{ srvSupport }}</p>
               </div>
@@ -234,6 +240,7 @@ export default {
       srvBukkitVersion: null,
       srvSupport: null,
       srvTrigger: null,
+      srvOnlineMode: null,
 
       envJava: null,
       envOs: null,
@@ -281,6 +288,7 @@ export default {
             this.srvBrand = dump["server-data"]["server-brand"]
             this.srvVersion = dump["server-data"]["server-version"]
             this.srvBukkitVersion = dump["server-data"]["bukkit-version"]
+            this.srvOnlineMode = dump["server-data"].hasOwnProperty("online-mode") ? dump["server-data"]["online-mode"] : "Not Provided"
             this.srvSupport = dump["server-data"]["support-status"].status + " (" + (dump["server-data"]["support-status"].supported ? "Supported" : "Unsupported") + ")"
             this.srvTrigger = dump["server-data"]["support-status"].trigger === null ? "N/A" : dump["server-data"]["support-status"].trigger
 
