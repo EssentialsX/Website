@@ -77,13 +77,73 @@ To add EssentialsX to your build system, you should use the following artifacts:
 
 | Type            | Group ID        | Artifact ID | Version         |
 | :-------------- | :-------------- | :---------- | :-------------- |
+| Latest release  | net.essentialsx | EssentialsX | 2.19.0
+| Snapshots       | net.essentialsx | EssentialsX | 2.19.1-SNAPSHOT |
 | Older releases  | net.ess3        | EssentialsX | 2.18.2          |
-| Snapshots       | net.essentialsx | EssentialsX | 2.19.0-SNAPSHOT |
-| Future releases | net.essentialsx | EssentialsX | 2.19.0          |
 
 Note: up until 2.18.2, EssentialsX used the net.ess3 group ID, but starting with 2.19.0 snapshots, the group ID is now net.essentialsx. When updating your plugin, make sure you use the correct group ID.
 
-### Maven
+### Releases
+#### Maven
+Under `repositories` in your `pom.xml`, you need to add a new `repository` for the EssentialsX CI server:
+```xml
+<repositories>
+    ...
+    <repository>
+        <id>essentials-releases</id>
+        <url>https://repo.essentialsx.net/releases/</url>
+    </repository>
+    <repository>
+        <id>paper-repo</id>
+        <url>https://papermc.io/repo/repository/maven-public/</url>
+    </repository>
+</repositories>
+```
+
+Next, add EssentialsX as a `dependency` under `dependencies`:
+```xml
+<dependencies>
+    ...
+    <dependency>
+        <groupId>net.essentialsx</groupId>
+        <artifactId>EssentialsX</artifactId>
+        <version>2.19.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+
+Make sure the dependency is `provided` - you don't want to include the whole of EssentialsX inside your plugin.
+
+You should now be able to build against EssentialsX's API in your IDE - you may need to reimport your project for this to work.
+
+#### Gradle
+First, add the repository to your `build.gradle`:
+```groovy
+repositories {
+    maven {
+        name "essentialsx-releases"
+        url "https://repo.essentialsx.net/releases/"
+    }
+    maven {
+        name "papermc"
+        url "https://papermc.io/repo/repository/maven-public/"
+    }
+}
+```
+
+Next, add the dependency as a `compileOnly` dependency:
+```groovy
+dependencies {
+    ...
+    compileOnly 'net.essentialsx:EssentialsX:2.19.0'
+}
+```
+
+You should now be able to build against EssentialsX's API in your IDE.
+
+### Snapshots 
+#### Maven
 Under `repositories` in your `pom.xml`, you need to add a new `repository` for the EssentialsX CI server:
 ```xml
 <repositories>
@@ -106,24 +166,17 @@ Next, add EssentialsX as a `dependency` under `dependencies`:
     <dependency>
         <groupId>net.essentialsx</groupId>
         <artifactId>EssentialsX</artifactId>
-        <version>2.19.0-SNAPSHOT</version>
+        <version>2.19.1-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
 ```
 
-<!-- Removed the releases repository
-    <repository>
-        <id>essentials-releases</id>
-        <url>https://repo.essentialsx.net/releases/</url>
-    </repository>
--->
-
 Make sure the dependency is `provided` - you don't want to include the whole of EssentialsX inside your plugin.
 
 You should now be able to build against EssentialsX's API in your IDE - you may need to reimport your project for this to work.
 
-### Gradle
+#### Gradle
 First, add the repository to your `build.gradle`:
 ```groovy
 repositories {
@@ -138,18 +191,11 @@ repositories {
 }
 ```
 
-<!-- Removed the releases repository
-    maven {
-        name "essentialsx-releases"
-        url "https://repo.essentialsx.net/releases/"
-    }
--->
-
 Next, add the dependency as a `compileOnly` dependency:
 ```groovy
 dependencies {
     ...
-    compileOnly 'net.essentialsx:EssentialsX:2.19.0-SNAPSHOT'
+    compileOnly 'net.essentialsx:EssentialsX:2.19.1-SNAPSHOT'
 }
 ```
 
