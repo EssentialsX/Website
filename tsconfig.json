@@ -28,8 +28,7 @@
       "@nuxtjs/axios",
       "@nuxt/content",
       "@types/node",
-      "@types/lodash",
-      "buefy/types"
+      "@types/lodash"
     ]
   },
   "exclude": [

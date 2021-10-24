@@ -2,20 +2,12 @@
   <div>
     <Navbar />
 
-    <div class="hero is-primary is-small">
-      <div class="hero-body">
-        <div class="container">
-          <div class="level">
-            <div class="level-left">
-              <p class="title">Documentation</p>
-            </div>
-            <div class="level-right">
-              <DocsHeroSearch search-root="docs/2.x" />
-            </div>
-          </div>
-        </div>
+    <Hero>
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <p class="flex-grow font-semibold text-3xl">EssentialsX Docs</p>
+        <DocsHeroSearch search-root="docs/2.x" />
       </div>
-    </div>
+    </Hero>
 
     <section class="main-content">
       <nuxt />

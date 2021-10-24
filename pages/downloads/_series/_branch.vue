@@ -1,16 +1,12 @@
 <template>
   <div>
-    <section class="hero is-primary is-small">
-      <div class="hero-body">
-        <div class="container">
-          <p class="title">Download EssentialsX</p>
-          <p class="subtitle">
-            Get stable series of EssentialsX and add-ons, or dev builds with the
-            latest features and bug fixes.
-          </p>
-        </div>
-      </div>
-    </section>
+    <Hero>
+      <p class="font-semibold text-3xl">Download EssentialsX</p>
+      <p class="font-medium text-xl">
+        Get stable series of EssentialsX and add-ons, or dev builds with the
+        latest features and bug fixes.
+      </p>
+    </Hero>
 
     <section class="section">
       <div class="container">
