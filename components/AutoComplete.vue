@@ -6,7 +6,7 @@
   >
     <input
       v-model="syncValue"
-      type="search"
+      type="text"
       :class="inputClass"
       :placeholder="placeholder"
     />
@@ -17,7 +17,7 @@
     />
     <div
       v-if="suggestionsVisible"
-      class="absolute z-10 flex flex-col items-start w-full right-0 bg-white text-black border rounded-md shadow-md mt-1"
+      class="absolute z-10 flex flex-col items-start w-full right-0 bg-white text-black dark:text-gray-300 dark:focus:text-white dark:bg-gray-900 border dark:border-gray-800 rounded-md shadow-md mt-1"
     >
       <a
         v-for="(element, index) in suggestions"
@@ -68,16 +68,18 @@ export default class AutoComplete extends Vue {
     }
   }
 
-  inputClass() {
+  get inputClass() {
     return {
       'pl-10': this.icon,
       'h-full': true,
       'w-full': true,
-      // eslint-disable-next-line prettier/prettier
       'rounded': true,
       'text-gray-600': true,
       'focus:text-black': true,
       'focus:ring': true,
+      'dark:text-gray-300': true,
+      'dark:focus:text-white': true,
+      'dark:bg-gray-900': true,
     }
   }
 }
