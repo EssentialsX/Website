@@ -14,7 +14,7 @@
             </b-button>
           </div>
           <div :class="menuClass">
-            <DocsSidebar :sidebar-menu="sidebarMenu" />
+            <DocsSidebarView :sidebar-menu="sidebarMenu" />
           </div>
         </div>
         <div class="column">

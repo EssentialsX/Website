@@ -1,61 +1,8 @@
 import { Plugin } from '@nuxt/types'
-import { ColorUpdater, hsl } from 'bulma-css-vars'
-import { ColorCallSet, Hsl } from 'bulma-css-vars/dist/types'
-import { bulmaCssVariablesDefs } from './bulma-colors'
 
 const themeKey = 'preferred-theme'
-const modes: { [index: string]: { [index: string]: string | Hsl } } = {
-  light: {
-    primary: '#E93B38',
-    secondary: '#F56C2F',
-    tertiary: '#FF308C',
 
-    'scheme-main': hsl(0, 0, 100),
-    'scheme-main-bis': hsl(0, 0, 98),
-    'scheme-main-ter': hsl(0, 0, 96),
-    'scheme-main-invert': hsl(0, 0, 4),
-    'scheme-main-invert-bis': hsl(0, 0, 7),
-    'scheme-main-invert-ter': hsl(0, 0, 14),
-
-    background: hsl(0, 0, 96),
-    text: hsl(0, 0, 29),
-    'text-light': hsl(0, 0, 48),
-    'text-strong': hsl(0, 0, 21),
-    'text-invert': '#ffffff',
-
-    border: hsl(0, 0, 86),
-    'border-hover': hsl(0, 0, 71),
-    'border-light': hsl(0, 0, 93),
-    'border-light-hover': hsl(0, 0, 71),
-  },
-  dark: {
-    primary: '#9c2825',
-    secondary: '#F56C2F',
-    tertiary: '#FF308C',
-
-    'scheme-main': hsl(0, 0, 8),
-    'scheme-main-bis': hsl(0, 0, 20),
-    'scheme-main-ter': hsl(0, 0, 28),
-    'scheme-main-invert': hsl(0, 0, 98),
-    'scheme-main-invert-bis': hsl(0, 0, 96),
-    'scheme-main-invert-ter': hsl(0, 0, 94),
-
-    background: hsl(0, 0, 4),
-    text: hsl(0, 0, 94),
-    'text-light': hsl(0, 0, 88),
-    'text-strong': hsl(0, 0, 100),
-    'text-invert': '#000000',
-
-    border: hsl(0, 0, 14),
-    'border-hover': hsl(0, 0, 29),
-    'border-light': hsl(0, 0, 7),
-    'border-light-hover': hsl(0, 0, 29),
-  },
-}
-
-const updater = new ColorUpdater(
-  (bulmaCssVariablesDefs as unknown) as ColorCallSet
-)
+const modes = ['dark', 'light']
 
 declare module 'vue/types/vue' {
   // this.$theme inside Vue components
@@ -87,18 +34,13 @@ const themePlugin: Plugin = (_context, inject) => {
   let currentTheme = 'light'
 
   function setTheme(theme: string, manual: boolean) {
-    if (!modes[theme]) {
+    if (!modes.includes(theme)) {
       // eslint-disable-next-line no-console
       console.error(`Invalid theme specified: ${theme}`)
       return
     }
 
-    for (const color in modes[theme]) {
-      if (Object.hasOwnProperty.call(modes[theme], color)) {
-        const value = modes[theme][color]
-        updater.updateVarsInDocument(color, value as string)
-      }
-    }
+    // TODO apply theme
 
     if (manual) {
       localStorage.setItem(themeKey, theme)

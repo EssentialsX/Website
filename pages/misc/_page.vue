@@ -1,15 +1,12 @@
 <template>
   <div>
-    <section class="hero is-primary is-small">
-      <div class="hero-body">
-        <div class="container">
-          <p class="title">{{ page.title }}</p>
-          <p v-if="page.description" class="subtitle">{{ page.description }}</p>
-        </div>
-      </div>
-    </section>
+    <Hero>
+      <p class="font-semibold text-3xl">{{ page.title }}</p>
+      <p v-if="page.description" class="font-medium text-xl">{{ page.description }}</p>
+    </Hero>
+
     <section class="section">
-      <div class="container content">
+      <div class="container prose">
         <nuxt-content :document="page" />
       </div>
     </section>
