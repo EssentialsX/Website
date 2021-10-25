@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Hero>
+    <KitHero>
       <p class="font-semibold text-3xl">Download EssentialsX</p>
       <p class="font-medium text-xl">
         Get stable series of EssentialsX and add-ons, or dev builds with the
         latest features and bug fixes.
       </p>
-    </Hero>
+    </KitHero>
 
     <section class="section">
       <div class="container">
