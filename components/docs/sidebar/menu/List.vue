@@ -1,11 +1,11 @@
 <template>
-  <ul class="menu-list">
+  <div class="menu-list">
     <DocsSidebarMenuListItem
       v-for="entry in entries"
       :key="entry.label"
       v-bind="entry"
     />
-  </ul>
+  </div>
 </template>
 
 <script lang="ts">

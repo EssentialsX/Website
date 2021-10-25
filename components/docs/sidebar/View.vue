@@ -1,11 +1,13 @@
 <template>
-  <div class="">
-    <div class="menu">
-      <template v-for="(contents, title) in sidebarMenu">
-        <p :key="`${title}_label`" class="menu-label">{{ title }}</p>
-        <DocsSidebarMenuList :key="`${title}_list`" :entries="contents" />
-      </template>
-    </div>
+  <div>
+    <section
+      v-for="(contents, title) in sidebarMenu"
+      :key="`sidebar_section_${title}`"
+      class="m-4 md:ml-2 first-of-type:mt-2 text-mg"
+    >
+      <p class="font-semibold text-lg mb-1">{{ title }}</p>
+      <DocsSidebarMenuList :entries="contents" />
+    </section>
   </div>
 </template>
 

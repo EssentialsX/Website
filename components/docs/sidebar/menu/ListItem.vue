@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <div class="hover:underline my-1">
     <nuxt-link v-if="link" :to="link" :class="linkClass">
       {{ label }}
     </nuxt-link>
@@ -7,7 +7,7 @@
       {{ label }}
     </a>
     <DocsSidebarMenuList v-if="children" :entries="children" />
-  </li>
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,7 +36,7 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class DocsSidebarMenuListItem extends Vue {
   get linkClass() {
     return {
-      'is-active': this.$route.path.includes(this.$props.link),
+      'font-semibold': this.$route.path.includes(this.$props.link),
     }
   }
 }
