@@ -22,9 +22,7 @@ export default {
   css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/darkmode/index.ts', mode: 'client' },
-  ],
+  plugins: [{ src: '~/plugins/darkmode/index.ts', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -121,7 +119,16 @@ export default {
     component: 'fa',
     suffix: true,
     icons: {
-      solid: ['faBars', 'faCaretUp', 'faSearch', 'faArrowDown', 'faArrowRight'],
+      solid: [
+        'faBars',
+        'faCaretUp',
+        'faSearch',
+        'faArrowDown',
+        'faArrowRight',
+        'faMoon',
+        'faSun',
+        'faEllipsisV',
+      ],
       regular: [],
       light: [],
     },

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-128 flex-auto">
+  <div class="flex max-w-lg flex-auto">
     <AutoComplete
       v-model="query"
       :suggestions="results"
@@ -11,7 +11,9 @@
     >
       <template slot-scope="props">
         <div>
-          <b>{{ props.element.title || props.element.slug }}</b>
+          <span class="font-semibold">
+            {{ props.element.title || props.element.slug }}
+          </span>
           <span>{{ props.element.excerpt }}</span>
         </div>
       </template>

@@ -34,7 +34,6 @@ export default class KitButton extends Vue {
       'border': true, // eslint-disable-line prettier/prettier
       'border-white': true,
       'hover:ring': true,
-      'ring-white': true,
     }
   }
 }
