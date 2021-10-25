@@ -1,23 +1,20 @@
 <template>
   <div class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-narrow">
-          <div class="block is-hidden-tablet">
-            <b-button
-              :icon-left="menuExpanded ? 'chevron-up' : 'chevron-down'"
-              type="is-primary"
-              expanded
-              @click="menuExpanded = !menuExpanded"
-            >
-              {{ menuExpanded ? 'Hide' : 'Show' }} menu
-            </b-button>
+    <div class="container mx-auto p-4">
+      <div class="flex justify-between flex-wrap md:flex-nowrap gap-4">
+        <div class="flex-shrink-0 border md:border-0 rounded w-full md:w-80">
+          <div
+            class="flex justify-between md:hidden items-center p-4 bg-gray-100"
+            @click="menuExpanded = !menuExpanded"
+          >
+            <b>Pages</b>
+            <fa-icon :icon="menuExpanded ? 'caret-up' : 'bars'"></fa-icon>
           </div>
           <div :class="menuClass">
             <DocsSidebarView :sidebar-menu="sidebarMenu" />
           </div>
         </div>
-        <div class="column">
+        <div class="flex-grows">
           <nav class="breadcrumb is-medium">
             <ul>
               <li><nuxt-link to="/docs">Docs</nuxt-link></li>
@@ -27,7 +24,7 @@
               </li>
             </ul>
           </nav>
-          <div class="content">
+          <div class="prose max-w-none">
             <nuxt-content :document="page" />
           </div>
         </div>
@@ -59,8 +56,8 @@ export default Vue.extend({
   computed: {
     menuClass() {
       return {
-        'is-hidden-mobile': !this.$data.menuExpanded,
-        block: true,
+        'hidden': !this.$data.menuExpanded,
+        'md:block': true,
       }
     },
     title(): String {
