@@ -1,12 +1,12 @@
 <template>
-  <div class="hover:underline my-1">
+  <div class="my-1 inline-block">
     <nuxt-link v-if="link" :to="link" :class="linkClass">
       {{ label }}
     </nuxt-link>
     <a v-else-if="href" :href="href" target="_blank" :class="linkClass">
       {{ label }}
     </a>
-    <DocsSidebarMenuList v-if="children" :entries="children" />
+    <DocsSidebarMenuList v-if="children" :entries="children" :nest="true" />
   </div>
 </template>
 
@@ -37,6 +37,7 @@ export default class DocsSidebarMenuListItem extends Vue {
   get linkClass() {
     return {
       'font-semibold': this.$route.path.includes(this.$props.link),
+      'hover:underline': true,
     }
   }
 }

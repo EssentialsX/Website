@@ -40,7 +40,11 @@ const themePlugin: Plugin = (_context, inject) => {
       return
     }
 
-    // TODO apply theme
+    if (theme === 'dark' && !document.body.classList.contains('dark')) {
+      document.body.classList.add('dark')
+    } else if (theme === 'light' && document.body.classList.contains('dark')) {
+      document.body.classList.remove('dark')
+    }
 
     if (manual) {
       localStorage.setItem(themeKey, theme)
@@ -59,6 +63,8 @@ const themePlugin: Plugin = (_context, inject) => {
   }
 
   inject('theme', (theme: string) => {
+    console.log(theme)
+
     if (theme) {
       setTheme(theme, true)
     }
