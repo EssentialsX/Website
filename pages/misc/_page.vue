@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Hero>
+    <KitHero>
       <p class="font-semibold text-3xl">{{ page.title }}</p>
       <p v-if="page.description" class="font-medium text-xl">{{ page.description }}</p>
-    </Hero>
+    </KitHero>
 
     <section class="section">
       <div class="container prose">

@@ -1,43 +1,35 @@
 <template>
   <div>
-    <div class="hero is-primary has-text-centered">
-      <div class="hero-body">
-        <p class="title">It's in the name.</p>
-        <p class="subtitle">
+    <KitHero>
+      <div class="flex flex-col items-center gap-2 mx-auto">
+        <p class="font-semibold text-3xl">It's in the name.</p>
+        <p class="font-medium text-md">
           EssentialsX is the essential plugin suite for Minecraft servers, with
           over 130 commands for servers of all size and scale.
         </p>
-        <br />
-        <b-button
-          tag="nuxt-link"
-          to="/downloads"
-          type="is-primary"
-          icon-left="arrow-down"
-          outlined
-          inverted
-        >
-          Download
-        </b-button>
+        <KitButtons>
+          <KitButton
+            tag="nuxt-link"
+            to="/downloads"
+            bg-color="white"
+            text-color="black"
+            icon-left="arrow-right"
+            label="Get started"
+          />
+          <KitButton
+            tag="nuxt-link"
+            to="/downloads"
+            inverted
+            icon-left="arrow-down"
+            label="Downloads"
+          />
+        </KitButtons>
       </div>
-    </div>
-    <div class="columns is-mobile">
-      <card title="Free" icon="github">
-        Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
-      </card>
+    </KitHero>
 
-      <card title="Responsive" icon="cellphone-link" type="secondary">
-        <b class="has-text-grey"> Every </b> component is responsive
-      </card>
-
-      <card title="Modern" icon="alert-decagram" type="tertiary">
-        Built with <a href="https://vuejs.org/"> Vue.js </a> and
-        <a href="http://bulma.io/"> Bulma </a>
-      </card>
-
-      <card title="Lightweight" icon="arrange-bring-to-front" type="info">
-        No other internal dependency
-      </card>
-    </div>
+    <section>
+      <p>Stuff goes here</p>
+    </section>
   </div>
 </template>
 
