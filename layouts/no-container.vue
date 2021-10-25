@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <Navbar />
 
     <section class="main-content">
