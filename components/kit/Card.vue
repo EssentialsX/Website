@@ -1,8 +1,8 @@
 <template>
   <div
-    class="border rounded-md bg-white dark:bg-gray-800 dark:text-white drop-shadow-sm"
+    class="border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white drop-shadow-sm"
   >
-    <section v-if="imageSrc" class="overflow-hidden">
+    <section v-if="imageSrc" class="overflow-hidden rounded-t-md">
       <div :class="imageClass">
         <nuxt-picture
           :src="imageSrc"
