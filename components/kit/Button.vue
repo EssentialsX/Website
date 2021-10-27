@@ -27,11 +27,11 @@ export default class KitButton extends Vue {
     return {
       'px-3': true,
       'py-2': true,
-      'bg-transparent': this.inverted,
+      'bg-transparent': !!this.inverted,
       [`bg-${this.bgColor}`]: !this.inverted,
       [`text-${this.textColor}`]: true,
-      'rounded': this.rounded, // eslint-disable-line prettier/prettier
-      'border': true, // eslint-disable-line prettier/prettier
+      'rounded-md': this.rounded, // eslint-disable-line prettier/prettier
+      'border': !!this.inverted, // eslint-disable-line prettier/prettier
       'border-white': true,
       'hover:ring': true,
     }

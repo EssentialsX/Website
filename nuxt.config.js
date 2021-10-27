@@ -33,6 +33,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    // https://image.nuxtjs.org/getting-started/installation
+    '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/fontawesome',
   ],
