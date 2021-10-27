@@ -28,7 +28,7 @@
     </KitHero>
 
     <section
-      class="flex flex-col lg:flex-row justify-items-stretch gap-4 container mx-auto my-4 px-4"
+      class="flex flex-col lg:flex-row justify-items-stretch gap-4 container mx-auto px-6 py-10"
     >
       <div class="flex-1">
         <KitCard image-src="/images/home/commands.png" :image-zoom="true">
@@ -83,8 +83,8 @@
         <KitCard image-src="/images/home/community.png" :image-zoom="true">
           <p class="text-lg font-semibold">Join our community</p>
           <p>
-            EssentialsX is open source and part of the MOSS community. Get help
-            with EssentialsX and show your support for the project below!
+            EssentialsX is open source, with community-powered support through
+            MOSS.
           </p>
           <KitButtons>
             <KitButton
