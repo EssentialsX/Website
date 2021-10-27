@@ -17,13 +17,10 @@
           </a>
         </span>
         <span class="md:hidden px-2">
-          <a class="px-3 py-2 hover:bg-gray-700 rounded" @click="toggleTheme">
+          <a class="px-3 py-2" @click="toggleTheme">
             <fa-icon :icon="themeIcon" />
           </a>
-          <a
-            class="px-3 py-2 ml-2 hover:bg-gray-700 rounded"
-            @click="toggleMenu"
-          >
+          <a class="px-3 py-2 ml-2" @click="toggleMenu">
             <fa-icon :icon="open ? 'caret-up' : 'bars'" />
           </a>
         </span>
