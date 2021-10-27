@@ -107,6 +107,9 @@
         </KitCard>
       </div>
     </section>
+    <section class="hidden lg:block py-10">
+      <!-- Spacer -->
+    </section>
   </div>
 </template>
 
