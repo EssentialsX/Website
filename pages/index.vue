@@ -7,7 +7,7 @@
           EssentialsX is the essential plugin suite for Minecraft servers, with
           over 130 commands for servers of all size and scale.
         </p>
-        <KitButtons>
+        <KitButtons class="mt-4 md:mt-8">
           <KitButton
             tag="nuxt-link"
             to="/downloads"
@@ -37,9 +37,7 @@
             EssentialsX adds countless essential features to your server,
             including homes, warps, kits and more!
           </p>
-          <KitButtons>
-            <!-- Add color -->
-            <div class="hidden bg-red-600"></div>
+          <KitButtons class="mt-4 md:mt-8">
             <!-- TODO: integrated commands and perms page -->
             <KitButton
               tag="nuxt-link"
@@ -86,7 +84,7 @@
             EssentialsX is open source, with community-powered support through
             MOSS.
           </p>
-          <KitButtons>
+          <KitButtons class="mt-4 md:mt-8">
             <KitButton
               tag="nuxt-link"
               to="/misc/get-help"
