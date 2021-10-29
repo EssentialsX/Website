@@ -27,6 +27,12 @@
       >
         Type to see suggestions...
       </p>
+      <p
+        v-else-if="suggestions.length == 0"
+        class="w-full px-4 py-3 rounded-md italic"
+      >
+        No pages match your search term.
+      </p>
       <a
         v-for="(element, index) in suggestions"
         v-else
