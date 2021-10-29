@@ -3,7 +3,7 @@
     <section
       v-for="(contents, title) in sidebarMenu"
       :key="`sidebar_section_${title}`"
-      class="m-4 md:ml-2 first-of-type:mt-2 text-mg"
+      class="m-4 lg:ml-2 first-of-type:mt-2 text-mg"
     >
       <p class="font-semibold text-lg mb-1">{{ title }}</p>
       <DocsSidebarMenuList :entries="contents" />

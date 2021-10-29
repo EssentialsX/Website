@@ -3,6 +3,8 @@
     v-click-outside="hideSuggestions"
     class="w-full relative"
     @click="showSuggestions"
+    @keypress="showSuggestions"
+    @focus="showSuggestions"
   >
     <input
       v-model="syncValue"
@@ -19,10 +21,17 @@
       v-if="suggestionsVisible"
       class="absolute z-10 flex flex-col items-start w-full right-0 bg-white text-black dark:text-gray-300 dark:focus:text-white dark:bg-gray-900 border dark:border-gray-800 rounded-md shadow-md mt-1"
     >
+      <p
+        v-if="syncValue.length == 0"
+        class="w-full px-4 py-3 rounded-md italic"
+      >
+        Type to see suggestions...
+      </p>
       <a
         v-for="(element, index) in suggestions"
+        v-else
         :key="`suggestion_${index}`"
-        class="w-full px-4 py-3 hover:bg-gray-300 cursor-pointer"
+        class="w-full px-4 py-3 hover:bg-gray-300 dark:hover:bg-gray-800 rounded-md cursor-pointer"
         @click.prevent="$emit('selected', element)"
       >
         <slot :element="element"> Suggestion {{ index }} </slot>
@@ -50,7 +59,7 @@ export default class AutoComplete extends Vue {
   suggestionsVisible = false
 
   showSuggestions() {
-    if (this.suggestions && this.suggestions.length > 0) {
+    if (this.suggestions) {
       this.suggestionsVisible = true
     } else {
       this.suggestionsVisible = false
@@ -73,13 +82,14 @@ export default class AutoComplete extends Vue {
       'pl-10': this.icon,
       'h-full': true,
       'w-full': true,
-      'rounded': true,
+      'rounded-md': true,
       'text-gray-600': true,
       'focus:text-black': true,
       'focus:ring': true,
       'dark:text-gray-300': true,
       'dark:focus:text-white': true,
       'dark:bg-gray-900': true,
+      'dark:border-gray-700': true,
     }
   }
 }

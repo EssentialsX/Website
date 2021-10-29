@@ -129,7 +129,7 @@ export default {
         'faArrowRight',
         'faMoon',
         'faSun',
-        'faEllipsisV',
+        'faExternalLinkAlt',
       ],
       regular: [],
       light: [],

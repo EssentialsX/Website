@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="overflow-x-hidden transition motion-reduce:transition">
     <Navbar />
 
     <section class="main-content dark:bg-gray-900 dark:text-white">

@@ -4,7 +4,8 @@
       {{ label }}
     </nuxt-link>
     <a v-else-if="href" :href="href" target="_blank" :class="linkClass">
-      {{ label }}
+      <span class="mr-2">{{ label }}</span>
+      <fa-icon icon="external-link-alt" class="text-xs" />
     </a>
     <DocsSidebarMenuList v-if="children" :entries="children" :nest="true" />
   </div>

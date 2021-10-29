@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-lg flex-auto">
+  <div class="flex max-w-lg flex-auto pr-4">
     <AutoComplete
       v-model="query"
       :suggestions="results"
@@ -18,24 +18,6 @@
         </div>
       </template>
     </AutoComplete>
-    <!-- <input
-      v-model="query"
-      type="search"
-      class="focus:ring rounded h-full w-20 text-lg"
-      placeholder="Search docs"
-      icon="magnify"
-      :data="results"
-      :loading="loading"
-      @select="(option) => $router.push(`/${$props.searchRoot}/${option.slug}`)"
-    /> -->
-    <!-- <template slot-scope="props">
-      <div class="media">
-        <div class="media-content">
-          <b>{{ props.option.title || props.option.slug }}</b>
-          <span>{{ props.option.excerpt }}</span>
-        </div>
-      </div>
-    </template> -->
   </div>
 </template>
 

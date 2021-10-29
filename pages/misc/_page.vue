@@ -5,8 +5,8 @@
       <p v-if="page.description" class="font-medium text-xl">{{ page.description }}</p>
     </KitHero>
 
-    <section class="section">
-      <div class="container prose">
+    <section class="container mx-auto px-6 py-4">
+      <div class="prose dark:prose-invert max-w-none">
         <nuxt-content :document="page" />
       </div>
     </section>
