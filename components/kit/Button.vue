@@ -14,9 +14,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class KitButton extends Vue {
   @Prop({ default: 'a' }) tag!: string
-  @Prop({ default: 'red-500' }) bgColor!: string
-  @Prop({ default: 'white' }) textColor!: string
+  @Prop({ default: 'bg-red-500' }) bgColor!: string
+  @Prop({ default: 'text-white' }) textColor!: string
   @Prop({ default: false }) inverted!: boolean
+  @Prop({ default: false }) disabled!: boolean
   @Prop({ default: true }) rounded!: boolean
   @Prop() iconLeft?: string
   @Prop() iconRight?: string
@@ -28,11 +29,13 @@ export default class KitButton extends Vue {
       'py-2': true,
       'bg-transparent': !!this.inverted,
       [this.bgColor]: !this.inverted,
-      [`text-${this.textColor}`]: true,
+      [this.textColor]: true,
       'rounded-md': this.rounded, // eslint-disable-line prettier/prettier
       'border': !!this.inverted, // eslint-disable-line prettier/prettier
       'border-white': true,
-      'hover:ring': true,
+      'hover:ring': !this.disabled,
+      'cursor-default': this.disabled,
+      'cursor-pointer': !this.disabled,
     }
   }
 }

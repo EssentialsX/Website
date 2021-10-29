@@ -44,13 +44,8 @@ import {
   ModuleId,
   FetchPayload,
 } from '@/store/downloads'
-import DownloadsEntry from '@/components/DownloadsEntry.vue'
 
-@Component({
-  components: {
-    DownloadsEntry,
-  },
-})
+@Component
 export default class Downloads extends Vue {
   readonly entries: Map<string, ModuleId[]> = new Map([
     ['Core', ['core']],
