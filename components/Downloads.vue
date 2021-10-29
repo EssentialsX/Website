@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="min-h-[80vh]">
     <div class="content">
       <p>
         The latest {{ branch }} version of EssentialsX is
@@ -11,19 +11,25 @@
         </span>
       </p>
     </div>
-    <b-progress v-if="loading" type="is-primary" />
-    <b-message v-if="downloadState.error" type="is-danger" has-icon>
+    <KitCard v-if="loading" class="mt-4">
+      <b>Loading download information, please wait...</b>
+    </KitCard>
+    <KitCard v-if="downloadState.error" class="mt-4">
       <b>Failed to load downloads!</b> <br />
       {{ downloadState.error.message }}
-    </b-message>
+    </KitCard>
     <div v-if="ready">
-      <div v-for="key in entries.keys()" :key="key" class="block">
-        <h1 class="title is-5">{{ key }}</h1>
-        <div v-for="moduleId in entries.get(key)" :key="moduleId" class="card">
+      <div v-for="key in entries.keys()" :key="key" class="mt-4 mb-8">
+        <h1 class="text-xl font-semibold my-4">{{ key }}</h1>
+        <KitCard
+          v-for="moduleId in entries.get(key)"
+          :key="moduleId"
+          class="mb-4 last:mb-0"
+        >
           <div class="card-content">
             <DownloadsEntry :module="moduleId" />
           </div>
-        </div>
+        </KitCard>
       </div>
     </div>
   </div>

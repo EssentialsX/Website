@@ -1,59 +1,56 @@
 <template>
-  <div class="media">
-    <div class="media-left">
-      <b-icon :icon="moduleData.icon" size="is-large"></b-icon>
+  <div class="flex flex-col gap-6 lg:flex-row justify-between align-top">
+    <div>
+      <!-- <fa-icon :icon="moduleData.icon"></fa-icon> -->
+      <p class="text-xl font-semibold">{{ moduleData.name }}</p>
+      <p class="text-md font-semibold">{{ version.name }}</p>
+      <p>{{ moduleData.description }}</p>
+      <p class="mt-2">
+        <span class="hidden bg-gray-500"></span>
+        <span class="hidden bg-red-600"></span>
+        <span class="hidden bg-blue-600"></span>
+        <span class="hidden bg-green-600"></span>
+        <span class="hidden bg-yellow-600"></span>
+        <KitTags>
+          <KitTag
+            v-for="tag in moduleData.tags"
+            :key="`${moduleData.name}--tag-${tag.text}`"
+            :bg-color="tag.color"
+          >
+            {{ tag.text }}
+          </KitTag>
+        </KitTags>
+      </p>
     </div>
-    <div class="media-content">
-      <div class="content">
-        <div class="columns">
-          <div class="column is-narrow">
-            <p class="title is-5">
-              {{ moduleData.name }}
-            </p>
-            <p class="subtitle is-6">{{ version.name }}</p>
-          </div>
-          <div class="column">
-            <span class="tags">
-              <b-tag
-                v-for="tag in moduleData.tags"
-                :key="`${moduleData.name}--tag-${tag.text}`"
-                :type="'is-' + tag.color"
-                class="has-text-weight-bold"
-              >
-                {{ tag.text }}
-              </b-tag>
-            </span>
-          </div>
-        </div>
-        <p>
-          {{ moduleData.description }}
-        </p>
-      </div>
-    </div>
-    <div class="media-right">
-      <div class="buttons">
-        <b-button
+    <!-- Buttons -->
+    <div>
+      <KitButtons>
+        <KitButton
           v-if="moduleData.docsUrl && moduleData.docsUrl.href"
           tag="a"
-          type="is-info"
-          icon-right="open-in-new"
-          :href="moduleData.docsUrl.href"
+          bg-color="bg-blue-600"
           target="_blank"
+          :href="moduleData.docsUrl.href"
         >
-          Info
-        </b-button>
-        <b-button
+          Learn more...
+        </KitButton>
+        <KitButton
           v-if="moduleData.docsUrl && moduleData.docsUrl.link"
           tag="nuxt-link"
-          type="is-info"
+          bg-color="bg-blue-600"
           :to="moduleData.docsUrl.link"
         >
           Docs
-        </b-button>
-        <b-button tag="a" type="is-primary" :href="moduleData.downloadUrl">
+        </KitButton>
+        <KitButton
+          v-if="moduleData.downloadUrl"
+          tag="a"
+          bg-color="bg-red-600"
+          :href="moduleData.downloadUrl"
+        >
           Download
-        </b-button>
-      </div>
+        </KitButton>
+      </KitButtons>
     </div>
   </div>
 </template>

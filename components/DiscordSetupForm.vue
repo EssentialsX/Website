@@ -14,7 +14,7 @@
           expanded
         />
         <p class="control">
-          <b-button
+          <KitButton
             type="is-primary"
             tag="a"
             label="Authorize"

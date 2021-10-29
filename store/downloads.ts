@@ -55,13 +55,13 @@ export const state = () => ({
       'EssentialsX',
       'Core functionality: teleports, private messages, homes, warps and more',
       'flask-empty',
-      [{ text: 'REQUIRED', color: 'primary' }]
+      [{ text: 'REQUIRED', color: 'bg-red-600' }]
     ),
     antibuild: new Artifact(
       'EssentialsX AntiBuild',
       'Simple permissions-based building control',
       'tools',
-      [{ text: 'OPTIONAL', color: 'light' }],
+      [{ text: 'OPTIONAL', color: 'bg-gray-500' }],
       { href: 'https://wiki.mc-ess.net/wiki/AntiBuild' }
     ),
     chat: new Artifact(
@@ -69,8 +69,8 @@ export const state = () => ({
       'Global and local chat + chat formatting',
       'chat-outline',
       [
-        { text: 'RECOMMENDED', color: 'info' },
-        { text: 'OPTIONAL', color: 'light' },
+        { text: 'RECOMMENDED', color: 'bg-blue-600' },
+        { text: 'OPTIONAL', color: 'bg-gray-500' },
       ]
     ),
     discord: new Artifact(
@@ -78,41 +78,37 @@ export const state = () => ({
       'Lightweight chat, messaging and console integration with Discord',
       'discord',
       [
-        { text: 'NEW', color: 'success' },
-        { text: 'OPTIONAL', color: 'light' },
+        { text: 'NEW', color: 'bg-green-600' },
+        { text: 'OPTIONAL', color: 'bg-gray-500' },
       ],
       { link: '/docs/2.x/Discord-Tutorial' }
     ),
     discordlink: new Artifact(
       'EssentialsX Discord Link',
-      'Account linking for EssentialsX Discord',
+      'Minecraft-to-Discord account linking (requires EssentialsX Discord)',
       'link-variant',
-      [
-        { text: 'NEW', color: 'success' },
-        { text: 'OPTIONAL', color: 'light' },
-        { text: 'Requires Discord addon', color: 'info' },
-      ]
+      [{ text: 'COMING SOON', color: 'bg-green-600' }]
     ),
     geo: new Artifact(
       'EssentialsX Geo',
       'Geographical player lookup (formerly EssentialsX GeoIP)',
       'earth',
-      [{ text: 'OPTIONAL', color: 'light' }],
+      [{ text: 'OPTIONAL', color: 'bg-gray-500' }],
       { link: '/docs/2.x/GeoIP' }
     ),
     protect: new Artifact(
       'EssentialsX Protect',
       'Configurable world protection and gameplay control',
       'cube',
-      [{ text: 'OPTIONAL', color: 'light' }]
+      [{ text: 'OPTIONAL', color: 'bg-gray-500' }]
     ),
     spawn: new Artifact(
       'EssentialsX Spawn',
       'Spawnpoint control + per-player and per-group spawns',
       'map-marker',
       [
-        { text: 'RECOMMENDED', color: 'info' },
-        { text: 'OPTIONAL', color: 'light' },
+        { text: 'RECOMMENDED', color: 'bg-blue-600' },
+        { text: 'OPTIONAL', color: 'bg-gray-500' },
       ]
     ),
     xmpp: new Artifact(
@@ -120,8 +116,8 @@ export const state = () => ({
       'Lightweight chat, messaging and server log integration with Jabber/XMPP services',
       'xmpp',
       [
-        { text: 'OPTIONAL', color: 'light' },
-        { text: 'LEGACY', color: 'warning' },
+        { text: 'OPTIONAL', color: 'bg-gray-500' },
+        { text: 'LEGACY', color: 'bg-yellow-600' },
       ],
       { href: 'https://wiki.mc-ess.net/wiki/XMPP' }
     ),
