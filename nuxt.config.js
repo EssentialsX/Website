@@ -130,6 +130,7 @@ export default {
         'faMoon',
         'faSun',
         'faExternalLinkAlt',
+        'faExclamationTriangle',
       ],
       regular: [],
       light: [],

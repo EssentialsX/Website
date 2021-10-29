@@ -12,7 +12,7 @@
             tag="nuxt-link"
             to="/downloads"
             bg-color="bg-white"
-            text-color="black"
+            text-color="text-black"
             icon-left="arrow-right"
             label="Get started"
           />
@@ -45,7 +45,7 @@
               tag="nuxt-link"
               to="/docs/2.x/Home"
               bg-color="bg-red-600"
-              text-color="white"
+              text-color="text-white"
               icon-right="arrow-right"
               label="Docs"
             />
@@ -53,7 +53,7 @@
               tag="a"
               href="https://essinfo.xeya.me/commands.html"
               bg-color="bg-red-600"
-              text-color="white"
+              text-color="text-white"
               icon-right="arrow-right"
               label="Commands list"
             />
@@ -72,7 +72,7 @@
               tag="nuxt-link"
               to="/docs/2.x/Discord-Tutorial"
               bg-color="bg-red-600"
-              text-color="white"
+              text-color="text-white"
               icon-right="arrow-right"
               label="Learn more"
             />
@@ -91,7 +91,7 @@
               tag="nuxt-link"
               to="/misc/get-help"
               bg-color="bg-red-600"
-              text-color="white"
+              text-color="text-white"
               icon-right="arrow-right"
               label="Get help"
             />
@@ -99,7 +99,7 @@
               tag="nuxt-link"
               to="/misc/support-us"
               bg-color="bg-red-600"
-              text-color="white"
+              text-color="text-white"
               icon-right="arrow-right"
               label="Support the project"
             />
