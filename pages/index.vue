@@ -11,7 +11,7 @@
           <KitButton
             tag="nuxt-link"
             to="/downloads"
-            bg-color="white"
+            bg-color="bg-white"
             text-color="black"
             icon-left="arrow-right"
             label="Get started"
@@ -44,7 +44,7 @@
             <KitButton
               tag="nuxt-link"
               to="/docs/2.x/Home"
-              bg-color="red-600"
+              bg-color="bg-red-600"
               text-color="white"
               icon-right="arrow-right"
               label="Docs"
@@ -52,7 +52,7 @@
             <KitButton
               tag="a"
               href="https://essinfo.xeya.me/commands.html"
-              bg-color="red-600"
+              bg-color="bg-red-600"
               text-color="white"
               icon-right="arrow-right"
               label="Commands list"
@@ -67,11 +67,11 @@
             Link your Minecraft server's chat to Discord for with our brand new
             addon!
           </p>
-          <KitButtons>
+          <KitButtons class="mt-4 md:mt-8">
             <KitButton
               tag="nuxt-link"
               to="/docs/2.x/Discord-Tutorial"
-              bg-color="red-600"
+              bg-color="bg-red-600"
               text-color="white"
               icon-right="arrow-right"
               label="Learn more"
@@ -90,7 +90,7 @@
             <KitButton
               tag="nuxt-link"
               to="/misc/get-help"
-              bg-color="red-600"
+              bg-color="bg-red-600"
               text-color="white"
               icon-right="arrow-right"
               label="Get help"
@@ -98,7 +98,7 @@
             <KitButton
               tag="nuxt-link"
               to="/misc/support-us"
-              bg-color="red-600"
+              bg-color="bg-red-600"
               text-color="white"
               icon-right="arrow-right"
               label="Support the project"

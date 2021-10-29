@@ -8,53 +8,58 @@
       </p>
     </KitHero>
 
-    <section class="section">
-      <div class="container">
-        <b-notification type="is-info">
+    <section class="container mx-auto p-6">
+      <div>
+        <div
+          class="p-4 border bg-blue-100 border-blue-200 dark:bg-blue-900 dark:border-blue-800 rounded-md"
+        >
           <p>
-            EssentialsX is developed by volunteers in our free time. If you'd
-            like to support the development of EssentialsX, please consider
-            supporting us on
-            <a href="https://www.patreon.com/essentialsx" target="_blank"
-              >Patreon</a
-            >,
-            <a href="https://github.com/sponsors/EssentialsX/" target="_blank"
-              >GitHub Sponsors</a
-            >
-            or
-            <a href="https://ko-fi.com/essentialsx" target="_blank">Ko-fi</a>.
+            EssentialsX is developed by volunteers in our free time. If you
+            appreciate our work and want to give back, please consider
+            <nuxt-link class="underline" to="/misc/support-us"
+              >supporting the EssentialsX project</nuxt-link
+            >.
           </p>
-        </b-notification>
+        </div>
 
-        <div class="level">
-          <div class="level-left">
-            <div class="buttons has-addons">
-              <b-button
-                label="Stable release"
-                :type="branch === 'stable' ? 'is-primary' : null"
-                @click="setBranch('stable')"
+        <div class="my-6 flex flex-row justify-between">
+          <div>
+            <span class="hidden bg-red-600"></span>
+            <span class="hidden bg-red-200"></span>
+            <KitButtons>
+              <KitButton
+                v-if="branch !== 'stable'"
+                label="Show stable releases"
+                tag="nuxt-link"
+                bg-color="bg-red-600"
+                :to="`/downloads/${series}/stable`"
               />
-              <b-button
-                label="Development build"
-                :type="branch === 'dev' ? 'is-primary' : null"
-                @click="setBranch('dev')"
+              <KitButton
+                v-if="branch !== 'dev'"
+                label="Show dev builds"
+                tag="nuxt-link"
+                bg-color="bg-red-600"
+                :to="`/downloads/${series}/dev`"
               />
-            </div>
+            </KitButtons>
           </div>
-          <div class="level-right">
-            <div class="buttons has-addons">
-              <b-button
-                label="Single files"
-                :type="mode === 'single' ? 'is-primary' : null"
+          <div>
+            <!-- Zip/individual toggle (not implemented) -->
+            <KitButtons v-if="series && branch && false">
+              <KitButton
+                v-if="mode !== 'single'"
+                label="Download individual files"
+                bg-color="bg-red-600"
                 @click="setMode('single')"
               />
-              <b-button
-                label="Zip (coming soon)"
-                :type="mode === 'zip' ? 'is-primary' : null"
+              <KitButton
+                v-if="mode !== 'zip'"
+                label="Create a zip (coming soon)"
+                bg-color="bg-red-200"
+                tag="button"
                 disabled
-                @click="setMode('zip')"
               />
-            </div>
+            </KitButtons>
           </div>
         </div>
 

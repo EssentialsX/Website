@@ -9,7 +9,6 @@
 
 <script lang="ts">
 // TODO kit demo page
-import 'vue-class-component/hooks'
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
@@ -28,7 +27,7 @@ export default class KitButton extends Vue {
       'px-3': true,
       'py-2': true,
       'bg-transparent': !!this.inverted,
-      [`bg-${this.bgColor}`]: !this.inverted,
+      [this.bgColor]: !this.inverted,
       [`text-${this.textColor}`]: true,
       'rounded-md': this.rounded, // eslint-disable-line prettier/prettier
       'border': !!this.inverted, // eslint-disable-line prettier/prettier
