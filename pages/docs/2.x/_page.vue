@@ -1,10 +1,14 @@
 <template>
   <div class="section">
     <div class="container mx-auto p-4">
-      <div class="flex justify-between flex-wrap md:flex-nowrap gap-4">
-        <div class="flex-shrink-0 border md:border-0 rounded w-full md:w-80">
+      <div
+        class="flex justify-between flex-wrap gap-4 lg:flex-nowrap lg:gap-0 lg:divide-x divide-grey-100 dark:divide-gray-800"
+      >
+        <div
+          class="flex-shrink-0 border rounded-md w-full lg:border-0 lg:w-80 dark:border-gray-700"
+        >
           <div
-            class="flex justify-between md:hidden items-center p-4 bg-gray-100"
+            class="flex justify-between lg:hidden items-center p-4 bg-gray-100 dark:bg-gray-800"
             @click="menuExpanded = !menuExpanded"
           >
             <b>Pages</b>
@@ -14,17 +18,19 @@
             <DocsSidebarView :sidebar-menu="sidebarMenu" />
           </div>
         </div>
-        <div class="flex-grows">
-          <nav class="breadcrumb is-medium">
+        <div class="lg:pl-6">
+          <nav class="mb-4">
             <ul>
-              <li><nuxt-link to="/docs">Docs</nuxt-link></li>
-              <li><nuxt-link to="/docs/2.x/Home">2.x</nuxt-link></li>
-              <li class="is-active">
+              <li class="inline-block"><nuxt-link to="/docs">Docs</nuxt-link></li>
+              <li class="inline-block mx-2">/</li>
+              <li class="inline-block"><nuxt-link to="/docs/2.x/Home">2.x</nuxt-link></li>
+              <li class="inline-block mx-2">/</li>
+              <li class="inline-block font-semibold">
                 <a>{{ title }}</a>
               </li>
             </ul>
           </nav>
-          <div class="prose max-w-none">
+          <div class="prose dark:prose-invert max-w-none">
             <nuxt-content :document="page" />
           </div>
         </div>
@@ -57,7 +63,7 @@ export default Vue.extend({
     menuClass() {
       return {
         'hidden': !this.$data.menuExpanded,
-        'md:block': true,
+        'lg:block': true,
       }
     },
     title(): String {

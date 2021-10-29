@@ -12,7 +12,10 @@
           <NavbarItem tag="NuxtLink" to="/misc/get-help">Get help</NavbarItem>
           <!-- eslint-disable-next-line prettier/prettier -->
           <NavbarItem tag="NuxtLink" to="/misc/support-us">Support us</NavbarItem>
-          <a class="p-2 hover:bg-gray-700 rounded" @click="toggleTheme">
+          <a
+            class="p-2 hover:bg-gray-700 rounded transition-colors"
+            @click="toggleTheme"
+          >
             <fa-icon :icon="themeIcon" />
           </a>
         </span>

@@ -9,7 +9,9 @@
       </div>
     </KitHero>
 
-    <section class="main-content dark:bg-gray-900 dark:text-white">
+    <section
+      class="main-content dark:bg-gray-900 dark:text-white transition motion-reduce:transition-none pb-12"
+    >
       <nuxt />
     </section>
 
