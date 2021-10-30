@@ -12,7 +12,7 @@
       <template slot-scope="props">
         <div>
           <span class="font-semibold">
-            {{ props.element.title || props.element.slug }}
+            {{ props.element.title || prettifySlug(props.element.slug) }}
           </span>
           <span>{{ props.element.excerpt }}</span>
         </div>
@@ -46,6 +46,11 @@ export default Vue.extend({
         .limit(10)
         .search(query)
         .fetch()
+    },
+  },
+  methods: {
+    prettifySlug(slug: string) {
+      return slug.replaceAll('-', ' ')
     },
   },
 })
