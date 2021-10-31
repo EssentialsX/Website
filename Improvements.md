@@ -1,21 +1,23 @@
-EssentialsX is a continuation of the origin Essentials plugin. Essentials was discontinued around 2014, and EssentialsX contains notable improvements over the original Essentials.
+EssentialsX is a continuation of the original Essentials plugin, which was discontinued around 2014. EssentialsX supports all the same features as classic Essentials, and also contains notable improvements over the original Essentials.
+
+This page aims to detail many of the improvements added by EssentialsX. For a more detailed list of changes between EssentialsX releases, see the [release changelogs](https://github.com/EssentialsX/Essentials/releases).
 
 ## Highlights
-* Actively maintained and updated for 1.8.8 all the way up to the latest Spigot and Minecraft versions.
-* Supports new Minecraft content including new items, enchantments, mobs and trees.
-* Supports [Essentials signs](https://wiki.mc-ess.net/wiki/Sign_Tutorial) on all Minecraft versions.
-* Supports [[BannerMeta|Banner Metadata]] and [[Command-Cooldowns|Command Cooldowns]].
-* Configuration option to hide the `no new mail` message on join.
-* Allows commands in kits with a `{player}` placeholder for the player's name.
-* Supports mob spawners on recent versions.
-  - On 1.8-1.12, you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners won't be pigs when placed.
-  - On 1.13+, you can use `/i blazespawner` to spawn in spawners.
-* Includes a new, more flexible item database for 1.13 and above.
+* Actively maintained and updated for modern Minecraft and Spigot versions, from 1.8.8 to the latest versions.
+  - Supports new Minecraft content including new items, enchantments, mobs and trees.
+  - Updates [Essentials signs](https://wiki.mc-ess.net/wiki/Sign_Tutorial) to work on all supported Minecraft versions.
+  - Supports mob spawners on all supported Minecraft versions.
+    * On 1.8-1.12, you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners will be updated when placed.
+    * On 1.13+, you can use `/i blazespawner` to spawn in spawners.
+* Includes new features in base EssentialsX such as [[BannerMeta|Banner Metadata]] for kits, [[Command-Cooldowns|Command Cooldowns]] and dozens of other new config options.
+* Brand new [[Discord-Tutorial|Discord bridge]] addon, and updated versions of all Essentials addons (even XMPP!)
+* Includes new item aliases for all Minecraft versions, including 1.13 and above.
 * Supports giving spawner eggs with entity ID values and potions with damage values in 1.9-1.12.
-* Fixes sending and receiving money with the Essentials economy.
-* Uses UUID-backed Vault for permissions group and prefix/suffix lookups.
+* Uses UUID-backed Vault for permissions group and prefix/suffix lookups, as well as a new Vault adapter rewritten to be more robust.
   - Spigot-Essentials implements UUID lookups for zPermissions, but not other permissions plugins.
   - EssentialsX prioritizes Vault, so all queries using the Vault handler should be much faster as they don't need a name-to-UUID lookup.
+
+### Other minor additions
 * `/tppos` can now optionally accept a world name.
 * Adds a `/msgtoggle` command to allow people to ignore all private messages.
 * Separate permissions for bulk sell and hand sell: `essentials.sell.hand` and `essentials.sell.bulk` respectively
@@ -26,42 +28,45 @@ EssentialsX is a continuation of the origin Essentials plugin. Essentials was di
 ## New features
 
 ### Per-gamemode permissions
-Permissions have been added for each gamemode with the EssentialsX `/gamemode` command, meaning that if desired, players may run `/gma` and `/gms`, but not `/gmc` or `/gmsp`. You need to give the player `essentials.gamemode` to use the /gm command, then whichever gamemodes you want them to be able to change to:
+You can now limit which gamemodes are available in `/gamemode` for players to switch to. For example, you might want to let players run `/gma` and `/gms`, but not `/gmc` or `/gmsp`. You can grant whichever gamemodes you want them to be able to change to:
 * `essentials.gamemode.creative`
 * `essentials.gamemode.survival`
 * `essentials.gamemode.adventure`
 * `essentials.gamemode.spectator`
 * `essentials.gamemode.all`
 
-**Note**: `essentials.gamemode` is still required to execute the /gamemode (and its aliases) command.
+**Note**: The base `essentials.gamemode` permission is still required to let players run the `/gamemode` command and its aliases.
 
-### Kits changes
-Kits have been moved from the main config to `kits.yml`. This means that kits can be created from in-game and automatically added to your server without needing to manually edit the config, while also retaining all the comments in `config.yml`.
+### Kits improvements
+Kits have been moved from the main config to `kits.yml`, and can now be created from in-game and automatically added to your server without needing to manually edit and reload the config.
 
-In addition, commands are now supported in kits - simply add a line to your kit as follows:
+In addition, commands are now supported in kits with the full set of [[EssentialsX placeholders|Keywords]] - simply add a line to your kit as follows:
+
 ```yaml
 kits:
   mykit:
     delay: 1000
     items:
       - stone 1
-      - /give {player} apple 1
+      - /give {USERNAME} apple 1
 ```
 
-You can also include `{player}`, which will be substituted for the player's name.
-
-#### `/showkit`
-Command: `/showkit <kitname>`
-Permission: `essentials.showkit`
-Shows a list of kit contents straight from config file.
-![showkit](https://i.imgur.com/d4Ff8vN.png)
+EssentialsX also adds new commands to help manage kits:
 
 #### `/createkit`
-Command: `/createkit <kitname> <delay>`
-Permission: `essentials.createkit`
-If `pastebin-createkit` is set to false, creates a kit from your inventory and puts it in the `kits.yml` file.
-If `pastebin-createkit` is set to true, creates a kit based on your inventory and returns a link to the file to add to your `kits.yml`.
+**Command**: `/createkit <kitname> <delay>`  
+**Permission**: `essentials.createkit`  
+If `pastebin-createkit` is set to `false` in `config.yml`, creates a kit from your inventory and puts it in the `kits.yml` file.  
+Alternatively, if `pastebin-createkit` is set to true, creates a kit based on your inventory and pastes an online link with the lines to add to your `kits.yml` by hand.
+
 ![createkit](https://i.imgur.com/nXMlNGP.png)
+
+#### `/showkit`
+**Command**: `/showkit <kitname>`  
+**Permission**: `essentials.showkit`  
+Shows a list of kit contents straight from config file.
+
+![showkit](https://i.imgur.com/d4Ff8vN.png)
 
 ### Forcefully disable teleportation safety
 
@@ -69,12 +74,12 @@ Upstream Essentials only has two values for the `teleport-safety` option:
 * Convert locations to safe teleports (results in plenty of exploits); or
 * Deny the teleport entirely.
 
-EssentialsX adds a `force-disable-teleport-safety` option (defaulting to false), that when combined with `teleport-safety: true`, disables conversion to safe locations and teleports the user to their exact location.
+EssentialsX adds a `force-disable-teleport-safety` option (defaulting to false). When combined with `teleport-safety: true`, this disables conversion to safe locations and teleports the user to their exact location.
 
-**Note:** To disable cross-world teleportation safety, switch to Paper and set `disable-teleportation-suffocation-check` to true in paper.yml.
+**Note:** To disable cross-world teleportation safety, switch to Paper and set `disable-teleportation-suffocation-check` to true in `paper.yml`.
 
 ### Spawner placement fix
-If your placed spawners are still pig spawners, assign `essentials.spawnerconvert.*` to your default group.
+If spawners from EssentialsX commands/kits become pig spawners when placed, you can assign `essentials.spawnerconvert.*` to your default group to automatically convert them to the correct mob type.
 
 ### Controlled Private Messaging
 
@@ -82,31 +87,24 @@ The new config option `last-message-reply-recipient` lets you change how `/reply
 
 Here's a formatted scenario of the new last-message-reply-recipient feature:
 
-> **SupaHam: `/msg Kakifrucht Hi`**
-
-> _SupaHam -> Kakifrucht: Hi_
-
-> **Kakifrucht: `/r Hi`**
-
-> _Kakifrucht -> SupaHam: Hi_
-
-> **EvilOlaf: `/msg Kakifrucht Hi`**
-
-> _EvilOlaf -> Kakifrucht: Hi_
-
-> **Kakifrucht: `/r Hi back to you, SupaHam!`**
-
-> _Kakifrucht -> SupaHam: Hi back to you, SupaHam!_
+> **JRoy: `/msg mdcfe Hi`**  
+> _JRoy -> mdcfe: Hi_  
+> **mdcfe: `/r Hi`**  
+> _mdcfe -> JRoy: Hi_  
+> **broccolai: `/msg JRoy Hi`**  
+> _broccolai -> JRoy: Hi_  
+> **JRoy: `/r Hi back to you, mdcfe!`**  
+> _JRoy -> mdcfe: Hi back to you, mdcfe!_  
 
 If this feature is enabled, EssentialsX will also use the `last-message-reply-recipient-timeout` setting. This setting allows you to control how long in seconds before the player's reply recipient is reset. After this duration, when a player receives a message, their replies will start going to the last person who sent them a message.
 
 ### `/seen` by UUID
 
-Typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
+You can now check when a player was last seen using either their username or their UUID. For example, typing `/seen SupaHam` and `/seen 5552e21d-de79-40bc-89da-62ee63244fb2` are now both valid methods of checking when a player was last seen.
 
 ### Per-world `/time` setting permission
 
-Prior to this build, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, regardless of any world permissions set in permission plugins. If `world-time-permissions` is set to `true` in the config, users will need a specific permission to set the time in each world - see the table below. This feature is disabled by default.
+In classic Essentials, players with the permissions `essentials.time` and `essentials.time.set` were able to set the time in any world, even if they didn't have the permissions set in that world in the permissions plugin. If `world-time-permissions` is set to `true` in the config, users will need a specific permission to set the time in each world - see the table below. This feature is disabled by default.
 
 #### Permissions
 | Permission                      | Description |
@@ -129,11 +127,9 @@ afk-list-name: '&7[AFK] &o{USERNAME}'
 
 ### Nickname color permissions
 
-PR #198 introduced the ability to limit /nick to only allow color changes, ensuring players could still be identified by their original Minecraft name. The feature introduced a new permission node called `essentials.nick.changecolors`. When a player has the preceding permission, they are only allowed to add colours to their names. Where if the player was called SupaHam, he could only be able to use `/nick &5SupaHam` but not `/nick &5TheSupaHam`, where the latter is prefixing the name with 'The'.
+EssentialsX adds new permissions for nickname colours and formatting, which match the names used by Mojang in the Minecraft chat component system. These permissions also cover chat messages (if you have EssentialsX Chat installed) and more. You can see a list of these new permissions [[Color-Permissions|here]].
 
-However, this feature also introduced the `essentials.nick.changecolors.bypass` permission node. Where if a player has the preceeding permission they are allowed to bypass the check and thus be able to change the characters of their name. This was originally created to ensure convenience for Server Operators without breaking functionality when they updated EssentialsX.
-
-**Note**: This permission requires the `essentials.nick.color` permission in order to use colors in the nickname to begin with.
+You can now also use the `essentials.nick.changecolors` permission to restrict players' nickname changes. When players have this permission, they can only change the colour and formatting of their nickname, and not the text content. For example, if player `SupaHam` has the `essentials.nick.changecolours` and `essentials.nick.color` permissions, they can change their nickname to `&5SupaHam`, but cannot change it to `&5TheSupaHam` as the text content doesn't match their username.
 
 ### Teleport to spawn when joining
 
