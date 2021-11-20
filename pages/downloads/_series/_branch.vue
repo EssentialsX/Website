@@ -79,12 +79,17 @@ const series = ['2.x']
 type Mode = 'single' | 'zip'
 
 @Component({
-  layout: 'no-container',
   asyncData({ params }) {
     return {
       series: series.includes(params.series) ? params.series : null,
       branch: params.branch,
     }
+  },
+  transition(to, from) {
+    if (from?.path.includes('/downloads') && to?.path.includes('/downloads')) {
+      return 'none'
+    }
+    return 'page'
   },
   watch: {
     series(this: DownloadsPage) {

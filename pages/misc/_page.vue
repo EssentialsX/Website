@@ -16,7 +16,6 @@
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  layout: 'no-container',
   async asyncData({ $content, params }) {
     const page = await $content(`misc/${params.page}`).fetch()
     return {
