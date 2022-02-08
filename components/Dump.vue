@@ -182,6 +182,30 @@
         <highlightjs class="p-0" language="yaml" :code="kits" />
       </collapse-message>
 
+      <collapse-message type="is-black" v-if="worth">
+        <template v-slot:title>
+          Item Worth Config
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="worth" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="tpr">
+        <template v-slot:title>
+          TPR Config
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="tpr" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="spawn">
+        <template v-slot:title>
+          Spawn Locations
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="spawn" />
+      </collapse-message>
+
       <collapse-message type="is-black" v-if="discord">
         <template v-slot:title>
           Discord config
@@ -251,6 +275,9 @@ export default {
       discord: null,
       kits: null,
       log: null,
+      spawn: null,
+      tpr: null,
+      worth: null,
 
       addons: [],
       plugins: [],
@@ -278,6 +305,12 @@ export default {
             this.discord = file.content.value
           } else if (file.name === "latest.log") {
             this.log = file.content.value
+          } else if (file.name === "worth.yml") {
+            this.worth = file.content.value
+          } else if (file.name === "spawn.yml") {
+            this.spawn = file.content.value
+          } else if (file.name === "tpr.yml") {
+            this.tpr = file.content.value
           } else if (file.name === "dump.json") {
             const dump = JSON.parse(file.content.value)
             this.essVersion = dump["ess-data"].version
