@@ -51,12 +51,8 @@
                         :version="version"
                     />
 
-                    <h1 class="title is-4">Other add-ons</h1>
+                    <h1 class="title is-4">Discord add-ons</h1>
 
-                    <downloads-item
-                        v-bind="plugins.antibuild"
-                        :version="version"
-                    />
                     <downloads-item
                         v-bind="plugins.discord"
                         v-if="plugins.discord.downloadUrl"
@@ -65,6 +61,13 @@
                     <downloads-item
                         v-bind="plugins.discordlink"
                         v-if="plugins.discordlink.downloadUrl"
+                        :version="version"
+                    />
+
+                    <h1 class="title is-4">More add-ons</h1>
+
+                    <downloads-item
+                        v-bind="plugins.antibuild"
                         :version="version"
                     />
                     <downloads-item
