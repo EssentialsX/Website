@@ -35,7 +35,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://image.nuxtjs.org/getting-started/installation
     '@nuxt/image',
-    '@nuxtjs/tailwindcss',
+    'nuxt-windicss',
     '@nuxtjs/fontawesome',
   ],
 

@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('windicss/defaultTheme')
 
 // https://github.com/tailwindlabs/tailwindcss-typography/blob/5dd220b1d3e0079dcc132e4c20d1755de373bb95/src/styles.js#L4-L10
 const round = (num) =>
@@ -10,14 +10,6 @@ const round = (num) =>
 const em = (px, base) => `${round(px / base)}em`
 
 module.exports = {
-  purge: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
-  mode: 'jit',
   darkMode: 'class',
   theme: {
     extend: {
@@ -135,5 +127,8 @@ module.exports = {
       transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [
+    require('windicss/plugin/typography'),
+    require('windicss/plugin/forms'),
+  ],
 }
