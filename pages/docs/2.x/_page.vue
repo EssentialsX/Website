@@ -11,7 +11,7 @@
         </li>
       </ul>
     </nav>
-    <div class="prose dark:prose-invert max-w-none">
+    <div class="prose !max-w-full">
       <nuxt-content :document="page" />
     </div>
   </div>

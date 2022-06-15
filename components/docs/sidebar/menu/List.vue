@@ -23,10 +23,11 @@ export default class DocsSidebarMenuList extends Vue {
     const selected = link && this.$route.path.includes(link)
     return {
       'block': true,
-      'pl-2': selected,
-      'border-l-4': selected,
-      'border-gray-200': true,
-      'dark:border-gray-700': true,
+      'pl-3': !this.nest,
+      'border-l-2': !this.nest,
+      'border-gray-200': !selected,
+      'border-red': selected,
+      'dark:border-gray-700': !selected,
     }
   }
 }
