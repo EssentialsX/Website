@@ -15,7 +15,22 @@ export default {
           'EssentialsX: the essential plugin suite for Minecraft servers.',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Lato&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -134,7 +149,7 @@ export default {
         'faDownload',
         'faBook',
         'faHeart',
-        'faLifeRing'
+        'faLifeRing',
       ],
       regular: [],
       light: [],
