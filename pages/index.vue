@@ -28,80 +28,106 @@
     </KitHero>
 
     <section
-      class="flex flex-col lg:flex-row justify-items-stretch gap-4 container mx-auto px-6 py-10"
+      class="flex flex-col md:flex-row items-stretch gap-4 container mx-auto px-6 py-10"
     >
-      <div class="flex-1">
-        <KitCard image-src="/images/home/commands.png" :image-zoom="true">
-          <p class="text-lg font-semibold">130+ commands at your fingertips</p>
-          <p>
-            EssentialsX adds countless essential features to your server,
-            including homes, warps, kits and more!
-          </p>
-          <KitButtons class="mt-4 md:mt-8">
-            <!-- TODO: integrated commands and perms page -->
-            <KitButton
-              tag="nuxt-link"
-              to="/docs/2.x/Home"
-              bg-color="bg-red-600"
-              text-color="text-white"
-              icon-right="arrow-right"
-              label="Docs"
-            />
-            <KitButton
-              tag="a"
-              href="https://essinfo.xeya.me/commands.html"
-              bg-color="bg-red-600"
-              text-color="text-white"
-              icon-right="arrow-right"
-              label="Commands list"
-            />
-          </KitButtons>
+      <div class="flex-basis-1">
+        <KitCard
+          class="h-full"
+          image-src="/images/home/commands.png"
+          :image-zoom="true"
+        >
+          <KitCardBody>
+            <p class="text-lg font-semibold">
+              130+ commands at your fingertips
+            </p>
+            <p>
+              EssentialsX adds countless essential features to your server,
+              including homes, warps, kits and more!
+            </p>
+            <template #footer>
+              <KitButtons class="mt-4 md:mt-8">
+                <!-- TODO: integrated commands and perms page -->
+                <KitButton
+                  tag="nuxt-link"
+                  to="/docs/2.x/Home"
+                  bg-color="bg-red-600"
+                  text-color="text-white"
+                  icon-right="arrow-right"
+                  label="Docs"
+                />
+                <KitButton
+                  tag="a"
+                  href="https://essinfo.xeya.me/commands.html"
+                  bg-color="bg-red-600"
+                  text-color="text-white"
+                  icon-right="arrow-right"
+                  label="Commands list"
+                />
+              </KitButtons>
+            </template>
+          </KitCardBody>
         </KitCard>
       </div>
-      <div class="flex-1">
-        <KitCard image-src="/images/home/discord.png" :image-zoom="true">
-          <p class="text-lg font-semibold">NEW: EssentialsX Discord</p>
-          <p>
-            Link your Minecraft server's chat to Discord for with our brand new
-            addon!
-          </p>
-          <KitButtons class="mt-4 md:mt-8">
-            <KitButton
-              tag="nuxt-link"
-              to="/docs/2.x/Discord-Tutorial"
-              bg-color="bg-red-600"
-              text-color="text-white"
-              icon-right="arrow-right"
-              label="Learn more"
-            />
-          </KitButtons>
+      <div class="flex-basis-1">
+        <KitCard
+          class="h-full"
+          image-src="/images/home/discord.png"
+          :image-zoom="true"
+        >
+          <KitCardBody>
+            <p class="text-lg font-semibold">NEW: EssentialsX Discord</p>
+            <p>
+              Link your Minecraft server's chat to Discord for with our brand
+              new addon!
+            </p>
+            <template #footer>
+              <KitButtons class="mt-4 md:mt-8">
+                <KitButton
+                  tag="nuxt-link"
+                  to="/docs/2.x/Discord-Tutorial"
+                  bg-color="bg-red-600"
+                  text-color="text-white"
+                  icon-right="arrow-right"
+                  label="Learn more"
+                />
+              </KitButtons>
+            </template>
+          </KitCardBody>
         </KitCard>
       </div>
-      <div class="flex-1">
-        <KitCard image-src="/images/home/community.png" :image-zoom="true">
-          <p class="text-lg font-semibold">Join our community</p>
-          <p>
-            EssentialsX is open source, with community-powered support through
-            MOSS.
-          </p>
-          <KitButtons class="mt-4 md:mt-8">
-            <KitButton
-              tag="nuxt-link"
-              to="/misc/get-help"
-              bg-color="bg-red-600"
-              text-color="text-white"
-              icon-right="arrow-right"
-              label="Get help"
-            />
-            <KitButton
-              tag="nuxt-link"
-              to="/misc/support-us"
-              bg-color="bg-red-600"
-              text-color="text-white"
-              icon-right="arrow-right"
-              label="Support the project"
-            />
-          </KitButtons>
+      <div class="flex-basis-1">
+        <KitCard
+          class="h-full"
+          image-src="/images/home/community.png"
+          :image-zoom="true"
+        >
+          <KitCardBody>
+            <p class="text-lg font-semibold">Join our community</p>
+            <p>
+              EssentialsX is open source, with community-powered support through
+              MOSS.
+            </p>
+            <template #footer>
+              <KitButtons class="mt-4 md:mt-8">
+                <KitButton
+                  tag="nuxt-link"
+                  to="/misc/get-help"
+                  bg-color="bg-red-600"
+                  text-color="text-white"
+                  icon-right="arrow-right"
+                  label="Get help"
+                />
+                <KitButton
+                  tag="nuxt-link"
+                  to="/misc/support-us"
+                  bg-color="bg-red-600"
+                  text-color="text-white"
+                  icon-right="arrow-right"
+                  label="Support the project"
+                />
+              </KitButtons>
+            </template>
+          </KitCardBody>
         </KitCard>
       </div>
     </section>

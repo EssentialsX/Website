@@ -1,8 +1,11 @@
 <template>
   <div
-    class="border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white drop-shadow-sm"
+    class="flex flex-col border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white drop-shadow-sm"
   >
-    <section v-if="imageSrc" class="overflow-hidden rounded-t-md">
+    <section
+      v-if="imageSrc"
+      class="overflow-hidden rounded-t-md flex-shrink-0 flex-grow-0"
+    >
       <div :class="imageClass">
         <nuxt-picture
           :src="imageSrc"
@@ -12,7 +15,7 @@
         />
       </div>
     </section>
-    <section class="m-4">
+    <section class="m-4 flex-grow">
       <slot>
         <div>
           <p class="text-lg font-semibold">Card title</p>
