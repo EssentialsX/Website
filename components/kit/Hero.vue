@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen py-2 bg-gradient-to-br from-red-600 to-red-800 text-white"
+    class="w-screen py-2 bg-gradient-to-br from-red-600 to-red-800 text-white dark:(from-red-800 to-red-900)"
   >
     <div class="container mx-auto px-4">
       <div class="py-6">
