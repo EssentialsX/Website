@@ -36,20 +36,19 @@
 </template>
 
 <script lang="ts">
-import { IContentDocument } from '@nuxt/content/types/content'
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import { FetchReturn } from '@nuxt/content/types/query-builder'
 
-type SidebarDocument = IContentDocument & { sidebar: any }
+type SidebarDocument = FetchReturn & { sidebar: any }
 
 @Component({
   async asyncData({ $content }) {
-    const sidebarDoc: SidebarDocument = (await $content(
-      'sidebars/2.x-docs'
-    ).fetch()) as SidebarDocument
+    const sidebarDoc = await $content('sidebars/2.x-docs').fetch()
+    const sidebar = sidebarDoc as SidebarDocument
 
     return {
-      sidebarMenu: sidebarDoc.sidebar,
+      sidebarMenu: sidebar.sidebar,
     }
   },
   transition(to, from) {
