@@ -10,10 +10,10 @@
     <section class="container mx-auto">
       <div class="p-4">
         <div
-          class="flex justify-between flex-wrap gap-4 lg:flex-nowrap lg:gap-0 lg:divide-x divide-grey-100 dark:divide-gray-800"
+          class="flex justify-between flex-col gap-4 lg:(flex-row gap-0 divide-x) divide-grey-100 dark:divide-gray-800"
         >
           <div
-            class="flex-shrink-0 border rounded-md w-full lg:border-0 lg:w-80 dark:border-gray-700"
+            class="flex-shrink-0 flex-grow-0 border rounded-md w-full lg:border-0 lg:w-80 dark:border-gray-700"
           >
             <div
               class="flex justify-between lg:hidden items-center p-4 bg-gray-100 dark:bg-gray-800"

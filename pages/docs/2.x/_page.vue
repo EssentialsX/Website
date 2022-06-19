@@ -4,13 +4,16 @@
       <ul>
         <li class="inline-block"><nuxt-link to="/docs">Docs</nuxt-link></li>
         <li class="inline-block mx-2">/</li>
-        <li class="inline-block"><nuxt-link to="/docs/2.x/Home">2.x</nuxt-link></li>
+        <li class="inline-block">
+          <nuxt-link to="/docs/2.x/Home">2.x</nuxt-link>
+        </li>
         <li class="inline-block mx-2">/</li>
         <li class="inline-block font-semibold">
           <a>{{ title }}</a>
         </li>
       </ul>
     </nav>
+    <hr class="mb-4 dark:border-gray-800" />
     <div class="prose !max-w-full">
       <nuxt-content :document="page" />
     </div>
