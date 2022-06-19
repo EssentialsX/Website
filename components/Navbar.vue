@@ -29,11 +29,25 @@
         </span>
       </div>
     </div>
-    <div v-if="open" class="md:hidden flex flex-col p-2 bg-gray-800 text-white">
-      <NavbarItem tag="NuxtLink" to="/downloads">Downloads</NavbarItem>
-      <NavbarItem tag="NuxtLink" to="/docs">Docs</NavbarItem>
-      <NavbarItem tag="NuxtLink" to="/misc/get-help">Get help</NavbarItem>
-      <NavbarItem tag="NuxtLink" to="/misc/support-us">Support us</NavbarItem>
+    <div v-if="open" class="md:hidden p-2 bg-gray-800 text-white">
+      <div class="container mx-auto flex flex-col">
+        <NavbarItem tag="NuxtLink" to="/downloads" class="flex flex-row items-center gap-2">
+          <fa-icon icon="download" fixed-width />
+          <span>Downloads</span>
+        </NavbarItem>
+        <NavbarItem tag="NuxtLink" to="/docs" class="flex flex-row items-center gap-2">
+          <fa-icon icon="book" fixed-width />
+          <span>Docs</span>
+        </NavbarItem>
+        <NavbarItem tag="NuxtLink" to="/misc/get-help" class="flex flex-row items-center gap-2">
+          <fa-icon icon="life-ring" fixed-width />
+          <span>Get help</span>
+        </NavbarItem>
+        <NavbarItem tag="NuxtLink" to="/misc/support-us" class="flex flex-row items-center gap-2">
+          <fa-icon icon="heart" fixed-width />
+          <span>Support us</span>
+        </NavbarItem>
+      </div>
     </div>
   </div>
 </template>

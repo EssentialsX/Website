@@ -131,6 +131,10 @@ export default {
         'faSun',
         'faExternalLinkAlt',
         'faExclamationTriangle',
+        'faDownload',
+        'faBook',
+        'faHeart',
+        'faLifeRing'
       ],
       regular: [],
       light: [],
