@@ -1,6 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import { defineConfig } from 'windicss/helpers'
+import colors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
 import typographyPlugin from 'windicss/plugin/typography'
 import formsPlugin from 'windicss/plugin/forms'
@@ -21,6 +22,13 @@ export default defineConfig({
         DEFAULT: {
           css: {
             maxWidth: '100%',
+          },
+        },
+        DARK: {
+          css: {
+            'ul > li::before': {
+              backgroundColor: colors.gray[600],
+            },
           },
         },
       },
