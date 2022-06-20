@@ -22,6 +22,30 @@ export default defineConfig({
         DEFAULT: {
           css: {
             maxWidth: '100%',
+            code: {
+              backgroundColor: colors.gray[200],
+              borderRadius: '4px',
+              padding: '1px 3px',
+            },
+            'code::before': {
+              content: 'none',
+            },
+            'code::after': {
+              content: 'none',
+            },
+            blockquote: {
+              marginLeft: '0',
+              marginRight: '0',
+            },
+            'blockquote p:first-of-type::before': {
+              content: 'none',
+            },
+            'blockquote p:last-of-type::after': {
+              content: 'none',
+            },
+            ol: {
+              paddingLeft: '0.8em',
+            },
           },
         },
         DARK: {
@@ -29,6 +53,9 @@ export default defineConfig({
             'ul > li::before': {
               backgroundColor: colors.gray[600],
             },
+            code: {
+              backgroundColor: colors.gray[800],
+            }
           },
         },
       },

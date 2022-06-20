@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto w-full my-8 flex justify-center">
     <KitCard>
-      <p class="font-semibold text-lg mb-4">Enter your client ID</p>
+      <p class="font-semibold text-lg !mt-0 mb-4">Enter your client ID</p>
       <div class="flex justify-between gap-4 px-2">
         <input
           v-model="clientId"

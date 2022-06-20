@@ -16,7 +16,7 @@
             class="flex-shrink-0 flex-grow-0 border rounded-md w-full lg:border-0 lg:w-80 dark:border-gray-700"
           >
             <div
-              class="flex justify-between lg:hidden items-center p-4 bg-gray-100 dark:bg-gray-800"
+              class="flex justify-between lg:hidden items-center p-4 bg-gray-100 dark:bg-gray-800 cursor-pointer"
               @click="menuExpanded = !menuExpanded"
             >
               <b>Pages</b>
