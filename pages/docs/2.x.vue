@@ -10,7 +10,7 @@
     <section class="container mx-auto">
       <div class="p-4">
         <div
-          class="flex justify-between flex-col gap-4 lg:(flex-row gap-0 divide-x) divide-grey-100 dark:divide-gray-800"
+          class="flex flex-col gap-4 lg:(flex-row gap-0 divide-x) divide-grey-100 dark:divide-gray-800"
         >
           <div
             class="flex-shrink-0 flex-grow-0 border rounded-md w-full lg:border-0 lg:w-80 dark:border-gray-700"
@@ -26,7 +26,7 @@
               <DocsSidebarView v-if="sidebarMenu" :sidebar-menu="sidebarMenu" />
             </div>
           </div>
-          <div class="lg:pl-6">
+          <div class="lg:pl-6 w-full">
             <NuxtChild />
           </div>
         </div>

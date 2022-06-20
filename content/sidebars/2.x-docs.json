@@ -9,9 +9,10 @@
     { "label": "Frequently Asked Questions", "link": "/docs/2.x/Common-Issues" }
     ],
     "Configuring EssentialsX": [
+      { "label": "Placeholders (Keywords)", "href": "/docs/2.x/Keywords" },
       { "label": "Command Cooldowns", "link": "/docs/2.x/Command-Cooldowns" },
       { "label": "Color Permissions", "link": "/docs/2.x/Color-Permissions" },
-      { "label": "Customising /list", "href": "https://wiki.mc-ess.net/wiki/List" }
+      { "label": "Customising /list", "href": "https://wiki.mc-ess.net/wiki/List" },
     ],
     "Using EssentialsX": [
       { "label": "Signs", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },

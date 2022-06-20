@@ -22,12 +22,15 @@ export default class DocsSidebarMenuList extends Vue {
   entryOuterClass(link?: string) {
     const selected = link && this.$route.path.includes(link)
     return {
-      'block': true,
+      block: true,
       'pl-3': !this.nest,
-      'border-l-2': !this.nest,
-      'border-gray-200': !selected,
+      'border-l-3': !this.nest,
+      'border-gray-200/50': !selected,
+      'dark:border-gray-700/50': !selected,
+      'hover:border-gray-200': !selected,
+      'hover:dark:border-gray-700': !selected,
       'border-red': selected,
-      'dark:border-gray-700': !selected,
+      transition: true,
     }
   }
 }
