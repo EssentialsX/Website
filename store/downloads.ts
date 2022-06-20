@@ -21,7 +21,7 @@ export type FetchPayload = {
 export class Artifact {
   readonly name: string
   readonly description: string
-  readonly icon?: string
+  readonly icon?: string | string[]
   readonly tags: Tag[]
   readonly docsUrl?: DocsUrl
   downloadUrl: string | null = null
@@ -29,7 +29,7 @@ export class Artifact {
   constructor(
     name: string,
     description: string,
-    icon?: string,
+    icon?: string | string[],
     tags: Tag[] = [],
     docsUrl?: DocsUrl
   ) {
@@ -54,7 +54,7 @@ export const state = () => ({
     core: new Artifact(
       'EssentialsX',
       'Core functionality: teleports, private messages, homes, warps and more',
-      'flask-empty',
+      'flask',
       [{ text: 'REQUIRED', color: 'bg-red-600' }]
     ),
     antibuild: new Artifact(
@@ -67,7 +67,7 @@ export const state = () => ({
     chat: new Artifact(
       'EssentialsX Chat',
       'Global and local chat + chat formatting',
-      'chat-outline',
+      'comment-dots',
       [
         { text: 'RECOMMENDED', color: 'bg-blue-600' },
         { text: 'OPTIONAL', color: 'bg-gray-500' },
@@ -76,7 +76,7 @@ export const state = () => ({
     discord: new Artifact(
       'EssentialsX Discord',
       'Lightweight chat, messaging and console integration with Discord',
-      'discord',
+      ['fab', 'discord'],
       [
         { text: 'NEW', color: 'bg-green-600' },
         { text: 'OPTIONAL', color: 'bg-gray-500' },
@@ -86,13 +86,13 @@ export const state = () => ({
     discordlink: new Artifact(
       'EssentialsX Discord Link',
       'Minecraft-to-Discord account linking (requires EssentialsX Discord)',
-      'link-variant',
+      'link',
       [{ text: 'COMING SOON', color: 'bg-green-600' }]
     ),
     geo: new Artifact(
       'EssentialsX Geo',
       'Geographical player lookup (formerly EssentialsX GeoIP)',
-      'earth',
+      'globe-americas',
       [{ text: 'OPTIONAL', color: 'bg-gray-500' }],
       { link: '/docs/2.x/GeoIP' }
     ),
@@ -114,7 +114,7 @@ export const state = () => ({
     xmpp: new Artifact(
       'EssentialsX XMPP',
       'Lightweight chat, messaging and server log integration with Jabber/XMPP services',
-      'xmpp',
+      'comments',
       [
         { text: 'OPTIONAL', color: 'bg-gray-500' },
         { text: 'LEGACY', color: 'bg-yellow-600' },

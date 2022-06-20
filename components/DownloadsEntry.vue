@@ -1,9 +1,11 @@
 <template>
   <div class="flex flex-col gap-6 lg:flex-row justify-between align-top">
     <div>
-      <!-- <fa-icon :icon="moduleData.icon"></fa-icon> -->
-      <p class="text-xl font-semibold">{{ moduleData.name }}</p>
-      <p class="text-md font-semibold">{{ version.name }}</p>
+      <div class="flex flex-row flex-wrap items-center gap-2">
+        <fa-icon :icon="moduleData.icon" fixed-width />
+        <p class="text-xl font-semibold">{{ moduleData.name }}</p>
+        <p class="text-md">{{ version.name }}</p>
+      </div>
       <p>{{ moduleData.description }}</p>
       <p class="mt-2">
         <span class="hidden bg-gray-500"></span>
