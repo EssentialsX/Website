@@ -18,6 +18,10 @@ export default {
     baseUrl,
   },
 
+  generate: {
+    fallback: '404.html',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: null,
