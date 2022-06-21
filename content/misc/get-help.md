@@ -1,8 +1,7 @@
 ---
 title: Get help with EssentialsX
+description: Need help with EssentialsX? There are several ways you can get help setting up and using EssentialsX.
 ---
-
-Need help with EssentialsX? There are several ways you can get help with setting up and using EssentialsX:
 
 ## Search the wiki
 

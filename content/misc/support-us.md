@@ -1,8 +1,7 @@
 ---
 title: Support the EssentialsX project
+description: Want to support the EssentialsX project? There are several ways you can help us out.
 ---
-
-Want to support the EssentialsX project? There are several ways you can help us out:
 
 ## Support EssentialsX on Patreon
 

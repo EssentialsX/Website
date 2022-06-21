@@ -2,7 +2,9 @@
   <div>
     <KitHero>
       <p class="font-semibold text-3xl">{{ page.title }}</p>
-      <p v-if="page.description" class="font-medium text-xl">{{ page.description }}</p>
+      <p v-if="page.description" class="font-medium text-xl mt-1">
+        {{ page.description }}
+      </p>
     </KitHero>
 
     <section class="container mx-auto px-6 py-4">
