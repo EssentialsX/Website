@@ -26,7 +26,7 @@
               <DocsSidebarView v-if="sidebarMenu" :sidebar-menu="sidebarMenu" />
             </div>
           </div>
-          <div class="lg:pl-6 w-full">
+          <div class="lg:pl-6 w-full overflow-x-scroll">
             <NuxtChild />
           </div>
         </div>
