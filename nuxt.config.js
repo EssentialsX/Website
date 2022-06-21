@@ -1,10 +1,24 @@
+const baseUrl =
+  process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://localhost:3000'
+
+function getPublicUrl(path) {
+  return baseUrl.includes('localhost') ? path : baseUrl + path
+}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  env: {
+    baseUrl,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'EssentialsX',
+    title: null,
+    titleTemplate: (chunk) => {
+      return chunk ? `${chunk} - EssentialsX` : 'EssentialsX'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -13,6 +27,32 @@ export default {
         name: 'description',
         content:
           'EssentialsX: the essential plugin suite for Minecraft servers.',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'EssentialsX',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'EssentialsX',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content:
+          'EssentialsX: the essential plugin suite for Minecraft servers.',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: getPublicUrl('/images/social.png'),
+      },
+      {
+        hid: 'og:image:secure_url',
+        name: 'og:image:secure_url',
+        content: getPublicUrl('/images/social.png'),
       },
     ],
     link: [
@@ -28,7 +68,8 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap',
       },
     ],
   },
