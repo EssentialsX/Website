@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white drop-shadow-sm"
+    class="flex flex-col border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white shadow"
   >
     <section
       v-if="imageSrc"
