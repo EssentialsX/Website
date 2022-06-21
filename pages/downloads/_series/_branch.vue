@@ -67,6 +67,10 @@
         <p v-else class="block">Select a branch to view downloads.</p>
       </div>
     </section>
+    <KitMeta
+      title="Downloads"
+      description="Download the latest versions of EssentialsX."
+    />
   </div>
 </template>
 

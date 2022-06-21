@@ -17,6 +17,7 @@
     <div class="prose !max-w-full">
       <nuxt-content :document="page" />
     </div>
+    <KitMeta :title="title" :description="page.excerpt" />
   </div>
 </template>
 
@@ -33,7 +34,9 @@ export default Vue.extend({
   },
   computed: {
     title(): String {
-      return this.$data.page.title || this.$data.page.slug || 'hello'
+      const pageTitle: string =
+        this.$data.page.title || this.$data.page.slug || 'hello'
+      return pageTitle.replace('-', ' ')
     },
   },
 })

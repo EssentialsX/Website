@@ -12,6 +12,7 @@
         <nuxt-content :document="page" />
       </div>
     </section>
+    <KitMeta :title="page.title" :description="page.excerpt" />
   </div>
 </template>
 

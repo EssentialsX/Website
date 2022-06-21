@@ -134,12 +134,6 @@
     <section class="hidden lg:block py-10">
       <!-- Spacer -->
     </section>
+    <KitMeta title="Home" description="The homepage for EssentialsX." />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Home',
-  layout: 'no-container',
-}
-</script>
