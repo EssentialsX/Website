@@ -6,7 +6,7 @@
       pattern-dark="circuit-board-light"
     >
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
-        <p class="text-6xl font-semibold">404</p>
+        <p class="text-6xl font-semibold">{{ error.statusCode }}</p>
         <p>
           You look lost.
           <nuxt-link class="underline" to="/">Return to homepage</nuxt-link>
@@ -15,3 +15,14 @@
     </KitHero>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+import { Prop } from 'vue-property-decorator'
+
+@Component
+export default class ErrorLayout extends Vue {
+  @Prop({ default: {} }) error!: Object
+}
+</script>
