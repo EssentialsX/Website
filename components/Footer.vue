@@ -45,8 +45,8 @@
         </div>
         <div>
           <p>
-            Website code and content &copy; 2019-2021 EssentialsX Team,
-            2015-2021 EssentialsX wiki contributors except where otherwise
+            Website code and content &copy; 2019-2022 EssentialsX Team,
+            2015-2022 EssentialsX wiki contributors except where otherwise
             noted.
           </p>
         </div>
