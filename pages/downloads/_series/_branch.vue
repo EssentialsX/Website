@@ -8,7 +8,7 @@
       </p>
     </KitHero>
 
-    <section class="container mx-auto p-6">
+    <section class="container mx-auto px-4 py-6">
       <div>
         <div
           class="p-4 border bg-blue-100 border-blue-200 dark:bg-blue-900 dark:border-blue-800 rounded-md"

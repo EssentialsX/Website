@@ -60,12 +60,17 @@ export default defineConfig({
         },
         DARK: {
           css: {
+            color: colors.gray[100],
             'ul > li::before': {
               backgroundColor: colors.gray[600],
             },
             code: {
               backgroundColor: colors.gray[800],
-            }
+            },
+            blockquote: {
+              color: colors.gray[200],
+              borderColor: colors.gray[700],
+            },
           },
         },
       },

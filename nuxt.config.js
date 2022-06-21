@@ -81,17 +81,24 @@ export default {
         [
           'remark-autolink-headings',
           {
-            behavior: 'append',
+            behavior: 'prepend',
             content: {
               type: 'element',
               tagName: 'span',
-              properties: { className: ['icon', 'is-small', 'pl-5'] },
+              properties: {
+                className: [
+                  'pr-2',
+                  'text-red-500',
+                  'opacity-80',
+                  'hover:opacity-100',
+                ],
+              },
               children: [
                 {
                   type: 'element',
-                  tagName: 'i',
+                  tagName: 'fa-icon',
                   properties: {
-                    className: ['mdi', 'mdi-link', 'mdi-rotate-135'],
+                    icon: ['hashtag'],
                   },
                 },
               ],
@@ -158,6 +165,7 @@ export default {
         'faGlobeAmericas',
         'faCube',
         'faComments',
+        'faHashtag',
       ],
       regular: [],
       light: [],
