@@ -1,8 +1,10 @@
 <template>
-  <div class="overflow-x-hidden transition motion-reduce:transition-none">
+  <div class="overflow-x-hidden !motion-reduce:transition-none">
     <Navbar />
 
-    <section class="main-content dark:bg-gray-900 dark:text-white min-h-[80vh]">
+    <section
+      class="main-content transition-colors ease-linear dark:bg-gray-900 dark:text-white min-h-[80vh]"
+    >
       <Nuxt :nuxt-child-key="childKey" />
     </section>
 

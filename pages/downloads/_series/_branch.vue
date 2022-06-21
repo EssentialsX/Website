@@ -1,6 +1,6 @@
 <template>
   <div>
-    <KitHero>
+    <KitHero pattern="charlie-brown">
       <p class="font-semibold text-3xl">Download EssentialsX</p>
       <p class="font-medium text-xl">
         Get stable releases of EssentialsX and add-ons, or dev builds with the

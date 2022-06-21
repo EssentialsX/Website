@@ -1,7 +1,9 @@
 <template>
   <div>
     <KitHero
-      class="h-80vh text-dark-900 from-slate-200 to-slate-400 dark:(text-white from-slate-800 to-slate-900)"
+      class="h-80vh text-dark-900 from-rose-100 to-rose-200 dark:(text-white from-rose-800 to-rose-900)"
+      pattern="circuit-board"
+      pattern-dark="circuit-board-light"
     >
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
         <p class="text-6xl font-semibold">404</p>

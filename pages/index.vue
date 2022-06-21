@@ -1,6 +1,6 @@
 <template>
   <div>
-    <KitHero>
+    <KitHero pattern="jigsaw">
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
         <p class="font-semibold text-3xl">It's in the name.</p>
         <p class="font-medium text-md">

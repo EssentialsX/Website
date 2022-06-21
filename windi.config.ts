@@ -3,11 +3,21 @@
 import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 import defaultTheme from 'windicss/defaultTheme'
+
 import typographyPlugin from 'windicss/plugin/typography'
 import formsPlugin from 'windicss/plugin/forms'
+import heropatternsPlugin from '@windicss/plugin-heropatterns'
 
 export default defineConfig({
   darkMode: 'class',
+  safelist: [
+    'bg-hero-charlie-brown',
+    'bg-hero-circuit-board',
+    'bg-hero-graph-paper',
+    'bg-hero-jigsaw',
+    'bg-hero-wiggle',
+    'dark:bg-hero-circuit-board-light',
+  ],
   theme: {
     extend: {
       colors: {
@@ -66,5 +76,21 @@ export default defineConfig({
       dark: true,
     }),
     formsPlugin,
+    heropatternsPlugin({
+      patterns: [
+        'charlie-brown',
+        'circuit-board',
+        'graph-paper',
+        'jigsaw',
+        'wiggle',
+      ],
+      colors: {
+        default: '#000000',
+        light: '#ffffff',
+      },
+      opacity: {
+        default: '0.05',
+      },
+    }),
   ],
 })

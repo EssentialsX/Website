@@ -1,6 +1,6 @@
 <template>
   <div>
-    <KitHero>
+    <KitHero pattern="wiggle">
       <p class="font-semibold text-3xl">{{ page.title }}</p>
       <p v-if="page.description" class="font-medium text-xl mt-1">
         {{ page.description }}
