@@ -5,6 +5,11 @@ function getPublicUrl(path) {
   return baseUrl.includes('localhost') ? path : baseUrl + path
 }
 
+const defaultTitle = 'EssentialsX'
+const defaultDescription =
+  'EssentialsX: the essential plugin suite for Minecraft servers.'
+const defaultImage = getPublicUrl('/images/social.png')
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -25,34 +30,77 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'EssentialsX: the essential plugin suite for Minecraft servers.',
+        content: defaultDescription,
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: defaultTitle,
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@EssentialsXTeam',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: defaultDescription,
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: defaultImage,
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: defaultTitle,
       },
       {
         hid: 'og:title',
         name: 'og:title',
-        content: 'EssentialsX',
+        content: defaultTitle,
       },
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: 'EssentialsX',
+        content: defaultTitle,
       },
       {
         hid: 'og:description',
         name: 'og:description',
-        content:
-          'EssentialsX: the essential plugin suite for Minecraft servers.',
+        content: defaultDescription,
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'object',
       },
       {
         hid: 'og:image',
         name: 'og:image',
-        content: getPublicUrl('/images/social.png'),
+        content: defaultImage,
       },
       {
         hid: 'og:image:secure_url',
         name: 'og:image:secure_url',
-        content: getPublicUrl('/images/social.png'),
+        content: defaultImage,
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: defaultTitle,
+      },
+      {
+        hid: 'og:image:width',
+        name: 'og:image:width',
+        content: 1200,
+      },
+      {
+        hid: 'og:image:height',
+        name: 'og:image:height',
+        content: 600,
       },
     ],
     link: [
