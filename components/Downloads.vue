@@ -30,6 +30,10 @@
                         Could not load the latest dev builds. <a href="#" @click="refreshDownloads">Retry</a>, or
                         click <a href="https://ci.ender.zone/job/EssentialsX">here</a> to view builds on Jenkins.
                     </p>
+                    <p>
+                        If the issue persists, check <saber-link to="/community.html">Discord</saber-link> for updates
+                        and alternative download links.
+                    </p>
                 </b-notification>
                 
                 <div v-if="version && !loading">
