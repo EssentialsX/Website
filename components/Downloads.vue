@@ -12,8 +12,14 @@
       </p>
     </div>
     <KitCard v-if="downloadState.error" class="mt-4">
-      <b>Failed to load downloads!</b> <br />
-      {{ downloadState.error.message }}
+      <p>
+        <b>Failed to load downloads!</b>
+      </p>
+      <p>
+        If the issue persists, check
+        <nuxt-link class="underline" to="/misc/get-help">Discord</nuxt-link>
+        for updates and alternative download links.
+      </p>
     </KitCard>
     <transition name="fade">
       <div v-if="ready">

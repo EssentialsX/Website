@@ -7,7 +7,7 @@
       </p>
     </KitHero>
 
-    <section class="container mx-auto px-6 py-4">
+    <section class="container mx-auto mt-[-20px] px-6 py-4">
       <div class="prose dark:prose-invert max-w-none">
         <nuxt-content :document="page" />
       </div>
