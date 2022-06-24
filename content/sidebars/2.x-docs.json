@@ -13,9 +13,19 @@
       { "label": "Color permissions", "link": "/docs/2.x/Color-Permissions" },
       { "label": "Customising /list", "href": "https://wiki.mc-ess.net/wiki/List" }
     ],
-    "Using EssentialsX": [
-      { "label": "Signs", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" },
-      { "label": "Items: Banner Metadata", "link": "/docs/2.x/BannerMeta" }
+    "Features": [
+      { "label": "Chat and Nicknames", "link": "/docs/2.x/Chat-and-Nicknames" },
+      { "label": "Economy", "link": "/docs/2.x/Economy" },
+      { "label": "Homes", "link": "/docs/2.x/Homes" },
+      { "label": "Items", "link": "/docs/2.x/Items", "children": [
+        { "label": "Items: Banner Metadata", "link": "/docs/2.x/BannerMeta" }
+      ] },
+      { "label": "Kits", "link": "/docs/2.x/Kits" },
+      { "label": "Signs", "link": "/docs/2.x/Signs", "children": [
+        { "label": "Signs on Essentials 2 wiki", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" }
+      ] },
+      { "label": "Vanish", "link": "/docs/2.x/Vanish" },
+      { "label": "Warps", "link": "/docs/2.x/Warps" }
     ],
     "Addons": [
       { "label": "AntiBuild", "href": "https://wiki.mc-ess.net/wiki/AntiBuild" },

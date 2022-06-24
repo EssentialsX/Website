@@ -14,6 +14,11 @@
       </ul>
     </nav>
     <hr class="mb-4 dark:border-gray-800" />
+    <KitCard v-if="page.wip" class="mb-4">
+      This article is a <b>work-in-progress</b> and may be incomplete. If you
+      need further support with EssentialsX,
+      <nuxt-link class="underline" to="/misc/get-help">click here</nuxt-link>.
+    </KitCard>
     <div class="prose !max-w-full">
       <nuxt-content :document="page" />
     </div>
