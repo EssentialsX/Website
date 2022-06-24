@@ -15,13 +15,19 @@
     </nav>
     <hr class="mb-4 dark:border-gray-800" />
     <KitCard v-if="page.wip" class="mb-4">
-      This article is a <b>work-in-progress</b> and may be incomplete. You can
-      help us out by
-      <a href="https://github.com/EssentialsX/Wiki">
-        contributing to the docs on GitHub.
-      </a>
-      If you need further support with EssentialsX,
-      <nuxt-link class="underline" to="/misc/get-help">click here</nuxt-link>.
+      <p>
+        This article is a <b>work-in-progress</b> and may be incomplete. You can
+        help us out by
+        <a class="underline" href="https://github.com/EssentialsX/Wiki">
+          contributing to the docs on GitHub.
+        </a>
+      </p>
+      <p>
+        If this article doesn't answer your questions, you can
+        <nuxt-link class="underline" to="/misc/get-help">
+          ask for community support with EssentialsX
+        </nuxt-link>.
+      </p>
     </KitCard>
     <KitCard v-if="page.fullscreen" class="lg:hidden mb-4">
       This article is best viewed <b>maximized on a large screen</b>.
