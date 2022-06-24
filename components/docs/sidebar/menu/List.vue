@@ -24,6 +24,7 @@ export default class DocsSidebarMenuList extends Vue {
     return {
       block: true,
       'pl-3': !this.nest,
+      'pt-1': this.nest,
       'border-l-3': !this.nest,
       'border-gray-200/50': !selected,
       'dark:border-gray-700/50': !selected,
