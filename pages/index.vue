@@ -84,7 +84,7 @@
               <KitButtons class="mt-4 md:mt-8">
                 <KitButton
                   tag="nuxt-link"
-                  to="/docs/2.x/Discord-Tutorial"
+                  to="/docs/2.x/Module-Discord"
                   bg-color="bg-red-600"
                   text-color="text-white"
                   icon-right="arrow-right"

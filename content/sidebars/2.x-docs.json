@@ -14,26 +14,26 @@
       { "label": "Customising /list", "href": "https://wiki.mc-ess.net/wiki/List" }
     ],
     "Features": [
-      { "label": "Chat and Nicknames", "link": "/docs/2.x/Chat-and-Nicknames" },
-      { "label": "Economy", "link": "/docs/2.x/Economy" },
-      { "label": "Homes", "link": "/docs/2.x/Homes" },
-      { "label": "Items", "link": "/docs/2.x/Items", "children": [
-        { "label": "Items: Banner Metadata", "link": "/docs/2.x/BannerMeta" }
+      { "label": "Chat and Nicknames", "link": "/docs/2.x/Feature-Chat-and-Nicknames" },
+      { "label": "Economy", "link": "/docs/2.x/Feature-Economy" },
+      { "label": "Homes", "link": "/docs/2.x/Feature-Homes" },
+      { "label": "Items", "link": "/docs/2.x/Feature-Items", "children": [
+        { "label": "Items: Banner Metadata", "link": "/docs/2.x/Feature-BannerMeta" }
       ] },
-      { "label": "Kits", "link": "/docs/2.x/Kits" },
-      { "label": "Signs", "link": "/docs/2.x/Signs", "children": [
+      { "label": "Kits", "link": "/docs/2.x/Feature-Kits" },
+      { "label": "Signs", "link": "/docs/2.x/Feature-Signs", "children": [
         { "label": "Signs on Essentials 2 wiki", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" }
       ] },
-      { "label": "Vanish", "link": "/docs/2.x/Vanish" },
-      { "label": "Warps", "link": "/docs/2.x/Warps" }
+      { "label": "Vanish", "link": "/docs/2.x/Feature-Vanish" },
+      { "label": "Warps", "link": "/docs/2.x/Feature-Warps" }
     ],
     "Addons": [
       { "label": "AntiBuild", "href": "https://wiki.mc-ess.net/wiki/AntiBuild" },
       { "label": "Chat", "link": "/docs/2.x/Module-Breakdown#essentialsx-chat" },
-      { "label": "Discord", "link": "/docs/2.x/Discord-Tutorial", "children": [
+      { "label": "Discord", "link": "/docs/2.x/Module-Discord", "children": [
         { "label": "Authorize your bot", "link": "/misc/discord-auth" }
       ] },
-      { "label": "GeoIP", "link": "/docs/2.x/GeoIP" },
+      { "label": "Geo", "link": "/docs/2.x/Module-Geo" },
       { "label": "Protect", "href": "https://wiki.mc-ess.net/wiki/Configuration_file#EssentialsProtect" },
       { "label": "Spawn", "link": "/docs/2.x/Module-Breakdown#essentialsx-spawn" },
       { "label": "XMPP", "href": "https://wiki.mc-ess.net/wiki/XMPP" }

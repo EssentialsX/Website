@@ -81,7 +81,7 @@ export const state = () => ({
         { text: 'NEW', color: 'bg-green-600' },
         { text: 'OPTIONAL', color: 'bg-gray-500' },
       ],
-      { link: '/docs/2.x/Discord-Tutorial' }
+      { link: '/docs/2.x/Module-Discord' }
     ),
     discordlink: new Artifact(
       'EssentialsX Discord Link',
@@ -94,7 +94,7 @@ export const state = () => ({
       'Geographical player lookup (formerly EssentialsX GeoIP)',
       'globe-americas',
       [{ text: 'OPTIONAL', color: 'bg-gray-500' }],
-      { link: '/docs/2.x/GeoIP' }
+      { link: '/docs/2.x/Module-GeoIP' }
     ),
     protect: new Artifact(
       'EssentialsX Protect',
