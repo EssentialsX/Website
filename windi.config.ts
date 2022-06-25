@@ -6,6 +6,7 @@ import defaultTheme from 'windicss/defaultTheme'
 
 import typographyPlugin from 'windicss/plugin/typography'
 import formsPlugin from 'windicss/plugin/forms'
+import aspectRatioPlugin from 'windicss/plugin/aspect-ratio'
 import heropatternsPlugin from '@windicss/plugin-heropatterns'
 
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
       },
       fontFamily: {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        mono: ['IBM Plex Mono', ...defaultTheme.fontFamily.mono],
       },
       typography: {
         DEFAULT: {
@@ -81,6 +83,7 @@ export default defineConfig({
       dark: true,
     }),
     formsPlugin,
+    aspectRatioPlugin,
     heropatternsPlugin({
       patterns: [
         'charlie-brown',

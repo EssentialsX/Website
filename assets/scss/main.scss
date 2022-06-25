@@ -14,3 +14,9 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+.bg-sign {
+  @apply bg-center bg-contain image-render-pixel;
+
+  background-image: url('@/assets/images/mc-planks.png');
+}
