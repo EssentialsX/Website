@@ -206,6 +206,14 @@
         <highlightjs class="p-0" language="yaml" :code="spawn" />
       </collapse-message>
 
+      <collapse-message type="is-black" v-if="commands">
+        <template v-slot:title>
+          Command Aliases
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="commands" />
+      </collapse-message>
+
       <collapse-message type="is-black" v-if="discord">
         <template v-slot:title>
           Discord config
@@ -278,6 +286,7 @@ export default {
       spawn: null,
       tpr: null,
       worth: null,
+      commands: null,
 
       addons: [],
       plugins: [],
@@ -309,6 +318,8 @@ export default {
             this.worth = file.content.value
           } else if (file.name === "spawn.yml") {
             this.spawn = file.content.value
+          } else if (file.name === "commands.yml") {
+            this.commands = file.content.value
           } else if (file.name === "tpr.yml") {
             this.tpr = file.content.value
           } else if (file.name === "dump.json") {
