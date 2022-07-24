@@ -36,9 +36,9 @@
                     placeholder="Client ID"
                     type="text"
                     required
-                    validation-message="Client IDs must be 18 digits long!"
-                    pattern="^\d{18}$"
-                    maxlength="18"/>
+                    validation-message="Client IDs must be between 18 and 19 digits long!"
+                    pattern="^\d{18,19}$"
+                    maxlength="19"/>
                 <p class="control">
                   <b-button @click="redirect" class="button is-primary">Authorize</b-button>
                 </p>
