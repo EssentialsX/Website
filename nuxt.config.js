@@ -157,6 +157,10 @@ export default {
     '@nuxt/content',
   ],
 
+  router: {
+    middleware: ['routingState'],
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

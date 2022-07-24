@@ -42,6 +42,22 @@ description: YOU HAVE FOUND THE SECRET LEVEL SELECT SCREEN
 
 </div>
 
+### Card
+
+<KitCard image-src="/images/home/commands.png" title="Card with title and image">
+
+# oh hi I didn't see you there
+
+how are you doing today fine sir
+
+</KitCard>
+
+<KitCard title="Card with title only">
+
+much title, very wow
+
+</KitCard>
+
 ## Docs components
 
 <DocsSign :line1="{ text: '[WooYeah]', highlight: 'invalid' }" line2="mdcfe" line3="kennyt26Puffy" :line4="{ text: 'wooYeah', highlight: 'valid' }"></DocsSign>

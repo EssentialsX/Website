@@ -2,6 +2,14 @@
   <div
     class="flex flex-col border dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 dark:text-white shadow"
   >
+    <slot name="header">
+      <header
+        v-if="title"
+        class="text-white bg-gray-900 px-4 py-2 font-bold rounded-t-md"
+      >
+        {{ title }}
+      </header>
+    </slot>
     <section
       v-if="imageSrc"
       class="overflow-hidden rounded-t-md flex-shrink-0 flex-grow-0"
@@ -33,6 +41,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class KitCard extends Vue {
+  @Prop() title?: string
   @Prop() imageSrc?: string
   @Prop({ default: '800' }) imageWidth!: string
   @Prop({ default: '600' }) imageHeight!: string
