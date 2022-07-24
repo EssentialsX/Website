@@ -21,6 +21,7 @@
         { "label": "Items: Banner Metadata", "link": "/docs/2.x/Feature-BannerMeta" }
       ] },
       { "label": "Kits", "link": "/docs/2.x/Feature-Kits" },
+      { "label": "Player Teleportation", "link": "/docs/2.x/Feature-Player-Teleports" },
       { "label": "Signs", "link": "/docs/2.x/Feature-Signs", "children": [
         { "label": "Signs on Essentials 2 wiki", "href": "https://wiki.mc-ess.net/wiki/Sign_Tutorial" }
       ] },
