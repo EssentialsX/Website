@@ -206,6 +206,34 @@
         <highlightjs class="p-0" language="yaml" :code="spawn" />
       </collapse-message>
 
+      <collapse-message type="is-black" v-if="commands">
+        <template v-slot:title>
+          Command Aliases
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="commands" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="commandoverride">
+        <template v-slot:title>
+          Command Overrides
+        </template>
+
+        <code class="p-0">
+          <pre class="dump-log">{{ commandoverride }}</pre>
+        </code>
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="commandmap">
+        <template v-slot:title>
+          Command Map
+        </template>
+
+        <code class="p-0">
+          <pre class="dump-log">{{ commandmap }}</pre>
+        </code>
+      </collapse-message>
+
       <collapse-message type="is-black" v-if="discord">
         <template v-slot:title>
           Discord config
@@ -219,7 +247,9 @@
           Server log
         </template>
 
-        <highlightjs class="p-0" language="yaml" :code="log" />
+        <code class="p-0">
+          <pre class="dump-log">{{ log }}</pre>
+        </code>
       </collapse-message>
 
       <b-notification type="is-dark" :closable="false">
@@ -278,6 +308,9 @@ export default {
       spawn: null,
       tpr: null,
       worth: null,
+      commands: null,
+      commandoverride: null,
+      commandmap: null,
 
       addons: [],
       plugins: [],
@@ -309,6 +342,12 @@ export default {
             this.worth = file.content.value
           } else if (file.name === "spawn.yml") {
             this.spawn = file.content.value
+          } else if (file.name === "commands.yml") {
+            this.commands = file.content.value
+          } else if (file.name === "commandmap.json") {
+            this.commandmap = file.content.value
+          } else if (file.name === "commandoverride.json") {
+            this.commandoverride = file.content.value
           } else if (file.name === "tpr.yml") {
             this.tpr = file.content.value
           } else if (file.name === "dump.json") {
@@ -388,5 +427,10 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+.dump-log {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #1c1b1b;
 }
 </style>
