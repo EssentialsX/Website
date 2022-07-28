@@ -214,6 +214,22 @@
         <highlightjs class="p-0" language="yaml" :code="commands" />
       </collapse-message>
 
+      <collapse-message type="is-black" v-if="commandoverride">
+        <template v-slot:title>
+          Command Overrides
+        </template>
+
+        <highlightjs class="p-0" language="properties" :code="commandoverride" />
+      </collapse-message>
+
+      <collapse-message type="is-black" v-if="commandmap">
+        <template v-slot:title>
+          Command Map
+        </template>
+
+        <highlightjs class="p-0" language="properties" :code="commandmap" />
+      </collapse-message>
+
       <collapse-message type="is-black" v-if="discord">
         <template v-slot:title>
           Discord config
@@ -287,6 +303,8 @@ export default {
       tpr: null,
       worth: null,
       commands: null,
+      commandoverride: null,
+      commandmap: null,
 
       addons: [],
       plugins: [],
@@ -320,6 +338,10 @@ export default {
             this.spawn = file.content.value
           } else if (file.name === "commands.yml") {
             this.commands = file.content.value
+          } else if (file.name === "commandmap.json") {
+            this.commandmap = file.content.value
+          } else if (file.name === "commandoverride.json") {
+            this.commandoverride = file.content.value
           } else if (file.name === "tpr.yml") {
             this.tpr = file.content.value
           } else if (file.name === "dump.json") {
