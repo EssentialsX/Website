@@ -219,7 +219,9 @@
           Command Overrides
         </template>
 
-        <highlightjs class="p-0" language="properties" :code="commandoverride" />
+        <code class="p-0">
+          <pre class="dump-log">{{ commandoverride }}</pre>
+        </code>
       </collapse-message>
 
       <collapse-message type="is-black" v-if="commandmap">
@@ -227,7 +229,9 @@
           Command Map
         </template>
 
-        <highlightjs class="p-0" language="properties" :code="commandmap" />
+        <code class="p-0">
+          <pre class="dump-log">{{ commandmap }}</pre>
+        </code>
       </collapse-message>
 
       <collapse-message type="is-black" v-if="discord">
@@ -243,7 +247,9 @@
           Server log
         </template>
 
-        <highlightjs class="p-0" language="yaml" :code="log" />
+        <code class="p-0">
+          <pre class="dump-log">{{ log }}</pre>
+        </code>
       </collapse-message>
 
       <b-notification type="is-dark" :closable="false">
@@ -421,5 +427,10 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+.dump-log {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #1c1b1b;
 }
 </style>
