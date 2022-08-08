@@ -1,78 +1,33 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-3 grid-auto-row gap-4">
     <KitCard title="EssentialsX info">
-      <table>
-        <tbody>
-          <tr>
-            <td>Version</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Branch</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Economy Layer</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Economy Backend</td>
-            <td>WooYeah</td>
-          </tr>
-        </tbody>
-      </table>
+      <DumpTable>
+        <DumpTableEntry title="Version" value="2.0.1-b370" />
+        <DumpTableEntry title="Branch" value="2.x" />
+        <DumpTableEntry title="Economy Layer" value="Register" />
+        <DumpTableEntry title="Economy Backend" value="iConomy 4" />
+      </DumpTable>
     </KitCard>
     <KitCard title="Server software">
-      <table>
-        <tbody>
-          <tr>
-            <td>Server Brand</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Server Version</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Bukkit Version</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Online Mode</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Support Status</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Support Trigger</td>
-            <td>WooYeah</td>
-          </tr>
-        </tbody>
-      </table>
+      <DumpTable>
+        <DumpTableEntry title="Server Brand" value="WooYeah" />
+        <DumpTableEntry title="Server Version" value="1.2.5" />
+        <DumpTableEntry title="Bukkit Version" value="1.2.5-R2" />
+        <DumpTableEntry title="Online Mode" :value="true" />
+        <DumpTableEntry title="Support Status" :value="null" />
+        <DumpTableEntry title="Support Trigger" />
+      </DumpTable>
     </KitCard>
     <KitCard title="Server environment">
-      <table>
-        <tbody>
-          <tr>
-            <td>Java Version</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Operating System</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Server Uptime</td>
-            <td>WooYeah</td>
-          </tr>
-          <tr>
-            <td>Allocated Memory</td>
-            <td>WooYeah</td>
-          </tr>
-        </tbody>
-      </table>
+      <DumpTable>
+        <DumpTableEntry title="Java Version" value="1.5" />
+        <DumpTableEntry title="Operating System" value="Windows NT 4.1" />
+        <DumpTableEntry
+          title="Server Uptime"
+          value="10 years 293 days 22 hours 5 minutes 22 seconds"
+        />
+        <DumpTableEntry title="Allocated Memory" value="256MB" />
+      </DumpTable>
     </KitCard>
   </div>
 </template>
