@@ -23,7 +23,7 @@ export type DumpDataV1 = {
     'bukkit-version': string
     'server-version': string
     'server-brand': string
-    'online-mode': string
+    'online-mode'?: string
     'support-status': {
       status: string
       supported: Boolean
