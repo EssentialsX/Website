@@ -25,11 +25,41 @@
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import { Watch } from 'vue-property-decorator'
+import { DumpFetchPayload } from '~/store/dump'
+
+const PASTEGG_HOST = 'api.paste.gg'
+const BYTEBIN_HOST_DEFAULT = 'bytebin.lucko.me'
 
 @Component({
   layout: 'tool',
   meta: {
     title: 'Dump Viewer',
+  },
+  fetchOnServer: false,
+  async fetch() {
+    await this.$store.dispatch('dump/reset')
+
+    const version = this.$route.query.v || 1
+    const host =
+      version === 1
+        ? PASTEGG_HOST
+        : this.$route.query.host || BYTEBIN_HOST_DEFAULT
+
+    const id = this.$route.query.id as string
+    if (!id) {
+      return
+    }
+
+    const fetchPayload: DumpFetchPayload = {
+      type: version === 1 ? 'paste.gg' : 'bytebin',
+      host: host as string,
+      id: id as string,
+    }
+    await this.$store.dispatch('dump/fetch', fetchPayload)
+  },
+  fetchKey(getCounter: Function) {
+    return this.$route.query + getCounter('dump')
   },
 })
 export default class DumpViewerPage extends Vue {
@@ -37,6 +67,11 @@ export default class DumpViewerPage extends Vue {
 
   get hasDump(): boolean {
     return !!this.$route.query.id
+  }
+
+  @Watch('$route.query')
+  refresh() {
+    this.$fetch()
   }
 }
 </script>

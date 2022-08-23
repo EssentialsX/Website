@@ -1,25 +1,20 @@
 <template>
   <section>
-    <client-only>
-      <DumpViewerContents v-if="status == 'ready'" :dump="dumpData" />
-
-      <div
-        slot="placeholder"
-        class="w-full py-10 flex flex-col items-center justify-around"
-      >
-        <KitLoader size="xl" />
-      </div>
-    </client-only>
+    <KitLoader v-if="status == 'loading'" size="xl" />
+    <DumpViewerContents v-else-if="status == 'ready'" :dump="dumpData" />
+    <KitCard v-else title="Failed to load dump">
+      <p>
+        The requested dump failed to load.
+        <span v-if="error">({{ error }})</span>
+      </p>
+    </KitCard>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import { DumpFetchPayload, DumpState } from '@/store/dump'
-
-const PASTEGG_HOST = 'api.paste.gg'
-const BYTEBIN_HOST_DEFAULT = 'bytebin.lucko.me'
+import { DumpState } from '@/store/dump'
 
 @Component
 export default class DumpViewer extends Vue {
@@ -37,28 +32,6 @@ export default class DumpViewer extends Vue {
 
   get dumpData() {
     return this.dumpState.dump
-  }
-
-  mounted() {
-    this.$store.dispatch('dump/reset')
-
-    const version = this.$route.query.v || 1
-    const host =
-      version === 1
-        ? PASTEGG_HOST
-        : this.$route.query.host || BYTEBIN_HOST_DEFAULT
-
-    const id = this.$route.query.id as string
-    if (!id) {
-      return
-    }
-
-    const fetchPayload: DumpFetchPayload = {
-      type: version === 1 ? 'paste.gg' : 'bytebin',
-      host: host as string,
-      id: id as string,
-    }
-    this.$store.dispatch('dump/fetch', fetchPayload)
   }
 }
 </script>
