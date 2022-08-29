@@ -3,7 +3,7 @@
     <NavMini />
 
     <section
-      class="main-content transition-colors ease-linear dark:bg-gray-800 dark:text-white min-h-[90vh]"
+      class="main-content transition-colors ease-linear dark:bg-gray-800 dark:text-white min-h-[calc(100vh_-_80px)]"
     >
       <Nuxt :nuxt-child-key="childKey" />
     </section>

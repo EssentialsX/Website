@@ -46,7 +46,5 @@ export async function fetch(
   if (!host.startsWith('https://') && !host.startsWith('http://')) {
     host = `https://${host}`
   }
-  return await axios.$get(`${host}/v1/pastes/${id}?full=true`, {
-    //headers: { 'Content-Type': 'application/json' },
-  })
+  return await axios.$get(`${host}/v1/pastes/${id}?full=true`)
 }
