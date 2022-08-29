@@ -18,6 +18,11 @@ export default {
     baseUrl,
   },
 
+  publicRuntimeConfig: {
+    baseUrl,
+    pasteggApiRoot: process.env.PASTEGG_API_ROOT || 'api.paste.gg',
+  },
+
   generate: {
     fallback: '404.html',
   },

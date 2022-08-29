@@ -18,7 +18,7 @@ export default class KitMeta extends Vue {
   @Prop({ default: undefined }) image!: string | undefined
 
   get imageUrl() {
-    return this.image || this.$nuxt.context.env.baseUrl + '/images/social.png'
+    return this.image || this.$config.baseUrl + '/images/social.png'
   }
 
   getHead() {

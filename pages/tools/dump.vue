@@ -28,7 +28,6 @@ import Component from 'vue-class-component'
 import { Watch } from 'vue-property-decorator'
 import { DumpFetchPayload } from '~/store/dump'
 
-const PASTEGG_HOST = 'api.paste.gg'
 const BYTEBIN_HOST_DEFAULT = 'bytebin.lucko.me'
 
 @Component({
@@ -43,7 +42,7 @@ const BYTEBIN_HOST_DEFAULT = 'bytebin.lucko.me'
     const version = this.$route.query.v || 1
     const host =
       version === 1
-        ? PASTEGG_HOST
+        ? this.$config.pasteggApiRoot
         : this.$route.query.host || BYTEBIN_HOST_DEFAULT
 
     const id = this.$route.query.id as string
