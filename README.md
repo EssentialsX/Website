@@ -1,6 +1,6 @@
-# website
+# EssentialsX Website v3
 
-## Build Setup
+## Development setup
 
 ```bash
 # install dependencies
@@ -17,4 +17,6 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+NOTE: some parts of the site rely on `webapi.essentialsx.net`, but you may run into CORS errors when using the public instance.
+
+You can use a local instance - rename `.env.example` to `.env` and edit as required.
