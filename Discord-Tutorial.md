@@ -38,9 +38,9 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
 > `New Application` -> Give Application a Name -> `Create`
 
 2. Once you create the application, you'll be directed to its overview. From this screen, you'll
-   need to copy your "Client ID"/"Application ID" and save it for a later step. To copy your
-   Client ID, click the upper-left most blue "Copy" button. Make sure to save it for a later step.
-> ![Copy Client ID](./images/discord/copy-client-id.gif)
+   need to copy your "Application ID" and save it for a later step. To copy your
+   Application ID, click the upper-left most blue "Copy" button. Make sure to save it for a later step.
+> ![Copy Application ID](./images/discord/copy-client-id.gif)
 > `Copy` -> Paste into Notepad for later step
 
 3. Optionally, you can set an icon for your application as it will be the icon for the bot too.
@@ -52,15 +52,17 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
 > ![Create Bot](./images/discord/create-bot.gif)
 > `Bot` -> `Add Bot` -> `Yes, do it!`
 
-5. Once on this screen, you'll need to uncheck the "Public Bot" setting and then click "Save Changes",
-   so other people can't add your bot to servers that are not your own.
-> ![Disable Public Bot](./images/discord/disable-public.gif)
-> Uncheck `Public Bot` -> `Save Changes`
+5. Once on this screen, you'll need to uncheck the "Public Bot" setting, enable all the "Privileged
+   Intents", and then click "Save Changes". This prevents other people from adding your bot and also
+   allows your bot to use more Discord features.
+> ![Update Bot Settings](./images/discord/disable-public.gif)
+> Uncheck `Public Bot` -> Check `Presence Intent` -> Check `Server Members Intent` -> Check `Message Content Invent` -> Save Changes`
 
 6. Finally, you'll need to copy your bot's token and save it for a later step. To copy your bot's token,
-   click the blue "Copy" button right of your bot's icon. Make sure to save it for a later step.
+   click the blue "Reset Token" button right of your bot's icon, then click "Yes, do it!", and finally
+   click "Copy". Make sure to save it for a later step.
 > ![Copy Token](./images/discord/copy-token.gif)
-> `Copy` -> Paste into Notepad for later step
+> `Reset Token` -> `Yes, do it!` -> `Copy` -> Paste into Notepad for later step
 
 7. Next up is adding your bot to your Discord server. First, go to [essentialsx.net/discord.html](https://essentialsx.net/discord.html)
    and paste your Client ID you copied from step 2 into the text box on that page. Once you do that, click
