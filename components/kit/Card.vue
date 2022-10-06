@@ -42,6 +42,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class KitCard extends Vue {
   @Prop() title?: string
+  @Prop({ default: false }) collapsible?: boolean
   @Prop() imageSrc?: string
   @Prop({ default: '800' }) imageWidth!: string
   @Prop({ default: '600' }) imageHeight!: string
