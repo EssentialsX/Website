@@ -15,14 +15,3 @@
     </KitHero>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
-import { Prop } from 'vue-property-decorator'
-
-@Component
-export default class ErrorLayout extends Vue {
-  @Prop({ default: {} }) error!: Object
-}
-</script>

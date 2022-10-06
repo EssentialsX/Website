@@ -8,12 +8,10 @@
   </component>
 </template>
 
-<script lang="ts">
-import 'vue-class-component/hooks'
-import { Component, Prop, Vue } from 'vue-property-decorator'
-
-@Component({})
-export default class NavbarItem extends Vue {
-  @Prop({ default: 'span' }) readonly tag!: string
-}
+<script setup lang="ts">
+const props = withDefaults(defineProps<{
+  tag?: string;
+}>(), {
+  tag: 'span'
+})
 </script>

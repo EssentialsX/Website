@@ -11,24 +11,19 @@
   </section>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+<script setup lang="ts">
+const props = defineProps<{
+  pattern?: string;
+  patternDark?: string;
+}>()
 
-@Component
-export default class KitHero extends Vue {
-  @Prop({ default: undefined }) pattern!: string | undefined
-  @Prop({ default: undefined }) patternDark!: string | undefined
-
-  get patternClass() {
-    return {
-      absolute: true,
-      'top-0': true,
-      'left-0': true,
-      'w-full': true,
-      'h-full': true,
-      [`bg-hero-${this.pattern}`]: true,
-      [`dark:bg-hero-${this.patternDark}`]: !!this.patternDark,
-    }
-  }
-}
+const patternClass = computed(() => ({
+  absolute: true,
+  'top-0': true,
+  'left-0': true,
+  'w-full': true,
+  'h-full': true,
+  [`bg-hero-${props.pattern}`]: true,
+  [`dark:bg-hero-${props.patternDark}`]: !!props.patternDark,
+}))
 </script>

@@ -14,7 +14,7 @@ description: YOU HAVE FOUND THE SECRET LEVEL SELECT SCREEN
 <KitButton tag="button" label="Disabled" :disabled="true"></KitButton>
 <KitButton tag="button" label="Inverted" :inverted="true"></KitButton>
 <KitButton tag="button" label="Square" :rounded="false"></KitButton>
-<KitButton tag="button" label="Icons" icon-left="sun" icon-right="arrow-down"></KitButton>
+<KitButton tag="button" label="Icons" icon-left="fa6-solid:sun" icon-right="fa6-solid:arrow-down"></KitButton>
 
 </KitButtons>
 

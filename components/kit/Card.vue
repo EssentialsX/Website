@@ -34,26 +34,25 @@
   </div>
 </template>
 
-<script lang="ts">
-// TODO kit demo page
-import 'vue-class-component/hooks'
-import { Component, Prop, Vue } from 'vue-property-decorator'
+<script setup lang="ts">
+const props = withDefaults(defineProps<{
+  title?: string;
+  collapsible?: boolean;
+  imageSrc?: string;
+  imageWidth?: string;
+  imageHeight?: string;
+  imageFit?: string;
+  imageZoom?: boolean;
+}>(), {
+  collapsible: false,
+  imageWidth: '800',
+  imageHeight: '600',
+  imageFit: 'cover',
+  imageZoom: false
+})
 
-@Component
-export default class KitCard extends Vue {
-  @Prop() title?: string
-  @Prop({ default: false }) collapsible?: boolean
-  @Prop() imageSrc?: string
-  @Prop({ default: '800' }) imageWidth!: string
-  @Prop({ default: '600' }) imageHeight!: string
-  @Prop({ default: 'cover' }) imageFit!: string
-  @Prop({ default: false }) imageZoom!: boolean
-
-  get imageClass() {
-    return {
-      'hover:scale-105': this.imageZoom,
-      'transition-transform': true,
-    }
-  }
-}
+const imageClass = computed(() => ({
+  'hover:scale-105': props.imageZoom,
+  'transition-transform': true
+}))
 </script>

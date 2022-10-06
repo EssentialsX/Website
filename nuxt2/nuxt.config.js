@@ -18,9 +18,11 @@ export default {
     baseUrl,
   },
 
-  publicRuntimeConfig: {
-    baseUrl,
-    pasteggApiRoot: process.env.PASTEGG_API_ROOT || 'api.paste.gg',
+  runtimeConfig: {
+    public: {
+      baseUrl,
+      pasteggApiRoot: process.env.PASTEGG_API_ROOT || 'api.paste.gg',
+    }
   },
 
   generate: {

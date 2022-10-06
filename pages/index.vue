@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <NuxtLayout>
     <KitHero pattern="jigsaw">
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
         <p class="font-semibold text-3xl">It's in the name.</p>
@@ -13,14 +13,14 @@
             to="/downloads"
             bg-color="bg-white"
             text-color="text-black"
-            icon-left="arrow-right"
+            icon-left="fa6-solid:arrow-right"
             label="Get started"
           />
           <KitButton
             tag="nuxt-link"
             to="/downloads"
             :inverted="true"
-            icon-left="arrow-down"
+            icon-left="fa6-solid:arrow-down"
             label="Downloads"
           />
         </KitButtons>
@@ -52,7 +52,7 @@
                   to="/docs/2.x/Home"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="arrow-right"
+                  icon-right="fa6-solid:arrow-right"
                   label="Docs"
                 />
                 <KitButton
@@ -60,7 +60,7 @@
                   href="https://essinfo.xeya.me/commands.html"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="arrow-right"
+                  icon-right="fa6-solid:arrow-right"
                   label="Commands list"
                 />
               </KitButtons>
@@ -87,7 +87,7 @@
                   to="/docs/2.x/Module-Discord"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="arrow-right"
+                  icon-right="fa6-solid:arrow-right"
                   label="Learn more"
                 />
               </KitButtons>
@@ -114,7 +114,7 @@
                   to="/misc/get-help"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="arrow-right"
+                  icon-right="fa6-solid:arrow-right"
                   label="Get help"
                 />
                 <KitButton
@@ -122,7 +122,7 @@
                   to="/misc/support-us"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="arrow-right"
+                  icon-right="fa6-solid:arrow-right"
                   label="Support the project"
                 />
               </KitButtons>
@@ -134,6 +134,5 @@
     <section class="hidden lg:block py-10">
       <!-- Spacer -->
     </section>
-    <KitMeta title="Home" description="The homepage for EssentialsX." />
-  </div>
+  </NuxtLayout>
 </template>

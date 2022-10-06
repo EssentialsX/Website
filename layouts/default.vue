@@ -5,21 +5,9 @@
     <section
       class="main-content transition-colors ease-linear dark:bg-gray-900 dark:text-white min-h-[80vh]"
     >
-      <Nuxt :nuxt-child-key="childKey" />
+      <slot />
     </section>
 
     <Footer />
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
-
-@Component
-export default class DefaultLayout extends Vue {
-  get childKey() {
-    return this.$route.path
-  }
-}
-</script>
