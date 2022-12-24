@@ -40,7 +40,7 @@ You can now limit which gamemodes are available in `/gamemode` for players to sw
 ### Kits improvements
 Kits have been moved from the main config to `kits.yml`, and can now be created from in-game and automatically added to your server without needing to manually edit and reload the config.
 
-In addition, commands are now supported in kits with the full set of [[EssentialsX placeholders|Keywords]] - simply add a line to your kit as follows:
+In addition, commands are now supported in kits with the full set of [EssentialsX placeholders](/wiki/Keywords.html) - simply add a line to your kit as follows:
 
 ```yaml
 kits:
