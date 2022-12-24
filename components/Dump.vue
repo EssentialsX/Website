@@ -219,7 +219,10 @@
           Server log
         </template>
 
-        <highlightjs class="p-0" language="yaml" :code="log" />
+        <code class="p-0">
+          <pre class="dump-log">{{ log }}</pre>
+        </code>
+        <!-- <highlightjs class="p-0" language="yaml" :code="log" /> -->
       </collapse-message>
 
       <b-notification type="is-dark" :closable="false">
@@ -388,5 +391,11 @@ pre {
   white-space: -moz-pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+
+.dump-log {
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #1c1b1b;
 }
 </style>
