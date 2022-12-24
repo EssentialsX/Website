@@ -9,8 +9,8 @@ This page aims to detail many of the improvements added by EssentialsX. For a mo
   - Supports mob spawners on all supported Minecraft versions.
     * On 1.8-1.12, you can use spawner signs and commands such as `/i mob_spawner:51`, and the spawners will be updated when placed.
     * On 1.13+, you can use `/i blazespawner` to spawn in spawners.
-* Includes new features in base EssentialsX such as [[BannerMeta|Banner Metadata]] for kits, [[Command-Cooldowns|Command Cooldowns]] and dozens of other new config options.
-* Brand new [[Discord-Tutorial|Discord bridge]] addon, and updated versions of all Essentials addons (even XMPP!)
+* Includes new features in base EssentialsX such as [Banner Metadata](/wiki/BannerMeta.html) for kits, [Command Cooldowns](/wiki/Command-Cooldowns.html) and dozens of other new config options.
+* Brand new [Discord bridge](/wiki/Discord-Tutorial.html) addon, and updated versions of all Essentials addons (even XMPP!)
 * Includes new item aliases for all Minecraft versions, including 1.13 and above.
 * Supports giving spawner eggs with entity ID values and potions with damage values in 1.9-1.12.
 * Uses UUID-backed Vault for permissions group and prefix/suffix lookups, as well as a new Vault adapter rewritten to be more robust.
@@ -127,7 +127,7 @@ afk-list-name: '&7[AFK] &o{USERNAME}'
 
 ### Nickname color permissions
 
-EssentialsX adds new permissions for nickname colours and formatting, which match the names used by Mojang in the Minecraft chat component system. These permissions also cover chat messages (if you have EssentialsX Chat installed) and more. You can see a list of these new permissions [[Color-Permissions|here]].
+EssentialsX adds new permissions for nickname colours and formatting, which match the names used by Mojang in the Minecraft chat component system. These permissions also cover chat messages (if you have EssentialsX Chat installed) and more. You can see a list of these new permissions [here](/wiki/Color-Permissions.html).
 
 You can now also use the `essentials.nick.changecolors` permission to restrict players' nickname changes. When players have this permission, they can only change the colour and formatting of their nickname, and not the text content. For example, if player `SupaHam` has the `essentials.nick.changecolours` and `essentials.nick.color` permissions, they can change their nickname to `&5SupaHam`, but cannot change it to `&5TheSupaHam` as the text content doesn't match their username.
 
@@ -154,7 +154,7 @@ _Requested in [#590](/drtshock/Essentials/issues/590); PR in [#664](/drtshock/Es
 
 Players can set their AFK message when using the `/afk` command to notify others of their situation. When a player sends a message with `/msg` to an AFK player, they will see the AFK player's message.
 
-By default, when a player sets their AFK status, the message will not be broadcast to the whole server. However, this can be changed in the [[Locale|locale file]] by adding `{1}` to the `userIsAwayWithMessage` message, where `{1}` will be replaced by the player's AFK message.
+By default, when a player sets their AFK status, the message will not be broadcast to the whole server. However, this can be changed in the [locale file](/wiki/Locale.html) by adding `{1}` to the `userIsAwayWithMessage` message, where `{1}` will be replaced by the player's AFK message.
 
 To set your AFK message, simply type `/afk <message...>`. For example: `/afk I'm walking my dog`.
 
@@ -185,7 +185,7 @@ This feature introduces the `teleport-to-center` configuration feature. When set
 ### Mail chat formatting
 _Requested in [#1560](/drtshock/Essentials/issues/1560); added in [665229b](https://github.com/drtshock/Essentials/commit/665229b)._
 
-This feature introduces the ability to format `/mail` messages using `&` formatting codes - [[Color-Permissions|click here]] for more information.
+This feature introduces the ability to format `/mail` messages using `&` formatting codes - [click here](/wiki/Color-Permissions.html) for more information.
 
 ### Helmet slot hat
 _Added in [7958cd0](https://github.com/EssentialsX/Essentials/commit/7958cd0b880205edaeaf34420bafde8d5cc1f7ed)._
