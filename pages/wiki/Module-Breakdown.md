@@ -48,7 +48,7 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
     * /list - List players currently online on Minecraft
 * & more...
 
-For more information on how to set up EssentialsX Discord, check out [[Discord-Tutorial|the tutorial]]!
+For more information on how to set up EssentialsX Discord, check out [the tutorial](/wiki/Discord-Tutorial.html)!
 
 ## EssentialsX XMPP
 
