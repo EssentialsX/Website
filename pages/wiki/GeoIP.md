@@ -45,7 +45,7 @@ You should now receive a **license key**. Copy this down somewhere safe, as you 
 
 ![Copy down the license key and keep it somewhere safe.](./images/geoip-step5.png)
 
-Next, you'll need to download and install the EssentialsXGeoIP jar - you can see how to do this [[Installing-EssentialsX|here]].
+Next, you'll need to download and install the EssentialsXGeoIP jar - you can see how to do this [here](/wiki/Installing-EssentialsX.html).
 Start and stop your server, then open `plugins/EssentialsGeoIP/config.yml` in a text editor.
 Copy the license key from before into the `license-key` setting, save the file and then restart your server.
 
