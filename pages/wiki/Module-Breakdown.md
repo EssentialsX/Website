@@ -48,18 +48,30 @@ EssentialsX Discord offers *essential* features you'd want from a Discord bridge
     * /list - List players currently online on Minecraft
 * & more...
 
-For more information on how to set up EssentialsX Discord, check out [[Discord-Tutorial|the tutorial]]!
+For more information on how to set up EssentialsX Discord, check out [the EssentialsX Discord tutorial](/wiki/Discord-Tutorial.html)!
 
-## EssentialsX XMPP
+## EssentialsX Discord Link
 
-**EssentialsX XMPP** acts as a bridge between Jabber/XMPP chat networks and your server. This allows players to chat between XMPP networks and your server, and can also allow server admins to monitor the console and server errors remotely. For more information, see the [Essentials XMPP guide](https://wiki.mc-ess.net/wiki/XMPP).
+**EssentialsX Discord Link** extends EssentialsX Discord with new features to sync in-game groups with Discord roles!
+
+EssentialsX Discord Link offers features such as:
+* Vault Group -> Discord Role Synchronization
+* Discord Role -> Vault Group Synchronization
+* Prevent unlinked players from joining
+* Prevent unlinked players from moving/chatting
+* & more...
+
+For more information, check out the [Discord Link tutorial](/wiki/Discord-Link.html)!
+
+## EssentialsX XMPP (legacy)
+
+**EssentialsX XMPP** acts as a bridge between Jabber/XMPP chat networks and your server.  
+Players can chat between XMPP networks and your server, and server admins can also monitor the console and server errors remotely.
+
+For more information, see the [Essentials XMPP guide](https://wiki.mc-ess.net/wiki/XMPP).
 
 *If you don't know what XMPP is, you don't need this!*
 
 <!--
-**EssentialsX Link** (coming soon) acts as a bridge between chat services such as Discord and your Minecraft server. This allows players to chat between Discord and your server, as well as letting players link their Discord and Minecraft accounts for special ranks.
-
-(also hi thanks for looking at the raw page o/)
-
 **EssentialsX Potato** integrates your Minecraft server with the well-known culinary open source project [Potato](https://github.com/drtshock/Potato). This ensures you always have the finest high-quality potatos ready to go!
 -->
