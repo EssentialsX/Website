@@ -68,7 +68,7 @@ Next, [download or clone EssentialsX](https://github.com/EssentialsX/Essentials)
 If this completes with no errors, you will be able to find each plugin jar in the `jars/` directory or, in `build/libs/` inside each module's directory.
 
 ## How do I add EssentialsX as a dependency?
-### Repositores
+### Repositories
 Do you want to integrate with EssentialsX in your plugin? You can use the EssentialsX Maven repo to build against EssentialsX's API.
 
 Releases are hosted on the Maven repo at `https://repo.essentialsx.net/releases/`, while snapshots (including dev builds) are hosted at `https://repo.essentialsx.net/snapshots/`.
