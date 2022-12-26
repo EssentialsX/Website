@@ -26,13 +26,13 @@ const pluginsDefaults = {
         name: "EssentialsX Discord",
         description: "Lightweight chat, messaging and command integration with Discord",
         downloadUrl: null,
-        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW', color: 'success' }]
+        tags: [{ text: 'OPTIONAL', color: 'light' }]
     },
     discordlink: {
-        name: "EssentialsX Discord: Account Linking",
+        name: "EssentialsX Discord Link",
         description: "Account sync between Discord and Minecraft",
         downloadUrl: null,
-        tags: [{ text: 'OPTIONAL', color: 'light' }, { text: 'NEW', color: 'success' }, { text: 'REQUIRES DISCORD ADDON', color: 'discord' }]
+        tags: [{ text: 'BETA', color: 'link' }, { text: 'OPTIONAL', color: 'light' }, { text: 'REQUIRES DISCORD ADDON', color: 'discord' }]
     },
     geo: {
         name: "EssentialsX Geo",
