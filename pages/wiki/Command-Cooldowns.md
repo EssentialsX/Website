@@ -44,3 +44,5 @@ command-cooldown-persistence: false
 **This feature was added in build 377**
 
 Users can be set to bypass all command cooldowns by giving them the `essentials.commandcooldowns.bypass` permission.
+
+**Since build 1452 ([25ad8ac](https://github.com/EssentialsX/Essentials/commit/25ad8ac9bd5f9dc9dd676e0cd26f9b067daf725b))**, specific command cooldowns can be bypassed with `essentials.commandcooldowns.bypass.<command name>`.
