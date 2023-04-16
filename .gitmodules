@@ -1,0 +1,3 @@
+[submodule "src/xeyame"]
+	path = src/xeyame
+	url = https://github.com/Xeyame/essinfo.xeya.me/

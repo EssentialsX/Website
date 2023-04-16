@@ -1,0 +1,1736 @@
+{
+  "commands": [
+    {
+      "module": "Essentials",
+      "base": "editsign",
+      "aliases": [
+        "sign",
+        "esign",
+        "eeditsign"
+      ],
+      "description": "Edits a sign in the world.",
+      "usage": "/<command> <set/clear/copy/paste> [line number] [text]"
+    },
+    {
+      "module": "Essentials",
+      "base": "repair",
+      "aliases": [
+        "fix",
+        "efix",
+        "erepair"
+      ],
+      "description": "Repairs the durability of one or all items.",
+      "usage": "/<command> [hand|all]"
+    },
+    {
+      "module": "Essentials",
+      "base": "msgtoggle",
+      "aliases": [
+        "emsgtoggle"
+      ],
+      "description": "Blocks receiving all private messages.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "setjail",
+      "aliases": [
+        "esetjail",
+        "createjail",
+        "ecreatejail"
+      ],
+      "description": "Creates a jail where you specified named [jailname].",
+      "usage": "/<command> <jailname>"
+    },
+    {
+      "module": "Essentials",
+      "base": "settpr",
+      "aliases": [
+        "[esettpr",
+        "settprandom",
+        "esettprandom]"
+      ],
+      "description": "Set the random teleport location and parameters.",
+      "usage": "/<command> [center|minrange|maxrange] [value]"
+    },
+    {
+      "module": "Essentials",
+      "base": "help",
+      "aliases": [
+        "ehelp"
+      ],
+      "description": "Views a list of available commands.",
+      "usage": "/<command> [search term] [page]"
+    },
+    {
+      "module": "Essentials",
+      "base": "clearinventoryconfirmtoggle",
+      "aliases": [
+        "eclearinventoryconfirmtoggle",
+        "clearinventoryconfirmoff",
+        "eclearinventoryconfirmoff",
+        "clearconfirmoff",
+        "eclearconfirmoff",
+        "clearconfirmon",
+        "eclearconfirmon",
+        "clearconfirm",
+        "eclearconfirm"
+      ],
+      "description": "Toggles whether you are prompted to confirm inventory clears.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "mute",
+      "aliases": [
+        "emute",
+        "silence",
+        "esilence"
+      ],
+      "description": "Mutes or unmutes a player.",
+      "usage": "/<command> <player> [datediff]"
+    },
+    {
+      "module": "Essentials",
+      "base": "spawner",
+      "aliases": [
+        "changems",
+        "echangems",
+        "espawner",
+        "mobspawner",
+        "emobspawner"
+      ],
+      "description": "Change the mob type of a spawner.",
+      "usage": "/<command> <mob> [delay]"
+    },
+    {
+      "module": "Essentials",
+      "base": "deljail",
+      "aliases": [
+        "edeljail",
+        "remjail",
+        "eremjail",
+        "rmjail",
+        "ermjail"
+      ],
+      "description": "Removes a jail.",
+      "usage": "/<command> <jailname>"
+    },
+    {
+      "module": "Essentials",
+      "base": "powertool",
+      "aliases": [
+        "epowertool",
+        "pt",
+        "ept"
+      ],
+      "description": "Assigns a command to the item in hand.\r\n\r\nUse 'c:' as the command to make a chat macro.\r\nUse 'a:' to append multiple commands.\r\nUse 'r:' to remove a single command.\r\nUse 'l:' to list all power tools\r\nUse 'd:' to remove all power tools \r\n",
+      "usage": "/<command> [l:|a:|r:|c:|d:][command] [arguments]\r\n({player} can be replaced by name of a clicked player.)\r\n"
+    },
+    {
+      "module": "Essentials",
+      "base": "weather",
+      "aliases": [
+        "rain",
+        "erain",
+        "sky",
+        "esky",
+        "storm",
+        "estorm",
+        "sun",
+        "esun",
+        "eweather"
+      ],
+      "description": "Sets the weather.",
+      "usage": "/<command> <storm/sun> [duration]"
+    },
+    {
+      "module": "Essentials",
+      "base": "gc",
+      "aliases": [
+        "lag",
+        "elag",
+        "egc",
+        "mem",
+        "emem",
+        "memory",
+        "ememory",
+        "uptime",
+        "euptime",
+        "tps",
+        "etps",
+        "entities",
+        "eentities"
+      ],
+      "description": "Reports memory, uptime and tick info.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "delhome",
+      "aliases": [
+        "edelhome",
+        "remhome",
+        "eremhome",
+        "rmhome",
+        "ermhome"
+      ],
+      "description": "Removes a home.",
+      "usage": "/<command> [player:]<name>"
+    },
+    {
+      "module": "Essentials",
+      "base": "enderchest",
+      "aliases": [
+        "echest",
+        "eechest",
+        "eenderchest",
+        "endersee",
+        "eendersee",
+        "ec",
+        "eec"
+      ],
+      "description": "Lets you see inside an enderchest.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "powertooltoggle",
+      "aliases": [
+        "epowertooltoggle",
+        "ptt",
+        "eptt",
+        "pttoggle",
+        "epttoggle"
+      ],
+      "description": "Enables or disables all current powertools.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "kickall",
+      "aliases": [
+        "ekickall"
+      ],
+      "description": "Kicks all players off the server except the issuer.",
+      "usage": "/<command> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "speed",
+      "aliases": [
+        "flyspeed",
+        "eflyspeed",
+        "fspeed",
+        "efspeed",
+        "espeed",
+        "walkspeed",
+        "ewalkspeed",
+        "wspeed",
+        "ewspeed"
+      ],
+      "description": "Change your walk or fly speed.",
+      "usage": "/<command> [type] <speed> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpall",
+      "aliases": [
+        "etpall"
+      ],
+      "description": "Teleport all online players to another player.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "suicide",
+      "aliases": [
+        "esuicide"
+      ],
+      "description": "Causes you to perish.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "whois",
+      "aliases": [
+        "ewhois"
+      ],
+      "description": "Displays player information",
+      "usage": "/<command> <nickname|playername>"
+    },
+    {
+      "module": "Essentials",
+      "base": "essentials",
+      "aliases": [
+        "eessentials",
+        "ess",
+        "eess",
+        "essversion"
+      ],
+      "description": "Reloads essentials and has some debug featues.",
+      "usage": "/<command> [debug|verbose|ver|version|cmd|commands|dump|reload|reset|cleanup|homes|uuidconvert|uuidtest|nya|nyan|moo]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tptoggle",
+      "aliases": [
+        "etptoggle"
+      ],
+      "description": "Blocks all forms of teleportation.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "disposal",
+      "aliases": [
+        "edisposal",
+        "trash",
+        "etrash"
+      ],
+      "description": "Opens a portable disposal menu.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "top",
+      "aliases": [
+        "etop"
+      ],
+      "description": "Teleport to the highest block at your current position.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "gamemode",
+      "aliases": [
+        "adventure",
+        "eadventure",
+        "adventuremode",
+        "eadventuremode",
+        "creative",
+        "eecreative",
+        "creativemode",
+        "ecreativemode",
+        "egamemode",
+        "gm",
+        "egm",
+        "gma",
+        "egma",
+        "gmc",
+        "egmc",
+        "gms",
+        "egms",
+        "gmt",
+        "egmt",
+        "survival",
+        "esurvival",
+        "survivalmode",
+        "esurvivalmode",
+        "gmsp",
+        "sp",
+        "egmsp",
+        "spec",
+        "spectator"
+      ],
+      "description": "Change player gamemode.",
+      "usage": "/<command>\n<survival|creative|adventure|spectator>\n[player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "condense",
+      "aliases": [
+        "econdense",
+        "compact",
+        "ecompact",
+        "blocks",
+        "eblocks",
+        "toblocks",
+        "etoblocks"
+      ],
+      "description": "Condenses items into a more compact blocks.",
+      "usage": " /<command> [itemname]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tp",
+      "aliases": [
+        "tele",
+        "etele",
+        "teleport",
+        "eteleport",
+        "etp",
+        "tp2p",
+        "etp2p"
+      ],
+      "description": "Teleport to a player.",
+      "usage": "/<command> <player> [otherplayer]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpoffline",
+      "aliases": [
+        "otp",
+        "offlinetp",
+        "tpoff",
+        "tpoffline"
+      ],
+      "description": "Teleport to a player's last known logout location",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "setworth",
+      "aliases": [
+        "esetworth"
+      ],
+      "description": "Set the sell value of an item.",
+      "usage": "/<command> [itemname|id] <price>"
+    },
+    {
+      "module": "Essentials",
+      "base": "spawnmob",
+      "aliases": [
+        "mob",
+        "emob",
+        "spawnentity",
+        "espawnentity",
+        "espawnmob"
+      ],
+      "description": "Spawns a mob.",
+      "usage": "/<command> <mob>[:data][,<mount>[:data]] [amount] [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "book",
+      "aliases": [
+        "ebook"
+      ],
+      "description": "Allows reopening and editing of sealed books.",
+      "usage": "/<command> [title|author [name]]"
+    },
+    {
+      "module": "Essentials",
+      "base": "time",
+      "aliases": [
+        "day",
+        "eday",
+        "night",
+        "enight",
+        "etime"
+      ],
+      "description": "Display/Change the world time. Defaults to current world.",
+      "usage": "/<command> [day|night|dawn|17:30|4pm|4000ticks] [worldname|all]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpaall",
+      "aliases": [
+        "etpaall"
+      ],
+      "description": "Requests all players online to teleport to you.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "mail",
+      "aliases": [
+        "email",
+        "eemail",
+        "memo",
+        "ememo"
+      ],
+      "description": "Manages inter-player, intra-server mail.",
+      "usage": "/<command> [read|clear|clear [number]|send [to] [message]|sendtemp [to] [expire time] [message]|sendall [message]]"
+    },
+    {
+      "module": "Essentials",
+      "base": "hat",
+      "aliases": [
+        "ehat",
+        "head",
+        "ehead"
+      ],
+      "description": "Get some cool new headgear.",
+      "usage": "/<command> [remove]"
+    },
+    {
+      "module": "Essentials",
+      "base": "worth",
+      "aliases": [
+        "eprice",
+        "price",
+        "eworth"
+      ],
+      "description": "Calculates the worth of items in hand or as specified.",
+      "usage": "/<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]"
+    },
+    {
+      "module": "Essentials",
+      "base": "kick",
+      "aliases": [
+        "ekick"
+      ],
+      "description": "Kicks a specified player with a reason.",
+      "usage": "/<command> <player> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "more",
+      "aliases": [
+        "emore"
+      ],
+      "description": "Fills the item stack in hand to specified amount, or to maximum size if none is specified.",
+      "usage": "/<command> [amount]"
+    },
+    {
+      "module": "Essentials",
+      "base": "info",
+      "aliases": [
+        "about",
+        "eabout",
+        "ifo",
+        "eifo",
+        "einfo",
+        "inform",
+        "einform",
+        "news",
+        "enews"
+      ],
+      "description": "Shows information set by the server owner.",
+      "usage": "/<command> [chapter] [page]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpahere",
+      "aliases": [
+        "etpahere"
+      ],
+      "description": "Request that the specified player teleport to you.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "realname",
+      "aliases": [
+        "erealname"
+      ],
+      "description": "Displays the username of a user based on nick.",
+      "usage": "/<command> <nickname>"
+    },
+    {
+      "module": "Essentials",
+      "base": "bigtree",
+      "aliases": [
+        "ebigtree",
+        "largetree",
+        "elargetree"
+      ],
+      "description": "Spawn a big tree where you are looking.",
+      "usage": "/<command> <tree|redwood|jungle>"
+    },
+    {
+      "module": "Essentials",
+      "base": "rest",
+      "aliases": [
+        "erest"
+      ],
+      "description": "Rests you or the given player.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "rules",
+      "aliases": [
+        "erules"
+      ],
+      "description": "Views the server rules.",
+      "usage": "/<command> [chapter] [page]"
+    },
+    {
+      "module": "Essentials",
+      "base": "recipe",
+      "aliases": [
+        "formula",
+        "eformula",
+        "method",
+        "emethod",
+        "erecipe",
+        "recipes",
+        "erecipes"
+      ],
+      "description": "Displays how to craft items.",
+      "usage": "/<command> <item> [number]"
+    },
+    {
+      "module": "Essentials",
+      "base": "sethome",
+      "aliases": [
+        "esethome",
+        "createhome",
+        "ecreatehome"
+      ],
+      "description": "Set home to your current location.",
+      "usage": "/<command> [player:]<name>"
+    },
+    {
+      "module": "Essentials",
+      "base": "pweather",
+      "aliases": [
+        "playerweather",
+        "eplayerweather",
+        "epweather"
+      ],
+      "description": "Adjust a player's weather",
+      "usage": "/<command> [list|reset|storm|sun|clear] [player|*]"
+    },
+    {
+      "module": "Essentials",
+      "base": "setwarp",
+      "aliases": [
+        "createwarp",
+        "ecreatewarp",
+        "esetwarp"
+      ],
+      "description": "Creates a new warp.",
+      "usage": "/<command> <warp>"
+    },
+    {
+      "module": "Essentials",
+      "base": "delwarp",
+      "aliases": [
+        "edelwarp",
+        "remwarp",
+        "eremwarp",
+        "rmwarp",
+        "ermwarp"
+      ],
+      "description": "Deletes the specified warp.",
+      "usage": "/<command> <warp>"
+    },
+    {
+      "module": "Essentials",
+      "base": "warpinfo",
+      "aliases": [
+        "ewarpinfo"
+      ],
+      "description": "Finds location information for a specified warp.",
+      "usage": "/<command> <warp>"
+    },
+    {
+      "module": "Essentials",
+      "base": "warp",
+      "aliases": [
+        "ewarp",
+        "warps",
+        "ewarps"
+      ],
+      "description": "List all warps or warp to the specified location.",
+      "usage": "/<command> <pagenumber|warp> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "break",
+      "aliases": [
+        "ebreak"
+      ],
+      "description": "Breaks the block you are looking at.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "msg",
+      "aliases": [
+        "w",
+        "m",
+        "t",
+        "pm",
+        "emsg",
+        "epm",
+        "tell",
+        "etell",
+        "whisper",
+        "ewhisper"
+      ],
+      "description": "Sends a private message to the specified player.",
+      "usage": "/<command> <to> <message>"
+    },
+    {
+      "module": "Essentials",
+      "base": "compass",
+      "aliases": [
+        "ecompass",
+        "direction",
+        "edirection"
+      ],
+      "description": "Describes your current bearing.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "world",
+      "aliases": [
+        "eworld"
+      ],
+      "description": "Switch between worlds.",
+      "usage": "/<command> [world]"
+    },
+    {
+      "module": "Essentials",
+      "base": "me",
+      "aliases": [
+        "action",
+        "eaction",
+        "describe",
+        "edescribe",
+        "eme"
+      ],
+      "description": "Describes an action in the context of the player.",
+      "usage": "/<command> <description>"
+    },
+    {
+      "module": "Essentials",
+      "base": "payconfirmtoggle",
+      "aliases": [
+        "epayconfirmtoggle",
+        "payconfirmoff",
+        "epayconfirmoff",
+        "payconfirmon",
+        "epayconfirmon",
+        "payconfirm",
+        "epayconfirm"
+      ],
+      "description": "Toggles whether you are prompted to confirm payments.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "ext",
+      "aliases": [
+        "eext",
+        "extinguish",
+        "eextinguish"
+      ],
+      "description": "Extinguish players.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "broadcastworld",
+      "aliases": [
+        "bcw",
+        "ebcw",
+        "bcastw",
+        "ebcastw",
+        "ebroadcastworld",
+        "shoutworld",
+        "eshoutworld"
+      ],
+      "description": "Broadcasts a message to a world.",
+      "usage": "/<command> <world> <msg>"
+    },
+    {
+      "module": "Essentials",
+      "base": "toggleshout",
+      "aliases": [
+        "etoggleshout"
+      ],
+      "description": "Toggles whether you are talking in shout mode",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "togglejail",
+      "aliases": [
+        "jail",
+        "ejail",
+        "tjail",
+        "etjail",
+        "etogglejail",
+        "unjail",
+        "eunjail"
+      ],
+      "description": "Jails/Unjails a player, TPs them to the jail specified.",
+      "usage": "/<command> <player> <jailname> [datediff]"
+    },
+    {
+      "module": "Essentials",
+      "base": "jails",
+      "aliases": [
+        "ejails"
+      ],
+      "description": "List all jails.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "list",
+      "aliases": [
+        "elist",
+        "online",
+        "eonline",
+        "playerlist",
+        "eplayerlist",
+        "plist",
+        "eplist",
+        "who",
+        "ewho"
+      ],
+      "description": "List all online players.",
+      "usage": "/<command> [group]"
+    },
+    {
+      "module": "Essentials",
+      "base": "remove",
+      "aliases": [
+        "eremove",
+        "butcher",
+        "ebutcher",
+        "killall",
+        "ekillall",
+        "mobkill",
+        "emobkill"
+      ],
+      "description": "Removes entities in your world.",
+      "usage": "/<command> <all|tamed|named|drops|arrows|boats|\nminecarts|xp|paintings|itemframes|endercrystals|\nmonsters|animals|ambient|mobs|[mobType]> [radius|world]"
+    },
+    {
+      "module": "Essentials",
+      "base": "lightning",
+      "aliases": [
+        "elightning",
+        "shock",
+        "eshock",
+        "smite",
+        "esmite",
+        "strike",
+        "estrike",
+        "thor",
+        "ethor"
+      ],
+      "description": "The power of Thor. Strikes at the cursor or a player.",
+      "usage": "/<command> [player] [power]"
+    },
+    {
+      "module": "Essentials",
+      "base": "ice",
+      "aliases": [
+        "eice",
+        "efreeze"
+      ],
+      "description": "Cools a player off.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "ignore",
+      "aliases": [
+        "eignore",
+        "unignore",
+        "eunignore",
+        "delignore",
+        "edelignore",
+        "remignore",
+        "eremignore",
+        "rmignore",
+        "ermignore"
+      ],
+      "description": "Ignore or unignore other players.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "item",
+      "aliases": [
+        "i",
+        "eitem",
+        "ei"
+      ],
+      "description": "Spawn an item.",
+      "usage": "/<command> <item|numeric> [amount [itemmeta...]]"
+    },
+    {
+      "module": "Essentials",
+      "base": "near",
+      "aliases": [
+        "enear",
+        "nearby",
+        "enearby"
+      ],
+      "description": "Lists the players near by or around a player.",
+      "usage": "/<command> [playername] [radius]"
+    },
+    {
+      "module": "Essentials",
+      "base": "firework",
+      "aliases": [
+        "efirework"
+      ],
+      "description": "Allows you to modify a stack of fireworks.",
+      "usage": "/<command> <<meta param>|power [amount]|clear|fire [amount]>"
+    },
+    {
+      "module": "Essentials",
+      "base": "invsee",
+      "aliases": [
+        "einvsee"
+      ],
+      "description": "See and/or edit the inventory of other players.",
+      "usage": "/<command> <player> [armor]"
+    },
+    {
+      "module": "Essentials",
+      "base": "balancetop",
+      "aliases": [
+        "ebalancetop",
+        "baltop",
+        "ebaltop"
+      ],
+      "description": "Lists players by top balances.",
+      "usage": "/<command> [page]"
+    },
+    {
+      "module": "Essentials",
+      "base": "ban",
+      "aliases": [
+        "eban"
+      ],
+      "description": "Bans a player.",
+      "usage": "/<command> <player> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "kill",
+      "aliases": [
+        "ekill"
+      ],
+      "description": "Kills specified player.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "balance",
+      "aliases": [
+        "bal",
+        "ebal",
+        "ebalance",
+        "money",
+        "emoney"
+      ],
+      "description": "States the current balance of a player.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "enchant",
+      "aliases": [
+        "eenchant",
+        "enchantment",
+        "eenchantment"
+      ],
+      "description": "Enchants the item the user is holding.",
+      "usage": "/<command> <enchantmentname> [level]"
+    },
+    {
+      "module": "Essentials",
+      "base": "banip",
+      "aliases": [
+        "ebanip"
+      ],
+      "description": "Bans an IP address.",
+      "usage": "/<command> <address> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "socialspy",
+      "aliases": [
+        "esocialspy"
+      ],
+      "description": "Toggles if you can see msg/mail commands in chat.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "workbench",
+      "aliases": [
+        "craft",
+        "ecraft",
+        "wb",
+        "ewb",
+        "wbench",
+        "ewbench",
+        "eworkbench"
+      ],
+      "description": "Opens up a workbench.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "anvil",
+      "aliases": [
+        "eanvil"
+      ],
+      "description": "Opens up an Anvil.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "cartographytable",
+      "aliases": [
+        "ecartographytable",
+        "carttable",
+        "ecarttable"
+      ],
+      "description": "Opens up a cartography table.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "grindstone",
+      "aliases": [
+        "egrindstone"
+      ],
+      "description": "Opens up a grindstone.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "loom",
+      "aliases": [
+        "eloom"
+      ],
+      "description": "Opens up a loom.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "smithingtable",
+      "aliases": [
+        "esmithingtable",
+        "smithtable",
+        "esmithtable"
+      ],
+      "description": "Opens up a smithing table.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "stonecutter",
+      "aliases": [
+        "estonecutter"
+      ],
+      "description": "Opens up a stonecutter.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "motd",
+      "aliases": [
+        "emotd"
+      ],
+      "description": "Views the Message Of The Day.",
+      "usage": "/<command> [chapter] [page]"
+    },
+    {
+      "module": "Essentials",
+      "base": "ptime",
+      "aliases": [
+        "playertime",
+        "eplayertime",
+        "eptime"
+      ],
+      "description": "Adjust player's client time. Add @ prefix to fix.",
+      "usage": "/<command> [list|reset|day|night|dawn|17:30|4pm|4000ticks] [player|*]"
+    },
+    {
+      "module": "Essentials",
+      "base": "give",
+      "aliases": [
+        "egive"
+      ],
+      "description": "Give a player an item.",
+      "usage": "/<command> <player> <item|numeric> [amount [itemmeta...]]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tree",
+      "aliases": [
+        "etree"
+      ],
+      "description": "Spawn a tree where you are looking.",
+      "usage": "/<command> <tree|birch|redwood|redmushroom|\nbrownmushroom|jungle|junglebush|swamp>"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpacancel",
+      "aliases": [
+        "etpacancel"
+      ],
+      "description": "Cancel all outstanding teleport requests. Specify [player] to cancel requests with them.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "sudo",
+      "aliases": [
+        "esudo"
+      ],
+      "description": "Make another user perform a command.",
+      "usage": "/<command> <player> <command [args]>"
+    },
+    {
+      "module": "Essentials",
+      "base": "back",
+      "aliases": [
+        "eback",
+        "return",
+        "ereturn"
+      ],
+      "description": "Teleports you to your location prior to tp/spawn/warp.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "jump",
+      "aliases": [
+        "j",
+        "ej",
+        "ejump",
+        "jumpto",
+        "ejumpto"
+      ],
+      "description": "Jumps to the nearest block in the line of sight.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "fly",
+      "aliases": [
+        "efly"
+      ],
+      "description": "Take off, and soar!",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "potion",
+      "aliases": [
+        "epotion",
+        "elixer",
+        "eelixer"
+      ],
+      "description": "Adds custom potion effects to a potion.",
+      "usage": "/<command> <clear|apply|effect:<effect> power:<power> duration:<duration>>"
+    },
+    {
+      "module": "Essentials",
+      "base": "seen",
+      "aliases": [
+        "eseen"
+      ],
+      "description": "Shows the last logout time of a player.",
+      "usage": "/<command> <playername>"
+    },
+    {
+      "module": "Essentials",
+      "base": "home",
+      "aliases": [
+        "ehome",
+        "homes",
+        "ehomes"
+      ],
+      "description": "Teleport to your home.",
+      "usage": "/<command> [player:]<name>"
+    },
+    {
+      "module": "Essentials",
+      "base": "vanish",
+      "aliases": [
+        "v",
+        "ev",
+        "evanish"
+      ],
+      "description": "Hide yourself from other players.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpdeny",
+      "aliases": [
+        "etpdeny",
+        "tpno",
+        "etpno"
+      ],
+      "description": "Rejects teleport requests.",
+      "usage": "/<command> [player|*]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpohere",
+      "aliases": [
+        "etpohere"
+      ],
+      "description": "Teleport here override for tptoggle.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "getpos",
+      "aliases": [
+        "eposition"
+      ],
+      "description": "Get your current coordinates or those of a player.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "god",
+      "aliases": [
+        "tgm"
+      ],
+      "description": "Enables your godly powers.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "ping",
+      "aliases": [
+        "echo",
+        "eecho",
+        "eping",
+        "pong",
+        "epong"
+      ],
+      "description": "Pong!",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "helpop",
+      "aliases": [
+        "eamsg"
+      ],
+      "description": "Message online admins.",
+      "usage": "/<command> <message>"
+    },
+    {
+      "module": "Essentials",
+      "base": "skull",
+      "aliases": [
+        "head",
+        "playerskull",
+        "eskull",
+        "ehead",
+        "eplayerskull"
+      ],
+      "description": "Get the player head item with your skin or a skin of a specified player, or change skin of the head you're holding.",
+      "usage": "/<command> [owner]"
+    },
+    {
+      "module": "Essentials",
+      "base": "broadcast",
+      "aliases": [
+        "ebcast",
+        "bc",
+        "bcast",
+        "ebc"
+      ],
+      "description": "Broadcasts a message to the entire server.",
+      "usage": "/<command> <msg>"
+    },
+    {
+      "module": "Essentials",
+      "base": "clearinventory",
+      "aliases": [
+        "ci",
+        "eci",
+        "clean",
+        "eclean",
+        "clear",
+        "eclear",
+        "clearinvent",
+        "eclearinvent",
+        "eclearinventory"
+      ],
+      "description": "Clear all items in your inventory.",
+      "usage": "/<command> [player|*] [item[:<data>]|*|**] [amount]"
+    },
+    {
+      "module": "Essentials",
+      "base": "unlimited",
+      "aliases": [
+        "eul"
+      ],
+      "description": "Allows the unlimited placing of items.",
+      "usage": "/<command> <list|item|clear> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "antioch",
+      "aliases": [
+        "tnt"
+      ],
+      "description": "A little surprise for operators.",
+      "usage": "/<command> [message]"
+    },
+    {
+      "module": "Essentials",
+      "base": "fireball",
+      "aliases": [
+        "fireskull"
+      ],
+      "description": "Throw a fireball or other assorted projectiles.",
+      "usage": "/<command> [fireball|small|large|arrow|skull|egg|snowball|expbottle|dragon|splashpotion|lingeringpotion|trident] [speed]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpa",
+      "aliases": [
+        "tpask"
+      ],
+      "description": "Request to teleport to the specified player.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "createkit",
+      "aliases": [
+        "ck"
+      ],
+      "description": "Create a kit in game!",
+      "usage": "/<command> <kitname> <delay>"
+    },
+    {
+      "module": "Essentials",
+      "base": "kitreset",
+      "aliases": [
+        "ekitreset",
+        "kitr",
+        "ekitr",
+        "resetkit",
+        "eresetkit"
+      ],
+      "description": "Resets the cooldown on the specified kit.",
+      "usage": "/<command> <kit> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "depth",
+      "aliases": [
+        "eheight"
+      ],
+      "description": "States current depth",
+      "usage": "/depth"
+    },
+    {
+      "module": "Essentials",
+      "base": "paytoggle",
+      "aliases": [
+        "payon"
+      ],
+      "description": "Toggles whether you are accepting payments.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "itemdb",
+      "aliases": [
+        "eitemdb"
+      ],
+      "description": "Searches for an item.",
+      "usage": "/<command> <item>"
+    },
+    {
+      "module": "Essentials",
+      "base": "itemlore",
+      "aliases": [
+        "lore",
+        "elore",
+        "ilore",
+        "eilore",
+        "eitemlore"
+      ],
+      "description": "Edit the lore of an item.",
+      "usage": "/<command> <add/set/clear> [text/line] [text]"
+    },
+    {
+      "module": "Essentials",
+      "base": "itemname",
+      "aliases": [
+        "iname",
+        "einame",
+        "eitemname",
+        "itemrename",
+        "irename",
+        "eitemrename",
+        "eirename"
+      ],
+      "description": "Renames the item your currently holding. Leave name empty to reset. You can add in color codes when you have permission to.",
+      "usage": "/<command> [name]"
+    },
+    {
+      "module": "Essentials",
+      "base": "afk",
+      "aliases": [
+        "eafk",
+        "away",
+        "eaway"
+      ],
+      "description": "Marks you as away-from-keyboard.",
+      "usage": "/<command> [player/message...]"
+    },
+    {
+      "module": "Essentials",
+      "base": "backup",
+      "aliases": [
+        "ebackup"
+      ],
+      "description": "Runs the backup if configured.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "burn",
+      "aliases": [
+        "eburn"
+      ],
+      "description": "Set a player on fire.",
+      "usage": "/<command> <player> <seconds>"
+    },
+    {
+      "module": "Essentials",
+      "base": "customtext",
+      "aliases": [],
+      "description": "Allows you to create custom text commands.",
+      "usage": "/<alias> - Define in bukkit.yml"
+    },
+    {
+      "module": "Essentials",
+      "base": "eco",
+      "aliases": [
+        "eeco",
+        "economy",
+        "eeconomy"
+      ],
+      "description": "Manages the server economy.",
+      "usage": "/<command> <give|take|set|reset> <player> <amount>"
+    },
+    {
+      "module": "Essentials",
+      "base": "exp",
+      "aliases": [
+        "eexp",
+        "xp"
+      ],
+      "description": "Give, set or look at a players exp.",
+      "usage": "/<command> [show|set|give] [playername [amount]]"
+    },
+    {
+      "module": "Essentials",
+      "base": "feed",
+      "aliases": [
+        "eat",
+        "eeat",
+        "efeed"
+      ],
+      "description": "Satisfy the hunger.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "heal",
+      "aliases": [
+        "eheal"
+      ],
+      "description": "Heals you or the given player.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "kit",
+      "aliases": [
+        "ekit",
+        "kits",
+        "ekits"
+      ],
+      "description": "Obtains the specified kit or views all available kits.",
+      "usage": "/<command> [kit] [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "kittycannon",
+      "aliases": [
+        "ekittycannon"
+      ],
+      "description": "Throw an exploding kitten at your opponent.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "beezooka",
+      "aliases": [
+        "ebeezooka",
+        "beecannon",
+        "ebeecannon"
+      ],
+      "description": "Throw an exploding bee at your opponent.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "nick",
+      "aliases": [
+        "enick",
+        "nickname",
+        "enickname"
+      ],
+      "description": "Change your nickname or that of another player.",
+      "usage": "/<command> [player] <nickname|off>"
+    },
+    {
+      "module": "Essentials",
+      "base": "nuke",
+      "aliases": [
+        "enuke"
+      ],
+      "description": "May death rain upon them.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "pay",
+      "aliases": [
+        "epay"
+      ],
+      "description": "Pays another player from your balance.",
+      "usage": "/<command> <player> <amount>"
+    },
+    {
+      "module": "Essentials",
+      "base": "r",
+      "aliases": [
+        "er",
+        "reply",
+        "ereply"
+      ],
+      "description": "Quickly reply to the last player to message you.",
+      "usage": "/<command> <message>"
+    },
+    {
+      "module": "Essentials",
+      "base": "rtoggle",
+      "aliases": [
+        "ertoggle",
+        "replytoggle",
+        "ereplytoggle"
+      ],
+      "description": "Change whether the recipient of the reply is last recipient or last sender.",
+      "usage": "/<command> [player] [on|off]"
+    },
+    {
+      "module": "Essentials",
+      "base": "sell",
+      "aliases": [
+        "esell"
+      ],
+      "description": "Sells the item currently in your hand.",
+      "usage": "/<command> <<itemname>|<id>|hand|inventory|blocks> [amount]"
+    },
+    {
+      "module": "Essentials",
+      "base": "showkit",
+      "aliases": [
+        "kitpreview",
+        "preview",
+        "kitshow"
+      ],
+      "description": "Show contents of a kit.",
+      "usage": "/<command> <kitname>"
+    },
+    {
+      "module": "Essentials",
+      "base": "tempban",
+      "aliases": [
+        "etempban"
+      ],
+      "description": "Temporary ban a user.",
+      "usage": "/<command> <playername> <datediff> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tempbanip",
+      "aliases": [
+        "etempbanip"
+      ],
+      "description": "Temporarily ban an IP Address.",
+      "usage": "/<command> <playername> <datediff> [reason]"
+    },
+    {
+      "module": "Essentials",
+      "base": "thunder",
+      "aliases": [
+        "ethunder"
+      ],
+      "description": "Enable/disable thunder.",
+      "usage": "/<command> <true/false> [duration]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpaccept",
+      "aliases": [
+        "etpaccept",
+        "tpyes",
+        "etpyes"
+      ],
+      "description": "Accepts teleport requests.",
+      "usage": "/<command> [player|*]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tphere",
+      "aliases": [
+        "s",
+        "etphere"
+      ],
+      "description": "Teleport a player to you.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpohere",
+      "aliases": [
+        "etpohere"
+      ],
+      "description": "Teleport here override for tptoggle.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "tppos",
+      "aliases": [
+        "etppos"
+      ],
+      "description": "Teleport to coordinates.",
+      "usage": "/<command> <x> <y> <z> [yaw] [pitch] [world]"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpr",
+      "aliases": [
+        "etpr",
+        "tprandom",
+        "etprandom"
+      ],
+      "description": "Teleport randomly.",
+      "usage": "/<command>"
+    },
+    {
+      "module": "Essentials",
+      "base": "unban",
+      "aliases": [
+        "pardon",
+        "eunban",
+        "epardon"
+      ],
+      "description": "Unbans the specified player.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "unbanip",
+      "aliases": [
+        "eunbanip",
+        "pardonip",
+        "epardonip"
+      ],
+      "description": "Unbans the specified IP address.",
+      "usage": "/<command> <address>"
+    },
+    {
+      "module": "EssentialsSpawn",
+      "base": "setspawn",
+      "aliases": [
+        "esetspawn"
+      ],
+      "description": "Set the spawnpoint to your current position.",
+      "usage": "/<command> <group>"
+    },
+    {
+      "module": "EssentialsSpawn",
+      "base": "spawn",
+      "aliases": [
+        "espawn"
+      ],
+      "description": "Teleport to the spawnpoint.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "EssentialsXMPP",
+      "base": "setxmpp",
+      "aliases": [],
+      "description": "Set your xmpp address.",
+      "usage": "/<command> <address>"
+    },
+    {
+      "module": "EssentialsXMPP",
+      "base": "xmpp",
+      "aliases": [],
+      "description": "Send a message to a player.",
+      "usage": "/<command> <player> <message>"
+    },
+    {
+      "module": "EssentialsXMPP",
+      "base": "xmppspy",
+      "aliases": [],
+      "description": "Toggle xmpp spy for all messages.",
+      "usage": "/<command> <player>"
+    },
+    {
+      "module": "Essentials",
+      "base": "tpauto",
+      "aliases": [
+        "etpauto"
+      ],
+      "description": "Automatically accept teleportation requests.",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "Essentials",
+      "base": "delkit",
+      "aliases": [],
+      "description": "Delete a given kit",
+      "usage": "/<command> <kitname>"
+    },
+    {
+      "module": "Essentials",
+      "base": "playtime",
+      "aliases": [],
+      "description": "Shows a player's time played in game",
+      "usage": "/<command> [player]"
+    },
+    {
+      "module": "EssentialsDiscord",
+      "base": "discordbroadcast",
+      "aliases": [
+        "dbroadcast",
+        "dbc",
+        "dbcast",
+        "ediscordbroadcast",
+        "edbroadcast",
+        "edbc",
+        "edbcast"
+      ],
+      "description": "Broadcasts a message to the specified Discord channel.",
+      "usage": "/<command> <channel> <msg>"
+    },
+    {
+      "module": "EssentialsDiscord",
+      "base": "discord",
+      "aliases": [
+        "ediscord"
+      ],
+      "description": "Sends the discord invite link to the player.",
+      "usage": "/<command>"
+    }
+  ]
+}
