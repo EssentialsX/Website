@@ -13,12 +13,12 @@ const defaultImage = getPublicUrl('/images/social.png')
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: [
-    'nuxt-windicss',
     '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    'nuxt-icon',
-    // TODO: @nuxt/image
+    '@nuxt/image-edge',
+    '@unocss/nuxt',
+    'unplugin-icons/nuxt',
   ],
 
   app: {
@@ -111,10 +111,19 @@ export default defineNuxtConfig({
 
   content: {
     documentDriven: true,
+    sources: {
+      ghWiki: {
+        prefix: '/docs/2.x',
+        driver: 'github',
+        repo: "EssentialsX/Wiki",
+        branch: "nuxt",
+        dir: "",
+      },
+    },
     markdown: {
-      remarkPlugins: [
+      rehypePlugins: [
         [
-          'remark-autolink-headings',
+          'rehype-autolink-headings',
           {
             behavior: 'prepend',
             content: {
@@ -140,8 +149,7 @@ export default defineNuxtConfig({
             },
           },
         ],
-        // TODO: remove wikilinks in preparation for translations
-      ],
+      ]
     },
     highlight: {
       theme: {
@@ -154,8 +162,12 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Lato: true,
-      'IBM Plex Mono': [400]
+      'IBM Plex Mono': true
     },
     download: true,
   },
+
+  devtools: {
+    enabled: true
+  }
 })

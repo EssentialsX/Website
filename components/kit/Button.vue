@@ -1,10 +1,10 @@
 <template>
   <component :is="tag" v-bind="$attrs" :class="buttonClass">
     <span :class="$props.loading ? 'opacity-0' : ''">
-      <Icon v-if="iconLeft" :name="iconLeft" class="mr-1" />
+      // TODO: <Icon v-if="iconLeft" :name="iconLeft" class="mr-1" />
       <span v-if="label">{{ label }}</span>
       <slot v-else></slot>
-      <Icon v-if="iconRight" :name="iconRight" class="ml-1" />
+      // TODO: <Icon v-if="iconRight" :name="iconRight" class="ml-1" />
     </span>
     <div
       v-if="loading"

@@ -1,0 +1,7 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"updateContentCommand": [
+    "pnpm i",
+    "pnpm dlx nuxi@latest devtools enable"
+  ]
+}

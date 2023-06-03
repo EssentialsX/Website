@@ -16,7 +16,7 @@
             class="p-2 hover:bg-gray-700 rounded transition-colors"
             @click="toggleTheme"
           >
-            <Icon :name="themeIcon" />
+            // TODO: <Icon :name="themeIcon" />
           </a>
         </span>
       </div>
