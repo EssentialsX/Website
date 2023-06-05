@@ -1,7 +1,7 @@
 const baseUrl =
   process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://localhost:3000'
 
-function getPublicUrl(path) {
+function getPublicUrl(path: string) {
   return baseUrl.includes('localhost') ? path : baseUrl + path
 }
 

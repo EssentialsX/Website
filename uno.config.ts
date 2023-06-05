@@ -1,7 +1,11 @@
 import {
-  presetTypography, presetWind, presetUno,
-  transformerVariantGroup, transformerDirectives
-} from 'unocss'
+  presetTypography,
+  presetWind,
+  presetUno,
+  transformerVariantGroup,
+  transformerDirectives,
+} from "unocss";
+import { presetHeroPatterns } from "@julr/unocss-preset-heropatterns"
 import { UnocssNuxtOptions } from "@unocss/nuxt"
 
 export default {
@@ -18,6 +22,7 @@ export default {
         },
       },
     }),
+    presetHeroPatterns(),
   ],
 
   transformers: [
