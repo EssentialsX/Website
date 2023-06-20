@@ -242,6 +242,14 @@
         <highlightjs class="p-0" language="yaml" :code="discord" />
       </collapse-message>
 
+      <collapse-message type="is-black" v-if="discordlink">
+        <template v-slot:title>
+          Discord Link config
+        </template>
+
+        <highlightjs class="p-0" language="yaml" :code="discordlink" />
+      </collapse-message>
+
       <collapse-message type="is-black" v-if="log">
         <template v-slot:title>
           Server log
@@ -303,6 +311,7 @@ export default {
 
       config: null,
       discord: null,
+      discordlink: null,
       kits: null,
       log: null,
       spawn: null,
@@ -336,6 +345,8 @@ export default {
             this.kits = file.content.value
           } else if (file.name === "discord-config.yml") {
             this.discord = file.content.value
+          } else if (file.name === "discord-link-config.yml") {
+            this.discordlink = file.content.value
           } else if (file.name === "latest.log") {
             this.log = file.content.value
           } else if (file.name === "worth.yml") {
