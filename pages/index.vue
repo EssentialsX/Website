@@ -28,7 +28,7 @@
                         </div>
                         <div class="tile is-child">
                             <h2>Free, for everyone, forever.</h2>
-                            <p>Developed by the community as an open source project for over 8 years, EssentialsX is completely free to use - as in free beer <i>and</i> free speech.</p>
+                            <p>Developed by the community as an open source project for over 12 years, EssentialsX is completely free to use - as in free beer <i>and</i> free speech.</p>
                             <p>We're supported through community donations on <a href="https://patreon.com/essentialsx">our Patreon page</a>. No corporate sponsors, no intrusive advertisments, no paywalls.</p>
                             <p>Not only is EssentialsX free, but the source code is available for anyone to modify and improve, and we accept improvements to code on <a href="https://github.com/EssentialsX/Essentials">GitHub</a> and new translations on <a href="https://crowdin.com/project/essentialsx-official">Crowdin</a>.</p>
                             <saber-link class="button is-primary is-rounded" to="/community.html">Join the community</saber-link>
@@ -41,8 +41,8 @@
                         <div class="tile is-child">
                             <h2>Compatible with just about <i>everything</i>.</h2>
                             <p>Built for the Bukkit platform with compatibility in mind, EssentialsX works seamlessly alongside thousands of other plugins. Plus, many plugins hook into EssentialsX's various features like economy, ignores, mutes and vanish through our API.</p>
-                            <p>Not only does EssentialsX work well with other plugins, but it also runs on 12 different versions of Minecraft. That's right, <i>twelve</i>. No more worrying about being forced to upgrade to the latest Minecraft version*, you can keep using the latest features and fixes all the way back to 1.8.8.</p>
-                            <p class="has-text-grey-light"><small>*You should probably update from Minecraft 1.8.8 anyway though - it's over 7 years old and lacks any support from Mojang.</small></p>
+                            <p>Not only does EssentialsX work well with other plugins, but it also runs on 13 different versions of Minecraft. That's right, <i>thirteen</i>. No more worrying about being forced to upgrade to the latest Minecraft version*, you can keep using the latest features and fixes all the way back to 1.8.8.</p>
+                            <p class="has-text-grey-light"><small>*You should probably update from Minecraft 1.8.8 anyway though - it's over 8 years old and lacks any support from Mojang.</small></p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Installing-EssentialsX.html">Get started with EssentialsX</saber-link>
                         </div>
                     </div>
