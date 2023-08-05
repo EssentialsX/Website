@@ -6,6 +6,7 @@
                     EssentialsX <b>does not support</b> the following Minecraft versions and server software:
                 </p>
                 <ul>
+                    <li> ℹ️ <b>Folia is not supported yet.</b> We are working on proper Folia support. <b>Do not attempt to use current versions of EssentialsX on Folia or forks of it - you may lose userdata.</b></li>
                     <li>🛑 <b>Do not use Mohist. Mohist tricks users into deleting official EssentialsX jars and installing unofficial modified software.</b> <saber-link to="/do-not-use-mohist.html">Click here for more information.</saber-link></li>
                     <li>🛑 <b>Magma modifies EssentialsX bytecode at runtime and includes hacks to fix other bugs in Magma.</b> If you encounter an issue with EssentialsX on Magma, please contact them for support.</li>
                     <li>🛑 <b>Other Forge/Fabric hybrid server software</b>, including <b>Cauldron</b>, <b>Thermos</b>, <b>CatServer</b> etc. - the Bukkit API does not properly support mods, and using Bukkit plugins on modded Forge/Fabric servers will cause significant problems.<br />For Forge servers, use <b><a href="https://www.spongepowered.org/downloads/spongeforge">SpongeForge</a></b> with <b><a href=https://nucleuspowered.org/>Nucleus</a></b> for plugin support and a complete Essentials replacement, or consider a mod designed for Forge such as <a href="https://www.curseforge.com/minecraft/mc-mods/ftb-essentials"><b>FTB Essentials</b></a>.</li>
