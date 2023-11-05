@@ -30,32 +30,53 @@ These languages are supported out-of-the-box. Note that not all languages are fu
 These translations are maintained by the community.  
 If your language is incomplete or isn't listed here, you can help translate EssentialsX over on [Crowdin](https://translate.essentialsx.net/).
 
-| Code    | Language                        |
-|---------|---------------------------------|
-| `en`    | English (US)                    |
-| `en_GB` | English (UK)                    |
-| `cs`    | Czech                           |
-| `da`    | Danish                          |
-| `de`    | German                          |
-| `es`    | Spanish                         |
-| `et`    | Estonian                        |
-| `fi`    | Finnish                         |
-| `fr`    | French                          |
-| `hu`    | Hungarian                       |
-| `it`    | Italian                         |
-| `ko`    | Korean                          |
-| `lt`    | Lithuanian                      |
-| `nl`    | Dutch                           |
-| `pl`    | Polish                          |
-| `pt`    | Portuguese                      |
-| `pt_BR` | Portuguese (Brazil)             |
-| `ro`    | Romanian                        |
-| `ru`    | Russian                         |
-| `sv`    | Swedish                         |
-| `tr`    | Turkish                         |
-| `zh`    | Simplified Chinese              |
-| `zh_HK` | Traditional Chinese (Hong Kong) |
-| `zh_TW` | Traditional Chinese (Taiwan)    |
+| Code     | Language                        |
+|----------|---------------------------------|
+| `en`     | English (US)                    |
+| `en_GB`  | English (UK)                    |
+| `bg`     | Bulgarian                       |
+| `bs`     | Bosnian                         |
+| `cs`     | Czech                           |
+| `da`     | Danish                          |
+| `de`     | German                          |
+| `el`     | Greek                           |
+| `es`     | Spanish                         |
+| `et`     | Estonian                        |
+| `eu`     | Basque                          |
+| `fi`     | Finnish                         |
+| `fil_PH` | Filipino                        |
+| `fr`     | French                          |
+| `ga_IE`  | Irish                           |
+| `gv_IM`  | Manx                            |
+| `he`     | Hebrew                          |
+| `hi_IN`  | Hindi                           |
+| `hr`     | Croatian                        |
+| `hu`     | Hungarian                       |
+| `is_IS`  | Icelandic                       |
+| `it`     | Italian                         |
+| `ja`     | Japanese                        |
+| `ko`     | Korean                          |
+| `lt`     | Lithuanian                      |
+| `lv_LV`  | Lithuanian                      |
+| `nl`     | Dutch                           |
+| `no`     | Norwegian                       |
+| `pl`     | Polish                          |
+| `pt`     | Portuguese                      |
+| `pt_BR`  | Portuguese (Brazil)             |
+| `ro`     | Romanian                        |
+| `ru`     | Russian                         |
+| `si_LK`  | Sinhala                         |
+| `sk`     | Slovak                          |
+| `sr_CS`  | Serbian                         |
+| `sv`     | Swedish                         |
+| `th`     | Thai                            |
+| `tr`     | Turkish                         |
+| `uk`     | Ukrainian                       |
+| `vi`     | Vietnamese                      |
+| `zh`     | Simplified Chinese              |
+| `zh_HK`  | Traditional Chinese (Hong Kong) |
+| `zh_TW`  | Traditional Chinese             |
+<!-- | `lol_US` | LOLCAT                          | -->
 
 ## Customising messages
 
