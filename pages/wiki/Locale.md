@@ -96,39 +96,22 @@ You can search through the default messages files on [GitHub](https://github.com
 
 TODO: examples here + link to minimessage wiki
 
-# TODO: sections below here haven't been reviewed/edited, remove if redundant
+### Hiding specific messages
 
-## Example
-
-Let's say you simply want to change the way currency is output so that the currency symbol comes AFTER the balance:
-
-- Be sure to read the information above regarding custom locales/messages.
-- Locate the line "currency={0}{1}"
-- Switch the numbers around, it should now read "currency={1}{0}". {1} is the amount, {0} is the currency symbol. You can have spaces here too, if you want.
-- Save the file and restart the server or issue /ess reload.
-
-## Disabling Messages
-
-Most user messages can be disabled or hidden simply by setting the message string to blank, for example:
+Most messages can be disabled or hidden - simply set the message to blank. For example:
 
 ```properties
 noNewMail=
 ```
 
-## Contributing
+### Editing messages in the config file
 
-If you wish to contribute translations, you can do so using [Crowdin](https://crowdin.com/project/essentialsx-official).
+There are a small number of settings in EssentialsX which can be altered by editing `plugins/Essentials/config.yml`, such as the currency format, and custom join and leave messages.
 
-## Other files
+### Creating custom text commands and books
 
-### plugin.yml
+EssentialsX's text commands (including `/motd`, `/rules`, `/info` and `/custom`) can be edited through text files in the `plugins/Essentials` directory. Simply run the command in-game once, then you'll find the corresponding text file inside `plugins/Essentials` to edit it.
 
-Aside from the messages file, there are a few other locations or settings you may want to change. The EssentialsX help system automatically reads each plugin's `plugin.yml`, including its own, and uses these files to display the syntax and command descriptions. To have a complete in-game translation, you may want to update these files to your native language.
+Custom books can be edited similarly to custom text commands.
 
-### Config file
-
-There are a number of settings in EssentialsX which can be altered by editing `plugins/Essentials/config.yml`, such as the currency format. These are independent of the `locale` setting, and can be changed without editing the jar file.
-
-### Text commands
-
-EssentialsX's text commands like `/motd` and `/rules` can be edited completely separately from the messages files and the config. Simply run the command in-game once, then find the corresponding text file inside `plugins/Essentials` to edit it.
+> TODO: explain chapters + book itemmeta
