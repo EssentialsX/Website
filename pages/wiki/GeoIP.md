@@ -29,7 +29,7 @@ You'll need to agree to the [GeoLite2 EULA](#legal-notices) in order to use the 
 
 Click **Continue**, then once you've received your email from MaxMind, set up a password using the link in the email, and log into your MaxMind account.
 
-Once you're logged in, scroll down and click **My License Key** on the left-hand side:
+Once you're logged in, navigate to **My Account** in top right, and select **Manage License Keys**:
 
 !["My License Key" is under Security on the left-hand sidebar.](./images/geoip-step2.png)
 
