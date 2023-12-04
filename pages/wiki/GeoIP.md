@@ -37,7 +37,7 @@ Next, click **Generate new license key**:
 
 ![The "Generate new license key" button is below the empty table.](./images/geoip-step3.png)
 
-Type in a name like `EssentialsX key` as the description and click **No** in the box below, then click **Confirm**:
+Type in a name like `EssentialsX key` as the description, then click **Confirm**:
 
 ![The description should be filled in with something to identify the key, and you should check "No" next to the GeoIP Update text.](./images/geoip-step4.png)
 
