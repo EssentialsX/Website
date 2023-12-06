@@ -102,7 +102,7 @@ In this directory, create an empty file named `messages_<lang>.properties`, wher
 You can now insert any customised messages in this file, and they will be loaded by EssentialsX the next time you restart your server. For example:
 
 ```properties
-TODOInsertExampleHere=<gold>aaaaaaaaa
+backOther=<primary>Returned <secondary>{0}<primary> to previous location.
 ```
 
 Note the numbers in curly braces (ie `{0}`, `{1}`). These are template placeholders, which EssentialsX will replace as appropriate before displaying the message. You can compare the messages in the default message files with the appearance in-game to determine which messages are needed.
@@ -129,10 +129,39 @@ noNewMail=
 
 There are a small number of settings in EssentialsX which can be altered by editing `plugins/Essentials/config.yml`, such as the currency format, and custom join and leave messages.
 
-### Creating custom text commands and books
+### Creating custom text commands
 
-EssentialsX's text commands (including `/motd`, `/rules`, `/info` and `/custom`) can be edited through text files in the `plugins/Essentials` directory. Simply run the command in-game once, then you'll find the corresponding text file inside `plugins/Essentials` to edit it.
+EssentialsX's text commands can be edited through text files in the `plugins/Essentials` directory. Simply run the command in-game once, then you'll find the corresponding text file inside `plugins/Essentials` to edit it.
 
-Custom books can be edited similarly to custom text commands.
+**NOTE: as of writing, custom text files don't support MiniMessage yet. Support is planned to be added soon.**
 
-> TODO: explain chapters + book itemmeta
+For example, here's the default `motd.txt`:
+
+```
+
+```
+
+These files also support [Keywords](/wiki/Keywords.html) as placeholders.
+
+There are several files you can use. Most of these are created when the corresponding command is run (with the exception of `help.txt`):
+
+| File name          | Usage                                                                                   |
+|--------------------|-----------------------------------------------------------------------------------------|
+| `motd.txt`         | Displayed when a user joins with the `essentials.motd` permission and in `/motd`        |
+| `rules.txt`        | Displayed when a user runs `/rules`                                                     |
+| `info.txt`         | Displayed when a user runs `/info`                                                      |
+| `help.txt`         | If this file exists, it will override the contents of `/help` (by default this is your server's command list) |
+| `custom.txt`       | Displayed when a user runs `/customtext` - we recommend custom command aliases for this |
+| `book.txt`         | Used to define custom book contents - see below                                         |
+
+> TODO: explain chapters
+
+### Creating custom books in `book.txt`
+
+Custom books can be created and edited similarly to custom text commands.
+
+> TODO: book itemmeta, `/book`
+
+### Customising `/help`
+
+> TODO: cover the config options + help.txt
