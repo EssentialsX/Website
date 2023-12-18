@@ -109,6 +109,8 @@ backOther=<primary>Returned <secondary>{0}<primary> to previous location.
 
 Note the numbers in curly braces (ie `{0}`, `{1}`). These are template placeholders, which EssentialsX will replace as appropriate before displaying the message. You can compare the messages in the default message files with the appearance in-game to determine which messages are needed.
 
+The colors defined in the `config.yml` file can also be used in your custom messages, and will be applied to text inside `<primary>Gold text here</primary>` and `<secondary>Red text here</secondary>` tags.
+
 You can search through the default messages files on [GitHub](https://github.com/EssentialsX/Essentials/tree/2.x/Essentials/src/main/resources). We strongly recommend copying only the messages you want to edit, as this will make it easier to manage and update these files across EssentialsX versions.
 
 **Note: do not edit any messages files directly inside the EssentialsX jar. You will lose these changes when you update the plugin and they will not be converted to the new MiniMessage format automatically.**
@@ -117,7 +119,13 @@ You can search through the default messages files on [GitHub](https://github.com
 
 **NEW IN 2.21.0:** EssentialsX now supports the MiniMessage syntax for its messages. This allows you to include gradients, hoverable and clickable elements, custom fonts and more!
 
-TODO: examples here + link to minimessage wiki
+Below is an example of hoverable/clickable elements in an EssentialsX message:
+
+```properties
+backAfterDeath=<primary><hover:show_text:'Click to go back'><click:run_command:'/back'><secondary>Click here</secondary> to return to your death point.
+```
+
+You can find a full reference guide for the MiniMessage syntax on the [Adventure wiki](https://docs.advntr.dev/minimessage/format.html). You can also use Adventure's [MiniMessageViewer](https://webui.advntr.dev/) to preview custom messages (although this doesn't support EssentialsX's `<primary>` and `<secondary>` tags).
 
 ### Hiding specific messages
 
