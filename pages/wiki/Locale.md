@@ -25,9 +25,10 @@ per-player-locale: true
 
 ### Supported languages
 
-These languages are supported out-of-the-box. Note that not all languages are fully translated, so some languages may display some messages in English.  
+The languages listed below are supported out-of-the-box.  
+Note that not all languages are fully translated; any messages missing from the translation will display in English.
 
-These translations are maintained by the community.  
+Translations are maintained by our community.  
 If your language is incomplete or isn't listed here, you can help translate EssentialsX over on [Crowdin](https://translate.essentialsx.net/).
 
 | Code     | Language                        |
@@ -83,9 +84,9 @@ If your language is incomplete or isn't listed here, you can help translate Esse
 
 In addition to using EssentialsX's built-in translations, you can also customise the text, appearance and functionality of EssentialsX messages!
 
-### Changing the default colours
+### Changing the default colors
 
-**NEW IN 2.21.0:** If you just want to change the colours used in the standard EssentialsX messages, you can do so using the `message-colors` section of `config.yml`:
+**NEW IN 2.21.0:** If you want to change the colors used in the standard EssentialsX messages, you can do so using the `message-colors` section of `config.yml`:
 
 ```yaml
 # Change the default primary and secondary colours used in EssentialsX messages.
