@@ -13,7 +13,7 @@ You can change the default language by uncommenting and setting the `locale` opt
 locale: de
 ```
 
-**NEW:** As of EssentialsX 2.21.0, you can now enable per-player translations with the `per-player-locale` option.  
+**NEW in 2.21.0:** You can now enable per-player translations with the `per-player-locale` option!  
 With this enabled, EssentialsX will attempt to display messages to each player in the language they play Minecraft in.  
 Players can change their game language in their game's settings. If a language is not supported, EssentialsX will use the default `locale` set above.
 
@@ -76,6 +76,7 @@ If your language is incomplete or isn't listed here, you can help translate Esse
 | `zh`     | Simplified Chinese              |
 | `zh_HK`  | Traditional Chinese (Hong Kong) |
 | `zh_TW`  | Traditional Chinese             |
+
 <!-- | `lol_US` | LOLCAT                          | -->
 
 ## Customising messages
@@ -131,37 +132,4 @@ There are a small number of settings in EssentialsX which can be altered by edit
 
 ### Creating custom text commands
 
-EssentialsX's text commands can be edited through text files in the `plugins/Essentials` directory. Simply run the command in-game once, then you'll find the corresponding text file inside `plugins/Essentials` to edit it.
-
-**NOTE: as of writing, custom text files don't support MiniMessage yet. Support is planned to be added soon.**
-
-For example, here's the default `motd.txt`:
-
-```
-
-```
-
-These files also support [Keywords](/wiki/Keywords.html) as placeholders.
-
-There are several files you can use. Most of these are created when the corresponding command is run (with the exception of `help.txt`):
-
-| File name          | Usage                                                                                   |
-|--------------------|-----------------------------------------------------------------------------------------|
-| `motd.txt`         | Displayed when a user joins with the `essentials.motd` permission and in `/motd`        |
-| `rules.txt`        | Displayed when a user runs `/rules`                                                     |
-| `info.txt`         | Displayed when a user runs `/info`                                                      |
-| `help.txt`         | If this file exists, it will override the contents of `/help` (by default this is your server's command list) |
-| `custom.txt`       | Displayed when a user runs `/customtext` - we recommend custom command aliases for this |
-| `book.txt`         | Used to define custom book contents - see below                                         |
-
-> TODO: explain chapters
-
-### Creating custom books in `book.txt`
-
-Custom books can be created and edited similarly to custom text commands.
-
-> TODO: book itemmeta, `/book`
-
-### Customising `/help`
-
-> TODO: cover the config options + help.txt
+EssentialsX's text commands can be edited through text files in the `plugins/Essentials` directory. For more information, see [Text Commands](/wiki/Text-Commands.html).
