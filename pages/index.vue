@@ -42,7 +42,7 @@
                             <h2>Compatible with just about <i>everything</i>.</h2>
                             <p>Built for the Bukkit platform with compatibility in mind, EssentialsX works seamlessly alongside thousands of other plugins. Plus, many plugins hook into EssentialsX's various features like economy, ignores, mutes and vanish through our API.</p>
                             <p>Not only does EssentialsX work well with other plugins, but it also runs on 9 different versions of Minecraft. That's right, <i>nine</i>. No more worrying about being forced to upgrade to the latest Minecraft version*, you can keep using the latest features and fixes all the way back to 1.8.8.</p>
-                            <p class="has-text-grey-light"><small>*You should probably update from Minecraft 1.8.8 anyway though - it's nearly 5 years old and lacks any support from Mojang.</small></p>
+                            <p class="has-text-grey-light"><small>*You should probably update from Minecraft 1.8.8 anyway though - it's over 6 years old and lacks any support from Mojang.</small></p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Installing-EssentialsX.html">Get started with EssentialsX</saber-link>
                         </div>
                     </div>
