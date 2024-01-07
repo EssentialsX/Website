@@ -99,7 +99,7 @@ message-colors:
 
 ### Changing the text content
 
-If you want to make more advanced changes to messages, you can create custom message files under the `plugins/Essentials` folder.  
+If you want to make more advanced changes to messages, you can create custom message files under the `plugins/Essentials/messages/` folder.  
 In this directory, create an empty file named `messages_<lang>.properties`, where `<lang>` is the language code for the language you want to edit.  
 You can now insert any customised messages in this file, and they will be loaded by EssentialsX the next time you restart your server. For example:
 
