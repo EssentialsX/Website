@@ -1,6 +1,7 @@
 <template>
     <div>
         <Navbar :hero="true" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <div class="hero is-primary is-bold is-medium">
             <div class="hero-body has-text-centered spin">
                 <h1 class="title is-1">It's in the name.</h1>
