@@ -42,6 +42,7 @@
                             <h2>Compatible with just about <i>everything</i>.</h2>
                             <p>Built for the Paper and Spigot platforms with compatibility in mind, EssentialsX works seamlessly alongside thousands of other plugins.</p>
                             <p>Plus, many plugins hook into EssentialsX's various features like economy, ignores, mutes and vanish through our API.</p>
+                            <p>With support for the latest rich text features, you can customise EssentialsX to your liking, with clickable links, hover text and RGB colours!</p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Installing-EssentialsX.html">Get started with EssentialsX</saber-link>
                         </div>
                     </div>
