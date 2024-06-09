@@ -25,7 +25,7 @@
                     EssentialsX officially supports the <b>CraftBukkit</b>, <b>Spigot</b> and <a href="https://papermc.io/"><b>Paper (recommended)</b></a> server software running the following Minecraft versions:
                 </p>            
                 <ul>
-                    <li>✅ <b>1.20.1</b> and <b>1.19.4</b> - EssentialsX actively develops against and supports these versions.</li>
+                    <li>✅ <b>1.20.6</b> and <b>1.19.4</b> - EssentialsX actively develops against and supports these versions.</li>
                     <li>⚠️ <b>1.8.8</b>, <b>1.9.4</b>, <b>1.10.2</b>, <b>1.11.2</b>, <b>1.12.2</b>, <b>1.13.2</b>, <b>1.14.4</b>, <b>1.15.2</b>, <b>1.16.5</b>, <b>1.17.1</b> and <b>1.18.2</b> - these versions are still supported, but are not a priority for us, and may be dropped in a future release.</li>
                 </ul>
                 <p>
