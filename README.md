@@ -2,7 +2,7 @@
 
 The EssentialsX website hosted at https://essentialsx.net.
 
-This website is a static site generated using [Saber](https://saber.land/). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
+This website is a static site generated using [Saber](https://saber.egoist.dev/). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
 
 ## Building
 
