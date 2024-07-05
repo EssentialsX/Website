@@ -83,9 +83,7 @@ alongside Forge mods. SpongeAPI is designed to support the nuances of modded pla
 work seamlessly with Forge mods - for example, [Nucleus](https://v2.nucleuspowered.org/) includes almost every feature
 of EssentialsX and more, and is 100% compatible with mods. Many Bukkit plugins also have equivalent Sponge ports, and
 some (such as [LuckPerms](https://luckperms.net/)) even allow you to use your existing Bukkit data when you switch to
-Sponge.
-
-For newer versions of Minecraft, SpongeForge currently isn't available. However, there is a wide selection of
+Sponge. Unfortunately, [Nucleus](https://v2.nucleuspowered.org/) has reached end-of-life, but consider that there is a wide selection of
 server-side mods for Forge and Fabric that can replace plugins, which you can find sites like on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 and [Modrinth](https://modrinth.com/mods). For example, [FTB Essentials](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 for Forge includes features similar to EssentialsX, while [FTB Chunks](https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge)
