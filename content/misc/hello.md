@@ -7,7 +7,9 @@ description: YOU HAVE FOUND THE SECRET LEVEL SELECT SCREEN
 
 ### Button
 
-<KitButtons>
+::KitButtons
+
+:KitButton{tag="button" label="button"}
 
 <KitButton tag="button" label="Button"></KitButton>
 <KitButton tag="button" label="Loading" :loading="true"></KitButton>
@@ -16,7 +18,7 @@ description: YOU HAVE FOUND THE SECRET LEVEL SELECT SCREEN
 <KitButton tag="button" label="Square" :rounded="false"></KitButton>
 <KitButton tag="button" label="Icons" icon-left="fa6-solid:sun" icon-right="fa6-solid:arrow-down"></KitButton>
 
-</KitButtons>
+::
 
 ### Loading spinner
 

@@ -3,7 +3,7 @@
     v-if="tag"
     :is="tag"
     v-bind="$attrs"
-    class="p-2 hover:bg-gray-700 rounded transition-colors"
+    class="p-2 hover:bg-gray-700 rounded transition-colors block"
   >
     <slot />
   </component>

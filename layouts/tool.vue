@@ -5,7 +5,9 @@
     <section
       class="main-content transition-colors ease-linear dark:bg-gray-800 dark:text-white min-h-[calc(100vh_-_80px)]"
     >
-      <slot />
+      <KitContainer>
+        <slot />
+      </KitContainer>
     </section>
 
     <FooterMini />

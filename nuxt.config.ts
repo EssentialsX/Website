@@ -143,13 +143,13 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true,
     sources: {
-      // ghWiki: {
-      //   prefix: '/docs/2.x',
-      //   driver: 'github',
-      //   repo: "EssentialsX/Wiki",
-      //   branch: "nuxt",
-      //   dir: "",
-      // },
+      ghWiki: {
+        prefix: '/docs/2.x',
+        driver: 'github',
+        repo: "EssentialsX/Wiki",
+        branch: "nuxt",
+        dir: "",
+      },
     },
     markdown: {
       rehypePlugins: [

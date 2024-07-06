@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="w-screen py-2 bg-gray-900 text-white">
-      <div class="flex gap-2 items-center container mx-auto h-full px-4">
+    <div class="w-screen py-1 bg-gray-900 text-white">
+      <div class="flex gap-2 items-center container mx-auto h-full px-2">
         <NuxtLink to="/">
           <img
             class="h-4"
@@ -11,13 +11,8 @@
         </NuxtLink>
         <span class="font-semibold">{{ pageTitle }}</span>
         <span class="flex-grow"></span>
-        <span class="items-center">
-          <a
-            class="p-2 hover:bg-gray-700 rounded transition-colors"
-            @click="toggleTheme"
-          >
-            // TODO: <Icon :name="themeIcon" />
-          </a>
+        <span class="min-w-20px">
+          <NavbarThemeToggle />
         </span>
       </div>
     </div>
@@ -26,7 +21,8 @@
 
 <script setup lang="ts">
 // TODO theme toggle, page title
-const pageTitle = computed(() => "TODO")
+const contentMeta = useContent()
+const pageTitle = computed(() => contentMeta.page.value.title)
 
 const themeIcon = computed(() => 'TODO')
 

@@ -8,13 +8,20 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     IconFaBook: typeof import('~icons/fa6-regular/book')['default']
+    IconFaExclamationTriangle: typeof import('~icons/fa6-regular/exclamation-triangle')['default']
     IconFaHeart: typeof import('~icons/fa6-regular/heart')['default']
     IconFaLifeRing: typeof import('~icons/fa6-regular/life-ring')['default']
     IconFasArrowDown: typeof import('~icons/fa6-solid/arrow-down')['default']
     IconFasArrowRight: typeof import('~icons/fa6-solid/arrow-right')['default']
     IconFasBars: typeof import('~icons/fa6-solid/bars')['default']
     IconFasBook: typeof import('~icons/fa6-solid/book')['default']
+    IconFasCross: typeof import('~icons/fa6-solid/cross')['default']
     IconFasDownload: typeof import('~icons/fa6-solid/download')['default']
+    IconFasTriangleExclamation: typeof import('~icons/fa6-solid/triangle-exclamation')['default']
+    IconFasUnlock: typeof import('~icons/fa6-solid/unlock')['default']
+    IconFasWarning: typeof import('~icons/fa6-solid/warning')['default']
+    IconFasWarningTriangle: typeof import('~icons/fa6-solid/warning-triangle')['default']
+    IconFaWarning: typeof import('~icons/fa6-regular/warning')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
