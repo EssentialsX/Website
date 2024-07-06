@@ -1,3 +1,8 @@
+import { resolve } from "path"
+import IconsResolver from "unplugin-icons/resolver"
+import Icons from "unplugin-icons/vite"
+import Components from "unplugin-vue-components/vite"
+
 const baseUrl =
   process.env.DEPLOY_PRIME_URL || process.env.URL || 'https://localhost:3000'
 
@@ -14,12 +19,38 @@ const defaultImage = getPublicUrl('/images/social.png')
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
-    '@nuxt/image-edge',
+    '@pinia/nuxt',
     '@unocss/nuxt',
     'unplugin-icons/nuxt',
   ],
+
+  vite: {
+    plugins: [
+      Components({
+        // we don't want to import components, just icons
+        dirs: ["none"],
+        // auto import icons
+        resolvers: [
+          // https://github.com/antfu/vite-plugin-icons
+          IconsResolver({
+            componentPrefix: "icon",
+            enabledCollections: ["fa6-solid", "fa6-regular"],
+            alias: {
+              fas: "fa6-solid",
+              fa: "fa6-regular"
+            }
+          }),
+        ],
+        dts: "types/generated/icons.d.ts",
+      }),
+      Icons({
+        autoInstall: true,
+      }),
+    ],
+  },
 
   app: {
     head: {
@@ -112,13 +143,13 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true,
     sources: {
-      ghWiki: {
-        prefix: '/docs/2.x',
-        driver: 'github',
-        repo: "EssentialsX/Wiki",
-        branch: "nuxt",
-        dir: "",
-      },
+      // ghWiki: {
+      //   prefix: '/docs/2.x',
+      //   driver: 'github',
+      //   repo: "EssentialsX/Wiki",
+      //   branch: "nuxt",
+      //   dir: "",
+      // },
     },
     markdown: {
       rehypePlugins: [
@@ -155,7 +186,8 @@ export default defineNuxtConfig({
       theme: {
         default: 'github-light',
         dark: 'github-dark'
-      }
+      },
+      langs: ['java', 'groovy', 'properties', 'xml', 'yaml', 'bash']
     }
   },
 
@@ -168,6 +200,12 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true
-  }
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
+
+  compatibilityDate: '2024-07-06'
 })

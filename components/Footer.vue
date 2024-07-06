@@ -32,21 +32,19 @@
                 >SpigotMC</a
               >
             </li>
-            <!--
             <li>
               <a
-                href="https://github.com/EssentialsX/Essentials"
+                href="https://hangar.papermc.io/EssentialsX/Essentials"
                 target="_blank"
-                >PaperMC Hangar</a
+                >Hangar</a
               >
             </li>
-            -->
           </ul>
         </div>
         <div>
           <p>
-            Website code and content &copy; 2019-2022 EssentialsX Team,
-            2015-2022 EssentialsX wiki contributors except where otherwise
+            Website code and content &copy; 2019-2024 EssentialsX Team,
+            2015-2024 EssentialsX wiki contributors except where otherwise
             noted.
           </p>
         </div>

@@ -1,10 +1,10 @@
 <template>
   <component :is="tag" v-bind="$attrs" :class="buttonClass">
-    <span :class="$props.loading ? 'opacity-0' : ''">
-      // TODO: <Icon v-if="iconLeft" :name="iconLeft" class="mr-1" />
-      <span v-if="label">{{ label }}</span>
+    <span :class="innerSpanClass">
+      <slot name="iconLeft" class="mr-1" />
+      <span class="px-2 first:pl-0 last:pr-0" v-if="label">{{ label }}</span>
       <slot v-else></slot>
-      // TODO: <Icon v-if="iconRight" :name="iconRight" class="ml-1" />
+      <slot name="iconRight" class="ml-1" />
     </span>
     <div
       v-if="loading"
@@ -23,8 +23,6 @@ const props = withDefaults(defineProps<{
   inverted?: boolean;
   disabled?: boolean;
   rounded?: boolean;
-  iconLeft?: string;
-  iconRight?: string;
   label?: string;
   loading?: boolean;
 }>(), {
@@ -50,5 +48,11 @@ const buttonClass = computed(() => ({
   'hover:ring': !props.disabled,
   'cursor-default': props.disabled,
   'cursor-pointer': !props.disabled,
+}))
+
+const innerSpanClass = computed(() => ({
+  'opacity-0': props.loading,
+  'flex-inline': true,
+  'items-center': true,
 }))
 </script>

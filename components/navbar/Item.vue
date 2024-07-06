@@ -1,17 +1,23 @@
 <template>
   <component
+    v-if="tag"
     :is="tag"
     v-bind="$attrs"
     class="p-2 hover:bg-gray-700 rounded transition-colors"
   >
     <slot />
   </component>
+  <NuxtLink
+    v-else
+    v-bind="$attrs"
+    class="p-2 hover:bg-gray-700 rounded transition-colors"
+  >
+    <slot />
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
+const props = defineProps<{
   tag?: string;
-}>(), {
-  tag: 'span'
-})
+}>();
 </script>

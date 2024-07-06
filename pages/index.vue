@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <KitHero pattern="jigsaw">
+    <KitHero pattern="bg-hero-jigsaw">
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
         <p class="font-semibold text-3xl">It's in the name.</p>
         <p class="font-medium text-md">
@@ -13,16 +13,18 @@
             to="/downloads"
             bg-color="bg-white"
             text-color="text-black"
-            icon-left="fa6-solid:arrow-right"
             label="Get started"
-          />
+          >
+            <template #iconRight><IconFasArrowRight /></template>
+          </KitButton>
           <KitButton
             tag="nuxt-link"
             to="/downloads"
             :inverted="true"
-            icon-left="fa6-solid:arrow-down"
             label="Downloads"
-          />
+          >
+            <template #iconRight><IconFasArrowDown /></template>
+          </KitButton>
         </KitButtons>
       </div>
     </KitHero>
@@ -30,7 +32,7 @@
     <section
       class="flex flex-col md:flex-row items-stretch gap-4 container mx-auto px-6 py-10"
     >
-      <div class="flex-basis-1">
+      <div>
         <KitCard
           class="h-full"
           image-src="/images/home/commands.png"
@@ -52,23 +54,25 @@
                   to="/docs/2.x/Home"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="fa6-solid:arrow-right"
                   label="Docs"
-                />
+                  >
+                  <template #iconRight><IconFasArrowRight /></template>
+                </KitButton>
                 <KitButton
                   tag="a"
                   href="https://essinfo.xeya.me/commands.html"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="fa6-solid:arrow-right"
                   label="Commands list"
-                />
+                  >
+                  <template #iconRight><IconFasArrowRight /></template>
+                </KitButton>
               </KitButtons>
             </template>
           </KitCardBody>
         </KitCard>
       </div>
-      <div class="flex-basis-1">
+      <div>
         <KitCard
           class="h-full"
           image-src="/images/home/discord.png"
@@ -87,15 +91,16 @@
                   to="/docs/2.x/Module-Discord"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="fa6-solid:arrow-right"
                   label="Learn more"
-                />
+                  >
+                  <template #iconRight><IconFasArrowRight /></template>
+                </KitButton>
               </KitButtons>
             </template>
           </KitCardBody>
         </KitCard>
       </div>
-      <div class="flex-basis-1">
+      <div>
         <KitCard
           class="h-full"
           image-src="/images/home/community.png"
@@ -114,17 +119,19 @@
                   to="/misc/get-help"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="fa6-solid:arrow-right"
                   label="Get help"
-                />
+                  >
+                  <template #iconRight><IconFasArrowRight /></template>
+                </KitButton>
                 <KitButton
                   tag="nuxt-link"
                   to="/misc/support-us"
                   bg-color="bg-red-600"
                   text-color="text-white"
-                  icon-right="fa6-solid:arrow-right"
                   label="Support the project"
-                />
+                  >
+                  <template #iconRight><IconFasArrowRight /></template>
+                </KitButton>
               </KitButtons>
             </template>
           </KitCardBody>

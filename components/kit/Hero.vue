@@ -23,7 +23,7 @@ const patternClass = computed(() => ({
   'left-0': true,
   'w-full': true,
   'h-full': true,
-  [`bg-hero-${props.pattern}`]: true,
-  [`dark:bg-hero-${props.patternDark}`]: !!props.patternDark,
+  [`${props.pattern}`]: true,
+  [`dark:${props.patternDark}`]: !!props.patternDark,
 }))
 </script>
