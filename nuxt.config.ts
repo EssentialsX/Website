@@ -23,7 +23,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
     '@pinia/nuxt',
-    '@unocss/nuxt',
+    //'@unocss/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@vite-pwa/nuxt',
     'unplugin-icons/nuxt',
   ],
 
@@ -133,7 +135,32 @@ export default defineNuxtConfig({
           content: 600,
         },
       ],
-    }
+      link: [
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-32x32.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon-16x16.png'
+        },
+        {
+          rel: 'mask-icon',
+          type: 'image/png',
+          color: '#5bbad5',
+          href: '/safari-pinned-tab.svg'
+        },
+      ],
+    },
   },
 
   colorMode: {
