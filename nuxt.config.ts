@@ -164,7 +164,7 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    classSuffix: ''
+    dataValue: 'theme',
   },
 
   content: {

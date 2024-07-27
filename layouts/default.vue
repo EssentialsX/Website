@@ -3,7 +3,7 @@
     <Navbar />
 
     <section
-      class="main-content transition-colors ease-linear dark:bg-gray-900 dark:text-white min-h-[80vh]"
+      class="main-content transition-colors ease-linear min-h-[80vh]"
     >
       <slot />
     </section>

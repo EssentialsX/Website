@@ -1,15 +1,13 @@
 <template>
   <NuxtLayout>
     <KitContainer>
-      <KitButtons>
-        <KitButton @click="showRaw = !showRaw">Toggle raw view</KitButton>
-      </KitButtons>
-      <div class="font-mono bg-dark text-white rounded-lg p-4" v-if="showRaw">
+      <button class="btn btn-primary mb-2" @click="showRaw = !showRaw">Toggle raw view</button>
+      <div class="font-mono bg-base-300 text-white rounded-xl p-4" v-if="showRaw">
         <code>
           <pre>{{ articles }}</pre>
         </code>
       </div>
-      <table class="table" v-else>
+      <table class="table table-lg bg-base-300" v-else>
         <thead>
           <tr class="font-bold">
             <td>Title</td>

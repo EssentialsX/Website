@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<{
   loading?: boolean;
 }>(), {
   tag: 'a',
-  bgColor: 'bg-red-500',
+  bgColor: 'bg-primary',
   textColor: 'text-white',
   inverted: false,
   disabled: false,

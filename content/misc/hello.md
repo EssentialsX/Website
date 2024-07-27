@@ -11,6 +11,22 @@ description: YOU HAVE FOUND THE SECRET LEVEL SELECT SCREEN
 
 :KitButton{tag="button" label="button"}
 
+::button{class="btn btn-primary"}
+Primary
+::
+
+::button{class="btn btn-balloon"}
+Balloon
+::
+
+::button{class="btn btn-secondary"}
+Secondary
+::
+
+::button{class="btn btn-accent btn-outline"}
+Accent
+::
+
 <KitButton tag="button" label="Button"></KitButton>
 <KitButton tag="button" label="Loading" :loading="true"></KitButton>
 <KitButton tag="button" label="Disabled" :disabled="true"></KitButton>
