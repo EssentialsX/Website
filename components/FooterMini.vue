@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-screen h-full py-2 bg-gray-900 text-gray-100">
+  <footer class="w-screen h-full py-2 bg-base-200 text-base-content">
     <div class="container mx-auto px-4">
       <p>
         Website code and content &copy; 2019-2024 EssentialsX Team, 2015-2024

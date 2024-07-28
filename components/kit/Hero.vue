@@ -1,12 +1,10 @@
 <template>
   <section
-    class="w-screen relative bg-gradient-to-br from-red-600 to-red-700 text-white dark:(from-red-700 to-red-900)"
+    class="hero w-screen relative bg-gradient-to-br from-red-600 to-red-700 text-white dark:(from-red-700 to-red-900)"
   >
     <div v-if="pattern != undefined" :class="patternClass"></div>
-    <div class="relative container mx-auto px-4 z-2">
-      <div class="py-6">
-        <slot></slot>
-      </div>
+    <div class="hero-content">
+      <slot></slot>
     </div>
   </section>
 </template>

@@ -29,6 +29,4 @@
 const { data: articles } = await useAsyncData('home', () => queryContent().find())
 
 const showRaw = ref(false);
-
-console.log(articles)
 </script>

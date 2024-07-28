@@ -1,5 +1,29 @@
 <template>
   <NuxtLayout>
+    <section class="hero bg-primary text-primary-content dark:bg-base-300 dark:text-base-content">
+      <div class="hero-content text-center">
+        <div class="max-w-full py-8">
+          <p class="font-semibold text-3xl">It's in the name.</p>
+          <p class="font-medium text-md">
+            EssentialsX is the essential plugin suite for Minecraft servers, with
+            over 130 commands for servers of all size and scale.
+          </p>
+          <KitButtons class="mt-4 md:mt-8">
+            <NuxtLink class="btn dark:btn-primary"
+              to="/downloads">
+              Download
+              <IconFasArrowDown />
+            </NuxtLink>
+            <NuxtLink class="btn btn-ghost"
+              to="/docs/2.x/Installing-EssentialsX">
+              Get started
+              <IconFasArrowRight />
+            </NuxtLink>
+          </KitButtons>
+        </div>
+      </div>
+    </section>
+    <!--
     <KitHero pattern="bg-hero-jigsaw">
       <div class="flex flex-col items-center gap-2 mx-auto my-8">
         <p class="font-semibold text-3xl">It's in the name.</p>
@@ -8,27 +32,20 @@
           over 130 commands for servers of all size and scale.
         </p>
         <KitButtons class="mt-4 md:mt-8">
-          <KitButton
-            tag="nuxt-link"
-            to="/downloads"
-            bg-color="bg-white"
-            text-color="text-black"
-            label="Get started"
-          >
-            <template #iconRight><IconFasArrowRight /></template>
-          </KitButton>
-          <KitButton
-            tag="nuxt-link"
-            to="/downloads"
-            :inverted="true"
-            label="Downloads"
-          >
-            <template #iconRight><IconFasArrowDown /></template>
-          </KitButton>
+          <NuxtLink class="btn "
+            to="/downloads">
+            Download
+            <IconFasArrowDown />
+          </NuxtLink>
+          <NuxtLink class="btn btn-ghost"
+            to="/docs/2.x/Installing-EssentialsX">
+            Get started
+            <IconFasArrowRight />
+          </NuxtLink>
         </KitButtons>
       </div>
     </KitHero>
-
+    -->
     <section
       class="flex flex-col md:flex-row items-stretch gap-4 container mx-auto px-6 py-10"
     >
