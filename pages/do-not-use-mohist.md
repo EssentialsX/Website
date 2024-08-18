@@ -86,7 +86,7 @@ some (such as [LuckPerms](https://luckperms.net/)) even allow you to use your ex
 Sponge.
 
 For newer versions of Minecraft, SpongeForge currently isn't available. However, there is a wide selection of
-server-side mods for Forge and Fabric that can replace plugins, which you can find sites like on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
+server-side mods for Forge and Fabric that can replace plugins, which you can find on sites like [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 and [Modrinth](https://modrinth.com/mods). For example, [FTB Essentials](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 for Forge includes features similar to EssentialsX, while [FTB Chunks](https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge)
 allows for land claims and protection.
