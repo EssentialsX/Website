@@ -77,7 +77,7 @@ that they do not care about the security of their users.
 There are countless alternative hybrid servers that attempt to run Bukkit plugins on top of Forge, but many suffer from
 similar incompatibilities as Mohist does.
 
-However, if you're running a 1.12.2 server, [SpongeForge](https://www.spongepowered.org/) is a mature and
+However, if you're running a 1.12.2 or 1.19+, [SpongeForge](https://www.spongepowered.org/) is a mature and
 well-engineered solution which allows running a rich ecosystem of [SpongeAPI plugins](https://ore.spongepowered.org/)
 alongside Forge mods. SpongeAPI is designed to support the nuances of modded platforms, and in general Sponge plugins
 work seamlessly with Forge mods - for example, [Nucleus](https://v2.nucleuspowered.org/) includes almost every feature
@@ -85,7 +85,7 @@ of EssentialsX and more, and is 100% compatible with mods. Many Bukkit plugins a
 some (such as [LuckPerms](https://luckperms.net/)) even allow you to use your existing Bukkit data when you switch to
 Sponge.
 
-For newer versions of Minecraft, SpongeForge currently isn't available. However, there is a wide selection of
+Depending on the version of Minecraft you run, a version of SpongeForge may not be available. However, there is a wide selection of
 server-side mods for Forge and Fabric that can replace plugins, which you can find sites like on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 and [Modrinth](https://modrinth.com/mods). For example, [FTB Essentials](https://www.curseforge.com/minecraft/mc-mods/ftb-essentials-forge)
 for Forge includes features similar to EssentialsX, while [FTB Chunks](https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge)
