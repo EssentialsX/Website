@@ -38,6 +38,7 @@
     "last 2 versions"
   ],
   "scripts": {
+    "saber": "NODE_OPTIONS=--openssl-legacy-provider saber",
     "postinstall": "patch-package"
   }
 }
