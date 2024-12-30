@@ -57,7 +57,7 @@ implementation of Bukkit, and instead has employed further workarounds to hide i
 On [10th April 2021](https://github.com/MohistMC/Mohist/commit/58bbb1c8a13dcbf764c11668287e6fb85a884b3a), Mohist added
 a "plugin checker", which scans for plugins that Mohist breaks and shows the following message:
 
-![Screenshot of Mohist warning message](https://cdn.discordapp.com/attachments/762376197308547082/851490309585502269/unknown.png)
+![Screenshot of Mohist warning message](@/images/mohist-warning.png)
 
 Not only is this message misleading (implying that EssentialsX is at fault when the real issue is on Mohist's end), but
 it tricks users into **deleting the software they downloaded from a trusted source** and **running arbitrary code**
