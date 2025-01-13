@@ -66,7 +66,7 @@
           </nav>
         </div>
       </div>
-      
+
       <div class="message is-serverinfo">
         <div class="message-header">
           <p>Server version</p>
@@ -337,8 +337,9 @@ export default {
       }
 
       try {
-        const { data } = await axios.get(`https://api.paste.gg/v1/pastes/${this.pasteId}?full=true`)
-        data.result.files.forEach(file => {
+        let { data } = await axios.get(this.newPaste ? `https://api.pastes.dev/${this.pasteId}` : `https://api.paste.gg/v1/pastes/${this.pasteId}?full=true`)
+        data = this.newPaste ? data.files : data.result.files;
+        data.forEach(file => {
           if (file.name === "config.yml") {
             this.config = file.content.value
           } else if (file.name === "kits.yml") {
@@ -396,14 +397,17 @@ export default {
     }
   },
   computed: {
+    newPaste() {
+      return this.$route.query.id === undefined;
+    },
     pasteId() {
-      return this.$route.hash ? this.$route.hash.substring(1) : this.$route.query.id;
+      return this.$route.hash ? this.$route.hash.substring(1) : (this.$route.query.id ? this.$route.query.id : this.$route.query.bytebin);
     },
     friendlyError() {
       if (typeof this.error == "string") {
         return this.error;
       }
-      
+
       if (this.error.error) {
         switch (this.error.error) {
           case "not_found":
@@ -419,6 +423,10 @@ export default {
       return !this.loaded && !this.error && !this.invalid;
     },
     originalUrl() {
+      if (this.newPaste) {
+        return `https://pastes.dev/${this.pasteId}`
+      }
+
       return `https://paste.gg/p/anonymous/${this.pasteId}`;
     },
     senderName() {
