@@ -9,7 +9,7 @@
                             <a href="https://www.spigotmc.org/resources/essentialsx.9089/" class="tag is-spigot">{{ downloads }} downloads</a>
                         </div>
                     </b-tooltip>
-                    <b-tooltip class="control" multilined label="View all changelogs">
+                    <b-tooltip class="control" multilined label="View all changelogs on GitHub">
                         <div class="tags has-addons">
                             <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-dark">Latest release</a>
                             <a href="https://github.com/EssentialsX/Essentials/releases" class="tag is-primary">{{ latestRelease }}</a>
@@ -21,7 +21,7 @@
                             <a href="https://ci.ender.zone/job/EssentialsX" class="tag is-success">b{{ buildNo }}</a>
                         </div>
                     </b-tooltip>
-                    <b-tooltip class="control" multilined :label="membersHover + ' people chatting on Discord'">
+                    <b-tooltip class="control" multilined :label="membersHover + ' people online on MOSS'">
                         <div class="tags has-addons">
                             <a href="https://discord.gg/h8CnPSw" class="tag is-dark">Discord</a>
                             <a href="https://discord.gg/h8CnPSw" class="tag is-discord">{{ members }} online</a>
@@ -42,12 +42,19 @@
                     <b-tooltip class="control" multilined label="Change the website theme">
                         <theme-toggle></theme-toggle>
                     </b-tooltip>
+                    <div class="hide-until-code">
+                        <b-tooltip class="control hide-until-code" multilined label="???">
+                            <div class="tags">
+                                <a class="tag is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a>
+                            </div>
+                        </b-tooltip>
+                    </div>
                 </div>
             </div>
             <br />
             <div class="container content">
-                <p>Website copyright &copy; 2019-2022 EssentialsX Team, 2015-2022 EssentialsX wiki contributors except where otherwise noted.</p>
-                <span class="hide-until-code"><a class="button is-info" href="https://tcrf.net/Dreamcast#Hidden_Alternate_Menu">???</a></span>
+                <p>Website and documentation &copy; 2019-2025 EssentialsX Team, 2015-2025 EssentialsX wiki contributors, except where otherwise noted.</p>
+                <p>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
             </div>
         </footer>
     </div>
@@ -55,7 +62,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import ThemeToggle from "./ThemeToggle";
 
 export default {
