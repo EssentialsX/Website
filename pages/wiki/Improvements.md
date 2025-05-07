@@ -170,7 +170,7 @@ Players have the ability to disable any and all payment via the `/paytoggle` com
 `payoff` will always disable payments to prevent errors. On the contrary, `payon` will always enable payments.
 
 ### Command confirmations for `/pay` and `/clearinventory`
-_Requested in [#1032](/drtshock/Essentials/issues/1032); added in [5f83766](https://github.com/drtshock/Essentials/commit/5f83766)._
+_Requested in [#1032](https://github.com/EssentialsX/Essentials/issues/1032); added in [5f83766](https://github.com/drtshock/Essentials/commit/5f83766)._
 
 You can now specify whether players are prompted to confirm `/clearinventory` and `/pay` commands before they are executed using the `default-enabled-confirm-commands` section of the config.
 
@@ -183,7 +183,7 @@ This feature was implemented in ([0a563b9](https://github.com/drtshock/Essential
 This feature introduces the `teleport-to-center` configuration feature. When set to `true` (default), all teleportations are centered to the block; technically, setting the x and z coordinate decimals to .5 and .5. When `teleport-to-center` is set to `false`, all teleports are performed to the exact location as given.
 
 ### Mail chat formatting
-_Requested in [#1560](/drtshock/Essentials/issues/1560); added in [665229b](https://github.com/drtshock/Essentials/commit/665229b)._
+_Requested in [#1560](https://github.com/EssentialsX/Essentials/issues/1560); added in [665229b](https://github.com/drtshock/Essentials/commit/665229b)._
 
 This feature introduces the ability to format `/mail` messages using `&` formatting codes - [click here](/wiki/Color-Permissions.html) for more information.
 

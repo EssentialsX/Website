@@ -16,7 +16,7 @@
                         </div>
                         <div class="tile is-child">
                             <h2>All you can eat, and then some.</h2>
-                            <p>With over <a href="https://essinfo.xeya.me/commands.php">130 commands</a>, EssentialsX provides one of the most comprehensive feature sets out there, providing teleportation, moderation tools, gameplay enhancements and more.</p>
+                            <p>With over <a href="https://essinfo.xeya.me/commands.html">130 commands</a>, EssentialsX provides one of the most comprehensive feature sets out there, providing teleportation, moderation tools, gameplay enhancements and more.</p>
                             <p>Just want the homes and warps? Great. Need a sign shop? Done. Want complex and rich kits with enchantments, custom books and lore? Sorted.</p>
                             <p>Whether you're a small group of friends or a huge server with hundreds of players, we've got the basics covered.</p>
                             <saber-link class="button is-primary is-rounded" to="/wiki/Home.html">Visit the wiki</saber-link>
