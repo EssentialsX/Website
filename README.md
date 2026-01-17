@@ -1,5 +1,10 @@
 # EssentialsX Website
 
+> [!IMPORTANT]
+> This repo was for our legacy site. You may find the code for our new website here: [https://github.com/EssentialsX/website-next](https://github.com/EssentialsX/website-next).
+
+---
+
 The EssentialsX website hosted at https://essentialsx.net.
 
 This website is a static site generated using [Saber](https://saber.land/). The site uses the [Bulma](https://bulma.io) and [Buefy](https://buefy.org) frameworks.
